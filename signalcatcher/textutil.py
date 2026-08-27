@@ -79,7 +79,11 @@ def extract_links(html: str) -> list[str]:
         return []
     out = []
     for node in HTMLParser(html).css("a[href]"):
-        href = node.attributes.get("href", "")
+        # A valueless attribute (`<a href>`) parses to None, and dict.get's
+        # default does not apply because the key IS present -- so the fallback
+        # has to be `or ""`. Real news pages contain these, and the raw None
+        # crashed ingestion mid-run.
+        href = node.attributes.get("href") or ""
         if href.startswith("http"):
             out.append(href)
     return out
