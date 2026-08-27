@@ -50,7 +50,7 @@ K_PER_WINDOW = 10
 MIN_JUDGED = 4          # fewer judged candidates than this -> window undecided
 
 PRE_WINDOWS = ((-730, -365), (-365, 0))
-POST_WINDOWS = ((0, 90), (90, 180), (180, 365), (365, 730))
+POST_WINDOWS = ((0, 90), (90, 180), (180, 365), (365, 730), (730, 1460))
 
 
 @dataclass

@@ -19,12 +19,21 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import time
 from typing import Any
 
 import anthropic
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 MODEL = "claude-opus-5"
+
+# The CLI backend shells out to headless `claude -p`, which bills against the
+# user's Claude subscription instead of metered API credits. Two things matter:
+# ANTHROPIC_API_KEY must be scrubbed from the subprocess env (a set key silently
+# takes precedence over the claude.ai login and fails on an empty API account),
+# and there is no server-side schema enforcement, so JSON is requested by
+# instruction and extracted defensively, with one retry.
+CLI_MODEL = "opus"
 
 GROUNDING_RULE = """\
 You are adjudicating evidence for a benchmark that measures which source said \
@@ -39,13 +48,19 @@ class LLM:
     def __init__(
         self,
         store=None,
-        model: str = MODEL,
+        model: str | None = None,
         effort: str = "high",
         use_cache: bool = True,
         api_key: str | None = None,
+        backend: str = "api",   # "api" | "cli"
     ):
-        self.client = anthropic.Anthropic(api_key=api_key or os.environ.get("ANTHROPIC_API_KEY"))
-        self.model = model
+        self.backend = backend
+        if backend == "cli":
+            self.client = None
+            self.model = f"cli:{model or CLI_MODEL}"
+        else:
+            self.client = anthropic.Anthropic(api_key=api_key or os.environ.get("ANTHROPIC_API_KEY"))
+            self.model = model or MODEL
         self.effort = effort
         self.store = store
         self.use_cache = use_cache
@@ -60,6 +75,54 @@ class LLM:
             h.update(str(part).encode())
             h.update(b"\x00")
         return h.hexdigest()
+
+    def _call_cli(self, system: str, user: str, schema: dict | None, max_tokens: int) -> str:
+        import json as _json
+        import subprocess
+
+        prompt = system + "\n\n" + user
+        if schema is not None:
+            prompt += ("\n\nRespond with ONLY a single JSON object -- no markdown "
+                       "fences, no commentary -- valid against this JSON Schema:\n"
+                       + _json.dumps(schema))
+        env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}
+        cli_model = self.model.split(":", 1)[1]
+        last_err = ""
+        for attempt in range(3):
+            try:
+                r = subprocess.run(
+                    ["claude", "-p", "--model", cli_model, "--output-format", "json"],
+                    input=prompt, capture_output=True, text=True, env=env, timeout=600,
+                )
+            except subprocess.TimeoutExpired:
+                last_err = "timeout"
+                continue
+            if r.returncode != 0:
+                last_err = (r.stderr or r.stdout or "")[:300]
+                time.sleep(5 * (attempt + 1))
+                continue
+            try:
+                wrapper = _json.loads(r.stdout)
+                text = wrapper.get("result", "")
+                usage = wrapper.get("usage") or {}
+                self.input_tokens += int(usage.get("input_tokens") or 0)
+                self.output_tokens += int(usage.get("output_tokens") or 0)
+            except _json.JSONDecodeError:
+                text = r.stdout
+            self.calls += 1
+            if schema is None:
+                return text
+            # Extract the JSON object even if the model wrapped it in prose.
+            a, b = text.find("{"), text.rfind("}")
+            if a != -1 and b > a:
+                candidate = text[a : b + 1]
+                try:
+                    _json.loads(candidate)
+                    return candidate
+                except _json.JSONDecodeError:
+                    pass
+            last_err = f"unparseable output: {text[:200]}"
+        raise RuntimeError(f"claude CLI failed after retries: {last_err}")
 
     @retry(
         stop=stop_after_attempt(4),
@@ -113,8 +176,13 @@ class LLM:
                 except json.JSONDecodeError:
                     pass
         try:
-            raw = self._call(sys_prompt, user, schema, max_tokens)
+            if self.backend == "cli":
+                raw = self._call_cli(sys_prompt, user, schema, max_tokens)
+            else:
+                raw = self._call(sys_prompt, user, schema, max_tokens)
         except RefusalError:
+            return None
+        except RuntimeError:
             return None
         try:
             data = json.loads(raw)
@@ -125,7 +193,8 @@ class LLM:
         return data
 
     def stats(self) -> dict:
-        # Opus 5 list pricing, for run-cost reporting.
+        # Opus 5 list pricing; on the CLI backend spend is subscription usage,
+        # reported as the equivalent API value so runs stay comparable.
         cost = self.input_tokens / 1e6 * 5.0 + self.output_tokens / 1e6 * 25.0
         return {
             "calls": self.calls, "cache_hits": self.cache_hits,
