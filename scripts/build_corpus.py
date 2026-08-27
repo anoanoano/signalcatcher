@@ -63,7 +63,7 @@ class LockedStore:
 
 
 def main(max_posts: int = 900, workers: int = 8) -> None:
-    raw = Store("data/corpus.db")
+    raw = Store()
     store = LockedStore(raw)
     t0 = time.time()
 
@@ -89,6 +89,10 @@ def main(max_posts: int = 900, workers: int = 8) -> None:
             except Exception:
                 print(f"FAIL {futs[fut]}\n{traceback.format_exc()}", flush=True)
 
+    from signalcatcher.paths import human, usage
+    u = usage()
+    print(f"disk: db {human(u['db'])} + cache {human(u['cache'])} "
+          f"= {human(u['total'])}", flush=True)
     lo, hi = raw.corpus_span()
     print(f"\nCORPUS: {raw.count_documents()} docs | {lo.date() if lo else '?'} .. "
           f"{hi.date() if hi else '?'} | {time.time()-t0:.0f}s", flush=True)

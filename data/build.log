@@ -3,3 +3,82 @@
 [  1012s] substack www.hyperdimensional.co                    listed=  88 added=  76 
 [  1124s] substack milesbrundage.substack.com                 listed=  23 added=  23 
 [  1236s] substack www.understandingai.org                    listed= 152 added= 130 
+[  1742s] substack astralcodexten.com                         listed= 900 added= 254 
+FAIL www.interconnects.ai
+Traceback (most recent call last):
+  File "/Users/matthewprewitt/signalcatcher/scripts/build_corpus.py", line 85, in main
+    kind, who, r = fut.result()
+                   ^^^^^^^^^^^^
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/scripts/build_corpus.py", line 72, in do_substack
+    return "substack", pub, substack.ingest(store, pub, max_posts=max_posts, fetcher=f)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/signalcatcher/ingest/substack.py", line 199, in ingest
+    "outlinks": extract_links(body_html)[:200],
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/signalcatcher/textutil.py", line 83, in extract_links
+    if href.startswith("http"):
+       ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'startswith'
+
+[  2711s] substack garymarcus.substack.com                    listed= 553 added= 481 
+FAIL www.chinatalk.media
+Traceback (most recent call last):
+  File "/Users/matthewprewitt/signalcatcher/scripts/build_corpus.py", line 85, in main
+    kind, who, r = fut.result()
+                   ^^^^^^^^^^^^
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/matthewprewitt/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/scripts/build_corpus.py", line 72, in do_substack
+    return "substack", pub, substack.ingest(store, pub, max_posts=max_posts, fetcher=f)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/signalcatcher/ingest/substack.py", line 199, in ingest
+    "outlinks": extract_links(body_html)[:200],
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthewprewitt/signalcatcher/signalcatcher/textutil.py", line 83, in extract_links
+    if href.startswith("http"):
+       ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'startswith'
+
+[  3209s] substack thezvi.substack.com                        listed= 900 added= 627 
+[  4241s] substack www.aisnakeoil.com                         listed=  23 added=  20 
+[  4386s] substack lastweekin.ai                              listed= 556 added= 492 
+[  4919s] substack epochai.substack.com                       listed= 113 added= 104 
+[  5367s] substack newsletter.pragmaticengineer.com           listed= 527 added= 468 
+[  5633s] substack platformer.news                            listed= 501 added= 471 
+[  5913s] substack www.construction-physics.com               listed= 318 added=  50 
+[  5920s] substack www.transformernews.ai                     listed= 268 added= 223 
+[  6345s] substack www.derekthompson.org                      listed=  70 added=  61 
+[  6379s] substack briefingday.substack.com                   listed=   0 added=   0 no Substack archive API at any of ['https://briefingday.substack.com', 'https://www.briefingday.substack.com']
+[  6679s] substack www.city-journal.org                       listed=  23 added=   5 
+[  6709s] substack kevindrum.substack.com                     listed=   0 added=   0 no Substack archive API at any of ['https://kevindrum.substack.com', 'https://www.kevindrum.substack.com']
+[  6813s] substack www.economicforces.xyz                     listed= 173 added= 154 
+[  6960s] substack kareemcarr.substack.com                    listed=  11 added=   9 
+[  6989s] substack kaushikcbasu.substack.com                  listed=   0 added=   0 no Substack archive API at any of ['https://kaushikcbasu.substack.com', 'https://www.kaushikcbasu.substack.com']
+[  7225s] substack erictopol.substack.com                     listed=  23 added=  19 
+[  7512s] substack kyla.substack.com                          listed= 174 added= 150 
+[  7564s] substack nadia.xyz                                  listed=   0 added=   0 no Substack archive API at any of ['https://nadia.xyz', 'https://www.nadia.xyz', 'https://nadia.substack.com']
+[  7572s] substack www.exponentialview.co                     listed= 900 added= 779 
+[  7959s] substack www.programmablemutter.com                 listed= 137 added= 121 
+[  8002s] substack www.natesilver.net                         listed=  73 added=  63 
+[  8053s] substack experimentalhistory.substack.com           listed=   0 added=   0 no Substack archive API at any of ['https://experimentalhistory.substack.com', 'https://www.experimentalhistory.substack.com']
+[  8451s] substack statmodeling.substack.com                  listed= 123 added= 117 
+[  8452s] substack www.slowboring.com                         listed= 900 added= 350 
+[  8455s] substack www.slowboring.com                         listed= 900 added=  83 
+[  8818s] substack cremieux.xyz                               listed=  73 added=  62 
+[  8853s] substack www.noahpinion.blog                        listed= 900 added= 579 
+[  8864s] substack marginalrevolution.substack.com            listed=   0 added=   0 no Substack archive API at any of ['https://marginalrevolution.substack.com', 'https://www.marginalrevolution.substack.com']
+[  8877s] substack www.thediff.co                             listed=   1 added=   0 

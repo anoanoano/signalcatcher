@@ -167,8 +167,9 @@ def _parse(s: str) -> datetime:
 
 
 class Store:
-    def __init__(self, path: str | Path = "data/corpus.db"):
-        self.path = Path(path)
+    def __init__(self, path: str | Path | None = None):
+        from .paths import db_path
+        self.path = db_path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         # check_same_thread=False lets a corpus build fetch many publications
         # concurrently; callers that share a Store across threads must

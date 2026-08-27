@@ -133,6 +133,43 @@ signalcatcher validate "Scott Alexander" --decoy "Noah Smith" --json out.json
 Corpus builds are restartable and idempotent: documents dedupe on URL and every
 HTTP response is cached to disk, so a re-run fills only what is missing.
 
+## Disk usage
+
+The corpus grows with every publication ingested, so nothing here is unbounded
+by default.
+
+| Item | What it is | Disposable? |
+|---|---|---|
+| `corpus.db` | The dataset: document text, FTS index, embeddings, judgements | **No** |
+| `cache/` | Raw HTTP responses, already parsed into the DB | Yes — capped at 512 MB, evicted oldest-first |
+
+The HTTP cache is pure speed. Every response in it has already been parsed into
+the corpus, so evicting an entry costs a re-fetch and never data. Left uncapped
+it reaches several gigabytes over a large build, which is not a trade anyone
+agreed to.
+
+```bash
+signalcatcher corpus                  # includes a disk breakdown
+signalcatcher purge-cache             # trim to the cap
+signalcatcher purge-cache --all       # empty it entirely
+```
+
+**Putting the corpus on another volume** — the repository then stays a few
+megabytes of code:
+
+```bash
+export SIGNALCATCHER_DATA=/Volumes/YourDrive/signalcatcher
+# or per-command:
+signalcatcher --data-dir /Volumes/YourDrive/signalcatcher corpus
+```
+
+Resolution order is `--data-dir` → `$SIGNALCATCHER_DATA` → `./data`.
+
+Note that `.venv` is a further ~870 MB, about 500 MB of which is PyTorch, pulled
+in by the local embedding model. Dropping `sentence-transformers` reclaims that
+but disables dense retrieval, which lowers coverage and therefore *widens* the
+originality intervals — the scores get more conservative, not wrong.
+
 ## Layout
 
 ```

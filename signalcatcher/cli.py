@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
+from pathlib import Path
 
 from .config import Config
 from .db import Store
@@ -15,7 +17,10 @@ from .report import render, to_json
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="signalcatcher", description=__doc__)
-    ap.add_argument("--db", default="data/corpus.db")
+    ap.add_argument("--data-dir", default=None,
+                    help="where the corpus lives (or set SIGNALCATCHER_DATA). "
+                         "Point this at another volume to keep the repo small.")
+    ap.add_argument("--db", default=None, help="explicit path to corpus.db")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("corpus", help="show what is in the pinned corpus")
@@ -41,6 +46,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--decoy", default=None)
     p.add_argument("--json", default=None)
 
+    p = sub.add_parser("purge-cache", help="free the HTTP cache (never loses corpus data)")
+    p.add_argument("--all", action="store_true", help="empty it entirely, not just down to the cap")
+
     p = sub.add_parser("ablate", help="measure a source's value to a model")
     p.add_argument("source")
     p.add_argument("--docs", type=int, default=2)
@@ -48,13 +56,32 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--json", default=None)
 
     args = ap.parse_args(argv)
+    if args.data_dir:
+        os.environ["SIGNALCATCHER_DATA"] = str(Path(args.data_dir).expanduser())
     store = Store(args.db)
 
     if args.cmd == "corpus":
+        from .paths import data_root, human, usage
         lo, hi = store.corpus_span()
         print(f"{store.count_documents()} documents | {lo} .. {hi}")
         for src, n in store.list_sources():
             print(f"  {n:6d}  {src.kind:9} {src.name[:40]:42} {src.domain}")
+        u = usage()
+        print(f"\ndisk at {data_root()}:  db {human(u['db'])} + "
+              f"cache {human(u['cache'])} = {human(u['total'])}")
+        return 0
+
+    if args.cmd == "purge-cache":
+        from .http import Fetcher
+        from .paths import human
+        f = Fetcher()
+        before = f.cache_bytes()
+        freed = f.sweep_cache(target_ratio=0.0) if args.all else f.sweep_cache()
+        print(f"cache was {human(before)}; freed {human(freed)}; "
+              f"now {human(f.cache_bytes())}")
+        print("(cached responses are already parsed into the corpus -- "
+              "purging costs a re-fetch, never data)")
+        f.close()
         return 0
 
     if args.cmd == "ingest":

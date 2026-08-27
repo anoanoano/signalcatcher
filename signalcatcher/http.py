@@ -23,12 +23,18 @@ from tenacity import (
     wait_exponential,
 )
 
+from .paths import cache_dir as _default_cache_dir
+
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 )
 
-CACHE_DIR = Path("data/cache")
+# The cache is pure speed: every response in it has already been parsed into the
+# corpus, so evicting an entry costs a re-fetch and nothing else. Left uncapped
+# it will happily consume several gigabytes over a large build, which is not a
+# trade anyone agreed to -- so it is bounded by default.
+DEFAULT_MAX_CACHE_BYTES = 512 * 1024 * 1024  # 512 MB
 
 
 class Fetcher:
@@ -42,13 +48,16 @@ class Fetcher:
 
     def __init__(
         self,
-        cache_dir: Path | str = CACHE_DIR,
+        cache_dir: Path | str | None = None,
         min_interval: float = 0.34,
         timeout: float = 45.0,
         use_cache: bool = True,
+        max_cache_bytes: int | None = DEFAULT_MAX_CACHE_BYTES,
     ):
-        self.cache_dir = Path(cache_dir)
+        self.cache_dir = Path(cache_dir) if cache_dir is not None else _default_cache_dir()
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.max_cache_bytes = max_cache_bytes
+        self._writes_since_sweep = 0
         self.min_interval = min_interval  # per-host rate limit
         self.use_cache = use_cache
         self._last: dict[str, float] = {}
@@ -115,7 +124,56 @@ class Fetcher:
         if self.use_cache:
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(body, encoding="utf-8", errors="replace")
+            self._maybe_sweep()
         return body
+
+    def _maybe_sweep(self) -> None:
+        """Enforce the cache ceiling, amortised.
+
+        Stat-ing the whole tree on every write would dominate the cost of a
+        build, so the check runs periodically and then evicts oldest-first down
+        to 80% of the cap -- leaving headroom so the next few hundred writes do
+        not immediately trigger another sweep.
+        """
+        if self.max_cache_bytes is None:
+            return
+        self._writes_since_sweep += 1
+        if self._writes_since_sweep < 500:
+            return
+        self._writes_since_sweep = 0
+        self.sweep_cache()
+
+    def sweep_cache(self, target_ratio: float = 0.8) -> int:
+        """Evict oldest cache entries until under the cap. Returns bytes freed."""
+        if self.max_cache_bytes is None:
+            return 0
+        files = []
+        total = 0
+        for f in self.cache_dir.rglob("*"):
+            if f.is_file():
+                try:
+                    st = f.stat()
+                except OSError:
+                    continue
+                files.append((st.st_mtime, st.st_size, f))
+                total += st.st_size
+        if total <= self.max_cache_bytes:
+            return 0
+        target = int(self.max_cache_bytes * target_ratio)
+        files.sort()  # oldest first
+        freed = 0
+        for _mtime, size, f in files:
+            if total - freed <= target:
+                break
+            try:
+                f.unlink()
+                freed += size
+            except OSError:
+                continue
+        return freed
+
+    def cache_bytes(self) -> int:
+        return sum(f.stat().st_size for f in self.cache_dir.rglob("*") if f.is_file())
 
     def get_json(self, url: str, *, force: bool = False) -> Any | None:
         body = self.get(url, force=force)
