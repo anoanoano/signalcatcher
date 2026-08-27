@@ -24,12 +24,25 @@ from signalcatcher.ingest import substack, wordpress
 # with each other. Diffusion is only measurable inside a community that actually
 # transmits, so a broad but disconnected sample would show nothing at all.
 SUBSTACKS = [
-    "astralcodexten.com", "noahpinion.blog", "www.slowboring.com",
-    "www.construction-physics.com", "thezvi.substack.com", "www.oneusefulthing.org",
-    "garymarcus.substack.com", "importai.substack.com", "www.thediff.co",
-    "newsletter.pragmaticengineer.com", "www.understandingai.org",
-    "www.programmablemutter.com", "www.hyperdimensional.co",
-    "milesbrundage.substack.com", "erictopol.substack.com",
+    # AI / technology commentary
+    "astralcodexten.com", "thezvi.substack.com", "www.oneusefulthing.org",
+    "garymarcus.substack.com", "importai.substack.com", "www.understandingai.org",
+    "www.hyperdimensional.co", "milesbrundage.substack.com", "www.interconnects.ai",
+    "www.aisnakeoil.com", "lastweekin.ai", "newsletter.pragmaticengineer.com",
+    "www.chinatalk.media", "www.exponentialview.co", "platformer.news",
+    "www.transformernews.ai", "epochai.substack.com",
+    # economics / policy / housing
+    "www.noahpinion.blog", "www.slowboring.com", "www.construction-physics.com",
+    "www.derekthompson.org", "www.economicforces.xyz", "briefingday.substack.com",
+    "www.city-journal.org", "kevindrum.substack.com", "kyla.substack.com",
+    "kareemcarr.substack.com", "kaushikcbasu.substack.com",
+    # science / medicine / meta
+    "erictopol.substack.com", "www.programmablemutter.com", "nadia.xyz",
+    "www.natesilver.net", "www.slowboring.com", "statmodeling.substack.com",
+    "experimentalhistory.substack.com", "www.overcomingbias.com",
+    "cremieux.xyz", "www.richardhanania.com", "arnoldkling.substack.com",
+    "marginalrevolution.substack.com", "goodreason.substack.com",
+    "www.thediff.co", "quantian.substack.com", "www.samstack.io",
 ]
 WORDPRESS = [("https://slatestarcodex.com", "Slate Star Codex")]
 

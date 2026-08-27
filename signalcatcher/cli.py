@@ -34,6 +34,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--effort", default="high")
     p.add_argument("--json", default=None, help="also write the full report here")
 
+    p = sub.add_parser("validate", help="run the full control harness on a source")
+    p.add_argument("source")
+    p.add_argument("--docs", type=int, default=2)
+    p.add_argument("--claims", type=int, default=4)
+    p.add_argument("--decoy", default=None)
+    p.add_argument("--json", default=None)
+
     args = ap.parse_args(argv)
     store = Store(args.db)
 
@@ -49,6 +56,35 @@ def main(argv: list[str] | None = None) -> int:
         mod = substack if args.kind == "substack" else wordpress
         r = mod.ingest(store, args.target, max_posts=args.max_posts)
         print(r)
+        return 0
+
+    if args.cmd == "validate":
+        from .validate.controls import judge_agreement_control
+        cfg = Config()
+        llm = LLM(store=store, effort=cfg.effort)
+        embedder = Embedder(store, backend=cfg.embed_backend)
+        rep = score_source(
+            store, llm, args.source, cfg=cfg, n_docs=args.docs,
+            max_claims_per_doc=args.claims, embedder=embedder,
+            run_controls=True, decoy_source_name=args.decoy,
+            progress=lambda m: print(m, flush=True),
+        )
+        # Judge agreement needs a second LLM at a different setting, so it runs
+        # here rather than inside the scoring pass.
+        src = store.find_source(args.source)
+        pairs = [(c, d.published_at)
+                 for d in store.documents_for_source(src.id, limit=50)
+                 for c in sorted(store.get_claims(d.id), key=lambda c: -c.salience)[:3]][:5]
+        if pairs:
+            print("running controls: judge_agreement ...", flush=True)
+            rep.controls.append(judge_agreement_control(
+                store, pairs, cfg, make_llm=lambda e: LLM(store=store, effort=e),
+                embedder=embedder, source_id=src.id, run_id=rep.run_id))
+        render(rep, sys.stdout)
+        if args.json:
+            with open(args.json, "w") as fh:
+                fh.write(to_json(rep))
+            print(f"\nfull report written to {args.json}")
         return 0
 
     if args.cmd == "score":
