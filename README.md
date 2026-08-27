@@ -171,3 +171,44 @@ readers' words rather than the author's.
   contested, retracted?) has a place in the schema and no scorer.
 - **A gold set.** Known-original and known-derivative pieces, with datable first
   use, to calibrate the metric against cases whose answers are already known.
+
+## Value to a model (`ablate`)
+
+Two questions, measured separately:
+
+- **Inference-time value** — does putting this source in the context window make
+  the model answer better than it otherwise would?
+- **Training-set value (proxy)** — does the model already know this unaided? For
+  a claim that *originated* with this source, a correct closed-book answer is
+  evidence the contribution is already priced into the weights.
+
+The measurement only means anything because of the third condition. Comparing
+"with the source" against "with nothing" mostly measures whether context helps,
+which it always does. So every question is also asked with a **decoy** context:
+the same amount of topically matched material from the same period, by other
+writers.
+
+```
+inference_value = score(with source) - max(score(closed book), score(decoy))
+```
+
+When the corpus has no contemporaneous material to build a decoy from, the decoy
+condition **did not run** and is reported as `n/a`, never as 0.0 — averaging an
+unavailable control in as zero silently inflates the source's apparent value.
+
+Measured on the current corpus:
+
+| Source | closed book | + decoy | + source | inference value | already in weights |
+|---|---|---|---|---|---|
+| Brian Potter (Construction Physics) | 0.542 | n/a | 0.983 | **+0.442** | 33% |
+| Scott Alexander (ACX) | 0.895 | 0.795 | 0.875 | **−0.050** | **100%** |
+
+The contrast is the point. The model already knows essentially all of ACX, so
+adding it to context buys nothing — its value was realised at training time.
+Niche construction reporting still carries substantial inference-time value.
+Those are different assets, and a benchmark that reported one number would hide
+the distinction that matters most to both a publisher and a data buyer.
+
+Caveat worth stating plainly: two ACX claims scored *negative* value, meaning the
+supplied excerpt made the answer worse than no context. That is an
+excerpt-selection failure, not a property of the source.

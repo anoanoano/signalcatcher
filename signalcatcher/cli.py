@@ -41,6 +41,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--decoy", default=None)
     p.add_argument("--json", default=None)
 
+    p = sub.add_parser("ablate", help="measure a source's value to a model")
+    p.add_argument("source")
+    p.add_argument("--docs", type=int, default=2)
+    p.add_argument("--claims", type=int, default=3)
+    p.add_argument("--json", default=None)
+
     args = ap.parse_args(argv)
     store = Store(args.db)
 
@@ -56,6 +62,40 @@ def main(argv: list[str] | None = None) -> int:
         mod = substack if args.kind == "substack" else wordpress
         r = mod.ingest(store, args.target, max_posts=args.max_posts)
         print(r)
+        return 0
+
+    if args.cmd == "ablate":
+        import json as _json
+        from .score.ablation import ablate_source
+        cfg = Config()
+        llm = LLM(store=store, effort=cfg.effort)
+        embedder = Embedder(store, backend=cfg.embed_backend)
+        res = ablate_source(store, llm, args.source, cfg, embedder=embedder,
+                            n_docs=args.docs, claims_per_doc=args.claims,
+                            progress=lambda m: print(m, flush=True))
+        d = res.to_dict()
+        print(f"\n{'='*70}\nVALUE TO A MODEL  |  {d['source']}\n{'='*70}")
+        print(f"  closed book       {d['mean_closed_book']:.3f}   model unaided")
+        decoy = d['mean_with_decoy']
+        print(f"  + decoy context   {'n/a  ' if decoy is None else f'{decoy:.3f}'}"
+              f"   contemporaries on the same topic")
+        print(f"  + THIS source     {d['mean_with_source']:.3f}")
+        print(f"  {'-'*40}")
+        print(f"  inference value   {d['mean_inference_value']:+.3f}   "
+              f"excess over the best alternative context")
+        print(f"  internalised      {d['internalised_rate']:.3f}   "
+              f"share already answerable from the weights alone")
+        print(f"  decoy-controlled  {d['n_decoy_controlled']}/{d['n_claims']} claims")
+        if d.get("decoy_caveat"):
+            print(f"\n  CAVEAT: {d['decoy_caveat']}")
+        if d['internalised_rate'] > 0.8:
+            print("\n  Note: nearly every claim is already answerable closed-book.")
+            print("  This source's contribution appears to be priced into the model")
+            print("  already -- high past training value, little marginal value now.")
+        if args.json:
+            with open(args.json, "w") as fh:
+                _json.dump(d, fh, indent=2)
+            print(f"\nfull report written to {args.json}")
         return 0
 
     if args.cmd == "validate":
