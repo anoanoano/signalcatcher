@@ -1,0 +1,122 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6104.53it/s]
+
+=== UNIT new-axis: Sizing up the New Axis (2024-08-31) ===
+  canvassed 5 of 32 claims (kinds: ['frame', 'thesis', 'fact', 'prediction', 'frame'])
+  [1/5] frame: The combination of Russia and China constitutes a de facto anti-U.S. b
+    3 queries -> 148 candidate articles
+    fetched 101, collapsed 23 syndicated, added 45
+    anchor moved back 761d to 2022-08-01 (3 earlier statements by the author)
+      S=0.9919 A=0.2414 V=1.0 PV=0.2395  [426s]
+  [2/5] thesis: China and Russia together represent an economic competitor unlike any 
+    3 queries -> 194 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 130, collapsed 19 syndicated, added 103
+    anchor moved back 761d to 2022-08-01 (1 earlier statements by the author)
+      S=0.9985 A=0.078 V=0.557 PV=0.0606  [996s]
+  [3/5] fact: In manufacturing output, the U.S.-led bloc only barely out-produces Ch
+    3 queries -> 142 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 96, collapsed 16 syndicated, added 73
+    anchor moved back 761d to 2022-08-01 (2 earlier statements by the author)
+      S=0.9988 A=0.0437 V=1.0 PV=0.0437  [1418s]
+  [4/5] prediction: The U.S. and its allies produce most of the world's semiconductors and
+    3 queries -> 183 candidate articles
+    fetched 130, collapsed 27 syndicated, added 97
+    anchor moved back 761d to 2022-08-01 (1 earlier statements by the author)
+      S=0.9988 A=0.1552 V=0.0581 PV=0.082  [1835s]
+  [5/5] frame: Preparing for great-power conflict requires far more than defense spen
+    3 queries -> 147 candidate articles
+    fetched 97, collapsed 26 syndicated, added 68
+    anchor moved back 761d to 2022-08-01 (2 earlier statements by the author)
+      S=0.9795 A=0.1675 V=1.0 PV=0.1641  [2324s]
+
+=== UNIT gpt4-expectations: What to Expect When You’re Expecting … GPT-5 (2025-07-27) ===
+  extracted 33 claims
+  canvassed 5 of 33 claims (kinds: ['prediction', 'thesis', 'frame', 'fact', 'prediction'])
+  [1/5] prediction: GPT-5 by itself will not be an artificial general intelligence capable
+    3 queries -> 190 candidate articles
+    fetched 138, collapsed 13 syndicated, added 124
+    anchor moved back 945d to 2022-12-25 (1 earlier statements by the author)
+      S=0.9865 A=0.161 V=0.8288 PV=0.1452  [3010s]
+  [2/5] thesis: Scaling alone — building ever bigger models until they absorb the enti
+    3 queries -> 72 candidate articles
+    fetched 39, collapsed 0 syndicated, added 37
+    anchor moved back 945d to 2022-12-25 (1 earlier statements by the author)
+      S=0.9656 A=0.1241 V=0.7217 PV=0.1032  [3628s]
+  [3/5] frame: Large language models such as GPT-5 are best characterised as turbocha
+    3 queries -> 63 candidate articles
+    fetched 44, collapsed 8 syndicated, added 33
+    anchor moved back 945d to 2022-12-25 (1 earlier statements by the author)
+      S=0.9545 A=0.052 V=0.1373 PV=0.0282  [4056s]
+  [4/5] fact: Virtually the entire text of the July 2025 essay 'What to Expect When 
+    3 queries -> 3 candidate articles
+    fetched 1, collapsed 0 syndicated, added 1
+      S=0.9882 A=-0.0052 V=1.0 PV=0.0  [4459s]
+  [5/5] prediction: Genuinely new AI architectures that incorporate explicit knowledge and
+    3 queries -> 75 candidate articles
+    fetched 64, collapsed 26 syndicated, added 36
+      S=0.9745 A=0.048 V=1.0 PV=0.0468  [4705s]
+
+=== UNIT svb-run: Why was there a run on Silicon Valley Bank? (2023-03-11) ===
+  extracted 36 claims
+  canvassed 5 of 36 claims (kinds: ['prediction', 'fact', 'thesis', 'frame', 'prediction'])
+  [1/5] prediction: Uninsured depositors at Silicon Valley Bank are likely to be made whol
+    3 queries -> 153 candidate articles
+    fetched 69, collapsed 12 syndicated, added 57
+python(97407) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+      S=0.9842 A=0.3022 V=1.0 PV=0.2974  [5229s]
+  [2/5] fact: Silicon Valley Bank collapsed on March 9, 2023 after depositors withdr
+python(97451) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+    3 queries -> 193 candidate articles
+    fetched 95, collapsed 12 syndicated, added 75
+python(97771) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(97793) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(97850) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(97893) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(97932) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(97969) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98010) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+      S=0.874 A=0.436 V=1.0 PV=0.3811  [5757s]
+  [3/5] thesis: The failure of Silicon Valley Bank was a classic textbook bank run of 
+python(98043) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+    3 queries -> 171 candidate articles
+    fetched 98, collapsed 29 syndicated, added 30
+python(98501) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98527) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98557) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98618) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98660) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98720) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(98762) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+      S=0.962 A=0.353 V=1.0 PV=0.3396  [6556s]
+  [4/5] frame: Silicon Valley Bank's collapse is one more stage in the slow deflation
+python(98795) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+    3 queries -> 212 candidate articles
+    fetched 128, collapsed 19 syndicated, added 65
+python(99411) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99435) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99509) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99540) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99580) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99636) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(99686) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+      S=0.9171 A=0.0245 V=1.0 PV=0.0225  [7458s]
+  [5/5] prediction: Contagion from Silicon Valley Bank would most likely take the form of 
+python(99723) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+    3 queries -> 164 candidate articles
+    fetched 99, collapsed 15 syndicated, added 70
+python(598) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(640) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(683) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(735) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(801) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(866) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(918) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(970) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(1002) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+      S=0.9535 A=0.195 V=0.7866 PV=0.1661  [8550s]
+
+DONE in 142 min. stats: {'calls': 124, 'cache_hits': 4, 'input_tokens': 248, 'output_tokens': 213791, 'est_cost_usd': 5.346}

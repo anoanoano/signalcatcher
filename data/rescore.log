@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5554.30it/s]
+  new-axis frame      PV=0.2902 trail=11 [159s]
+  new-axis thesis     PV=0.0383 trail=12 [315s]
+  new-axis fact       PV=0.0342 trail=4 [376s]
+  new-axis prediction PV=0.0391 trail=6 [483s]
+  new-axis frame      PV=0.1641 trail=18 [509s]
+  gpt5-expectations prediction PV=0.1452 trail=16 [509s]
+  gpt5-expectations thesis     PV=0.1148 trail=27 [528s]
+  gpt5-expectations frame      PV=0.0302 trail=18 [545s]
+  gpt5-expectations fact       PV=0.0 trail=1 [545s]
+  gpt5-expectations prediction PV=0.0468 trail=10 [545s]
+  svb-run prediction PV=0.3507 trail=17 [692s]
+  svb-run fact       PV=0.4688 trail=27 [826s]
+  svb-run thesis     PV=0.2932 trail=19 [947s]
+  svb-run frame      PV=0.0325 trail=14 [1048s]
+  svb-run prediction PV=0.1673 trail=12 [1070s]
+done 1070s cache_hits=74/112

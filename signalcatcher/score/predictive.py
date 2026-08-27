@@ -73,10 +73,13 @@ class JudgedWindow:
         return f"t{self.start_days:+d}..{self.end_days:+d}d"
 
     def to_dict(self) -> dict:
+        # `examples` is the adoption trail -- the whole point of the readout is
+        # that a reader can see WHERE a claim resurfaced; dropping it here left
+        # the report with numbers and no receipts.
         return {"window": self.label, "topical": self.n_topical,
                 "judged": self.n_judged, "expression": round(self.expression, 4),
                 "support": round(self.support, 3), "refute": round(self.refute, 3),
-                "reliable": self.reliable}
+                "reliable": self.reliable, "examples": self.examples}
 
 
 @dataclass
@@ -142,8 +145,15 @@ def _topical_candidates(store, embedder, claim, t_start, t_end,
 def score_predictive(
     store, llm: LLM, claim: Claim, doc: Document, cfg: Config | None = None,
     embedder=None, run_id: str = "", persist: bool = True, progress=None,
+    pre_windows=None, post_windows=None,
 ) -> PredictiveResult:
+    """`pre_windows`/`post_windows` override the default horizons. A claim about
+    a breaking event needs month-scale windows -- its value is being right in
+    week two, not year three -- while a thesis claim needs years. One window set
+    per unit, fixed across its claims, so scores stay comparable within a unit."""
     say = progress or (lambda m: None)
+    pre_w = tuple(pre_windows) if pre_windows else PRE_WINDOWS
+    post_w = tuple(post_windows) if post_windows else POST_WINDOWS
     src_id = doc.source_id
 
     # ---- Stage 0: anchor at true first use ---------------------------------
@@ -155,7 +165,7 @@ def score_predictive(
 
     # ---- pre-t1: the baseline, judged with the prior-art adjudicator -------
     pre: list[JudgedWindow] = []
-    for a, b in PRE_WINDOWS:
+    for a, b in pre_w:
         docs, n_top = _topical_candidates(
             store, embedder, claim, t1 + timedelta(days=a), t1 + timedelta(days=b), src_id)
         if not docs:
@@ -174,7 +184,7 @@ def score_predictive(
     # ---- post-t1: adoption and sign, judged with the anticipation taxonomy --
     post: list[JudgedWindow] = []
     all_judged: list[dict] = []
-    for a, b in POST_WINDOWS:
+    for a, b in post_w:
         docs, n_top = _topical_candidates(
             store, embedder, claim, t1 + timedelta(days=a), t1 + timedelta(days=b), src_id)
         if not docs:
@@ -191,10 +201,15 @@ def score_predictive(
             a, b, n_top, len(judged),
             float(np.mean(pos)) if pos else 0.0,
             float(np.sum(pos)), float(np.sum(neg)),
-            examples=[{"title": j["doc"].title[:70],
+            examples=[{"title": j["doc"].title[:90],
                        "date": j["doc"].published_at.date().isoformat(),
-                       "relation": j["relation"], "quote": j["quote"][:160]}
-                      for j in judged if j["weight"] != 0.0][:3],
+                       "source": (lambda sr: sr.name if sr else "")(
+                           store.get_source(j["doc"].source_id)),
+                       "url": j["doc"].url,
+                       "relation": j["relation"],
+                       "confidence": round(j["confidence"], 2),
+                       "quote": j["quote"][:280]}
+                      for j in judged if j["weight"] != 0.0],
         ))
 
     # ---- combine ------------------------------------------------------------
