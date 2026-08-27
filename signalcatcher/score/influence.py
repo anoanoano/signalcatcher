@@ -32,6 +32,7 @@ from typing import Sequence
 
 from ..config import Config
 from ..index.retrieve import Candidate, expand_queries, retrieve
+from ..ingest.dedup import cluster_documents
 from ..llm import LLM
 from ..models import Claim, Direction, Evidence, Relation
 from .adjudicate import adjudicate
@@ -70,6 +71,7 @@ class InfluenceResult:
     total_uptake_sources: int
     attribution_rate: float
     fingerprint_spread: int
+    syndicated_collapsed: int = 0
     evidence: list[Evidence] = field(default_factory=list)
 
     def detail(self) -> dict:
@@ -79,6 +81,7 @@ class InfluenceResult:
             "total_uptake_sources": self.total_uptake_sources,
             "attribution_rate": round(self.attribution_rate, 3),
             "fingerprint_spread": self.fingerprint_spread,
+            "syndicated_copies_collapsed": self.syndicated_collapsed,
             "windows": [w.to_dict() for w in self.windows],
             "first_follower": None if ff is None else {
                 "url": ff.url, "title": ff.title,
@@ -138,6 +141,27 @@ def score_influence(
     uptake = [e for e in evidence if e.relation in UPTAKE_RELATIONS and e.confidence >= 0.5]
     topical = [e for e in evidence if e.relation is Relation.TOPICAL]
 
+    # Collapse syndication before counting anything. A wire story running in
+    # twenty outlets is one source picking a claim up, not twenty, and without
+    # this the whole influence score measures syndication reach.
+    ev_docs = [store.get_document(e.doc_id) for e in evidence if e.doc_id]
+    ev_docs = [d for d in ev_docs if d is not None]
+    canonical_of, syn_clusters = cluster_documents(ev_docs)
+    n_syndicated = sum(c.size - 1 for c in syn_clusters)
+
+    def distinct_sources(items) -> int:
+        """Distinct sources, counting each syndication cluster once."""
+        seen_canon: set[str] = set()
+        srcs: set[str] = set()
+        for e in items:
+            canon = canonical_of.get(e.doc_id or "", e.doc_id)
+            if canon in seen_canon:
+                continue
+            seen_canon.add(canon)
+            if e.source_id:
+                srcs.add(e.source_id)
+        return len(srcs)
+
     windows: list[WindowStats] = []
     for days in cfg.windows_days:
         end = claim_date + timedelta(days=days)
@@ -151,7 +175,7 @@ def score_influence(
         lift = n_up_docs / (n_up_docs + n_top + 2.0) if (n_up_docs or n_top) else 0.0
         windows.append(WindowStats(
             days=days,
-            uptake_sources=len({e.source_id for e in w_up if e.source_id}),
+            uptake_sources=distinct_sources(w_up),
             uptake_docs=n_up_docs,
             strong_docs=sum(1 for e in w_up if e.relation in STRONG_UPTAKE),
             topical_docs=n_top,
@@ -162,7 +186,7 @@ def score_influence(
 
     first = min(uptake, key=lambda e: e.published_at, default=None)
     lead = (first.published_at - claim_date).days if first else None
-    total_sources = len({e.source_id for e in uptake if e.source_id})
+    total_sources = distinct_sources(uptake)
     attributed = sum(1 for e in uptake if e.attributes_source)
     attribution_rate = attributed / len(uptake) if uptake else 0.0
     fp_spread = len({e.doc_id for e in uptake if e.fingerprint_hits})
@@ -173,12 +197,13 @@ def score_influence(
         claim_id=claim.id, score=round(score, 4), lead_time_days=lead,
         first_follower=first, windows=windows, total_uptake_sources=total_sources,
         attribution_rate=attribution_rate, fingerprint_spread=fp_spread,
-        evidence=evidence,
+        syndicated_collapsed=n_syndicated, evidence=evidence,
     )
     if persist and run_id:
         detail = result.detail()
         detail["window_pool_sizes"] = pools
         detail["retrievers"] = retrievers
+        detail["syndicated_copies_collapsed"] = n_syndicated
         store.put_score(run_id, "claim", claim.id, "influence", result.score,
                         None, None, detail)
     return result
