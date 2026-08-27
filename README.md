@@ -159,11 +159,56 @@ megabytes of code:
 
 ```bash
 export SIGNALCATCHER_DATA=/Volumes/YourDrive/signalcatcher
-# or per-command:
-signalcatcher --data-dir /Volumes/YourDrive/signalcatcher corpus
+signalcatcher --data-dir /Volumes/YourDrive/signalcatcher corpus   # or per-command
 ```
 
 Resolution order is `--data-dir` → `$SIGNALCATCHER_DATA` → `./data`.
+
+### How much corpus is actually needed
+
+Measured, not guessed. Coverage saturates logarithmically — the `target_pool`
+constant is 20,000 prior documents, and beyond it extra documents buy nothing:
+
+| prior-art pool | coverage | db size |
+|---|---|---|
+| 2,500 | 0.79 | 0.06 GB |
+| 6,599 | 0.89 | 0.16 GB |
+| 12,500 | 0.95 | 0.31 GB |
+| 20,000 | **1.00** | 0.49 GB |
+| 100,000 | 1.00 | 2.44 GB |
+
+Only about half a corpus precedes any given claim, so **~40,000 documents ≈ 1 GB
+reaches saturated coverage**. At ~24 KB/document, 1 GB is roughly 44,000 docs.
+
+The catch, and it is the whole catch: this assumes the corpus is *topically
+relevant*. The `topical` term dominates the coverage formula, and 40,000
+unrelated pages contribute nothing to it. A subsampling experiment
+(`scripts/scaling_experiment.py`) makes the point — cutting the corpus 16× barely
+moved best-match similarity (0.666 → 0.588) but collapsed coverage (0.89 → 0.39),
+because what thinned out was the *neighbourhood*, not the raw count.
+
+**So: build one focused ~1 GB corpus per investigation, not one giant one.**
+
+### Cold storage (`snapshot` / `restore`)
+
+A live corpus does not belong on a cloud drive. Google Drive for Desktop caches
+every file locally before syncing — measured: writing 200 MB to Drive consumed
+200 MB of local disk — so a database you are actively writing costs the same
+local space *plus* re-uploading a changing binary on every write.
+
+Archives are a different story. A corpus compresses to ~41% and, once
+snapshotted, never changes. So keep one corpus live and park the rest:
+
+```bash
+signalcatcher snapshot ai-commentary-2018-2026   # -> Google Drive, 194M -> 79M
+signalcatcher snapshots                          # list what is archived
+signalcatcher restore housing-2015-2025 --force  # page a different one in
+```
+
+Google Drive is auto-detected; `--to` / `--at` override it. Snapshots use
+`VACUUM INTO`, so they are consistent even while a build is running, and they
+preserve claims, judgements and the LLM cache — restoring gets you back the
+expensive work, not just the text.
 
 Note that `.venv` is a further ~870 MB, about 500 MB of which is PyTorch, pulled
 in by the local embedding model. Dropping `sentence-transformers` reclaims that

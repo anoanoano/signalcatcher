@@ -46,6 +46,18 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--decoy", default=None)
     p.add_argument("--json", default=None)
 
+    p = sub.add_parser("snapshot", help="archive the corpus to cloud/cold storage")
+    p.add_argument("name")
+    p.add_argument("--to", default=None, help="archive dir (default: Google Drive)")
+
+    p = sub.add_parser("snapshots", help="list archived corpora")
+    p.add_argument("--at", default=None)
+
+    p = sub.add_parser("restore", help="page an archived corpus back to local disk")
+    p.add_argument("name")
+    p.add_argument("--at", default=None)
+    p.add_argument("--force", action="store_true", help="overwrite the local corpus")
+
     p = sub.add_parser("purge-cache", help="free the HTTP cache (never loses corpus data)")
     p.add_argument("--all", action="store_true", help="empty it entirely, not just down to the cap")
 
@@ -58,7 +70,13 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     if args.data_dir:
         os.environ["SIGNALCATCHER_DATA"] = str(Path(args.data_dir).expanduser())
-    store = Store(args.db)
+
+    # Constructing a Store CREATES the database file. Commands that manage
+    # corpus files rather than read them must not trigger that: an eagerly
+    # created empty corpus.db made `restore` refuse to unpack into a fresh
+    # location, because it correctly saw a file already sitting there.
+    needs_store = args.cmd not in ("snapshot", "snapshots", "restore", "purge-cache")
+    store = Store(args.db) if needs_store else None
 
     if args.cmd == "corpus":
         from .paths import data_root, human, usage
@@ -69,6 +87,38 @@ def main(argv: list[str] | None = None) -> int:
         u = usage()
         print(f"\ndisk at {data_root()}:  db {human(u['db'])} + "
               f"cache {human(u['cache'])} = {human(u['total'])}")
+        return 0
+
+    if args.cmd in ("snapshot", "snapshots", "restore"):
+        from .archive import default_archive_dir, list_snapshots, restore, snapshot
+        from .paths import human
+        if args.cmd == "snapshot":
+            e = snapshot(args.name, args.to, args.db,
+                         progress=lambda m: print(m, flush=True))
+            ratio = 100 * e["packed_bytes"] / max(e["raw_bytes"], 1)
+            print(f"\narchived '{e['name']}': {e['documents']:,} docs / "
+                  f"{e['sources']} sources, {e['span'][0]} .. {e['span'][1]}")
+            print(f"  {human(e['raw_bytes'])} -> {human(e['packed_bytes'])} "
+                  f"({ratio:.0f}%)")
+            print("  local corpus is untouched; delete it with rm once synced "
+                  "if you need the space")
+            return 0
+        if args.cmd == "snapshots":
+            d = args.at or default_archive_dir()
+            snaps = list_snapshots(args.at)
+            print(f"archive: {d}")
+            if not snaps:
+                print("  (none)")
+                return 0
+            for sn in snaps:
+                span = sn.get("span", [None, None])
+                print(f"  {sn['name']:24} {human(sn.get('packed_bytes',0)):>8}  "
+                      f"{sn.get('documents','?'):>7} docs  "
+                      f"{span[0] or '?'} .. {span[1] or '?'}")
+            return 0
+        target = restore(args.name, args.at, args.db, force=args.force,
+                         progress=lambda m: print(m, flush=True))
+        print(f"restored to {target} ({human(target.stat().st_size)})")
         return 0
 
     if args.cmd == "purge-cache":
