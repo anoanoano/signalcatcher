@@ -40,7 +40,10 @@ CREATE TABLE IF NOT EXISTS sources (
 );
 
 CREATE TABLE IF NOT EXISTS documents (
-    id TEXT PRIMARY KEY,
+    -- Explicit INTEGER PRIMARY KEY: the FTS index is external-content and needs
+    -- a stable rowid to point at.
+    rid INTEGER PRIMARY KEY,
+    id TEXT NOT NULL UNIQUE,
     source_id TEXT NOT NULL REFERENCES sources(id),
     url TEXT NOT NULL UNIQUE,
     title TEXT NOT NULL,
@@ -57,16 +60,18 @@ CREATE TABLE IF NOT EXISTS documents (
 );
 CREATE INDEX IF NOT EXISTS idx_docs_ts ON documents(published_ts);
 CREATE INDEX IF NOT EXISTS idx_docs_source ON documents(source_id, published_ts);
+CREATE INDEX IF NOT EXISTS idx_docs_id ON documents(id);
 
--- Contentless-adjacent FTS mirror. `published_ts` is duplicated in here as an
--- UNINDEXED column so the date cutoff can be applied inside the FTS scan
--- instead of by post-filtering a truncated top-k, which would silently drop
--- older matches and inflate novelty.
+-- External-content FTS: the index tokenises `documents` in place rather than
+-- storing its own copy of every article. A standard FTS5 table duplicates the
+-- full text, which on a real corpus was 115 MB of the 298 MB database for no
+-- benefit. Rows must be kept in sync explicitly (see upsert_document) since
+-- external-content tables do not track their content table automatically.
 CREATE VIRTUAL TABLE IF NOT EXISTS documents_fts USING fts5(
-    doc_id UNINDEXED,
-    published_ts UNINDEXED,
     title,
     text,
+    content='documents',
+    content_rowid='rid',
     tokenize = "porter unicode61"
 );
 
@@ -221,9 +226,11 @@ class Store:
             )
             added = cur.rowcount > 0
             if added:
+                # External-content FTS is not auto-maintained; the index row must
+                # be written with the same rowid as the document it describes.
                 c.execute(
-                    "INSERT INTO documents_fts (doc_id, published_ts, title, text) VALUES (?,?,?,?)",
-                    (d.id, _ts(d.published_at), d.title, d.text),
+                    "INSERT INTO documents_fts (rowid, title, text) VALUES (?,?,?)",
+                    (cur.lastrowid, d.title, d.text),
                 )
         return added
 
@@ -377,14 +384,14 @@ class Store:
         where = ["documents_fts MATCH ?"]
         params: list[Any] = [match]
         if before is not None:
-            where.append("f.published_ts < ?")
+            where.append("d.published_ts < ?")
             params.append(_ts(before))
         if after is not None:
-            where.append("f.published_ts > ?")
+            where.append("d.published_ts > ?")
             params.append(_ts(after))
         excl = list(exclude_docs)
         if excl:
-            where.append(f"f.doc_id NOT IN ({','.join('?' * len(excl))})")
+            where.append(f"d.id NOT IN ({','.join('?' * len(excl))})")
             params.extend(excl)
         if exclude_source:
             where.append("d.source_id != ?")
@@ -392,7 +399,7 @@ class Store:
         params.append(limit)
         sql = (
             "SELECT d.*, bm25(documents_fts) AS score FROM documents_fts f "
-            "JOIN documents d ON d.id = f.doc_id WHERE " + " AND ".join(where) +
+            "JOIN documents d ON d.rid = f.rowid WHERE " + " AND ".join(where) +
             " ORDER BY score LIMIT ?"
         )
         try:
@@ -423,21 +430,21 @@ class Store:
         where = ["documents_fts MATCH ?"]
         params: list[Any] = [match]
         if before is not None:
-            where.append("f.published_ts < ?")
+            where.append("d.published_ts < ?")
             params.append(_ts(before))
         if after is not None:
-            where.append("f.published_ts > ?")
+            where.append("d.published_ts > ?")
             params.append(_ts(after))
         excl = list(exclude_docs)
         if excl:
-            where.append(f"f.doc_id NOT IN ({','.join('?' * len(excl))})")
+            where.append(f"d.id NOT IN ({','.join('?' * len(excl))})")
             params.extend(excl)
         if exclude_source:
             where.append("d.source_id != ?")
             params.append(exclude_source)
         params.append(limit)
         sql = ("SELECT d.*, bm25(documents_fts) AS score FROM documents_fts f "
-               "JOIN documents d ON d.id = f.doc_id WHERE " + " AND ".join(where) +
+               "JOIN documents d ON d.rid = f.rowid WHERE " + " AND ".join(where) +
                " ORDER BY score LIMIT ?")
         try:
             rows = self.conn.execute(sql, params).fetchall()
