@@ -118,11 +118,30 @@ def _r(x):
 
 
 def _topical_candidates(store, embedder, claim, t_start, t_end,
-                        exclude_source) -> tuple[list[Document], int]:
-    """Top-K docs by similarity within a window; also the neighbourhood size."""
+                        exclude_source) -> tuple[list[Document], list[Document], int]:
+    """One window's candidates, in two samples with different jobs.
+
+    RATE sample: drawn uniformly at random (seeded, so runs reproduce) from the
+    topical neighbourhood. The expression rate must be comparable across windows,
+    and a top-K-by-similarity sample is not: top-10 of 1,187 documents is a far
+    more extreme selection than top-10 of 20, which inflated dense windows in the
+    first pilot. A uniform sample estimates the same quantity everywhere.
+
+    TRAIL sample: top-K by similarity. Its job is recall -- surfacing the
+    documents most likely to express or contradict the claim, for the evidence
+    trail and the vindication balance -- and for that, biased selection is
+    exactly what is wanted.
+
+    Both are drawn after collapsing wire syndication: three copies of one AP
+    story would otherwise spend three judging slots and count as three
+    expressions of the claim.
+    """
+    import random as _random
+    from ..ingest.dedup import cluster_documents
+
     qv = embedder.embed_one(claim.text, cache_key=f"claim:{claim.id}")
     if qv is None:
-        return [], 0
+        return [], [], 0
     where = "d.published_ts >= ? AND d.published_ts < ?"
     params: list = [int(t_start.timestamp()), int(t_end.timestamp())]
     if exclude_source:
@@ -133,13 +152,26 @@ def _topical_candidates(store, embedder, claim, t_start, t_end,
         f"JOIN documents d ON ('doc:' || d.id) = e.key WHERE {where}", params,
     ).fetchall()
     if not rows:
-        return [], 0
+        return [], [], 0
     sims = np.vstack([embedder._unpack(r["vec"], r["dim"]) for r in rows]) @ qv
     above = [(float(sims[i]), rows[i]["id"]) for i in range(len(rows))
              if sims[i] >= TOPICAL_FLOOR]
+    if not above:
+        return [], [], 0
     above.sort(reverse=True)
-    docs = [d for d in (store.get_document(doc_id) for _, doc_id in above[:K_PER_WINDOW]) if d]
-    return docs, len(above)
+    # Load enough documents to dedupe: the whole neighbourhood when small, the
+    # top slice when large (dupes cluster at the top -- they are near-identical,
+    # so they land at near-identical similarity).
+    pool_ids = [doc_id for _, doc_id in above[: max(4 * K_PER_WINDOW, 60)]]
+    pool = [d for d in (store.get_document(i) for i in pool_ids) if d]
+    mapping, _clusters = cluster_documents(pool)
+    canon = [d for d in pool if mapping.get(d.id, d.id) == d.id]
+    n_topical = len(above) - (len(pool) - len(canon))  # neighbourhood net of dupes
+
+    trail = canon[:K_PER_WINDOW]
+    rng = _random.Random(claim.id + str(int(t_start.timestamp())))
+    rate = canon if len(canon) <= K_PER_WINDOW else rng.sample(canon, K_PER_WINDOW)
+    return rate, trail, max(n_topical, len(canon))
 
 
 def score_predictive(
@@ -166,7 +198,7 @@ def score_predictive(
     # ---- pre-t1: the baseline, judged with the prior-art adjudicator -------
     pre: list[JudgedWindow] = []
     for a, b in pre_w:
-        docs, n_top = _topical_candidates(
+        docs, _trail, n_top = _topical_candidates(
             store, embedder, claim, t1 + timedelta(days=a), t1 + timedelta(days=b), src_id)
         if not docs:
             pre.append(JudgedWindow(a, b, n_top, 0, 0.0, 0.0, 0.0))
@@ -185,8 +217,12 @@ def score_predictive(
     post: list[JudgedWindow] = []
     all_judged: list[dict] = []
     for a, b in post_w:
-        docs, n_top = _topical_candidates(
+        rate_docs, trail_docs, n_top = _topical_candidates(
             store, embedder, claim, t1 + timedelta(days=a), t1 + timedelta(days=b), src_id)
+        union = {d.id: d for d in rate_docs}
+        for d in trail_docs:
+            union.setdefault(d.id, d)
+        docs = list(union.values())
         if not docs:
             post.append(JudgedWindow(a, b, n_top, 0, 0.0, 0.0, 0.0))
             continue
@@ -194,13 +230,18 @@ def score_predictive(
         all_judged.extend(judged)
         if persist and judged and run_id:
             store.add_evidence([j["evidence"] for j in judged], run_id)
-        pos = [max(0.0, j["weight"]) * j["confidence"] for j in judged]
+        rate_ids = {d.id for d in rate_docs}
+        rate_judged = [j for j in judged if j["doc"].id in rate_ids]
+        # Expression rate comes from the unbiased sample alone; support/refute
+        # (vindication) from everything judged, where recall matters instead.
+        pos = [max(0.0, j["weight"]) * j["confidence"] for j in rate_judged]
         neg = [abs(j["weight"]) * j["confidence"] for j in judged
                if j["relation"] == "contradicts"]
         post.append(JudgedWindow(
-            a, b, n_top, len(judged),
+            a, b, n_top, len(rate_judged),
             float(np.mean(pos)) if pos else 0.0,
-            float(np.sum(pos)), float(np.sum(neg)),
+            float(sum(max(0.0, j["weight"]) * j["confidence"] for j in judged)),
+            float(sum(neg)),
             examples=[{"title": j["doc"].title[:90],
                        "date": j["doc"].published_at.date().isoformat(),
                        "source": (lambda sr: sr.name if sr else "")(

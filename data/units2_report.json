@@ -1,0 +1,4149 @@
+{
+ "run_id": "units2_1787866758",
+ "units": [
+  {
+   "key": "media-rarely-lies",
+   "label": "Recognized-great essay, contested thesis",
+   "source": "Scott Alexander",
+   "title": "The Media Very Rarely Lies",
+   "url": "https://www.astralcodexten.com/p/the-media-very-rarely-lies",
+   "published": "2022-12-22",
+   "horizon": "long",
+   "claims": [
+    {
+     "anchor_date": "2022-12-22",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 147,
+       "judged": 10,
+       "expression": 0.033,
+       "support": 0.33,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 202,
+       "judged": 10,
+       "expression": 0.058,
+       "support": 0.58,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 79,
+       "judged": 10,
+       "expression": 0.0255,
+       "support": 0.867,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Why Paul Ehrlich got everything wrong",
+         "date": "2023-01-06",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-paul-ehrlich-got-everything-wrong",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "in the year 2022, 60 Minutes still had Ehrlich on to offer his thoughts on wildlife loss"
+        },
+        {
+         "title": "The CNET Fake News Fiasco, Autopilot, and the Uncanny Cognitive Valley",
+         "date": "2023-01-31",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/the-cnet-fake-news-fiasco-autopilot",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "they published a bunch of machine-generated articles that turned out to be filled with subtle but important errors, with errors in 41 of the 77 articles the bot wrote, all missed by editors who weren't paying enough attention"
+        },
+        {
+         "title": "t-hacking",
+         "date": "2023-03-02",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/t-hacking",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "All three framings are true but depend on picking different comparison dates to tell the story and leave the audience with different impressions."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 91,
+       "judged": 10,
+       "expression": 0.0913,
+       "support": 1.207,
+       "refute": 0.5,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "San Francisco progressives need to course correct on crime",
+         "date": "2023-04-10",
+         "source": "sfgate.com",
+         "url": "https://www.sfgate.com/politics/article/san-francisco-crime-course-correction-17889166.php",
+         "relation": "entails",
+         "confidence": 0.62,
+         "quote": "There are also systemic media biases toward fear: Conceptions of \u201cnewsworthiness\u201d often mean that journalists can write about each instance of a crime occurring"
+        },
+        {
+         "title": "In which David Sacks and Balaji raise a false alarm about the jobs numbers",
+         "date": "2023-06-05",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/in-which-david-sacks-and-balaji-raise",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Balaji is mistaking normal forecast errors and data revisions for bad data, and suspecting fraud where there is almost certainly none"
+        },
+        {
+         "title": "Inflation Forecast Update",
+         "date": "2023-06-07",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/inflation-forecast-update",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "large media outlets continue to run stories about this \u201cidea that isn\u2019t getting much attention\u201d known as \u201cgreedflation.\u201d One wonders how much glowing media coverage a particular idea needs to get before it can be considered neglected."
+        },
+        {
+         "title": "POWELL: Down the rabbit hole",
+         "date": "2023-04-22",
+         "source": "herald-zeitung.com",
+         "url": "https://herald-zeitung.com/community_alert/powell-down-the-rabbit-hole/article_48d98aa6-e069-11ed-b99c-c3b0aba9bbf7.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.58,
+         "quote": "Positive stories are not highly newsworthy. In the business of journalism, a negative headline is called \u201cclickbait,\u201d a statement intended to lure a reader, that appeals to emotions, not reason."
+        },
+        {
+         "title": "How Fox News Promoted Hoax About Homeless Veterans To Smear Asylum Seekers",
+         "date": "2023-05-28",
+         "source": "nationalmemo.com",
+         "url": "https://www.nationalmemo.com/fox-news-disinformation",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "Fox News for claiming it had \u201cconfirmed\u201d the false story, in the context of its recent $787.5 million defamation settlement in the Dominion case"
+        },
+        {
+         "title": "Trust Week: First draft of history sometimes needs a correction",
+         "date": "2023-04-07",
+         "source": "thedickinsonpress.com",
+         "url": "https://www.thedickinsonpress.com/opinion/columns/trust-week-first-draft-of-history-sometimes-needs-a-correction",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "something we\u2019ll write this week will have information that isn\u2019t quite correct or doesn\u2019t entirely explain a fact or context"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 176,
+       "judged": 10,
+       "expression": 0.1055,
+       "support": 1.545,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Liberal and conservative media have opposing views on artificial intelligence",
+         "date": "2023-12-09",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/technology/science/liberal-conservative-media-artificial-intelligence-9060794/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "they performed an emotional tone analysis on each story using an automated text analysis tool"
+        },
+        {
+         "title": "Objective Journalism in an Objectively Uneven Contest",
+         "date": "2023-11-13",
+         "source": "outsidethebeltway.com",
+         "url": "https://www.outsidethebeltway.com/objective-journalism-in-an-objectively-uneven-contest/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "their infrequent coverage of his inflammatory statements raise questions about why certain comments are covered and some are not"
+        },
+        {
+         "title": "Frenemy of the state",
+         "date": "2023-11-15",
+         "source": "deseret.com",
+         "url": "https://www.deseret.com/2023/11/14/23915926/frenemy-of-the-state-journalism-bias-fake-news",
+         "relation": "anticipates_directionally",
+         "confidence": 0.65,
+         "quote": "\u201cIt just shows the level of amplification, of blowing certain things out of proportion,\u201d says conservative commentator Evan Siegfried."
+        },
+        {
+         "title": "Don\u2019t Ask People How The Economy Is Doing",
+         "date": "2023-12-14",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/dont-ask-people-how-the-economy-is",
+         "relation": "anticipates_directionally",
+         "confidence": 0.65,
+         "quote": "Now that is terrible for the workers involved, but we are talking about a few hundred jobs in total. For context, in the US, there were 5.6 million job separations. In October! There is no possible way you could cobble together enough news stories to learn about the aggregate pic"
+        },
+        {
+         "title": "Are social media and coordinated misinformation campaigns fomenting extremism?",
+         "date": "2023-12-21",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/are-social-media-and-coordinated",
+         "relation": "anticipates_directionally",
+         "confidence": 0.62,
+         "quote": "Some of the reports on TikTok are of course true; there's been atrocities and bad behavior on both sides. What social media does is to weaponize those atrocities, and those bad behaviors to amplify outrage, by presenting them without context and history. And the most outrage-indu"
+        },
+        {
+         "title": "JP Observer: Election Warning #2: Watch out for media hype of poll \u2018results\u2019",
+         "date": "2023-12-22",
+         "source": "jamaicaplaingazette.com",
+         "url": "http://jamaicaplaingazette.com/2023/12/22/jp-observer-election-warning-2-watch-out-for-media-hype-of-poll-results/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Media coverage of the results of the New York Times/Siena College poll of Biden v. Trump provides a great example of several things that can go wrong for those of us in the poll results coverage audience."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 379,
+       "judged": 10,
+       "expression": 0.0264,
+       "support": 1.595,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "When it comes to security, LLMs are like Swiss cheese \u2014 and that\u2019s going to cause huge pro",
+         "date": "2024-10-17",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/when-it-comes-to-security-llms-are",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "governed by training data that nobody knows about, obeying an algorithm that is only hinted at, glorified by the media"
+        },
+        {
+         "title": "An epistemic clusterfuck in the making",
+         "date": "2024-05-04",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/an-epistemic-clusterfuck-in-the-making",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Automatically amplifying the already inherent tendency towards extremism without fact-checking or reasoned analysis is a recipe for chaos."
+        },
+        {
+         "title": "Evidence that LLMs are reaching a point of diminishing returns \u2014 and what that might mean",
+         "date": "2024-04-13",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/evidence-that-llms-are-reaching-a",
+         "relation": "partially_anticipates",
+         "confidence": 0.25,
+         "quote": "The study Mollick linked to doesn\u2019t actually show what he claims. If you read it carefully, it says literally nothing about capabilities improving."
+        },
+        {
+         "title": "\ud83e\udd14 The misinformation about misinformation",
+         "date": "2024-06-08",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-misinformation-about-misinformation",
+         "relation": "anticipates_directionally",
+         "confidence": 0.48,
+         "quote": "Exposure to false and inflammatory content is remarkably low, with just 1% of Twitter users accounting for 80% of exposure to dubious websites during the 2016 U.S. election."
+        },
+        {
+         "title": "We Looked at 78 Election Deepfakes. Political Misinformation is not an AI Problem.",
+         "date": "2024-12-13",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/we-looked-at-78-election-deepfakes",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "Increasing the supply of misinformation does not meaningfully change the dynamics of the demand for misinformation since the increased supply is competing for the same eyeballs."
+        },
+        {
+         "title": "\ud83d\udd2e The root of riots; AI\u2018s climate costs; AGI; the last ICE & bronze age tech ++ #486",
+         "date": "2024-08-11",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-486",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "It all started with an unfounded rumour on social media. Obscure news sites sought to legitimise the rumour, before it was amplified by far-right activists, bot networks (likely of Russian origin) and crossed over into the mainstream"
+        },
+        {
+         "title": "How not to be fooled by viral charts, Part 2",
+         "date": "2024-06-14",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/how-not-to-be-fooled-by-viral-charts-563",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "this data is just from the BLS, so it\u2019s the best data we\u2019ve got. No complaints there. And after EPI put in the inflation adjustment, there\u2019s nothing that\u2019s really misleading about this chart... But what about the narrative attached to this chart? Here things get dicey."
+        },
+        {
+         "title": "Disturbing and misleading efforts to defame Helen Toner through misdirection",
+         "date": "2024-05-30",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/disturbing-and-misleading-efforts",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Some of what the essa6 says is true (e.g., \u201cOpenAI has held discussions with government officials around the world on numerous issues), but the core of the essay is misdirection... Taylor and Summers refer to the WilmerHale review, but leave the most important part out."
+        },
+        {
+         "title": "OpenAI\u2019s Lies and Half-Truths",
+         "date": "2024-03-15",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/openais-lies-and-half-truths",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "OpenAI, 2015:\u201dResearchers will be strongly encouraged to publish their work... Translation: We are happy to let the public believe that we are open, but it\u2019s really just a recruiting promise that we don\u2019t intend to live up to"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 1306,
+       "judged": 10,
+       "expression": 0.0475,
+       "support": 0.625,
+       "refute": 0.35,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Learn smart lessons from the L.A. fires, not stupid lessons",
+         "date": "2025-01-10",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/learn-smart-lessons-from-the-la-fires",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Others mistook a one-time capital expense in 2024 for a 2025 budget cut."
+        },
+        {
+         "title": "Why do econ journalists keep making this basic mistake?",
+         "date": "2025-05-03",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-do-econ-journalists-keep-making",
+         "relation": "anticipates_directionally",
+         "confidence": 0.68,
+         "quote": "The mistake econ reporters are making is claiming that imports subtract from GDP. Imports do not subtract from GDP. And yet again and again, economics journalists say that they do."
+        },
+        {
+         "title": "People are getting their news from AI \u2013 and it\u2019s altering their views",
+         "date": "2025-12-19",
+         "source": "theconversation.com",
+         "url": "https://theconversation.com/people-are-getting-their-news-from-ai-and-its-altering-their-views-269354",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "they may have a tendency to highlight particular perspectives while omitting or diminishing others. Such bias can influence how users think or feel, regardless of whether the information presented is true or false."
+        },
+        {
+         "title": "Bad Actors are Grooming LLMs to Produce Falsehoods",
+         "date": "2025-07-11",
+         "source": "Gary Marcus",
+         "url": "https://americansunlight.substack.com/cp/168074209",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "the English-language site of the Pravda network regurgitates antisemitic tropes about \u201cglobalists,\u201d falsely claiming that secret societies are somehow ruling the world. Russian disinformation frequently utilizes these false claims and conspiracy theories."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0455,
+     "surprisal": 0.9545,
+     "peak_after": 0.1055,
+     "adoption": 0.06,
+     "vindication": 0.7459,
+     "predictive_value": 0.05,
+     "best_anticipation": {
+      "title": "t-hacking",
+      "date": "2023-03-02",
+      "url": "https://www.economicforces.xyz/p/t-hacking",
+      "relation": "entails",
+      "confidence": 0.68,
+      "quote": "All three framings are true but depend on picking different comparison dates to tell the story and leave the audience with different impressions."
+     },
+     "contradiction": {
+      "title": "How Fox News Promoted Hoax About Homeless Veterans To Smear Asylum Seekers",
+      "date": "2023-05-28",
+      "url": "https://www.nationalmemo.com/fox-news-disinformation",
+      "relation": "contradicts",
+      "confidence": 0.5,
+      "quote": "Fox News for claiming it had \u201cconfirmed\u201d the false story, in the context of its recent $787.5 million defamation settlement in the Dominion case"
+     },
+     "claim": {
+      "text": "News media outlets rarely state specific factual assertions they know to be false; when they misinform audiences, they do so by misinterpreting data, excluding context, or selectively signal-boosting some events over others.",
+      "kind": "thesis",
+      "salience": 0.95,
+      "explicit": true,
+      "fingerprints": [
+       "the media rarely lies explicitly and directly",
+       "misinterpreting things, excluding context, or signal-boosting"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-22",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 216,
+       "judged": 10,
+       "expression": 0.0057,
+       "support": 0.058,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 364,
+       "judged": 10,
+       "expression": 0.0068,
+       "support": 0.068,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 148,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 182,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.75,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Immigration Patriotism, Not Conspiracy Theories, Triggered Tech Totalitarians\u2019 Purge Of IN",
+         "date": "2023-06-14",
+         "source": "vdare.com",
+         "url": "https://vdare.com/articles/immigration-patriotism-not-conspiracy-theories-triggered-tech-totalitarians-purge-of-infowars-alex-jones",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "Jones explored the official account of the 2012 Sandy Hook shooting and in February of this year called Parkland School student turned gun control crusader David Hogg a \"crisis actor.\""
+        },
+        {
+         "title": "Ideas & Opinions - George Boardman: MAGA Republicans can\u2019t handle the truth",
+         "date": "2023-05-03",
+         "source": "theunion.com",
+         "url": "https://www.theunion.com/news/community/ideas-opinions---george-boardman-maga-republicans-can-t-handle-the-truth/article_ca63dd7a-e93c-11ed-9a8a-b7c83a31c4e5.html",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "two separate juries rendered defamation judgments totaling more than $1 billion against conspiracy theorist Alex Jones, who claimed on his InfoWars platform that the 2012 Sandy Hook school massacre was a hoax"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 323,
+       "judged": 10,
+       "expression": 0.009,
+       "support": 0.345,
+       "refute": 0.4,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Vibes vs. data",
+         "date": "2023-12-03",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/vibes-vs-data",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "economic facts have limited power against narratives, since narratives can color our interpretations of facts, or entice us into believing things that aren\u2019t true"
+        },
+        {
+         "title": "Automatic Disinformation Threatens Democracy\u2014 and It\u2019s Here",
+         "date": "2023-08-17",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/automatic-disinformation-threatens",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "we ought to demand that the wholesale generation of misinformation be punishable"
+        },
+        {
+         "title": "Frenemy of the state",
+         "date": "2023-11-15",
+         "source": "deseret.com",
+         "url": "https://www.deseret.com/2023/11/14/23915926/frenemy-of-the-state-journalism-bias-fake-news",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "They\u2019re calling (stories) liberal and conservative, when really, it\u2019s just that this story isn\u2019t talking about the people I like in the way that I like."
+        },
+        {
+         "title": "Are social media and coordinated misinformation campaigns fomenting extremism?",
+         "date": "2023-12-21",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/are-social-media-and-coordinated",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Some of the reports on TikTok are of course true; there\u2019s been atrocities and bad behavior on both sides. What social media does is to weaponize those atrocities, and those bad behaviors to amplify outrage, by presenting them without context and history."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 784,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.21,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "We Looked at 78 Election Deepfakes. Political Misinformation is not an AI Problem.",
+         "date": "2024-12-13",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/we-looked-at-78-election-deepfakes",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "we use the term misinformation to refer to outright false information, as opposed to issues of misleading interpretive framing. Despite many people's perception of outgroup narratives as \"misinformation,\" we don't think the misinformation lens is a useful way to think about diffe"
+        },
+        {
+         "title": "\ud83e\udd14 The misinformation about misinformation",
+         "date": "2024-06-08",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-misinformation-about-misinformation",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Exposure to false and inflammatory content is remarkably low, with just 1% of Twitter users accounting for 80% of exposure to dubious websites during the 2016 U.S. election."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2583,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.09,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Reckless disregard for the truth coming from cops, doctors, and scientists",
+         "date": "2025-06-24",
+         "source": "Andrew Gelman",
+         "url": "https://statmodeling.substack.com/p/reckless-disregard-for-the-truth",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "what bothers me isn\u2019t so much that the wrapping of these papers didn\u2019t accurately describe their content, so much as it seemed pretty clear that the authors involved never even saw the problem"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0063,
+     "surprisal": 0.9938,
+     "peak_after": 0.009,
+     "adoption": 0.0027,
+     "vindication": -0.2813,
+     "predictive_value": 0.001,
+     "best_anticipation": {
+      "title": "Are social media and coordinated misinformation campaigns fomenting extremism?",
+      "date": "2023-12-21",
+      "url": "https://garymarcus.substack.com/p/are-social-media-and-coordinated",
+      "relation": "partially_anticipates",
+      "confidence": 0.5,
+      "quote": "Some of the reports on TikTok are of course true; there\u2019s been atrocities and bad behavior on both sides. What social media does is to weaponize those atrocities, and those bad behaviors to amplify ou"
+     },
+     "contradiction": {
+      "title": "Ideas & Opinions - George Boardman: MAGA Republicans can\u2019t handle the truth",
+      "date": "2023-05-03",
+      "url": "https://www.theunion.com/news/community/ideas-opinions---george-boardman-maga-republicans-can-t-handle-the-truth/article_ca63dd7a-e93c-11ed-9a8a-b7c83a31c4e5.html",
+      "relation": "contradicts",
+      "confidence": 0.45,
+      "quote": "two separate juries rendered defamation judgments totaling more than $1 billion against conspiracy theorist Alex Jones, who claimed on his InfoWars platform that the 2012 Sandy Hook school massacre wa"
+     },
+     "claim": {
+      "text": "Most Infowars articles are technically true but misleading rather than fabricated; a survey of the Infowars front page turns up few or no stories that are completely made up.",
+      "kind": "fact",
+      "salience": 0.7,
+      "explicit": true,
+      "fingerprints": [
+       "technically-true-but-misleading vs. completely-made-up",
+       "I tried this and had trouble finding the latter"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-22",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 99,
+       "judged": 10,
+       "expression": 0.0238,
+       "support": 0.238,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 181,
+       "judged": 10,
+       "expression": 0.0435,
+       "support": 0.435,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 79,
+       "judged": 10,
+       "expression": 0.072,
+       "support": 0.87,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Ex-CIA Agents Dominate Censorship Efforts at Facebook, Social Media Giant 'Swarming With S",
+         "date": "2022-12-22",
+         "source": "redstate.com",
+         "url": "https://redstate.com/bobhoge/2022/12/22/ex-cia-agents-dominate-censorship-efforts-at-facebook-social-media-giant-swarming-with-spooks-n677466",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "These hires are primarily in highly politically sensitive sectors such as trust, security and content moderation"
+        },
+        {
+         "title": "Russian lawmaker attacks Vladimir Putin for Ukraine 'war' reference - Times of India",
+         "date": "2022-12-23",
+         "source": "timesofindia.indiatimes.com",
+         "url": "https://timesofindia.indiatimes.com/world/europe/russian-lawmaker-attacks-vladimir-putin-for-ukraine-war-reference/articleshow/96458696.cms",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "He signed laws in March that prescribe steep fines and jail terms for discrediting or spreading \"deliberately false information\" about the armed forces, putting people at risk of prosecution if they call the war by its name."
+        },
+        {
+         "title": "China Is About to Get Tougher on Deepfakes in an Unprecedented Way. Here's What the Rules ",
+         "date": "2022-12-23",
+         "source": "nbcphiladelphia.com",
+         "url": "https://www.nbcphiladelphia.com/news/business/money-report/china-is-about-to-get-tougher-on-deepfakes-in-an-unprecedented-way-heres-what-the-rules-mean/3457949/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Analysts say the law tackles two goals \u2014 tighter online censorship and getting ahead of regulation around new technologies."
+        },
+        {
+         "title": "The people who want to end Section 230 may have botched their case",
+         "date": "2023-02-22",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-people-who-want-to-end-section",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "the court will preserve liability only for algorithms that are \u201cneutral,\u201d assuming that term can even be defined"
+        },
+        {
+         "title": "The Supreme Court reckoning over content moderation is arriving",
+         "date": "2023-01-20",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-supreme-court-reckoning-over",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "There's no way to organize content on a social network without \"recommending\" it in some fashion \u2014 even if you're only showing a feed in reverse chronological order, you're still taking a point of view on how those posts ought to be consumed."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 104,
+       "judged": 10,
+       "expression": 0.0135,
+       "support": 0.219,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Last Week in AI #217: Generative AI and the First Amendment, robots dribble + catch + bala",
+         "date": "2023-05-01",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/last-week-in-ai-217-generative-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "increasing calls for regulation have led a growing number of people to assert that enforcing ethical norms in AI system development amounts to \u201cAI censorship\u201d"
+        },
+        {
+         "title": "BOMBSHELL REPORT: ADL has been secretly policing America for 60 years \u2013 NaturalNews.com",
+         "date": "2023-05-19",
+         "source": "naturalnews.com",
+         "url": "https://www.naturalnews.com/2023-05-19-adl-secretly-policing-america-for-60-years.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "the ADL is at the heart of the Marxist globalist movement destroying America and that things are about to ratchet up as the elite go for total control"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 196,
+       "judged": 10,
+       "expression": 0.0405,
+       "support": 1.22,
+       "refute": 0.35,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Yuletide: DSS urges Nigerians to shun violence, fake news",
+         "date": "2023-12-22",
+         "source": "thenationonlineng.net",
+         "url": "https://thenationonlineng.net/yuletide-dss-urges-nigerians-to-shun-violence-fake-news/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "they are encouraged to shun acts of violence, fake news and any form of divisive tendency, in the interest of public order and national security"
+        },
+        {
+         "title": "Ari Cohn",
+         "date": "2023-06-20",
+         "source": "techdirt.com",
+         "url": "https://www.techdirt.com/user/ari-cohn/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "None of these reforms would achieve what seems to be Musk\u2019s real goal: politically neutral outcomes."
+        },
+        {
+         "title": "Why it's so hard to fix the information ecosystem",
+         "date": "2023-06-22",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-its-so-hard-to-fix-the-information",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "This is a post about America\u2019s information ecosystem, and why it\u2019s so hard to combat misinformation."
+        },
+        {
+         "title": "Objective Journalism in an Objectively Uneven Contest",
+         "date": "2023-11-13",
+         "source": "outsidethebeltway.com",
+         "url": "https://www.outsidethebeltway.com/objective-journalism-in-an-objectively-uneven-contest/",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Because Trump is so much more rhetorically volatile than normal politicians, he gets constant media attention, often live coverage, which amplifies his remarks and drowns out the campaigns of his opponents. That\u2019s bad! Too much coverage! But, when he says truly outrageous things,"
+        },
+        {
+         "title": "Frenemy of the state",
+         "date": "2023-11-15",
+         "source": "deseret.com",
+         "url": "https://www.deseret.com/2023/11/14/23915926/frenemy-of-the-state-journalism-bias-fake-news",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Journalism and bias in the age of \u2018fake news\u2019"
+        },
+        {
+         "title": "Automatic Disinformation Threatens Democracy\u2014 and It\u2019s Here",
+         "date": "2023-08-17",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/automatic-disinformation-threatens",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "What we really need is AI that is smart enough to know when it is being used to spew falsehood."
+        },
+        {
+         "title": "The democracies turning against online speech",
+         "date": "2023-07-26",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-democracies-turning-against-online",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Authoritarians around the world will hear Breton\u2019s message loud and clear"
+        },
+        {
+         "title": "Bombshell Congressional report uncovers well-funded network of election interference and c",
+         "date": "2023-11-15",
+         "source": "naturalnews.com",
+         "url": "https://www.naturalnews.com/2023-11-15-congressional-report-uncovers-network-election-interference-censorship.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "This is a sophisticated way of saying: \u201cWe know what\u2019s best for everyone to see and hear."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 362,
+       "judged": 10,
+       "expression": 0.0186,
+       "support": 0.496,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "SF's Substack execs shrug off writers' complaints about profiting from Nazism",
+         "date": "2023-12-22",
+         "source": "sfgate.com",
+         "url": "https://www.sfgate.com/tech/article/substack-nazi-problem-writers-letter-18570872.php",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "In response, McKenzie posted a note on the platform Thursday that made it clear he and his co-founders will continue to allow the publication of Nazi content on their site."
+        },
+        {
+         "title": "A Rebuttal to Zvi Mowshowitz",
+         "date": "2024-02-13",
+         "source": "Dean W. Ball",
+         "url": "https://www.hyperdimensional.co/p/a-rebuttal-to-zvi-mowshowitz",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The arguments against such rules often come from the implicit assumption that we enforce our laws as written, reliably and without discretion. Which we don't."
+        },
+        {
+         "title": "We Looked at 78 Election Deepfakes. Political Misinformation is not an AI Problem.",
+         "date": "2024-12-13",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/we-looked-at-78-election-deepfakes",
+         "relation": "anticipates_directionally",
+         "confidence": 0.62,
+         "quote": "Depending on what someone's worldview is, the information in question is often misinformation\u2014or at least would be considered misinformation by those with differing worldviews."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 1297,
+       "judged": 10,
+       "expression": 0.0555,
+       "support": 0.95,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "LLM-judged policy debates",
+         "date": "2026-07-21",
+         "source": "Robin Hanson",
+         "url": "https://www.overcomingbias.com/p/llm-judged-policy-debates",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "However, experts who point this out are usually accused of being politically biased. Which is why we stay stuck in this situation."
+        },
+        {
+         "title": "Bad Actors are Grooming LLMs to Produce Falsehoods",
+         "date": "2025-07-11",
+         "source": "Gary Marcus",
+         "url": "https://americansunlight.substack.com/cp/168074209",
+         "relation": "partially_anticipates",
+         "confidence": 0.33,
+         "quote": "An even more subtle case is satire, which can perhaps only be properly addressed through reasoning."
+        },
+        {
+         "title": "Political Psychology Links, 8/6/2026",
+         "date": "2026-08-06",
+         "source": "Arnold Kling",
+         "url": "https://arnoldkling.substack.com/p/political-psychology-links-862026",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "every part of that can be disputed by reasonable, informed people. And a claim that reasonable people dispute is, by definition, arguable"
+        },
+        {
+         "title": "We're getting the social media crisis wrong",
+         "date": "2025-01-07",
+         "source": "Henry Farrell",
+         "url": "https://www.programmablemutter.com/p/were-getting-the-social-media-crisis",
+         "relation": "anticipates_directionally",
+         "confidence": 0.48,
+         "quote": "What purports to be a collective phenomena; the \u2018voice of the people;\u2019 is actually in private hands; is, to a very great extent shaped by two extremely powerful individuals."
+        },
+        {
+         "title": "People are getting their news from AI \u2013 and it\u2019s altering their views",
+         "date": "2025-12-19",
+         "source": "theconversation.com",
+         "url": "https://theconversation.com/people-are-getting-their-news-from-ai-and-its-altering-their-views-269354",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Proponents of AI regulation often cite neutral AI as a goal, but true neutrality is often unattainable. AI systems reflect the biases embedded in their data, training and design, and attempts to regulate such bias often end up trading one flavor of bias for another."
+        },
+        {
+         "title": "Political Psychology Links, 8/22/2026",
+         "date": "2026-08-22",
+         "source": "Arnold Kling",
+         "url": "https://arnoldkling.substack.com/p/political-psychology-links-8182026",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "What changed was the narrative that disinformation (\u201cfake news\u201d) on Facebook swung the election to Trump."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0336,
+     "surprisal": 0.9664,
+     "peak_after": 0.072,
+     "adoption": 0.0384,
+     "vindication": 0.8295,
+     "predictive_value": 0.0339,
+     "best_anticipation": {
+      "title": "We Looked at 78 Election Deepfakes. Political Misinformation is not an AI Proble",
+      "date": "2024-12-13",
+      "url": "https://www.normaltech.ai/p/we-looked-at-78-election-deepfakes",
+      "relation": "anticipates_directionally",
+      "confidence": 0.62,
+      "quote": "Depending on what someone's worldview is, the information in question is often misinformation\u2014or at least would be considered misinformation by those with differing worldviews."
+     },
+     "contradiction": {
+      "title": "Automatic Disinformation Threatens Democracy\u2014 and It\u2019s Here",
+      "date": "2023-08-17",
+      "url": "https://garymarcus.substack.com/p/automatic-disinformation-threatens",
+      "relation": "contradicts",
+      "confidence": 0.35,
+      "quote": "What we really need is AI that is smart enough to know when it is being used to spew falsehood."
+     },
+     "claim": {
+      "text": "Because nobody can agree on which context is necessary versus redundant, censorship of \"misinformation\" or \"fake news\" will always require a value-laden judgment call by a person in power rather than a mechanical, value-neutral determination.",
+      "kind": "thesis",
+      "salience": 0.95,
+      "explicit": true,
+      "fingerprints": [
+       "nobody will ever agree what context is necessary",
+       "a judgment call by a person in power enforcing their values",
+       "interpret mechanically in some fair, value-neutral way"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-22",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 54,
+       "judged": 10,
+       "expression": 0.064,
+       "support": 0.64,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 97,
+       "judged": 10,
+       "expression": 0.0365,
+       "support": 0.365,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 36,
+       "judged": 10,
+       "expression": 0.03,
+       "support": 0.69,
+       "refute": 0.7,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Elon Musk Perplexed as Twitter Begins Widespread Suspensions of Accounts Critical of U.S. ",
+         "date": "2022-12-22",
+         "source": "theconservativetreehouse.com",
+         "url": "https://theconservativetreehouse.com/blog/2022/12/22/elon-musk-perplexed-as-twitter-begins-widespread-suspensions-of-accounts-critical-of-u-s-funding-for-ukraine-and-zelenskyy-grift/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "the FBI is claiming { Direct Rumble Link } that anyone who notices their influence over the platform content is a \u201cconspiracy theorist\u201d intent on delivering harm to the United States by spreading disinformation"
+        },
+        {
+         "title": "China Is About to Get Tougher on Deepfakes in an Unprecedented Way. Here's What the Rules ",
+         "date": "2022-12-23",
+         "source": "nbcphiladelphia.com",
+         "url": "https://www.nbcphiladelphia.com/news/business/money-report/china-is-about-to-get-tougher-on-deepfakes-in-an-unprecedented-way-heres-what-the-rules-mean/3457949/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "China is taking aim at one of the critical threats to our society in the modern age: the erosion of trust in what we see and hear, and the increasing difficulty of separating truth from lies"
+        },
+        {
+         "title": "Yes, of course we should ban TikTok",
+         "date": "2023-03-20",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/yes-of-course-we-should-ban-tiktok",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "TikTok is probably subject to Chinese-directed censorship that tries to nudge U.S. users into supporting CCP goals."
+        },
+        {
+         "title": "The threat of automated misinformation is only getting worse",
+         "date": "2023-02-28",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/the-threat-of-automated-misinformation",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "The potential for automatically generating misinformation at scale is only getting worse."
+        },
+        {
+         "title": "t-hacking",
+         "date": "2023-03-02",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/t-hacking",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Most of the time, we aren't worried about scientists explicitly \"hacking\" things and lying about results. It is much more innocent. Journals usually don't like publishing null results."
+        },
+        {
+         "title": "Putin Finally Uses The Word 'War' In Discussing Ukraine; City Deputy Wants Him Charged",
+         "date": "2022-12-23",
+         "source": "ibtimes.com",
+         "url": "https://www.ibtimes.com/putin-finally-uses-word-war-discussing-ukraine-city-deputy-wants-him-charged-3650453",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Roskomnadzor ordered media outlets to remove reports describing the military operation as an \"assault, invasion or a declaration of war.\""
+        },
+        {
+         "title": "Don\u2019t Look Up: The AI Edition",
+         "date": "2023-03-02",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/dont-look-up-the-ai-edition",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "accused me of deliberately hiding the context that was fed to the misinformation-spewing model"
+        },
+        {
+         "title": "The Media and Democracy",
+         "date": "2022-12-23",
+         "source": "thecitizen.in",
+         "url": "https://www.thecitizen.in/opinion/the-media-and-democracy-553482",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "Creating validity from falsehood is a phenomenon now categorised as 'paid news'."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 49,
+       "judged": 10,
+       "expression": 0.0525,
+       "support": 0.825,
+       "refute": 1.85,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "In which David Sacks and Balaji raise a false alarm about the jobs numbers",
+         "date": "2023-06-05",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/in-which-david-sacks-and-balaji-raise",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "It's just a different concept of \"employment\". Neither one is right or wrong; they just tell you two different things."
+        },
+        {
+         "title": "Ideas & Opinions - George Boardman: MAGA Republicans can\u2019t handle the truth",
+         "date": "2023-05-03",
+         "source": "theunion.com",
+         "url": "https://www.theunion.com/news/community/ideas-opinions---george-boardman-maga-republicans-can-t-handle-the-truth/article_ca63dd7a-e93c-11ed-9a8a-b7c83a31c4e5.html",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "Plaintiffs must meet a high bar to prove their claims, showing that a defendant knowingly published falsehoods or showed a reckless disregard for the truth."
+        },
+        {
+         "title": "Alex Jones Claims His Kanye West Interview Was a \u2018Setup\u2019",
+         "date": "2023-05-23",
+         "source": "rollingstoneindia.com",
+         "url": "https://rollingstoneindia.com/alex-jones-claims-his-kanye-west-interview-was-a-setup/",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "A note to readers: It's useless to fact check Jones, a demonstrated liar."
+        },
+        {
+         "title": "WaPo Fact Checker Roasted for Fake Claims of Intimidation Against Judge\u2019s Daughter",
+         "date": "2023-04-04",
+         "source": "breitbart.com:443",
+         "url": "https://www.breitbart.com:443/politics/2023/04/04/washington-post-fact-checker-roasted-for-fake-claims-of-intimidation-against-judges-daughter/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Journalists and political pundits quickly roasted the fact checker for omitting the context behind the photo."
+        },
+        {
+         "title": "POWELL: Down the rabbit hole",
+         "date": "2023-04-22",
+         "source": "herald-zeitung.com",
+         "url": "https://herald-zeitung.com/community_alert/powell-down-the-rabbit-hole/article_48d98aa6-e069-11ed-b99c-c3b0aba9bbf7.html",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "Then we must deal with misinformation, which is untrue, and disinformation, which is intended to deceive."
+        },
+        {
+         "title": "The Unseen Damages Fact Checking Has On Public Discourse",
+         "date": "2023-03-27",
+         "source": "collective-evolution.com",
+         "url": "https://www.collective-evolution.com/blog/the-unseen-damages-fact-checking-has-on-public-discourse",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "it's not as though in all cases fact checkers are cleaning up fake stories, they are actually dead wrong \u2013 a lot"
+        },
+        {
+         "title": "'Outright lie': Union IT Minister Rajeev Chandrasekhar slams former Twitter CEO Jack Dorse",
+         "date": "2023-06-13",
+         "source": "organiser.org",
+         "url": "https://organiser.org/2023/06/13/178714/bharat/outright-lie-union-it-minister-rajeev-chandrasekhar-slams-former-twitter-ceo-jack-dorsey-over-pressure-allegation/",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "there was a lot of misinformation and even reports of genocide which were definitely fake"
+        },
+        {
+         "title": "How Fox News Promoted Hoax About Homeless Veterans To Smear Asylum Seekers",
+         "date": "2023-05-28",
+         "source": "nationalmemo.com",
+         "url": "https://www.nationalmemo.com/fox-news-disinformation",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "The source who told the New York Post, get this one, that the homeless veterans in New York were displaced to make room for illegals at another New York hotel, made the story up. It was a made-up story."
+        },
+        {
+         "title": "CNN CEO Chris Licht is out. Can 'balanced' news exist in the post-Trump era?",
+         "date": "2023-06-08",
+         "source": "usatoday.com",
+         "url": "https://www.usatoday.com/story/opinion/2023/06/08/cnn-chris-licht-atlantic-brutal-takedown/70298008007/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "There are two intractable versions of reality at work \u2013 or rather, decidedly not at work \u2013 in CNN's newsroom. One that believes honest journalism requires providing a platform to all sides, and the other that believes honest journalism requires denying that platform to peddlers o"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 101,
+       "judged": 10,
+       "expression": 0.033,
+       "support": 1.105,
+       "refute": 0.35,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "\u201cNot consistently candid\u201d",
+         "date": "2023-12-05",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/not-consistently-candid",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Most of you by now realize that OpenAI was set up to be a nonprofit. Fewer realize that it still is a nonprofit, receiving tax benefits at least as recently as couple years ago."
+        },
+        {
+         "title": "Lies are expensive, truth is priceless",
+         "date": "2023-12-18",
+         "source": "thestatehousefile.com",
+         "url": "https://www.thestatehousefile.com/commentary/lies-are-expensive-truth-is-priceless/article_fa7d1c08-9dee-11ee-8b4f-cfc61f0b4d31.html",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "Giuliani never had any evidence such a scheme existed. He admitted as much under oath."
+        },
+        {
+         "title": "Ukraine war: Videos straight from the trenches to the phone",
+         "date": "2023-06-21",
+         "source": "dw.com",
+         "url": "https://www.dw.com/en/ukraine-war-footage-straight-from-the-trenches-to-the-phone/a-65991772",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "there can be no truthful reporting without a sustained examination of the sources, without comparing different information, without understanding and explaining the context"
+        },
+        {
+         "title": "Biden-defending fact-checkers fail to pounce on Rashida Tlaib",
+         "date": "2023-11-16",
+         "source": "foxnews.com",
+         "url": "https://www.foxnews.com/opinion/biden-defending-fact-checkers-fail-pounce-rashida-tlaib",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "In recent days, Reuters Fact Check flagged social media posts and warned, \"Posts about US Representative Tlaib's birthplace lack context.\"... It's weird that Reuters said \"missing context,\" not \"false.\""
+        },
+        {
+         "title": "Frenemy of the state",
+         "date": "2023-11-15",
+         "source": "deseret.com",
+         "url": "https://www.deseret.com/2023/11/14/23915926/frenemy-of-the-state-journalism-bias-fake-news",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "They coddle Democrats and endorse liberal ideas but target Republican politicians and conservative values with unfair and unbalanced scrutiny."
+        },
+        {
+         "title": "Why it's so hard to fix the information ecosystem",
+         "date": "2023-06-22",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-its-so-hard-to-fix-the-information",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "In this bitterly bifurcated situation, each side may simply think the other side's information is the real \"fake news\"."
+        },
+        {
+         "title": "Objective Journalism in an Objectively Uneven Contest",
+         "date": "2023-11-13",
+         "source": "outsidethebeltway.com",
+         "url": "https://www.outsidethebeltway.com/objective-journalism-in-an-objectively-uneven-contest/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "\"When everything and everybody is portrayed as deeply flawed, there's no sense making distinctions on that score, which works to the advantage of those who are more deeply flawed.\""
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 107,
+       "judged": 10,
+       "expression": 0.0505,
+       "support": 1.355,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Lies and deception: Andreessen Horowitz\u2019s SB 1047 campaign is as misleading as it gets",
+         "date": "2024-09-17",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/lies-and-deception-andreessen-horowitzs",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The company said the bill would \u201cimpose civil and in some cases criminal liability on model developers\u201d, without noting that this liability only applied to \u201cpeople who intentionally lie to the government\u201d."
+        },
+        {
+         "title": "OpenAI's new model tried to avoid being shut down",
+         "date": "2024-12-05",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/openais-new-model-tried-to-avoid",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "As a couple of readers have pointed out, the original version of this piece missed some important context. So what really happened?"
+        },
+        {
+         "title": "\ud83e\udd14 The misinformation about misinformation",
+         "date": "2024-06-08",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-misinformation-about-misinformation",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "It\u2019s an important paper because it unpicks the moral panic around misinformation, allowing us to address it more with our heads than with our guts."
+        },
+        {
+         "title": "We Looked at 78 Election Deepfakes. Political Misinformation is not an AI Problem.",
+         "date": "2024-12-13",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/we-looked-at-78-election-deepfakes",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Paradoxically, the alarm about AI might be comforting because it positions concerns about the information environment as a discrete problem with a discrete solution. But fixes to the information environment depend on structural and institutional changes rather than on curbing AI-"
+        },
+        {
+         "title": "OpenAI\u2019s Lies and Half-Truths",
+         "date": "2024-03-15",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/openais-lies-and-half-truths",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Half truths about openness, about what data they are training on, about finances, about their views on regulation, about when if ever they would pause, and more, essentially every topic that matters, from the day they were launched all the way to the present. A lack of full cando"
+        },
+        {
+         "title": "Disturbing and misleading efforts to defame Helen Toner through misdirection",
+         "date": "2024-05-30",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/disturbing-and-misleading-efforts",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "The thread accuses Toner of \u201coutright lying\u201d pointing to a real (but misunderstood) tension between the Toner saying \u201clot of people didn\u2019t want the company to fall apart, us included\u201d and Toner telling \u201cThe board\u2019s mission was to ensure that the company creates artificial intelli"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 425,
+       "judged": 10,
+       "expression": 0.0439,
+       "support": 1.49,
+       "refute": 0.68,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The Boring Truth About Why America Got Fat",
+         "date": "2025-09-05",
+         "source": "Derek Thompson",
+         "url": "https://www.derekthompson.org/p/why-america-is-fatand-how-the-media",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Ultra-processed food is too large a category to paint with one broad brush."
+        },
+        {
+         "title": "Sam Altman, unconstrained by the truth",
+         "date": "2026-04-06",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/sam-altman-unconstrained-by-the-truth",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "he often tries to change the narrative with hype"
+        },
+        {
+         "title": "Most Trend Breaks Aren't Real",
+         "date": "2025-06-18",
+         "source": "Cremieux",
+         "url": "https://www.cremieux.xyz/p/most-trend-breaks-arent-real",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "the frequently-touted four-to-five-fold increase in natural disaster numbers over the past half-century has more to do with the adoption of satellite monitoring, improved communications technology, the spread of the Internet, and intentional and recent efforts to catalogue disast"
+        },
+        {
+         "title": "Sometimes Papers Contain Obvious Lies",
+         "date": "2025-03-20",
+         "source": "Cremieux",
+         "url": "https://www.cremieux.xyz/p/sometimes-papers-contain-obvious",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "What they did is, thus, arguably, appropriate, but to believe that, you have to believe the model, and the evidence from outside of the exercise they presented fits exceptionally poorly with their proposed model."
+        },
+        {
+         "title": "Bad Actors are Grooming LLMs to Produce Falsehoods",
+         "date": "2025-07-11",
+         "source": "Gary Marcus",
+         "url": "https://americansunlight.substack.com/cp/168074209",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "claiming falsely that ATACMS didn\u2019t work in Ukraine because of Russian air defense prowess. (This is a common false narrative that pro-Russia actors spread, as part of a broader effort to discredit Western military aid to Ukraine based on lies.)"
+        },
+        {
+         "title": "People are getting their news from AI \u2013 and it\u2019s altering their views",
+         "date": "2025-12-19",
+         "source": "theconversation.com",
+         "url": "https://theconversation.com/people-are-getting-their-news-from-ai-and-its-altering-their-views-269354",
+         "relation": "states",
+         "confidence": 0.82,
+         "quote": "The issue isn\u2019t clear-cut cases of misinformation or harmful subject matter going unflagged in the absence of content moderation. What\u2019s missing from the discussion is how ostensibly accurate information is selected, framed and emphasized in ways that can shape public perception."
+        },
+        {
+         "title": "Reckless disregard for the truth coming from cops, doctors, and scientists",
+         "date": "2025-06-24",
+         "source": "Andrew Gelman",
+         "url": "https://statmodeling.substack.com/p/reckless-disregard-for-the-truth",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "what bothers me isn\u2019t so much that the wrapping of these papers didn\u2019t accurately describe their content, so much as it seemed pretty clear that the authors involved never even saw the problem"
+        },
+        {
+         "title": "Sora is here. The window to save visual truth is closing",
+         "date": "2025-11-05",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/sora-is-here-the-window-to-save-visual-truth-closing-deepfakes-disinformation-misinformation-witness",
+         "relation": "contradicts",
+         "confidence": 0.28,
+         "quote": "A still photo turned into a fake AI video, passed off as real footage of a prison being bombed then circulated in a foreign influence campaign."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0502,
+     "surprisal": 0.9497,
+     "peak_after": 0.0525,
+     "adoption": 0.0023,
+     "vindication": 0.2084,
+     "predictive_value": 0.0013,
+     "best_anticipation": {
+      "title": "People are getting their news from AI \u2013 and it\u2019s altering their views",
+      "date": "2025-12-19",
+      "url": "https://theconversation.com/people-are-getting-their-news-from-ai-and-its-altering-their-views-269354",
+      "relation": "states",
+      "confidence": 0.82,
+      "quote": "The issue isn\u2019t clear-cut cases of misinformation or harmful subject matter going unflagged in the absence of content moderation. What\u2019s missing from the discussion is how ostensibly accurate informat"
+     },
+     "contradiction": {
+      "title": "POWELL: Down the rabbit hole",
+      "date": "2023-04-22",
+      "url": "https://herald-zeitung.com/community_alert/powell-down-the-rabbit-hole/article_48d98aa6-e069-11ed-b99c-c3b0aba9bbf7.html",
+      "relation": "contradicts",
+      "confidence": 0.45,
+      "quote": "Then we must deal with misinformation, which is untrue, and disinformation, which is intended to deceive."
+     },
+     "claim": {
+      "text": "There is no bright-line category called \"misinformation\" that separates false stories from true ones, because deceptive reporting operates through insufficient context rather than through explicit falsehood.",
+      "kind": "thesis",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "some bright-line category called \u201cmisinformation",
+       "bright-line distinction between \u201cmisinformation"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-22",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 116,
+       "judged": 10,
+       "expression": 0.0423,
+       "support": 0.423,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 240,
+       "judged": 10,
+       "expression": 0.0445,
+       "support": 0.445,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 90,
+       "judged": 10,
+       "expression": 0.0485,
+       "support": 0.88,
+       "refute": 0.85,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "China Is About to Get Tougher on Deepfakes in an Unprecedented Way. Here's What the Rules ",
+         "date": "2022-12-23",
+         "source": "nbcphiladelphia.com",
+         "url": "https://www.nbcphiladelphia.com/news/business/money-report/china-is-about-to-get-tougher-on-deepfakes-in-an-unprecedented-way-heres-what-the-rules-mean/3457949/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Content that goes against existing laws is prohibited, as is content that endangers national security and interests, damages the national image or disrupts the economy."
+        },
+        {
+         "title": "What Google Should Really Be Worried About",
+         "date": "2023-02-12",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/what-google-should-really-be-worried",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "Bialek is an undeniably busy person (she even has a PhD in Neuroscience from UCLA), but selling CBD gummies has never been part of her portfolio. Still the hoax gathered so much momentum, she eventually felt that she had to speak out"
+        },
+        {
+         "title": "Putin Finally Uses The Word 'War' In Discussing Ukraine; City Deputy Wants Him Charged",
+         "date": "2022-12-23",
+         "source": "ibtimes.com",
+         "url": "https://www.ibtimes.com/putin-finally-uses-word-war-discussing-ukraine-city-deputy-wants-him-charged-3650453",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "The communications regulator accused independent media outlets, such as Dozhd television channel and Novaya Gazeta newspaper, of providing \"unreliable socially significant untrue information\" about the war in Ukraine"
+        },
+        {
+         "title": "A visit to TikTok's transparency center",
+         "date": "2023-02-03",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/a-visit-to-tiktoks-transparency-center",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "it's now fair game for Trump to say he won in 2020"
+        },
+        {
+         "title": "The threat of automated misinformation is only getting worse",
+         "date": "2023-02-28",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/the-threat-of-automated-misinformation",
+         "relation": "contradicts",
+         "confidence": 0.25,
+         "quote": "What's even more disturbing is that Bing makes it look like the false narrative that it generates is referenced."
+        },
+        {
+         "title": "Why does ChatGPT constantly lie?",
+         "date": "2023-01-30",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-does-chatgpt-constantly-lie",
+         "relation": "contradicts",
+         "confidence": 0.25,
+         "quote": "ChatGPT routinely spews out a lot of fake \"facts\""
+        },
+        {
+         "title": "The Supreme Court reckoning over content moderation is arriving",
+         "date": "2023-01-20",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-supreme-court-reckoning-over",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "There's no way to organize content on a social network without \"recommending\" it in some fashion \u2014 even if you're only showing a feed in reverse chronological order, you're still taking a point of view on how those posts ought to be consumed."
+        },
+        {
+         "title": "Questions linger over Facebook, Twitter, TikTok's commitment to uphold election integrity ",
+         "date": "2022-12-23",
+         "source": "techcrunch.com",
+         "url": "https://techcrunch.com/2022/12/23/questions-linger-over-facebook-twitter-tittoks-commitment-to-uphold-election-integrity-in-africa-as-countries-head-to-polls/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.58,
+         "quote": "they have consistently failed to address the key aspects that make an election environment a dangerous information environment in the first place, where things are neither true or false and information tends to get weaponized quite a bit"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 123,
+       "judged": 9,
+       "expression": 0.1056,
+       "support": 1.67,
+       "refute": 0.65,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Immigration Patriotism, Not Conspiracy Theories, Triggered Tech Totalitarians\u2019 Purge Of IN",
+         "date": "2023-06-14",
+         "source": "vdare.com",
+         "url": "https://vdare.com/articles/immigration-patriotism-not-conspiracy-theories-triggered-tech-totalitarians-purge-of-infowars-alex-jones",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Spend your time talking about whether a plane hit the Pentagon or not on 9/11 or if black helicopters are flying all around us ready to implement the New World Order (NWO) agenda, or what's actually happening when the Bilderberg Group meet, and you run no risk of attracting the c"
+        },
+        {
+         "title": "In which David Sacks and Balaji raise a false alarm about the jobs numbers",
+         "date": "2023-06-05",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/in-which-david-sacks-and-balaji-raise",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "So while revisions are a good reason not to put too much stock in any one month of data, they're also not a reason to think the data is fake."
+        },
+        {
+         "title": "Do Any Republicans Really Think a President DeSantis Won\u2019t Get Impeached Or Framed By The ",
+         "date": "2023-06-16",
+         "source": "freerepublic.com",
+         "url": "https://freerepublic.com/focus/f-news/4161224/posts",
+         "relation": "states",
+         "confidence": 0.55,
+         "quote": "They constantly leak information out of context to form false narratives that benefit Democrats. That's called disinformation and misinformation."
+        },
+        {
+         "title": "The Unseen Damages Fact Checking Has On Public Discourse",
+         "date": "2023-03-27",
+         "source": "collective-evolution.com",
+         "url": "https://www.collective-evolution.com/blog/the-unseen-damages-fact-checking-has-on-public-discourse",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "it's not as though in all cases fact checkers are cleaning up fake stories, they are actually dead wrong \u2013 a lot"
+        },
+        {
+         "title": "POWELL: Down the rabbit hole",
+         "date": "2023-04-22",
+         "source": "herald-zeitung.com",
+         "url": "https://herald-zeitung.com/community_alert/powell-down-the-rabbit-hole/article_48d98aa6-e069-11ed-b99c-c3b0aba9bbf7.html",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "Then we must deal with misinformation, which is untrue, and disinformation, which is intended t"
+        },
+        {
+         "title": "FDA\u2019s \u2018Rumor Control\u2019 hub encourages public to SNITCH on \u2018misinformation spreaders\u2019 \u2013 Natu",
+         "date": "2023-06-09",
+         "source": "naturalnews.com",
+         "url": "https://www.naturalnews.com/2023-06-09-fdas-rumor-control-hub-snitch-misinformation-spreaders.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "The video warns that people may be misled by headlines or out-of-context statements, particularly when they are shared by a trusted person."
+        },
+        {
+         "title": "Ideas & Opinions - George Boardman: MAGA Republicans can\u2019t handle the truth",
+         "date": "2023-05-03",
+         "source": "theunion.com",
+         "url": "https://www.theunion.com/news/community/ideas-opinions---george-boardman-maga-republicans-can-t-handle-the-truth/article_ca63dd7a-e93c-11ed-9a8a-b7c83a31c4e5.html",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "Dominion alleged that Fox hosts and guests amplified false claims that its voting technology helped rig the election for Joe Biden."
+        },
+        {
+         "title": "What are disinformation and extremism? And why should troops be aware?",
+         "date": "2023-06-05",
+         "source": "armytimes.com",
+         "url": "https://www.armytimes.com/flashpoints/extremism-disinformation/2023/06/05/what-are-disinformation-and-extremism-and-why-should-troops-be-aware/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Unlike both disinformation and misinformation, malinformation is based on fact. It's true information that is used for harmful or manipulative purposes, according to DHS. In many cases, malinformation refers to situations in which facts are used out of context, such as editing a "
+        },
+        {
+         "title": "WaPo Fact Checker Roasted for Fake Claims of Intimidation Against Judge\u2019s Daughter",
+         "date": "2023-04-04",
+         "source": "breitbart.com:443",
+         "url": "https://www.breitbart.com:443/politics/2023/04/04/washington-post-fact-checker-roasted-for-fake-claims-of-intimidation-against-judges-daughter/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "You routinely fact check people for things like leaving context out of their statements \u2014 so why did you lie and say Don Jr. and Eric posted a picture of the judges daughter instead of telling the truth that they posted a link to a news story?"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 225,
+       "judged": 10,
+       "expression": 0.0675,
+       "support": 1.59,
+       "refute": 0.7,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Fact check: Conspiracy theories about the 'pandemic treaty'",
+         "date": "2023-06-21",
+         "source": "dw.com",
+         "url": "https://www.dw.com/en/fact-check-conspiracy-theories-about-the-pandemic-treaty/a-65982226",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "The draft makes no mention of the organization planning to issue digital passports to monitor holders' movements."
+        },
+        {
+         "title": "Bombshell Congressional report uncovers well-funded network of election interference and c",
+         "date": "2023-11-15",
+         "source": "naturalnews.com",
+         "url": "https://www.naturalnews.com/2023-11-15-congressional-report-uncovers-network-election-interference-censorship.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Information shared by Republicans and conservatives was targeted as \"misinformation\" and routinely removed from platforms, even when true, while false information shared by Democrats and liberals was allowed to flourish"
+        },
+        {
+         "title": "Objective Journalism in an Objectively Uneven Contest",
+         "date": "2023-11-13",
+         "source": "outsidethebeltway.com",
+         "url": "https://www.outsidethebeltway.com/objective-journalism-in-an-objectively-uneven-contest/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "They should not simply feed readers the things candidates say and leave it at that. They very much owe readers, most of whom are not news junkies, context."
+        },
+        {
+         "title": "Images of Syrian Civil War Take on a Second Life in Gaza Conflict - bellingcat",
+         "date": "2023-12-08",
+         "source": "bellingcat.com",
+         "url": "https://www.bellingcat.com/news/2023/12/08/images-of-syrian-civil-war-take-on-a-second-life-in-gaza-conflict/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Ahmad said there are two kinds of people who end up sharing Syrian footage stripped of context."
+        },
+        {
+         "title": "Are social media and coordinated misinformation campaigns fomenting extremism?",
+         "date": "2023-12-21",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/are-social-media-and-coordinated",
+         "relation": "partially_anticipates",
+         "confidence": 0.65,
+         "quote": "What social media does is to weaponize those atrocities, and those bad behaviors to amplify outrage, by presenting them without context and history."
+        },
+        {
+         "title": "Frenemy of the state",
+         "date": "2023-11-15",
+         "source": "deseret.com",
+         "url": "https://www.deseret.com/2023/11/14/23915926/frenemy-of-the-state-journalism-bias-fake-news",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "they were not primarily upset that the media get facts wrong, nor even that journalists push a liberal policy agenda"
+        },
+        {
+         "title": "Understanding the Crisis in Gaza: Your One-Stop Resource to Stay Informed, Challenge Misin",
+         "date": "2023-11-23",
+         "source": "amnesty.org.au",
+         "url": "https://www.amnesty.org.au/israel-gaza-toolkit-disinformation/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Disinformation is sharing false contextual information: meaning the content shared is genuine but it is reframed in a misleading way to support a certain viewpoint."
+        },
+        {
+         "title": "4 tips to spot misinformation on the web",
+         "date": "2023-11-29",
+         "source": "gqindia.com",
+         "url": "https://www.gqindia.com/content/4-tips-to-spot-misinformation-on-the-web",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Misinformation and fake news will often come without any real context attached, such as a source, a location, or an accompanying link that directs you to something similar"
+        },
+        {
+         "title": "Biden-defending fact-checkers fail to pounce on Rashida Tlaib",
+         "date": "2023-11-16",
+         "source": "foxnews.com",
+         "url": "https://www.foxnews.com/opinion/biden-defending-fact-checkers-fail-pounce-rashida-tlaib",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "With Democrats, the so-called independent fact-checkers rush to correct Tlaib critics, and not Tlaib \u2013 just as they rush to correct President Biden's critics, and not Biden."
+        },
+        {
+         "title": "Automatic Disinformation Threatens Democracy\u2014 and It\u2019s Here",
+         "date": "2023-08-17",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/automatic-disinformation-threatens",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "What we really need is AI that is smart enough to know when it is being used to spew falsehood."
+        },
+        {
+         "title": "So-Called Fact-Checkers Downplay Rashida Tlaib's Lies - The Daily Signal",
+         "date": "2023-11-17",
+         "source": "dailysignal.com",
+         "url": "https://www.dailysignal.com/2023/11/17/rashida-tlaibs-lies-ignored-by-fact-checkers/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "With Democrats, the so-called independent fact-checkers rush to correct Tlaib critics, and not Tlaib\u2014just as they rush to correct Biden critics, and not President Joe Biden."
+        },
+        {
+         "title": "Israel-Hamas war: Misinformation is being spread across social media \u2013 with real-world con",
+         "date": "2023-10-18",
+         "source": "scroll.in",
+         "url": "https://scroll.in/article/1057626/israel-hamas-war-misinformation-is-being-spread-across-social-media-with-real-world-consequences",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Palestinian narratives are censored and/or unable to make it to the online realm"
+        },
+        {
+         "title": "Liberalism is losing the information war",
+         "date": "2023-11-08",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/liberalism-is-losing-the-information",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The U.S. government's censorship efforts during the Vietnam War silenced much-needed dissent in that conflict, and the Bush Administration was famously less than forthright with the American people when persuading them to accept a war in Iraq."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 335,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.495,
+       "refute": 0.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "\ud83d\udd2e The root of riots; AI\u2018s climate costs; AGI; the last ICE & bronze age tech ++ #486",
+         "date": "2024-08-11",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-486",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "It all started with an unfounded rumour on social media. Obscure news sites sought to legitimise the rumour, before it was amplified by far-right activists, bot networks (likely of Russian origin) and crossed over into the mainstream and onto the streets."
+        },
+        {
+         "title": "SF's Substack execs shrug off writers' complaints about profiting from Nazism",
+         "date": "2023-12-22",
+         "source": "sfgate.com",
+         "url": "https://www.sfgate.com/tech/article/substack-nazi-problem-writers-letter-18570872.php",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "we don't think that censorship (including through demonetizing publications) makes the problem go away\u2014in fact, it makes it worse"
+        },
+        {
+         "title": "\ud83e\udd14 The misinformation about misinformation",
+         "date": "2024-06-08",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-misinformation-about-misinformation",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "Exposure to false and inflammatory content is remarkably low, with just 1% of Twitter users accounting for 80% of exposure to dubious websites during the 2016 U.S. election."
+        },
+        {
+         "title": "Disturbing and misleading efforts to defame Helen Toner through misdirection",
+         "date": "2024-05-30",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/disturbing-and-misleading-efforts",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Some of what the essa6 says is true (e.g., \u201cOpenAI has held discussions with government officials around the world on numerous issues), but the core of the essay is misdirection (either deliberate or accidental; I can\u2019t say)."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 1195,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.73,
+       "refute": 0.35,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "AI is persuasive, but that\u2019s not the real problem for democracy",
+         "date": "2025-10-01",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/persuasive-ai-not-problem-democracy-disinformation-misinformation-trust",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "A wrinkle in the AISI study, though, is that while personalization might not be very important compared to other factors, factual accuracy after a certain point doesn\u2019t seem to be either."
+        },
+        {
+         "title": "Bad Actors are Grooming LLMs to Produce Falsehoods",
+         "date": "2025-07-11",
+         "source": "Gary Marcus",
+         "url": "https://americansunlight.substack.com/cp/168074209",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "More specifically, 4o cited content from the Pravda network that was published on a different date (October 2024 rather than April 2025)\u2014in response to other strikes in the same city around that time. This shows the model\u2019s inability to reason about time."
+        },
+        {
+         "title": "People are getting their news from AI \u2013 and it\u2019s altering their views",
+         "date": "2025-12-19",
+         "source": "theconversation.com",
+         "url": "https://theconversation.com/people-are-getting-their-news-from-ai-and-its-altering-their-views-269354",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Such bias can influence how users think or feel, regardless of whether the information presented is true or false."
+        },
+        {
+         "title": "Sora is here. The window to save visual truth is closing",
+         "date": "2025-11-05",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/sora-is-here-the-window-to-save-visual-truth-closing-deepfakes-disinformation-misinformation-witness",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "A still photo turned into a fake AI video, passed off as real footage of a prison being bombed then circulated in a foreign influence campaign."
+        },
+        {
+         "title": "Why ChatGPT can\u2019t be trusted with breaking news",
+         "date": "2026-01-03",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/why-chatgpt-cant-be-trusted-with",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Accurate reporting already existed by the time Barrett posed his queries to the system, but Perplexity missed it, made an error, and wrongly blamed the user."
+        },
+        {
+         "title": "Breaking: \u201csycophantic AI distorts belief, manufacturing certainty where there should be d",
+         "date": "2026-03-03",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/breaking-sycophantic-ai-distorts",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Unlike hallucinations, which introduce false-hoods, sycophancy is a bias in the selection of the data people see."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0434,
+     "surprisal": 0.9566,
+     "peak_after": 0.1056,
+     "adoption": 0.0622,
+     "vindication": 0.2827,
+     "predictive_value": 0.0382,
+     "best_anticipation": {
+      "title": "Do Any Republicans Really Think a President DeSantis Won\u2019t Get Impeached Or Fram",
+      "date": "2023-06-16",
+      "url": "https://freerepublic.com/focus/f-news/4161224/posts",
+      "relation": "states",
+      "confidence": 0.55,
+      "quote": "They constantly leak information out of context to form false narratives that benefit Democrats. That's called disinformation and misinformation."
+     },
+     "contradiction": {
+      "title": "\ud83d\udd2e The root of riots; AI\u2018s climate costs; AGI; the last ICE & bronze age tech ++ ",
+      "date": "2024-08-11",
+      "url": "https://www.exponentialview.co/p/ev-486",
+      "relation": "contradicts",
+      "confidence": 0.45,
+      "quote": "It all started with an unfounded rumour on social media. Obscure news sites sought to legitimise the rumour, before it was amplified by far-right activists, bot networks (likely of Russian origin) and"
+     },
+     "claim": {
+      "text": "The pro-censorship argument that authorities can neutrally strip out false facts and leave honest disagreement intact fails, because the actual mechanism of misinformation is decontextualized true statements rather than false facts.",
+      "kind": "thesis",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "a lazy argument for censorship",
+       "they say true things without enough context",
+       "totally objective, unbiased way"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "key": "techtimes-ai-2023",
+   "label": "Low-tier outlet, aggregated predictions",
+   "source": "techtimes.com",
+   "title": "AI Predictions for 2023: Experts Foresee Shift to Autonomous Systems, Data Shortage Concerns, and Continued Industry Integration",
+   "url": "https://www.techtimes.com/articles/285594/20221229/ai-predictions-2023-experts-foresee-shift-autonomous-systems-data-shortage.htm",
+   "published": "2022-12-29",
+   "horizon": "long",
+   "claims": [
+    {
+     "anchor_date": "2022-12-29",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 191,
+       "judged": 10,
+       "expression": 0.0083,
+       "support": 0.083,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 405,
+       "judged": 10,
+       "expression": 0.0375,
+       "support": 0.375,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 176,
+       "judged": 10,
+       "expression": 0.12,
+       "support": 1.575,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Superhuman: What can AI do in 30 minutes? ",
+         "date": "2023-03-25",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/superhuman-what-can-ai-do-in-30-minutes",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "1,757 words. 7 (good!) pages. Two prompts. 2 minutes and 40 seconds."
+        },
+        {
+         "title": "Looking into 2023",
+         "date": "2023-01-06",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/2023-predictions-ml-ai",
+         "relation": "states",
+         "confidence": 0.6,
+         "quote": "Companies used to rely on humans to generate text, now it's an ML model with poorly-measured biases. The conversations happening on hidden middle layers of the internet will increasingly be written by bots."
+        },
+        {
+         "title": "The CNET Fake News Fiasco, Autopilot, and the Uncanny Cognitive Valley",
+         "date": "2023-01-31",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/the-cnet-fake-news-fiasco-autopilot",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "CNET\u2019s editors learned this the hard way last week, when they published a bunch of machine-generated articles that turned out to be filled with subtle but important errors, with errors in 41 of the 77 articles the bot wrote, all missed by editors who weren\u2019t paying enough attenti"
+        },
+        {
+         "title": "Secretary jobs in the age of AI",
+         "date": "2023-01-17",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/secretary-jobs-in-the-age-of-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "You're going to be flooded with AI-written communication, much of which will be incorrect."
+        },
+        {
+         "title": "LWiAI Podcast #113 - Nvidia\u2019s 10k GPU, Toolformer, AI alignment, John Oliver ",
+         "date": "2023-03-04",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-113-bing-chat-antics",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Generative AI Is Coming For the Lawyers"
+        },
+        {
+         "title": "Microsoft kickstarts the AI arms race",
+         "date": "2023-02-08",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/microsoft-kickstarts-the-ai-arms",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "a top marketing executive at the company planned a five-day trip to Mexico City, identified the best 65\" television, and then refined his query to find the best 65\" TV for gaming"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 215,
+       "judged": 9,
+       "expression": 0.1094,
+       "support": 1.26,
+       "refute": 0.62,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "LWiAI Podcast #122 - AI for Word and Excel, leaked Google memo, ImageBind, LLAva, robot so",
+         "date": "2023-05-13",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-122-ai-for-word-and",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "LinkedIn\u2019s new AI will write messages to hiring managers"
+        },
+        {
+         "title": "Catastrophe / Eucatastrophe",
+         "date": "2023-05-14",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/catastrophe-eucatastrophe",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "these tools are about to be deeply integrated into our work environments. Microsoft is releasing Co-Pilot GPT-4 tools for its ubiquitous Office applications, even as Google does the same for its office tools"
+        },
+        {
+         "title": "What happens when AI reads a book \ud83e\udd16\ud83d\udcd6",
+         "date": "2023-05-26",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/what-happens-when-ai-reads-a-book",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Given the entire text of the book, can AI help an instructor create more meaningful learning as a result? I think the answer is yes."
+        },
+        {
+         "title": "LWiAI Podcast #127 - Chatbot dating app, AI at work, RedPajama 7B, tons of research, worke",
+         "date": "2023-06-21",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-127-chatbot-dating",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Lawyers blame ChatGPT for tricking them into citing bogus case law"
+        },
+        {
+         "title": "On giving AI eyes and ears",
+         "date": "2023-06-23",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/on-giving-ai-eyes-and-ears",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Before multimodal AI, this is where things would have ended - with an impressive output..., but one that required humans to develop further. That is because, in the past, the AI couldn\u2019t tell what DALL-E was doing with its prompts"
+        },
+        {
+         "title": "LWiAI Podcast #118 - Anthropic vs OpenAI, AutoGPT, RL at Scale, AI Safety, Memeworthy AI V",
+         "date": "2023-04-14",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-118-anthropic-vs-openai",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Developers Are Connecting Multiple AI Agents to Make More \u2018Autonomous\u2019 AI"
+        },
+        {
+         "title": "AI Mailbag: the risks and benefits of AI",
+         "date": "2023-06-13",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/ai-mailbag-the-risks-and-benefits",
+         "relation": "contradicts",
+         "confidence": 0.62,
+         "quote": "Over the next five to 10 years, I expect most uses of AI in the workplace will be based on the \u201ccopilot\u201d model where software makes workers more productive rather than replacing them outright."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 370,
+       "judged": 10,
+       "expression": 0.09,
+       "support": 0.9,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "LWiAI Podcast #142 - Humanoid Robots, Video-To-Text, Habitat 3.0, Cruise troubles, data po",
+         "date": "2023-11-16",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-142-humanoid-robots",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Sick of meetings? Microsoft's new AI assistant will go in your place"
+        },
+        {
+         "title": "Now is the time for grimoires",
+         "date": "2023-08-20",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/now-is-the-time-for-grimoires",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "creating grimoires, spellbooks full of prompts that encode expertise"
+        },
+        {
+         "title": "On holding back the strange AI tide",
+         "date": "2023-07-23",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/on-holding-back-the-strange-ai-tide",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "individual employees will find ways to use AI to enhance their own jobs. They won't tell the organization's leaders about what they are doing"
+        },
+        {
+         "title": "The Best Available Human Standard",
+         "date": "2023-10-22",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/the-best-available-human-standard",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "while it may not be as good as an experienced professional, it is a pretty solid Best Available Coach if you don't have access to a human"
+        },
+        {
+         "title": "A CERN for AI and the Global Governance of AI",
+         "date": "2023-10-26",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/a-cern-for-ai-and-the-global-governance",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "we don't have tons of controls over current AI, especially now that people can hook them up to TaskRabbit and real-world software APIs"
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 1039,
+       "judged": 10,
+       "expression": 0.0465,
+       "support": 1.005,
+       "refute": 0.33,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Mantic Monday 3/11/24",
+         "date": "2024-03-12",
+         "source": "Scott Alexander",
+         "url": "https://www.astralcodexten.com/p/mantic-monday-31124",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "When they let their AI forecast only on those questions where it's most likely to do well (eg those with lots of relevant news articles), it very slightly outperforms the human crowd."
+        },
+        {
+         "title": "Let's Talk About AI 'X-Risk'",
+         "date": "2024-01-11",
+         "source": "Dean W. Ball",
+         "url": "https://www.hyperdimensional.co/p/lets-talk-about-ai-x-risk",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "nt LLMs because of their propensity to hallucinate and otherwise act in unexpected ways. These systems are only valuable to the business world insofar as they are both powerful and predictable."
+        },
+        {
+         "title": "How to think like an economist about AI and jobs",
+         "date": "2024-11-22",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/how-to-think-like-an-economist-about",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Yesterday I argued that human workers were likely to have a durable advantage over AI because many people value services provided by other people."
+        },
+        {
+         "title": "\ud83d\udd2e The year of scaling enterprise AI, with Cohere's Aidan Gomez",
+         "date": "2024-03-15",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-year-of-scaling-enterprise-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "How organisations are taking their large language models from proof of concept to useful application"
+        },
+        {
+         "title": "Signs and Portents",
+         "date": "2024-01-06",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/signs-and-portents",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Current AIs are good enough that they essentially do solid work on their own, raising the level of lower performers who use them."
+        },
+        {
+         "title": "\u2728 AI in 2025 \u2013 The great normalisation",
+         "date": "2024-12-18",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ai-in-2025-the-great-normalisation",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "Enterprise spending on genAI leapt to $13 billion in 2024 from about $3 billion in 2023."
+        },
+        {
+         "title": "\ud83d\udd2e What AI holds for us in 2025, with Ethan Mollick",
+         "date": "2024-12-11",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ai-2025-ethan-mollick",
+         "relation": "contradicts",
+         "confidence": 0.33,
+         "quote": "Despite a year of pilot projects and enthusiastic rhetoric, many large firms remain stuck in incremental territory. Instead of using AI to imagine radically new workflows, they're automating legacy tasks."
+        },
+        {
+         "title": "\ud83d\udd25 Unleashing the power of AI, with Ethan Mollick",
+         "date": "2024-03-20",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/unleashing-the-power-of-ai-with-ethan",
+         "relation": "partially_anticipates",
+         "confidence": 0.38,
+         "quote": "Ethan's students create GPTs to automate their jobs"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2682,
+       "judged": 10,
+       "expression": 0.0285,
+       "support": 2.22,
+       "refute": 1.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "AI scaling & scientific R&D by 2030",
+         "date": "2025-09-16",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/ai-scaling-and-scientific-r-and-d",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "AI may be a transformative tool well before it can work autonomously."
+        },
+        {
+         "title": " \ud83e\udd16 Jevons and the automated developer",
+         "date": "2025-01-15",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/jevons-and-the-automated-developer",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "I was feeling pretty lazy so I enlisted Claude, a large-language model created by Anthropic, to define the scope of the software."
+        },
+        {
+         "title": "Economists, tech leaders warn AI could bring 'large-scale job displacement' and other risk",
+         "date": "2026-07-14",
+         "source": "latimes.com",
+         "url": "https://www.latimes.com/business/story/2026-07-14/economists-tech-leaders-warn-ai-could-bring-large-scale-job-displacement-other-risks",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Tech giants such as Meta and Coinbase continue to lay off employees, citing the way AI is reshaping how people work."
+        },
+        {
+         "title": "The Epoch AI Brief - September 2025",
+         "date": "2025-10-01",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-epoch-ai-brief-september-2025",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "AI may be a transformative tool well before it can work autonomously."
+        },
+        {
+         "title": "Katharine Campbell: Navigating the AI revolution",
+         "date": "2026-01-13",
+         "source": "civilsociety.co.uk",
+         "url": "https://www.civilsociety.co.uk/finance/navigating-the-ai-revolution.html",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "Predictions of adoption have frequently been ahead of reality in prior technology shifts."
+        },
+        {
+         "title": "What to expect from AI in 2023",
+         "date": "2026-08-25",
+         "source": "thenextweb.com",
+         "url": "https://thenextweb.com/news/what-to-expect-ai-in-2023",
+         "relation": "states",
+         "confidence": 0.97,
+         "quote": "Alexander Hagerup, co-founder and CEO at Vic.ai, told us that we'd continue to see the \"progression from humans using AI and ML software to augment their work, to humans relying on software to autonomously do the work for them.\""
+        },
+        {
+         "title": "Will AI really decimate human jobs? Tech industry insiders are split | CNN Business",
+         "date": "2025-07-21",
+         "source": "cnn.com",
+         "url": "https://www.cnn.com/2025/07/21/tech/ai-replace-human-workers-tech-insiders-split",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "A doctor, for example, might have an AI assistant take notes during a patient's visit and fill out their chart autonomously, giving that doctor more time for face-to-face discussions with the patient."
+        },
+        {
+         "title": "A data bottleneck could slow the superintelligence race ",
+         "date": "2026-07-14",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/data-bottleneck-could-slow-superintelligence-race-asi-recursive-self-improvement",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "AI is already helping develop future AI models. Right now, these systems work only as assistants, shepherded by human programmers."
+        },
+        {
+         "title": "\u201cHuman-level AI by 2030\u201d \u2013 will it happen and are we ready? ",
+         "date": "2025-03-14",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/human-level-ai-by-2030-will-it-happen",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Increasing AI involvement in complex, long-duration tasks\n\nEarly adoption in industries like software engineering"
+        },
+        {
+         "title": "The year ahead",
+         "date": "2026-01-07",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-year-ahead",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "This is the year when AI will feel less like a set of tools and more like a workforce, where the advantage shifts to those who can orchestrate it into reliable outcomes."
+        },
+        {
+         "title": "Top scientists at OpenAI and Anthropic ask U.S. for tools to pace AI development",
+         "date": "2026-07-28",
+         "source": "nbcnews.com",
+         "url": "https://www.nbcnews.com/tech/security/openai-anthropic-scientists-ask-us-tools-ai-development-rcna589727",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "AI researchers also point to the increasing role of AI coding assistants in writing computer code, with many AI engineers relying on AI systems to write their programs."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0229,
+     "surprisal": 0.9771,
+     "peak_after": 0.12,
+     "adoption": 0.0971,
+     "vindication": 0.4872,
+     "predictive_value": 0.0706,
+     "best_anticipation": {
+      "title": "What to expect from AI in 2023",
+      "date": "2026-08-25",
+      "url": "https://thenextweb.com/news/what-to-expect-ai-in-2023",
+      "relation": "states",
+      "confidence": 0.97,
+      "quote": "Alexander Hagerup, co-founder and CEO at Vic.ai, told us that we'd continue to see the \"progression from humans using AI and ML software to augment their work, to humans relying on software to autonom"
+     },
+     "contradiction": {
+      "title": "AI Mailbag: the risks and benefits of AI",
+      "date": "2023-06-13",
+      "url": "https://www.understandingai.org/p/ai-mailbag-the-risks-and-benefits",
+      "relation": "contradicts",
+      "confidence": 0.62,
+      "quote": "Over the next five to 10 years, I expect most uses of AI in the workplace will be based on the \u201ccopilot\u201d model where software makes workers more productive rather than replacing them outright."
+     },
+     "claim": {
+      "text": "Alexander Hagerup, co-founder and CEO of Vic.ai, predicts that in 2023 humans will increasingly rely on AI and machine learning software to do their work for them autonomously.",
+      "kind": "prediction",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "do their work for them autonomously",
+       "a shift towards humans relying on AI"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-29",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 289,
+       "judged": 10,
+       "expression": 0.0087,
+       "support": 0.087,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 559,
+       "judged": 10,
+       "expression": 0.0152,
+       "support": 0.152,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 208,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.255,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Four questions platforms should answer before launching AI features",
+         "date": "2023-02-14",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/four-questions-platforms-should-answer",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Large language models work by ingesting an enormous corpus of text and images... Much of the web is free and open to being scraped, and it is this body of material that has provided much of the foundation for Bing, Bard, DALL-E, Midjourney"
+        },
+        {
+         "title": "GPT4: The quiet parts and the state of ML",
+         "date": "2023-03-20",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/gpt4-review",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "We're in the stage where ML model-generated text is going to accelerate the rate of data accumulating on the internet and lower the average quality."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 299,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.21,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Unfortunately, OpenAI and Google have moats",
+         "date": "2023-05-17",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/openai-google-llm-moats",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Concretely, that difference is access to quality and diverse training prompts for fine-tuning."
+        },
+        {
+         "title": "LWiAI Podcast #127 - Chatbot dating app, AI at work, RedPajama 7B, tons of research, worke",
+         "date": "2023-06-21",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-127-chatbot-dating",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "The Curse of Recursion: Training on Generated Data Makes Models Forget"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 531,
+       "judged": 10,
+       "expression": 0.0575,
+       "support": 1.34,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The AI is eating itself",
+         "date": "2023-06-27",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-ai-is-eating-itself",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "It suggests the proverbial mines from which companies gather the supposed raw material of human insights are now instead being filled up with counterfeit human intelligence."
+        },
+        {
+         "title": "DALL\u00b7E 3 and multimodality as moats, correcting bad moat takes",
+         "date": "2023-09-27",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/dalle3-multimodality-moats",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Multimodality is a good source for added scaling data after the text on the internet."
+        },
+        {
+         "title": "Synthetic data: Anthropic\u2019s CAI, from fine-tuning to pretraining, OpenAI\u2019s Superalignment,",
+         "date": "2023-11-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-synthetic-data",
+         "relation": "entails",
+         "confidence": 0.85,
+         "quote": "As the current or next generation of models akin to Gemini and GPT5 will have likely trained on all of the high-quality data on the internet (with the last sources coming from things like YouTube and podcasts), model providers are looking to new directions to get the last few ord"
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 1261,
+       "judged": 10,
+       "expression": 0.015,
+       "support": 0.15,
+       "refute": 0.72,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Why I build open language models",
+         "date": "2024-10-30",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/why-i-build-open-language-models",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "we're facing headwinds as the web closes its archives for AI training, could easily utilize 10x the compute we have"
+        },
+        {
+         "title": "We aren't running out of training data, we are running out of open training data",
+         "date": "2024-05-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/we-arent-running-out-of-training-474",
+         "relation": "contradicts",
+         "confidence": 0.72,
+         "quote": "We aren't running out of training data, we are running out of open training data"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 3321,
+       "judged": 10,
+       "expression": 0.0165,
+       "support": 1.27,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "American versus Chinese LLMs: a Game of Capabilities for Enterprise Adoption",
+         "date": "2026-01-23",
+         "source": "zerohedge.com",
+         "url": "https://www.zerohedge.com/news/2026-01-23/american-versus-chinese-llms-game-capabilities-enterprise-adoption",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "A team at Meta, Virginia Tech, and Cerebras Systems recently published a paper entitled \u201c Demystifying Synthetic Data in LLM Pre-training: A Systematic Study of Scaling Laws, Benefits, and Pitfalls. \u201d In this paper, the research team assess whether there are limits in improvement"
+        },
+        {
+         "title": "Up And Away: Pushing And Surpassing The Limits Of LLMs",
+         "date": "2025-11-25",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/councils/forbestechcouncil/2025/11/25/up-and-away-pushing-and-surpassing-the-limits-of-llms/",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "2. Data Scarcity\n\nAs more data is scraped from the internet, high-quality datasets are becoming harder to find. Beyond a certain point, adding more data may no longer lead to meaningful improvements."
+        },
+        {
+         "title": "The huge potential implications of long-context inference",
+         "date": "2025-09-19",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-huge-potential-implications-of",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "part of Kimi K2\u2019s training involved combining MCP servers and using LLMs to automatically generate lots of synthetic tools, agents, tasks and transcripts to help create good post-training data"
+        },
+        {
+         "title": "I wrote an AI textbook \u2014 how long until AI can do it better?",
+         "date": "2026-08-12",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Today's LLMs increase entropy in long-form non-fiction writing, and I don't see how that can be stacked on top of itself endlessly. They'll be reliant on humans acting as sort of guides."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.012,
+     "surprisal": 0.988,
+     "peak_after": 0.0575,
+     "adoption": 0.0455,
+     "vindication": 0.635,
+     "predictive_value": 0.0367,
+     "best_anticipation": {
+      "title": "Up And Away: Pushing And Surpassing The Limits Of LLMs",
+      "date": "2025-11-25",
+      "url": "https://www.forbes.com/councils/forbestechcouncil/2025/11/25/up-and-away-pushing-and-surpassing-the-limits-of-llms/",
+      "relation": "states",
+      "confidence": 0.85,
+      "quote": "2. Data Scarcity\n\nAs more data is scraped from the internet, high-quality datasets are becoming harder to find. Beyond a certain point, adding more data may no longer lead to meaningful improvements."
+     },
+     "contradiction": {
+      "title": "We aren't running out of training data, we are running out of open training data",
+      "date": "2024-05-29",
+      "url": "https://www.interconnects.ai/p/we-arent-running-out-of-training-474",
+      "relation": "contradicts",
+      "confidence": 0.72,
+      "quote": "We aren't running out of training data, we are running out of open training data"
+     },
+     "claim": {
+      "text": "The supply of high-quality text data suitable for training language models is finite, and the growing use of large language models raises the prospect of exhausting it.",
+      "kind": "thesis",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "the finite supply of high-quality text data",
+       "raises concerns about"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-29",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 212,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 411,
+       "judged": 10,
+       "expression": 0.012,
+       "support": 0.12,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 139,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 217,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.315,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "LWiAI Podcast #126 - Few have tried ChatGPT, Baidu\u2019s $145M AI fund, AI job culling, OpenAI",
+         "date": "2023-06-13",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/126-few-have-tried-chatgpt-baidus",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "How to Keep Scaling Large Language Models when Data Runs Out? A New AI Research Trains 400 Models with up to 9B Parameters and 900B Tokens to Create an Extension of Chinchilla Scaling Laws for Repeated Data"
+        },
+        {
+         "title": "Unfortunately, OpenAI and Google have moats",
+         "date": "2023-05-17",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/openai-google-llm-moats",
+         "relation": "partially_anticipates",
+         "confidence": 0.25,
+         "quote": "these models are trained on trillions of tokens of data from the internet"
+        },
+        {
+         "title": "AI Scaling Laws Guide Building to Superhuman Level AI",
+         "date": "2023-05-25",
+         "source": "nextbigfuture.com",
+         "url": "https://www.nextbigfuture.com/2023/05/ai-scaling-laws-guide-building-to-superhuman-level-ai.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "This said that your LLM models are optimial with a ratio of 20 tokens per parameter. This was a hugely influential paper (March 2022). Instead of more and more parameters, there was a race to more and more tokens."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 381,
+       "judged": 10,
+       "expression": 0.03,
+       "support": 0.39,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "What people ask me most. Also, some answers.",
+         "date": "2023-10-12",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/what-people-ask-me-most-also-some",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "this paper argues that we will be out of training data in the next decade or two (or even by 2026 if we restrict ourselves to high quality data)"
+        },
+        {
+         "title": "Llama 2: an incredible open LLM",
+         "date": "2023-07-18",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llama-2-from-meta",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "We trained on 2 trillion tokens of data as this provides a good performance\u2013cost trade-off, up-sampling the most factual sources in an effort to increase knowledge and dampen hallucinations."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 947,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.873,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Artifacts Log 2: Gemma 2, more Chinese LLMs, high quality datasets, and domain-specific tr",
+         "date": "2024-07-10",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/artifacts-log-2",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "This DeepSeek model has \u201c16B total params, 2.4B active params\u201d and is trained on 5.7 trillion tokens."
+        },
+        {
+         "title": "Why large language models struggle with long contexts",
+         "date": "2024-12-17",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/why-large-language-models-struggle",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The latest AI models have been trained on trillions of tokens\u2014far more than any human will read or hear. But a lot of valuable information is proprietary, time-sensitive, or otherwise not available for training."
+        },
+        {
+         "title": "Sam Altman Wants $7 Trillion",
+         "date": "2024-02-13",
+         "source": "Scott Alexander",
+         "url": "https://www.astralcodexten.com/p/sam-altman-wants-7-trillion",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "There isn\u2019t that much text in the whole world. You might be able to get a few trillion more by combining all published books, Facebo"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2404,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.34,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "GPT models memorize 3.6 bits per parameter | VentureBeat",
+         "date": "2025-06-05",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/how-much-information-do-llms-really-memorize-now-we-know-thanks-to-meta-google-nvidia-and-cornell/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "trained on massive datasets: trillions of words pulled from websites, books, codebases, and, increasingly, other media such as images, audio, and video"
+        },
+        {
+         "title": "Up And Away: Pushing And Surpassing The Limits Of LLMs",
+         "date": "2025-11-25",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/councils/forbestechcouncil/2025/11/25/up-and-away-pushing-and-surpassing-the-limits-of-llms/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "As more data is scraped from the internet, high-quality datasets are becoming harder to find. Beyond a certain point, adding more data may no longer lead to meaningful improvements."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.006,
+     "surprisal": 0.994,
+     "peak_after": 0.03,
+     "adoption": 0.024,
+     "vindication": 1.0,
+     "predictive_value": 0.0239,
+     "best_anticipation": {
+      "title": "Sam Altman Wants $7 Trillion",
+      "date": "2024-02-13",
+      "url": "https://www.astralcodexten.com/p/sam-altman-wants-7-trillion",
+      "relation": "entails",
+      "confidence": 0.72,
+      "quote": "There isn\u2019t that much text in the whole world. You might be able to get a few trillion more by combining all published books, Facebo"
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "The world's total stock of high-quality text data available for training large language models \u2014 including all books, scientific papers, news articles, Wikipedia, and publicly available code \u2014 is estimated at between 4.6 trillion and 17.2 trillion tokens.",
+      "kind": "fact",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "between 4.6 trillion and 17.2 trillion tokens",
+       "the world's total stock of such data"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-29",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 106,
+       "judged": 10,
+       "expression": 0.0028,
+       "support": 0.028,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 235,
+       "judged": 10,
+       "expression": 0.0125,
+       "support": 0.125,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 99,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 144,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.12,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "An AI trained on dark web? Researchers may have unlocked a new weapon against hackers",
+         "date": "2023-05-18",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/technology/artificial-intelligence/darkbert-unveiled-ai-llm-dark-web-8616834/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "due to the shortage of publicly available Dark Web task-specific data, some tasks may require some fine-tuning"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 294,
+       "judged": 10,
+       "expression": 0.009,
+       "support": 0.09,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Synthetic data: Anthropic\u2019s CAI, from fine-tuning to pretraining, OpenAI\u2019s Superalignment,",
+         "date": "2023-11-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-synthetic-data",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Niche facts, languages, and tasks will all get much better simply by providing the models with a ton of data. Synthetic data lets models see an obscure data point a few times in training, rather than just once."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 827,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.105,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Frontier language models have become much smaller",
+         "date": "2024-12-13",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/frontier-language-models-have-become-24-12-13",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Instead of getting the tokens used for training from internet scraping, we can instead generate the tokens that we will later use in training"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2107,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.09,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "AI is advancing far faster than our annual report can track",
+         "date": "2025-10-15",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/ai-safety-report-update-yoshua-bengio-clare-prunkl",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "These improvements have come about largely without the need for larger training runs, a shift that has important implications both for expectations of future gains"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0076,
+     "surprisal": 0.9924,
+     "peak_after": 0.009,
+     "adoption": 0.0014,
+     "vindication": 1.0,
+     "predictive_value": 0.0014,
+     "best_anticipation": {
+      "title": "An AI trained on dark web? Researchers may have unlocked a new weapon against ha",
+      "date": "2023-05-18",
+      "url": "https://indianexpress.com/article/technology/artificial-intelligence/darkbert-unveiled-ai-llm-dark-web-8616834/",
+      "relation": "partially_anticipates",
+      "confidence": 0.4,
+      "quote": "due to the shortage of publicly available Dark Web task-specific data, some tasks may require some fine-tuning"
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "The data typically used for training language models may be used up as early as 2026.",
+      "kind": "prediction",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "may be used up in the near future-as early as 2026"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-29",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 263,
+       "judged": 10,
+       "expression": 0.0057,
+       "support": 0.058,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 515,
+       "judged": 10,
+       "expression": 0.112,
+       "support": 1.12,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 200,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 2.45,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Looking into 2023",
+         "date": "2023-01-06",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/2023-predictions-ml-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "GPT4 is less impactful than ChatGPT"
+        },
+        {
+         "title": "LWiAI Podcast #115 - GPT4, Bard, AGI, Alpaca, Anthropic, Midjourney V5",
+         "date": "2023-03-26",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/lwiai-podcast-115-gpt4-bard-agi-alpaca",
+         "relation": "entails",
+         "confidence": 0.85,
+         "quote": "Confirmed: the new Bing runs on OpenAI's GPT-4"
+        },
+        {
+         "title": "Could ChatGPT Become an Architect?",
+         "date": "2023-03-29",
+         "source": "Brian Potter",
+         "url": "https://www.construction-physics.com/p/could-chatgpt-become-an-architect",
+         "relation": "states",
+         "confidence": 0.92,
+         "quote": "OpenAI recently released an updated version of their GPT large language model, GPT-4, and have incorporated it into their ChatGPT chatbot."
+        },
+        {
+         "title": "A temporary pause on training extra large language models",
+         "date": "2023-03-29",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/a-temporary-pause-on-training-extra",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "It calls for a 6 month moratorium on training systems that are \u201cmore powerful than GPT-4\u201d."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 278,
+       "judged": 10,
+       "expression": 0.0375,
+       "support": 2.978,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Baidu Says Ernie AI Beats ChatGPT In Key Metrics",
+         "date": "2023-06-27",
+         "source": "silicon.co.uk",
+         "url": "https://www.silicon.co.uk/e-innovation/artificial-intelligence/baidu-ernie-chatgpt-518187",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "found that Ernie 3.5 surpassed OpenAI\u2019s latest GPT-4 in several Chinese-language capabilities"
+        },
+        {
+         "title": "Generative AI Is a 'Double-Edged Sword,' US Senators Say, Urging Harm Assessment - CNET",
+         "date": "2023-06-24",
+         "source": "cnet.com",
+         "url": "https://www.cnet.com/tech/generative-ai-is-a-double-edged-sword-us-senators-say-urging-harm-assessment/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "In March, Tesla CEO Elon Musk and other industry leaders urged for a pause on AI models more advanced than ChatGPT 4, the most advanced version of the large language model behind the ChatGPT chatbot"
+        },
+        {
+         "title": "NowVertical Group Inc: NowVertical Announces New Partnership Program with Microsoft and Az",
+         "date": "2023-06-27",
+         "source": "finanznachrichten.de",
+         "url": "https://www.finanznachrichten.de/nachrichten-2023-06/59436497-nowvertical-group-inc-nowvertical-announces-new-partnership-program-with-microsoft-and-azure-openai-for-secured-enterprise-ai-deployments-399.htm",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "will allow customers to take advantage of the powerful GPT-4 model formulated by OpenAI"
+        },
+        {
+         "title": "GPT-5: Everything We Know So Far About OpenAI's Next Chat-GPT Release - SlashGear",
+         "date": "2023-06-25",
+         "source": "slashgear.com",
+         "url": "https://www.slashgear.com/1322736/chat-gpt-5-release-open-ai-details/",
+         "relation": "states",
+         "confidence": 0.92,
+         "quote": "GPT-3.5 was succeeded by GPT-4 in March 2023, which brought massive improvements to the chatbot"
+        },
+        {
+         "title": "It is starting to get strange.",
+         "date": "2023-05-02",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/it-is-starting-to-get-strange",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "But, you might ask, hasn\u2019t GPT-4 been around forever (or at least for about a month, which is forever in AI terms)?"
+        },
+        {
+         "title": "Different development paths of LLMs",
+         "date": "2023-06-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-development-paths",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Side note on if we should try to precisely reproduce ChatGPT / GPT4 or not"
+        },
+        {
+         "title": "Bitgpt App: Revolutionizing Crypto Trading with OpenAI's GPT-4 and Developed by Former Ope",
+         "date": "2023-06-23",
+         "source": "markets.financialcontent.com",
+         "url": "https://markets.financialcontent.com/stocks/article/accwirecq-2023-6-23-bitgpt-app-revolutionizing-crypto-trading-with-openais-gpt-4-and-developed-by-former-openai-experts",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Utilizing the revolutionary GPT-4 module developed by OpenAI, Bitgpt App represents a cutting-edge solution"
+        },
+        {
+         "title": "The AI industry really should slow down a little",
+         "date": "2023-03-31",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-ai-industry-really-should-slow",
+         "relation": "entails",
+         "confidence": 0.85,
+         "quote": "the next several months will let us observe the real-world effects of GPT-4 and its rivals, and help us understand how and where we should act"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 555,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.825,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Synthetic data: Anthropic\u2019s CAI, from fine-tuning to pretraining, OpenAI\u2019s Superalignment,",
+         "date": "2023-11-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-synthetic-data",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "rumors that Mistral is just Llama 2 pretraining continued on GPT4 tokens"
+        },
+        {
+         "title": "4 things experts say could happen with AI in 2024 \u2014 and why it could be bad news for OpenA",
+         "date": "2023-12-28",
+         "source": "businessinsider.com",
+         "url": "https://www.businessinsider.com/experts-ai-in-2024-could-be-bad-news-for-openai-2023-12",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Google ended the year with a bang with the launch of Gemini, an AI model that it says can match OpenAI's GPT-4"
+        },
+        {
+         "title": "10 Unbelievable Ways ChatGPT Shook Up The World In 2023 - SlashGear",
+         "date": "2023-12-29",
+         "source": "slashgear.com",
+         "url": "https://www.slashgear.com/1480796/ways-chat-gpt-shook-up-the-world-2023/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Anyone with internet access can use the free ChatGPT-3.5, while OpenAI's newer GPT-4 algorithm is available for $20 a month."
+        },
+        {
+         "title": "OpenAI's vision: a chatbot in every app",
+         "date": "2023-11-09",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/openais-vision-a-chatbot-in-every",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "That's four times more than classic GPT-4, and it's plenty for personal use."
+        },
+        {
+         "title": "An Opinionated Guide to Which AI to Use: ChatGPT Anniversary Edition",
+         "date": "2023-12-07",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "GPT-4 is at least a year old."
+        },
+        {
+         "title": "Ubiquitous cameras plus AI will change how we understand the world",
+         "date": "2023-10-03",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/ubiquitous-cameras-plus-ai-will-change",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Last week I wrote about OpenAI releasing GPT-4V, a new version of its flagship language model that has the ability to understand images."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 1238,
+       "judged": 10,
+       "expression": 0.033,
+       "support": 3.25,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "\ud83d\udca1 The foundations of future AI",
+         "date": "2024-10-02",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-foundations-of-future-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "GPT-4, Claude 3 and Llama represent the \u201cliberal arts\u201d of AI, offering wide-ranging but generalised capabilities"
+        },
+        {
+         "title": "What OpenAI did",
+         "date": "2024-05-14",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/what-openai-did",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "it does not represent a major leap over the previous version of GPT-4, the way that GPT-4 was a 10x improvement over the free GPT-3.5"
+        },
+        {
+         "title": "Last Week in AI #277 - OpenAI's CriticGPT, Music labels sue for copyright infringement, An",
+         "date": "2024-07-02",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/last-week-in-ai-277-openais-criticgpt",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "CriticGPT, designed to identify errors in the outputs of ChatGPT, an AI system built on the GPT-4 architecture"
+        },
+        {
+         "title": "Not-so-large language models: a concise guide",
+         "date": "2024-05-09",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/not-so-large-language-models-a-concise",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "When OpenAI released GPT-4 in March 2023, it set a new standard for large language model performance."
+        },
+        {
+         "title": "Frontier language models have become much smaller",
+         "date": "2024-12-13",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/frontier-language-models-have-become-24-12-13",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "given that GPT-4 was released in March 2023"
+        },
+        {
+         "title": "Where 2024\u2019s \u201copen GPT4\u201d can\u2019t match OpenAI\u2019s",
+         "date": "2024-01-05",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/open-gpt4-limitations",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "we know we're close to a model on paper that's similar to GPT4 on most normal large language model (LLM) evaluation tasks"
+        },
+        {
+         "title": "Why the collapse of the Generative AI bubble may be imminent",
+         "date": "2024-08-03",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/why-the-collapse-of-the-generative",
+         "relation": "states",
+         "confidence": 0.9,
+         "quote": "their flagship model, introduced in March of 2023"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 3103,
+       "judged": 10,
+       "expression": 0.015,
+       "support": 1.855,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "OpenAI Model Differentiation 101",
+         "date": "2025-07-11",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/openai-model-differentiation-101",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "The next model was a big leap, so it was called GPT-4."
+        },
+        {
+         "title": "OpenAI just released GPT-5\u2014it just didn\u2019t call it that",
+         "date": "2025-03-07",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/openai-just-released-gpt-5it-just",
+         "relation": "states",
+         "confidence": 0.9,
+         "quote": "When OpenAI released GPT-4 in March 2023, it was dramatically more capable than previous models."
+        },
+        {
+         "title": "ChatGPT-5 and GPT-5 rumors: Expected release date, all the rumors so far",
+         "date": "2025-05-21",
+         "source": "androidauthority.com",
+         "url": "https://www.androidauthority.com/gpt-5-chatgpt-release-date-rumors-features-3337892/",
+         "relation": "states",
+         "confidence": 0.7,
+         "quote": "Even though OpenAI released GPT-4 mere months after ChatGPT, we know that it took over two years to train, develop, and test."
+        },
+        {
+         "title": "2025: A Look Ahead",
+         "date": "2025-01-09",
+         "source": "Dean W. Ball",
+         "url": "https://www.hyperdimensional.co/p/2025-a-look-ahead",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "o3's leap in performance over o1 could be because the former is based on the as-yet unreleased GPT-5, whereas o1 is based on GPT-4"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0589,
+     "surprisal": 0.9411,
+     "peak_after": 0.0375,
+     "adoption": -0.0214,
+     "vindication": 1.0,
+     "predictive_value": 0.0,
+     "best_anticipation": {
+      "title": "Not-so-large language models: a concise guide",
+      "date": "2024-05-09",
+      "url": "https://www.understandingai.org/p/not-so-large-language-models-a-concise",
+      "relation": "states",
+      "confidence": 0.95,
+      "quote": "When OpenAI released GPT-4 in March 2023, it set a new standard for large language model performance."
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "OpenAI's next-generation generative language model GPT-4 will be released within the first months of 2023.",
+      "kind": "prediction",
+      "salience": 0.75,
+      "explicit": true,
+      "fingerprints": [
+       "set to be released in the coming months",
+       "According to recent rumors"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "key": "lichtman-ignore",
+   "label": "Under-the-radar post, checkable within months",
+   "source": "Andre Cooper",
+   "title": "You Can Ignore Allan Lichtman and His Presidential Predictions",
+   "url": "https://goodreason.substack.com/p/you-can-ignore-allan-lichtman-and",
+   "published": "2024-07-24",
+   "horizon": "short",
+   "claims": [
+    {
+     "anchor_date": "2024-07-24",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 217,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 76,
+       "judged": 10,
+       "expression": 0.0307,
+       "support": 0.307,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 38,
+       "judged": 10,
+       "expression": 0.009,
+       "support": 0.36,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "US polling 'Nostradamus' says RFK Jr. dropping out will help Harris",
+         "date": "2024-08-21",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/allan-lichtman-rfk-kamala-harris-kennedy-drop-out-2024-election-trump-1942253",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Lichtman also noted that he hasn't definitively called [the \"third party\"] key, but said \"it certainly doesn't look like [Kennedy] is going to rebound.\" \"I'm still reserving judgement,\" he added."
+        },
+        {
+         "title": "Accurate Election Historian Shares Thoughts On Trump, Harris Matchup | News Radio 105.5 WE",
+         "date": "2024-07-30",
+         "source": "wercfm.iheart.com",
+         "url": "https://wercfm.iheart.com/content/2024-07-30-accurate-election-historian-gives-take-on-trump-harris-matchup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "American University historian Allan Lichtman, who has accurately predicted the result of nine of the last 10 presidential elections"
+        },
+        {
+         "title": "'US Election Nostradamus' reveals why Trump's 'disastrous pick' JD Vance would be a \u2018horro",
+         "date": "2024-08-03",
+         "source": "hindustantimes.com",
+         "url": "https://www.hindustantimes.com/world-news/us-news/us-election-nostradamus-reveals-why-trumps-disastrous-pick-jd-vance-would-be-a-horror-show-101722675641852.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.25,
+         "quote": "The American University professor Lichtman has correctly predicted the outcome of almost every presidential election since 40th President Ronald Reagan's victory in 1984."
+        },
+        {
+         "title": "Historian who predicted almost every election since 1984 gives take on Trump-Harris matchu",
+         "date": "2024-07-30",
+         "source": "nypost.com",
+         "url": "https://nypost.com/2024/07/29/us-news/historian-who-predicted-almost-every-election-since-1984-gives-take-on-trump-harris-matchup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Allan Lichtman, an election forecaster who has correctly predicted nearly every presidential race since 1984, developed a formula that is used to make predictions about an upcoming presidential election \u2014 and in most cases, it proves to be right."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 56,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.651,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "When Election Modelers Attack",
+         "date": "2024-10-09",
+         "source": "nymag.com",
+         "url": "https://nymag.com/intelligencer/article/who-will-win-election-trump-harris-model-wars-nate-silver.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.72,
+         "quote": "(Lichtman did suggest at the time that Trump would win the popular vote, which he did not; he has since clarified that his forecast only includes the ultimate Electoral College victor. His one miss was 2000, when the Electoral College outcome hinged on a small number of contested"
+        },
+        {
+         "title": "How an \u2018October surprise\u2019 could impact the 2024 election, according to polling \u2018Nostradamu",
+         "date": "2024-10-07",
+         "source": "nypost.com",
+         "url": "https://nypost.com/2024/10/06/us-news/election-nostradamus-says-october-surprise-wont-change-prediction-that-harris-will-win/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The scholar, who is a registered Democrat, claims to have correctly predicted the winner of every US presidential race since 1984 \u2014 though not without some caveats pointed out by critics."
+        },
+        {
+         "title": "Nate Silver Throws Shade on Allan Lichtman's 2024 Election Prediction",
+         "date": "2024-09-27",
+         "source": "twitchy.com",
+         "url": "https://twitchy.com/justmindy/2024/09/27/nate-silver-allan-lichtman-dispute-n2401506",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "The funny thing is if you actually apply his keys correctly based on how he's applied them in the past, they predict a Trump victory."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 103,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.09,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "25 AI Predictions for 2025, from Marcus on AI",
+         "date": "2025-01-01",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/25-ai-predictions-for-2025-from-marcus",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "People will also continue to play games to weaken the definition or even try to define it in financial rather than scientific terms."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 272,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0154,
+     "surprisal": 0.9846,
+     "peak_after": 0.009,
+     "adoption": -0.0064,
+     "vindication": 1.0,
+     "predictive_value": 0.0,
+     "best_anticipation": {
+      "title": "Nate Silver Throws Shade on Allan Lichtman's 2024 Election Prediction",
+      "date": "2024-09-27",
+      "url": "https://twitchy.com/justmindy/2024/09/27/nate-silver-allan-lichtman-dispute-n2401506",
+      "relation": "anticipates_directionally",
+      "confidence": 0.6,
+      "quote": "The funny thing is if you actually apply his keys correctly based on how he's applied them in the past, they predict a Trump victory."
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "Lichtman's claimed perfect record of presidential predictions is an artifact of retroactively editing his own past predictions and redefining what the model claims to forecast, not of genuine predictive accuracy.",
+      "kind": "thesis",
+      "salience": 0.95,
+      "explicit": true,
+      "fingerprints": [
+       "touting a non-existent \u2018perfect record\u2019",
+       "retroactively editing his predictions to maintain the illusion"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-07-24",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 557,
+       "judged": 10,
+       "expression": 0.0028,
+       "support": 0.028,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 206,
+       "judged": 10,
+       "expression": 0.003,
+       "support": 0.03,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 96,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 1.55,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Polling \"Nostradamus\" has new nickname for Donald Trump",
+         "date": "2024-07-29",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/donald-trump-nickname-kamala-harris-debate-donald-duck-allan-lichtman-1931373",
+         "relation": "contradicts",
+         "confidence": 0.55,
+         "quote": "his predictive method has been proven correct in all but one presidential elections since 1984. The only outlier is the contentious 2000 election, when then-Vice President Al Gore clinched the popular vote, but fell five Electoral College votes behind then-Texas Gov. George W. Bu"
+        },
+        {
+         "title": "Accurate Election Historian Shares Thoughts On Trump, Harris Matchup | News Radio 105.5 WE",
+         "date": "2024-07-30",
+         "source": "wercfm.iheart.com",
+         "url": "https://wercfm.iheart.com/content/2024-07-30-accurate-election-historian-gives-take-on-trump-harris-matchup/",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "American University historian Allan Lichtman, who has accurately predicted the result of nine of the last 10 presidential elections"
+        },
+        {
+         "title": "Historian who predicted almost every election since 1984 gives take on Trump-Harris matchu",
+         "date": "2024-07-30",
+         "source": "nypost.com",
+         "url": "https://nypost.com/2024/07/29/us-news/historian-who-predicted-almost-every-election-since-1984-gives-take-on-trump-harris-matchup/",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "an election forecaster who has correctly predicted nearly every presidential race since 1984"
+        },
+        {
+         "title": "US polling 'Nostradamus' says RFK Jr. dropping out will help Harris",
+         "date": "2024-08-21",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/allan-lichtman-rfk-kamala-harris-kennedy-drop-out-2024-election-trump-1942253",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "His impressive accuracy forecasting the last 10 election outcomes using this system has earned him the nickname \"Nostradamus\" of U.S. elections"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 229,
+       "judged": 10,
+       "expression": 0.104,
+       "support": 3.12,
+       "refute": 0.65,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Letter to the editor: Indicators point to election outcomes",
+         "date": "2024-09-30",
+         "source": "herald-dispatch.com",
+         "url": "https://www.herald-dispatch.com/opinion/letter-to-the-editor-indicators-point-to-election-outcomes/article_c075a6b2-7500-11ef-a6ad-4be9beabe74e.html",
+         "relation": "contradicts",
+         "confidence": 0.3,
+         "quote": "Their model accurately forecasts every presidential election since 1984, with sole exception of 2000 election."
+        },
+        {
+         "title": "Election Polls: Accurate Indicators or Poor Predictors?",
+         "date": "2024-09-30",
+         "source": "ivn.us",
+         "url": "https://ivn.us/posts/election-polls-accurate-indicators-or-poor-predictors-2024-09-30",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "This was even the case in the infamous polling \u201cmiss\u201d of 2016, as detractors often overlook that the candidate leading in national polls that year\u2014Hillary Clinton\u2014 did win more votes. Polls just cannot account for quirks of the Electoral College."
+        },
+        {
+         "title": "When Election Modelers Attack",
+         "date": "2024-10-09",
+         "source": "nymag.com",
+         "url": "https://nymag.com/intelligencer/article/who-will-win-election-trump-harris-model-wars-nate-silver.html",
+         "relation": "states",
+         "confidence": 0.92,
+         "quote": "Lichtman did suggest at the time that Trump would win the popular vote, which he did not; he has since clarified that his forecast only includes the ultimate Electoral College victor."
+        },
+        {
+         "title": "US Presidential elections: Historian Allan Lichtman predicts Harris win",
+         "date": "2024-10-14",
+         "source": "deccanchronicle.com",
+         "url": "https://www.deccanchronicle.com/world/americas/us-presidential-elections-historian-allan-lichtman-predicts-harris-win-1830015",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Asked about whether there can be different winners among Democrats and Republicans in terms of electoral college and popular votes, Lichtman said he hasn't made any prediction on that aspect"
+        },
+        {
+         "title": "US Election 2024: Astrologers Predict Shocking Outcome Of Presidential Race",
+         "date": "2024-09-10",
+         "source": "oneindia.com",
+         "url": "https://www.oneindia.com/international/us-election-2024-astrologers-predict-shocking-outcome-of-presidential-race-011-3930475.html",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "Lichtman, who accurately predicted Trump's victory in 2016, now believes that Vice President Kamala Harris will win the election on November 5. He has a near-perfect record, having correctly predicted nine out of the last ten elections."
+        },
+        {
+         "title": "Harris will beat Trump, says election prediction legend Allan Lichtman",
+         "date": "2024-09-05",
+         "source": "cnbc.com",
+         "url": "https://www.cnbc.com/2024/09/05/harris-trump-lichtman-election-prediction.html",
+         "relation": "states",
+         "confidence": 0.93,
+         "quote": "However, Lichtman's model indicated that Trump would win the popular vote, which he lost despite securing the Electoral College."
+        },
+        {
+         "title": "Nate Silver Throws Shade on Allan Lichtman's 2024 Election Prediction",
+         "date": "2024-09-27",
+         "source": "twitchy.com",
+         "url": "https://twitchy.com/justmindy/2024/09/27/nate-silver-allan-lichtman-dispute-n2401506",
+         "relation": "states",
+         "confidence": 0.88,
+         "quote": "In 2016, he predicted Trump would win the *popular* vote and said nothing about the Electoral College."
+        },
+        {
+         "title": "How an \u2018October surprise\u2019 could impact the 2024 election, according to polling \u2018Nostradamu",
+         "date": "2024-10-07",
+         "source": "nypost.com",
+         "url": "https://nypost.com/2024/10/06/us-news/election-nostradamus-says-october-surprise-wont-change-prediction-that-harris-will-win/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "claims to have correctly predicted the winner of every US presidential race since 1984 \u2014 though not without some caveats pointed out by critics"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 240,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.105,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "What drove Asian and Hispanic voters to the right in 2024",
+         "date": "2024-11-20",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/what-drove-asian-and-hispanic-voters",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Harris also lost the popular vote to Donald Trump, who lost it to Clinton in 2016 despite winning the electoral college"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 658,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0029,
+     "surprisal": 0.9971,
+     "peak_after": 0.104,
+     "adoption": 0.1011,
+     "vindication": 0.1889,
+     "predictive_value": 0.0599,
+     "best_anticipation": {
+      "title": "Harris will beat Trump, says election prediction legend Allan Lichtman",
+      "date": "2024-09-05",
+      "url": "https://www.cnbc.com/2024/09/05/harris-trump-lichtman-election-prediction.html",
+      "relation": "states",
+      "confidence": 0.93,
+      "quote": "However, Lichtman's model indicated that Trump would win the popular vote, which he lost despite securing the Electoral College."
+     },
+     "contradiction": {
+      "title": "Polling \"Nostradamus\" has new nickname for Donald Trump",
+      "date": "2024-07-29",
+      "url": "https://www.newsweek.com/donald-trump-nickname-kamala-harris-debate-donald-duck-allan-lichtman-1931373",
+      "relation": "contradicts",
+      "confidence": 0.55,
+      "quote": "his predictive method has been proven correct in all but one presidential elections since 1984. The only outlier is the contentious 2000 election, when then-Vice President Al Gore clinched the popular"
+     },
+     "claim": {
+      "text": "Lichtman's 2016 published paper stated explicitly that \"As a national system, the Keys predict the popular vote, not the state-by-state tally of Electoral College votes,\" meaning his 2016 forecast was a prediction that Trump would win the popular vote \u2014 which Trump lost.",
+      "kind": "fact",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "As a national system, the Keys predict the popular vote, not the state-by-state tally of Electoral College votes"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-07-24",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 972,
+       "judged": 10,
+       "expression": 0.0225,
+       "support": 0.225,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 330,
+       "judged": 10,
+       "expression": 0.0078,
+       "support": 0.078,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 142,
+       "judged": 10,
+       "expression": 0.0255,
+       "support": 0.57,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "US polling 'Nostradamus' slams J.D. Vance: 'a horror show'",
+         "date": "2024-08-02",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/allan-lichtman-prediction-jd-vance-horror-show-historian-white-house-keys-nostradamus-1933899",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Lichtman told Newsweek that Vance's views are \"certainly on the extreme right side and would not appeal to the more moderate element in the Republican Party.\""
+        },
+        {
+         "title": "Historian who predicted almost every election since 1984 gives take on Trump-Harris matchu",
+         "date": "2024-07-30",
+         "source": "nypost.com",
+         "url": "https://nypost.com/2024/07/29/us-news/historian-who-predicted-almost-every-election-since-1984-gives-take-on-trump-harris-matchup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The \"Keys to the White House\" are favoring Vice President Kamala Harris in a hypothetical 2024 matchup against former President Donald Trump, but a final prediction for the 2024 race has yet to be made."
+        },
+        {
+         "title": "Accurate Election Historian Shares Thoughts On Trump, Harris Matchup | News Radio 105.5 WE",
+         "date": "2024-07-30",
+         "source": "wercfm.iheart.com",
+         "url": "https://wercfm.iheart.com/content/2024-07-30-accurate-election-historian-gives-take-on-trump-harris-matchup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Licthman still has several keys that have yet to be decided including the \"third-party\" factor, which is notable given Robert F. Kennedy Jr. 's involvement in the presidential race, as well as having \"no social unrest\" and \"foreign military failure\" and \"foreign military success."
+        },
+        {
+         "title": "US polling 'Nostradamus' says RFK Jr. dropping out will help Harris",
+         "date": "2024-08-21",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/allan-lichtman-rfk-kamala-harris-kennedy-drop-out-2024-election-trump-1942253",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "\"[Kennedy's] endorsement of Trump has nothing to do with the keys \u2013 [it] doesn't turn a key one way or the other.\"... Lichtman also noted that he hasn't definitively called [the \"third party\"] key, but said \"it certainly doesn't look like [Kennedy] is going to rebound.\" \"I'm stil"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 333,
+       "judged": 10,
+       "expression": 0.027,
+       "support": 0.82,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "He's predicted every US election, says Harris will win",
+         "date": "2024-09-09",
+         "source": "omanobserver.om",
+         "url": "https://www.omanobserver.om/article/1158842/world/americas/hes-predicted-every-us-election-says-harris-will-win",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Critics of the \"13 keys\" home in on the speculative nature of some of the true-false propositions. What is a charismatic leader, for example?"
+        },
+        {
+         "title": "When Election Modelers Attack",
+         "date": "2024-10-09",
+         "source": "nymag.com",
+         "url": "https://nymag.com/intelligencer/article/who-will-win-election-trump-harris-model-wars-nate-silver.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "But Lichtman and Abramowitz are also throwbacks of a sort."
+        },
+        {
+         "title": "Susan Shelley: Keys to the White House suggest that Trump will prevail in November",
+         "date": "2024-10-19",
+         "source": "dailynews.com",
+         "url": "https://www.dailynews.com/2024/10/19/susan-shelley-keys-to-presidency-show-that-trump-will-prevail/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Ready to try it? Here are the \"13 Keys to the White House\""
+        },
+        {
+         "title": "Nate Silver Throws Shade on Allan Lichtman's 2024 Election Prediction",
+         "date": "2024-09-27",
+         "source": "twitchy.com",
+         "url": "https://twitchy.com/justmindy/2024/09/27/nate-silver-allan-lichtman-dispute-n2401506",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Nate Silver doesn't believe Lichtman is properly applying his own formula and let him know so today.\n\nThe funny thing is if you actually apply his keys correctly based on how he's applied them in the past, they predict a Trump victory."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 368,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 1055,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0151,
+     "surprisal": 0.9849,
+     "peak_after": 0.027,
+     "adoption": 0.0119,
+     "vindication": 1.0,
+     "predictive_value": 0.0117,
+     "best_anticipation": {
+      "title": "Susan Shelley: Keys to the White House suggest that Trump will prevail in Novemb",
+      "date": "2024-10-19",
+      "url": "https://www.dailynews.com/2024/10/19/susan-shelley-keys-to-presidency-show-that-trump-will-prevail/",
+      "relation": "anticipates_directionally",
+      "confidence": 0.55,
+      "quote": "Ready to try it? Here are the \"13 Keys to the White House\""
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "Lichtman's 13 Keys function like astrology: they are flexible enough to be bent to fit any political situation after the fact, so the answers become whatever they need to be for the model to appear correct.",
+      "kind": "frame",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "There\u2019s an element of astrology here",
+       "bent to match the contours of any situation",
+       "whatever they need to be make the model right"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-07-24",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 32,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 12,
+       "judged": 10,
+       "expression": 0.0205,
+       "support": 0.205,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 8,
+       "judged": 8,
+       "expression": 0.0551,
+       "support": 0.441,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Accurate Election Historian Shares Thoughts On Trump, Harris Matchup | News Radio 105.5 WE",
+         "date": "2024-07-30",
+         "source": "wercfm.iheart.com",
+         "url": "https://wercfm.iheart.com/content/2024-07-30-accurate-election-historian-gives-take-on-trump-harris-matchup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "Lichtman scored Democrats as holding six keys in primary contest, short-term economy, long-term economy, policy change, no scandal and no challenger charisma. Republicans were given three keys for winning the House majority in the 2022 mid-term election, current incumbent not see"
+        },
+        {
+         "title": "Polling \"Nostradamus\" has new nickname for Donald Trump",
+         "date": "2024-07-29",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/donald-trump-nickname-kamala-harris-debate-donald-duck-allan-lichtman-1931373",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "No social unrest: There is no sustained social unrest during the term."
+        },
+        {
+         "title": "US polling 'Nostradamus' says RFK Jr. dropping out will help Harris",
+         "date": "2024-08-21",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/allan-lichtman-rfk-kamala-harris-kennedy-drop-out-2024-election-trump-1942253",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Charismatic incumbent: The incumbent party candidate is charismatic or a national hero."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 20,
+       "judged": 10,
+       "expression": 0.1835,
+       "support": 2.783,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "US Presidential elections: Historian Allan Lichtman predicts Harris win",
+         "date": "2024-10-14",
+         "source": "deccanchronicle.com",
+         "url": "https://www.deccanchronicle.com/world/americas/us-presidential-elections-historian-allan-lichtman-predicts-harris-win-1830015",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "They win the challenger charisma key, because whatever you may think of Trump as a showman, he doesn't fit the definition of the key, which is a once-in-a-generation, across-the-board, inspirational candidate."
+        },
+        {
+         "title": "Harris will beat Trump, says election prediction legend Allan Lichtman",
+         "date": "2024-09-05",
+         "source": "cnbc.com",
+         "url": "https://www.cnbc.com/2024/09/05/harris-trump-lichtman-election-prediction.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Social unrest: There is no sustained social unrest during the term. TRUE"
+        },
+        {
+         "title": "Letter: Susan Shelley got it wrong in interpreting \u201913 Keys to the White House\u2019 for Trump",
+         "date": "2024-10-21",
+         "source": "redlandsdailyfacts.com",
+         "url": "https://www.redlandsdailyfacts.com/2024/10/21/letter-susan-shelley-got-it-wrong-in-interpreting-13-keys-to-the-white-house-for-trump/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Lichtman, with a proven record, defined the criteria, so claiming he's \"wrong\" is misguided."
+        },
+        {
+         "title": "Kamala Harris will win, says man with near-perfect record of predicting U.S. elections | C",
+         "date": "2024-09-10",
+         "source": "cbc.ca",
+         "url": "https://www.cbc.ca/radio/asithappens/allan-litchman-election-prediction-1.7318889",
+         "relation": "states",
+         "confidence": 0.65,
+         "quote": "The 13 keys are at their most useful as starting points for questions: what makes for a damaging, divisive primary contest? What counts as a policy failure? What is charisma? These are interesting and important questions. But it is not in any real sense a 'model,'"
+        },
+        {
+         "title": "He's predicted every US election, says Harris will win",
+         "date": "2024-09-09",
+         "source": "omanobserver.om",
+         "url": "https://www.omanobserver.om/article/1158842/world/americas/hes-predicted-every-us-election-says-harris-will-win",
+         "relation": "states",
+         "confidence": 0.6,
+         "quote": "Critics of the \"13 keys\" home in on the speculative nature of some of the true-false propositions. What is a charismatic leader, for example?"
+        },
+        {
+         "title": "Nate Silver Throws Shade on Allan Lichtman's 2024 Election Prediction",
+         "date": "2024-09-27",
+         "source": "twitchy.com",
+         "url": "https://twitchy.com/justmindy/2024/09/27/nate-silver-allan-lichtman-dispute-n2401506",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Nate Silver doesn't believe Lichtman is properly applying his own formula and let him know so today.\n\nThe funny thing is if you actually apply his keys correctly based on how he's applied them in the past, they predict a Trump victory."
+        },
+        {
+         "title": "Susan Shelley: Keys to the White House suggest that Trump will prevail in November",
+         "date": "2024-10-19",
+         "source": "dailynews.com",
+         "url": "https://www.dailynews.com/2024/10/19/susan-shelley-keys-to-presidency-show-that-trump-will-prevail/",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "13. Challenger charisma: The challenging party candidate is not charismatic or a national hero. The American Heritage Dictionary says charisma is \u201ca rare personal quality attributed to leaders who arouse fervent popular devotion and enthusiasm.\u201d... This key is FALSE.... According"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 3,
+       "judged": 3,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": false,
+       "examples": []
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 16,
+       "judged": 10,
+       "expression": 0.009,
+       "support": 0.09,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The Holistic Judgment Conceit",
+         "date": "2025-04-19",
+         "source": "Cremieux",
+         "url": "https://www.cremieux.xyz/p/the-holistic-judgment-conceit",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The other big benefit is that a model can be audited, whereas human judgment is much harder to interrogate. Auditing human judgment for bias or error is often impractical."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0103,
+     "surprisal": 0.9898,
+     "peak_after": 0.1835,
+     "adoption": 0.1732,
+     "vindication": 1.0,
+     "predictive_value": 0.1715,
+     "best_anticipation": {
+      "title": "Kamala Harris will win, says man with near-perfect record of predicting U.S. ele",
+      "date": "2024-09-10",
+      "url": "https://www.cbc.ca/radio/asithappens/allan-litchman-election-prediction-1.7318889",
+      "relation": "states",
+      "confidence": 0.65,
+      "quote": "The 13 keys are at their most useful as starting points for questions: what makes for a damaging, divisive primary contest? What counts as a policy failure? What is charisma? These are interesting and"
+     },
+     "contradiction": null,
+     "claim": {
+      "text": "Several of Lichtman's 13 Keys \u2014 including those referring to \"charisma,\" \"major scandal,\" and \"sustained social unrest\" \u2014 are so vaguely defined that their truth values are set by Lichtman's subjective judgment rather than by any stated criterion.",
+      "kind": "thesis",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "The boundaries are wherever Lichtman thinks they are",
+       "so open to interpretation that they can say whatever you want"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-07-24",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 301,
+       "judged": 10,
+       "expression": 0.0068,
+       "support": 0.068,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 130,
+       "judged": 10,
+       "expression": 0.0203,
+       "support": 0.203,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 48,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 92,
+       "judged": 10,
+       "expression": 0.0105,
+       "support": 0.975,
+       "refute": 0.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Polls are \u2018underestimating\u2019 turnout for Kamala Harris, Allan Lichtman argues",
+         "date": "2024-10-17",
+         "source": "washingtonexaminer.com",
+         "url": "https://www.washingtonexaminer.com/news/campaigns/presidential/3193339/2024-election-polls-underestimating-turnout-kamala-harris-allan-lichtman/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "\u201cThe polls in 2016 underestimated Republican voting strength,\u201d Lichtman said. \u201cIt\u2019s my view based on what I saw from 2022-2024 that the polls are now underestimating Democratic voting strength.\u201d"
+        },
+        {
+         "title": "He's predicted every US election, says Harris will win",
+         "date": "2024-09-09",
+         "source": "omanobserver.om",
+         "url": "https://www.omanobserver.om/article/1158842/world/americas/hes-predicted-every-us-election-says-harris-will-win",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "Biden's vice president and replacement as nominee, Kamala Harris, is surging on optimism among party faithful. But Lichtman rules that she does not qualify for another of the keys, which is being a charismatic, \"once-in-a-generation\" candidate in the style of Ronald Reagan or Fra"
+        },
+        {
+         "title": "\u2018Nostradamus\u2019 reveals if 'October surprise' will change if Harris or Trump win",
+         "date": "2024-10-08",
+         "source": "metro.co.uk",
+         "url": "https://metro.co.uk/2024/10/08/nostradamus-reveals-surprise-will-change-harris-trump-win-21760842/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Lichtman\u2019s keys are based on 120 years worth of presidential election results and determined through simple true or false answers to the performance of the party in the White House at the time. They are not based on polling."
+        },
+        {
+         "title": "Letter: Susan Shelley got it wrong in interpreting \u201913 Keys to the White House\u2019 for Trump",
+         "date": "2024-10-21",
+         "source": "redlandsdailyfacts.com",
+         "url": "https://www.redlandsdailyfacts.com/2024/10/21/letter-susan-shelley-got-it-wrong-in-interpreting-13-keys-to-the-white-house-for-trump/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Trump excites his base, but Lichtman's definition requires broad appeal, which Trump lacks."
+        },
+        {
+         "title": "US Presidential elections: Historian Allan Lichtman predicts Harris win",
+         "date": "2024-10-14",
+         "source": "deccanchronicle.com",
+         "url": "https://www.deccanchronicle.com/world/americas/us-presidential-elections-historian-allan-lichtman-predicts-harris-win-1830015",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "whatever you may think of Trump as a showman, he doesn't fit the definition of the key, which is a once-in-a-generation, across-the-board, inspirational candidate. He only appeals to a narrow base. In four years as president, his approval rating was just 41 per cent, right at the"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 102,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 261,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0135,
+     "surprisal": 0.9865,
+     "peak_after": 0.0105,
+     "adoption": -0.003,
+     "vindication": 0.3684,
+     "predictive_value": 0.0,
+     "best_anticipation": {
+      "title": "US Presidential elections: Historian Allan Lichtman predicts Harris win",
+      "date": "2024-10-14",
+      "url": "https://www.deccanchronicle.com/world/americas/us-presidential-elections-historian-allan-lichtman-predicts-harris-win-1830015",
+      "relation": "entails",
+      "confidence": 0.7,
+      "quote": "whatever you may think of Trump as a showman, he doesn't fit the definition of the key, which is a once-in-a-generation, across-the-board, inspirational candidate. He only appeals to a narrow base. In"
+     },
+     "contradiction": {
+      "title": "He's predicted every US election, says Harris will win",
+      "date": "2024-09-09",
+      "url": "https://www.omanobserver.om/article/1158842/world/americas/hes-predicted-every-us-election-says-harris-will-win",
+      "relation": "contradicts",
+      "confidence": 0.45,
+      "quote": "Biden's vice president and replacement as nominee, Kamala Harris, is surging on optimism among party faithful. But Lichtman rules that she does not qualify for another of the keys, which is being a ch"
+     },
+     "claim": {
+      "text": "Lichtman's \"charisma\" key does not measure a candidate's inherent charisma but rather the candidate's popularity at the time of the election, which makes it a covert reintroduction of polling data into a model that claims to exclude polls.",
+      "kind": "thesis",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "a way for Lichtman to sneak polling in the backdoor",
+       "using the polls without citing the polls"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

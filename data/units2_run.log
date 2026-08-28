@@ -1,0 +1,84 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6441.17it/s]
+
+=== UNIT media-rarely-lies: The Media Very Rarely Lies (2022-12-22) ===
+  extracted 25 claims
+  canvassed 5 (kinds: ['thesis', 'fact', 'thesis', 'thesis', 'thesis'])
+  [1/5] thesis: News media outlets rarely state specific factual assertions they k
+    3 queries -> 171 candidate articles
+    fetched 72, collapsed 12 syndicated, added 60
+      S=0.9545 A=0.06 V=0.7459 PV=0.05 [1152s]
+  [2/5] fact: Most Infowars articles are technically true but misleading rather 
+    3 queries -> 122 candidate articles
+    fetched 75, collapsed 36 syndicated, added 39
+      S=0.9938 A=0.0027 V=-0.2813 PV=0.001 [2186s]
+  [3/5] thesis: Because nobody can agree on which context is necessary versus redu
+    3 queries -> 224 candidate articles
+    fetched 135, collapsed 22 syndicated, added 113
+      S=0.9664 A=0.0384 V=0.8295 PV=0.0339 [3437s]
+  [4/5] thesis: There is no bright-line category called "misinformation" that sepa
+    3 queries -> 68 candidate articles
+    fetched 30, collapsed 6 syndicated, added 24
+      S=0.9497 A=0.0023 V=0.2084 PV=0.0013 [4459s]
+  [5/5] thesis: The pro-censorship argument that authorities can neutrally strip o
+    3 queries -> 192 candidate articles
+    fetched 129, collapsed 23 syndicated, added 104
+      S=0.9566 A=0.0622 V=0.2827 PV=0.0382 [5736s]
+
+=== UNIT techtimes-ai-2023: AI Predictions for 2023: Experts Foresee Shift to Autonomo (2022-12-29) ===
+  extracted 26 claims
+  canvassed 5 (kinds: ['prediction', 'thesis', 'fact', 'prediction', 'prediction'])
+  [1/5] prediction: Alexander Hagerup, co-founder and CEO of Vic.ai, predicts that in 
+    3 queries -> 13 candidate articles
+    fetched 9, collapsed 0 syndicated, added 8
+      S=0.9771 A=0.0971 V=0.4872 PV=0.0706 [6524s]
+  [2/5] thesis: The supply of high-quality text data suitable for training languag
+    3 queries -> 0 candidate articles
+      S=0.988 A=0.0455 V=0.635 PV=0.0367 [7484s]
+  [3/5] fact: The world's total stock of high-quality text data available for tr
+    3 queries -> 40 candidate articles
+    fetched 21, collapsed 2 syndicated, added 19
+      S=0.994 A=0.024 V=1.0 PV=0.0239 [7790s]
+  [4/5] prediction: The data typically used for training language models may be used u
+    3 queries -> 0 candidate articles
+      S=0.9924 A=0.0014 V=1.0 PV=0.0014 [8273s]
+  [5/5] prediction: OpenAI's next-generation generative language model GPT-4 will be r
+    3 queries -> 142 candidate articles
+    fetched 88, collapsed 16 syndicated, added 72
+      S=0.9411 A=-0.0214 V=1.0 PV=0.0 [9137s]
+
+=== UNIT lichtman-ignore: You Can Ignore Allan Lichtman and His Presidential Predict (2024-07-24) ===
+  extracted 33 claims
+  canvassed 5 (kinds: ['thesis', 'fact', 'frame', 'thesis', 'thesis'])
+  [1/5] thesis: Lichtman's claimed perfect record of presidential predictions is a
+    3 queries -> 123 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 85, collapsed 40 syndicated, added 45
+      S=0.9846 A=-0.0064 V=1.0 PV=0.0 [10264s]
+  [2/5] fact: Lichtman's 2016 published paper stated explicitly that "As a natio
+    3 queries -> 75 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 55, collapsed 16 syndicated, added 20
+      S=0.9971 A=0.1011 V=0.1889 PV=0.0599 [11002s]
+  [3/5] frame: Lichtman's 13 Keys function like astrology: they are flexible enou
+    3 queries -> 113 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 89, collapsed 40 syndicated, added 8
+      S=0.9849 A=0.0119 V=1.0 PV=0.0117 [11618s]
+  [4/5] thesis: Several of Lichtman's 13 Keys — including those referring to "char
+    3 queries -> 126 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 89, collapsed 34 syndicated, added 11
+      S=0.9898 A=0.1732 V=1.0 PV=0.1715 [11912s]
+  [5/5] thesis: Lichtman's "charisma" key does not measure a candidate's inherent 
+    3 queries -> 109 candidate articles
+/Users/matthewprewitt/signalcatcher/.venv/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname IST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+    fetched 92, collapsed 55 syndicated, added 2
+      S=0.9865 A=-0.003 V=0.3684 PV=0.0 [12564s]
+
+DONE in 209 min. stats: {'calls': 186, 'cache_hits': 0, 'input_tokens': 372, 'output_tokens': 327029, 'est_cost_usd': 8.178}

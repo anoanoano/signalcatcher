@@ -13,6 +13,16 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 DATA = json.loads(Path("data/units_report.json").read_text())
+_d2 = Path("data/units2_report.json")
+if _d2.exists():
+    DATA["units"] = DATA["units"] + json.loads(_d2.read_text())["units"]
+    DATA["run_id"] = DATA.get("run_id","") + " + units2"
+
+EXPERIMENT_TAG = {  # run-2 discriminant-validity experiment labels
+    "media-rarely-lies": "widely recognized as a great essay",
+    "techtimes-ai-2023": "low-tier outlet, aggregated content",
+    "lichtman-ignore": "under-the-radar writer",
+}
 
 REL_LABEL = {
     "states": ("states it", "pos"), "entails": ("entails it", "pos"),
@@ -154,7 +164,27 @@ def unit_card(u):
   {''.join(claim_block(c,i) for i,c in enumerate(cs))}
 </div>'''
 
-units_html = "\n".join(unit_card(u) for u in DATA["units"])
+def summary_table():
+    rows=[]
+    for u in DATA["units"]:
+        cs=u["claims"]
+        def m(k):
+            v=[c[k] for c in cs if c.get(k) is not None]
+            return sum(v)/len(v) if v else None
+        best=max((c.get("predictive_value") or 0) for c in cs) if cs else 0
+        tag=EXPERIMENT_TAG.get(u["key"],"")
+        rows.append((best,f'<tr><td>{esc(u["title"][:44])}<div class="note">{esc(u["source"])}'
+             f'{" &middot; "+esc(tag) if tag else ""}</div></td>'
+             f'<td class="num">{fmt(m("surprisal"))}</td><td class="num">{fmt(m("adoption"))}</td>'
+             f'<td class="num">{fmt(m("vindication"))}</td><td class="num"><strong>{fmt(best)}</strong></td></tr>'))
+    rows.sort(key=lambda r:-r[0])
+    return ('<div class="tblwrap"><table><tr><th>text</th><th class="num">S&#772; surprisal</th>'
+            '<th class="num">A&#772; adoption</th><th class="num">V&#772; vindication</th>'
+            '<th class="num">best claim PV</th></tr>'+"".join(r[1] for r in rows)+"</table></div>"
+            '<p class="note" style="margin-top:.6rem">Ranked by best claim. Averages are over '
+            'each text&rsquo;s ~5 canvassed claims.</p>')
+
+units_html = summary_table() + "\n".join(unit_card(u) for u in DATA["units"])
 n_claims = sum(len(u["claims"]) for u in DATA["units"])
 
 page = f'''<title>SignalCatcher Readout</title>
@@ -259,7 +289,7 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
 
 <div class="wrap">
 <header class="hero">
-  <p class="eyebrow">SignalCatcher &middot; Pilot Readout &middot; Three Texts</p>
+  <p class="eyebrow">SignalCatcher &middot; Pilot Readout Pilot Readout &middot; Three Textsmiddot; Six Texts</p>
   <h1>Which text saw further?</h1>
   <p class="sub">The unit of evaluation is <strong>a text</strong> &mdash; here a blog post, at
   larger scale a publication&rsquo;s whole corpus. Each text is canvassed for its 4&ndash;10
@@ -267,7 +297,7 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
   corpus: was it <strong>surprising</strong> when written, was it <strong>adopted</strong> by
   later discourse, and was it <strong>vindicated</strong> by the record? Expand any claim to
   see exactly where &mdash; and in whose words &mdash; it resurfaced.</p>
-  <div class="meta"><span>Aug 27, 2026</span><span>{n_claims} claims scored across 3 texts</span><span>corpus: 8,000+ dated documents, 2018&ndash;2026</span></div>
+  <div class="meta"><span>Aug 27, 2026</span><span>{n_claims} claims scored across 6 texts</span><span>corpus: 8,000+ dated documents, 2018&ndash;2026</span></div>
 </header>
 
 <section>
@@ -294,10 +324,13 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
 
 <section>
   <p class="eyebrow">02 &middot; The Units</p>
-  <h2>Three texts, side by side</h2>
-  <p>Chosen to stress different parts of the measure: a slow-burn geopolitical frame, a
-  set of concrete near-term predictions, and a day-one interpretation of a breaking
-  event scored on <em>month</em>-scale windows rather than years.</p>
+  <h2>Six texts, side by side</h2>
+  <p>Two pilots. The first three texts stress different parts of the measure: a slow-burn
+  geopolitical frame, concrete near-term predictions, a day-one event interpretation on
+  month-scale windows. The second three are a <strong>reputation test</strong>: a widely
+  recognized great essay, a content-mill piece from a low-tier outlet, and an
+  under-the-radar post by a little-known writer &mdash; does the metric rank them the way
+  reputation would predict? (It did not, and the receipts below say why.)</p>
   {units_html}
 </section>
 
