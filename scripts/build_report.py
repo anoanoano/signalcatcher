@@ -139,6 +139,91 @@ def claim_block(c, idx):
 </div>
 </details>'''
 
+from datetime import date as _date
+
+def _pdate(s_):
+    y,m,d=s_.split("-"); return _date(int(y),int(m),int(d))
+
+REL_VIS = {  # (css fill, shape, label)
+    "states": ("var(--chart)", "circle", "states it"),
+    "entails": ("var(--chart)", "circle", "entails it"),
+    "anticipates_directionally": ("var(--chart-soft)", "circle", "anticipates"),
+    "partially_anticipates": ("none", "circle", "partial"),
+    "contradicts": ("var(--anno-chart)", "diamond", "contradicts"),
+}
+
+def unit_timeline(u):
+    """One lane per claim; every later text that engaged the claim is a dot at
+    its calendar date. This is the unit's whole story in one picture: what came
+    back, when, and on which claim -- click a dot for the source and quote."""
+    uid = u["key"].replace("-","_")
+    lanes=[]
+    all_dates=[_pdate(u["published"])]
+    for ci,c in enumerate(u["claims"]):
+        pts={}
+        for w in c["windows_post"]:
+            for e in (w.get("examples") or []):
+                k=e["url"]
+                if k not in pts or abs(0)==0:  # keep first occurrence
+                    pts.setdefault(k,e)
+        pts=sorted(pts.values(), key=lambda e:e["date"])
+        for e in pts: all_dates.append(_pdate(e["date"]))
+        anchor=c["anchor_date"]
+        all_dates.append(_pdate(anchor))
+        lanes.append((ci,c,pts,anchor))
+    lo=min(all_dates); hi=max(all_dates)
+    span=max((hi-lo).days,120); pad_days=int(span*0.04)
+    lo=_date.fromordinal(lo.toordinal()-pad_days); hi=_date.fromordinal(hi.toordinal()+pad_days)
+    span=(hi-lo).days
+    W=660; LX=118; RX=12; TY=18; lane_h=34; H=TY+len(lanes)*lane_h+34
+    def X(d): return LX+(W-LX-RX)*( ( _pdate(d) if isinstance(d,str) else d ) - lo).days/span
+    o=[f'<svg class="tl" width="{W}" height="{H}" role="img" aria-label="Timeline of later texts engaging each claim">']
+    # year gridlines
+    for y in range(lo.year, hi.year+1):
+        d=_date(y,1,1)
+        if lo<=d<=hi:
+            x=X(d)
+            o.append(f'<line x1="{x:.0f}" y1="{TY-6}" x2="{x:.0f}" y2="{H-26}" stroke="var(--rule)" stroke-width="1"/>')
+            o.append(f'<text x="{x:.0f}" y="{H-12}" text-anchor="middle" font-size="9" fill="var(--ink-3)">{y}</text>')
+    # publication marker
+    xp=X(u["published"])
+    o.append(f'<line x1="{xp:.0f}" y1="{TY-6}" x2="{xp:.0f}" y2="{H-26}" stroke="var(--ink-2)" stroke-width="1.4"/>')
+    o.append(f'<text x="{xp:.0f}" y="{TY-8}" text-anchor="middle" font-size="8.5" font-weight="600" fill="var(--ink-2)">published</text>')
+    for ci,c,pts,anchor in lanes:
+        y=TY+ci*lane_h+lane_h//2
+        o.append(f'<line x1="{LX}" y1="{y}" x2="{W-RX}" y2="{y}" stroke="var(--rule)" stroke-width="1"/>')
+        kind=c["claim"]["kind"]
+        stub=c["claim"]["text"][:15]
+        o.append(f'<text x="{LX-8}" y="{y-2}" text-anchor="end" font-size="8.5" font-weight="600" fill="var(--anno)">{esc(kind)}</text>')
+        o.append(f'<text x="{LX-8}" y="{y+9}" text-anchor="end" font-size="8" fill="var(--ink-3)">{esc(stub)}&hellip;</text>')
+        # first-use anchor tick if moved
+        if anchor != u["published"]:
+            xa=X(anchor)
+            o.append(f'<path d="M{xa:.0f},{y-7} L{xa:.0f},{y+7}" stroke="var(--anno-chart)" stroke-width="2"/>')
+        for e in pts:
+            x=X(e["date"])
+            fill,shape,_=REL_VIS.get(e["relation"],("var(--chart-soft)","circle",""))
+            stroke='var(--chart)' if fill=="none" else "var(--panel)"
+            attrs=(f'data-d="{esc(e["date"])}" data-s="{esc(e.get("source") or "")}" '
+                   f'data-r="{esc(e["relation"])}" data-t="{esc(e["title"][:110])}" '
+                   f'data-q="{esc(e.get("quote","")[:260])}" data-u="{esc(e.get("url",""))}" '
+                   f'data-unit="{uid}"')
+            if shape=="diamond":
+                o.append(f'<path class="dot" d="M{x:.0f},{y-6} L{x+6:.0f},{y} L{x:.0f},{y+6} L{x-6:.0f},{y} Z" fill="{fill}" stroke="var(--panel)" stroke-width="1.5" {attrs}/>')
+            else:
+                o.append(f'<circle class="dot" cx="{x:.0f}" cy="{y}" r="5.5" fill="{fill}" stroke="{stroke}" stroke-width="1.5" {attrs}/>')
+    o.append('</svg>')
+    legend=('<div class="tl-legend">'
+      '<span><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="var(--chart)"/></svg> states / entails</span>'
+      '<span><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="var(--chart-soft)"/></svg> anticipates</span>'
+      '<span><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="none" stroke="var(--chart)" stroke-width="1.5"/></svg> partial</span>'
+      '<span><svg width="14" height="12"><path d="M7,1 L13,6 L7,11 L1,6 Z" fill="var(--anno-chart)"/></svg> contradicts</span>'
+      '<span><svg width="12" height="12"><path d="M6,1 L6,11" stroke="var(--anno-chart)" stroke-width="2"/></svg> first use</span></div>')
+    return (f'<figure class="tl-fig"><div class="chart-wrap">{"".join(o)}</div>{legend}'
+            f'<figcaption>Every later text judged to engage a claim, placed at its publication date. '
+            f'Click a dot to see the source and its words.</figcaption></figure>'
+            f'<div class="tl-detail" id="det_{uid}" hidden></div>')
+
 def unit_card(u):
     cs = u["claims"]
     def m(key):
@@ -161,6 +246,7 @@ def unit_card(u):
     <div><div class="unum upv">{fmt(best)}</div><div class="ulbl">best claim PV</div></div>
   </div>
   <p class="note unit-note">Averages over the {len(cs)} canvassed claims; expand each for its evidence.</p>
+  {unit_timeline(u)}
   {''.join(claim_block(c,i) for i,c in enumerate(cs))}
 </div>'''
 
@@ -282,6 +368,18 @@ details.claim summary:hover{{background:var(--quote-bg)}}
 .trail-title{{font-size:.88rem;margin-top:.15rem}}
 .trail-quote{{font-size:.85rem;color:var(--ink-2);background:var(--quote-bg);
   padding:.5rem .7rem;border-radius:4px;margin-top:.35rem}}
+.tl-fig{{margin:1rem 0 .6rem}}
+.tl .dot{{cursor:pointer}}
+.tl .dot:hover{{stroke:var(--ink);stroke-width:2}}
+.tl-legend{{display:flex;gap:1.1rem;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;
+  font-size:.68rem;color:var(--ink-2);margin-top:.4rem;align-items:center}}
+.tl-legend span{{display:inline-flex;gap:.35rem;align-items:center}}
+.tl-detail{{border:1px solid var(--panel-edge);border-left:3px solid var(--chart);
+  border-radius:4px;padding:.7rem .9rem;margin:.3rem 0 .9rem;font-size:.88rem;
+  background:var(--quote-bg)}}
+.tl-detail .dhead{{display:flex;gap:.7rem;flex-wrap:wrap;align-items:baseline;
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem}}
+.tl-detail .dq{{color:var(--ink-2);margin-top:.35rem}}
 footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
   font-family:"IBM Plex Mono",monospace;font-size:.71rem;color:var(--ink-3);line-height:2}}
 @media (max-width:640px){{ .cnums{{flex-basis:100%;order:3}} }}
@@ -371,6 +469,30 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
   </ul>
 </section>
 
+<div id="tip" style="position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:.72rem;padding:.35rem .55rem;border-radius:4px;opacity:0;transition:opacity .12s;z-index:9;white-space:nowrap;max-width:70vw;overflow:hidden;text-overflow:ellipsis"></div>
+<script>
+(function(){{
+  const tip=document.getElementById('tip');
+  document.querySelectorAll('.tl .dot').forEach(d=>{{
+    d.addEventListener('mousemove',e=>{{
+      tip.textContent=d.dataset.d+' \u00b7 '+(d.dataset.s||'?')+' \u00b7 '+d.dataset.r;
+      tip.style.left=(e.clientX+14)+'px'; tip.style.top=(e.clientY-10)+'px'; tip.style.opacity=1;
+    }});
+    d.addEventListener('mouseleave',()=>tip.style.opacity=0);
+    d.addEventListener('click',()=>{{
+      const det=document.getElementById('det_'+d.dataset.unit);
+      if(!det) return;
+      det.hidden=false;
+      det.innerHTML='<div class="dhead"><strong>'+d.dataset.d+'</strong><span>'+
+        (d.dataset.s||'')+'</span><span class="chip '+(d.dataset.r==='contradicts'?'neg':'pos')+'">'+
+        d.dataset.r.replace(/_/g,' ')+'</span></div><div>'+
+        (d.dataset.u?('<a href="'+d.dataset.u+'" target="_blank" rel="noopener">'+d.dataset.t+'</a>'):d.dataset.t)+
+        '</div>'+(d.dataset.q?('<div class="dq">\u201c'+d.dataset.q+'\u201d</div>'):'');
+      det.scrollIntoView({{behavior:'smooth',block:'nearest'}});
+    }});
+  }});
+}})();
+</script>
 <footer>SignalCatcher &middot; run {esc(DATA.get("run_id",""))} &middot; judgements: Claude (Opus), grounded &amp; quote-enforced &middot; every claim expandable to its dated evidence above</footer>
 </div>'''
 
