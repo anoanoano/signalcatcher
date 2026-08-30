@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7258.29it/s]
+  new-axis frame      S=0.7525 PV=0.1137 [261s]
+  new-axis thesis     S=0.975 PV=0.0579 [550s]
+  new-axis fact       S=0.9625 PV=0.0089 [746s]
+  new-axis prediction S=0.975 PV=0.0129 [1012s]
+  new-axis frame      S=0.775 PV=0.2086 [20339s]
+  gpt5-expectations prediction S=0.82 PV=0.0702 [37142s]

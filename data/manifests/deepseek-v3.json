@@ -1,0 +1,202 @@
+{
+ "recipe": "shell-v1",
+ "unit": "deepseek-v3",
+ "text_url": "https://thezvi.substack.com/p/deekseek-v3-the-six-million-dollar",
+ "published": "2024-12-31",
+ "assembled_at": "2026-08-29T21:59:25",
+ "channels": {
+  "news": {
+   "status": "ok",
+   "per_claim": [
+    {
+     "queries": [
+      "DeepSeek model release",
+      "DeepSeek \"High-Flyer\"",
+      "DeepSeek researchers hiring"
+     ],
+     "found": 133,
+     "syndicated_collapsed": 18,
+     "added": 82
+    },
+    {
+     "queries": [
+      "\"DeepSeek-V3\"",
+      "DeepSeek open-source model",
+      "\"DeepSeek\" China AI model"
+     ],
+     "found": 60,
+     "syndicated_collapsed": 4,
+     "added": 36
+    },
+    {
+     "queries": [
+      "\"DeepSeek-V3\"",
+      "\"DeepSeek\" \"mixture of experts\"",
+      "\"DeepSeek-V3\" parameters model"
+     ],
+     "found": 141,
+     "syndicated_collapsed": 7,
+     "added": 53
+    },
+    {
+     "queries": [
+      "\"Claude Sonnet\" benchmark",
+      "AI model benchmark scores",
+      "\"Anthropic\" model evaluation"
+     ],
+     "found": 105,
+     "syndicated_collapsed": 9,
+     "added": 51
+    },
+    {
+     "queries": [
+      "\"DeepSeek V3\"",
+      "\"Claude Sonnet\" coding",
+      "DeepSeek Anthropic model routing"
+     ],
+     "found": 88,
+     "syndicated_collapsed": 7,
+     "added": 20
+    }
+   ]
+  },
+  "intl": {
+   "status": "ok",
+   "panel": [
+    "lemonde.fr",
+    "faz.net",
+    "spiegel.de",
+    "corriere.it",
+    "repubblica.it",
+    "elpais.com",
+    "elobservador.com.uy",
+    "asahi.com",
+    "japantimes.co.jp",
+    "theguardian.com",
+    "scmp.com"
+   ],
+   "hits": {
+    "lemonde.fr": 0,
+    "faz.net": 0,
+    "spiegel.de": 0,
+    "corriere.it": 0,
+    "repubblica.it": 0,
+    "elpais.com": 0,
+    "elobservador.com.uy": 0,
+    "asahi.com": 0,
+    "japantimes.co.jp": 0,
+    "theguardian.com": 2,
+    "scmp.com": 18
+   },
+   "fetched": 17,
+   "added": 15
+  },
+  "academic": {
+   "status": "ok",
+   "queries": [
+    {
+     "q": "DeepSeek-V3 mixture-of-experts 671B parameters",
+     "found": 1,
+     "added": 1
+    },
+    {
+     "q": "sparse mixture-of-experts activated parameters per token",
+     "found": 14,
+     "added": 14
+    },
+    {
+     "q": "LLM benchmark contamination evaluation validity",
+     "found": 32,
+     "added": 32
+    }
+   ],
+   "added": 47
+  },
+  "reference": {
+   "status": "ok",
+   "articles": [
+    {
+     "title": "DeepSeek",
+     "milestones": [
+      {
+       "lang": "en",
+       "created": "2024-12-29",
+       "url": "https://en.wikipedia.org/wiki/DeepSeek"
+      },
+      {
+       "lang": "de",
+       "created": "2024-12-28",
+       "url": "https://de.wikipedia.org/wiki/DeepSeek"
+      },
+      {
+       "lang": "fr",
+       "created": "2024-12-28",
+       "url": "https://fr.wikipedia.org/wiki/DeepSeek"
+      },
+      {
+       "lang": "it",
+       "created": "2025-01-28",
+       "url": "https://it.wikipedia.org/wiki/DeepSeek"
+      },
+      {
+       "lang": "es",
+       "created": "2025-01-27",
+       "url": "https://es.wikipedia.org/wiki/DeepSeek"
+      },
+      {
+       "lang": "ja",
+       "created": "2025-01-27",
+       "url": "https://ja.wikipedia.org/wiki/DeepSeek"
+      }
+     ],
+     "added": 0
+    },
+    {
+     "title": "DeepSeek (chatbot)",
+     "milestones": [
+      {
+       "lang": "en",
+       "created": "2025-02-05",
+       "url": "https://en.wikipedia.org/wiki/DeepSeek_%28chatbot%29"
+      }
+     ],
+     "added": 0
+    },
+    {
+     "title": "Mixture of experts",
+     "milestones": [
+      {
+       "lang": "en",
+       "created": "2019-08-26",
+       "url": "https://en.wikipedia.org/wiki/Mixture_of_experts"
+      }
+     ],
+     "added": 0
+    }
+   ]
+  },
+  "forum": {
+   "status": "ok",
+   "added": 10
+  }
+ },
+ "terms": {
+  "news_terms": [
+   "DeepSeek V3",
+   "DeepSeek open source model",
+   "DeepSeek China AI lab",
+   "DeepSeek V3 Claude Sonnet comparison"
+  ],
+  "academic_terms": [
+   "DeepSeek-V3 mixture-of-experts 671B parameters",
+   "sparse mixture-of-experts activated parameters per token",
+   "LLM benchmark contamination evaluation validity"
+  ],
+  "wikipedia_articles": [
+   "DeepSeek",
+   "DeepSeek (chatbot)",
+   "Mixture of experts"
+  ]
+ },
+ "elapsed_s": 4696.6
+}

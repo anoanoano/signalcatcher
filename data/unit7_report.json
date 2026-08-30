@@ -1,0 +1,2024 @@
+{
+ "units": [
+  {
+   "key": "deepseek-v3",
+   "label": "Shell-protocol test: intl press + arXiv + reference layer",
+   "source": "Zvi Mowshowitz",
+   "title": "DeepSeek v3: The Six Million Dollar Model",
+   "url": "https://thezvi.substack.com/p/deekseek-v3-the-six-million-dollar",
+   "published": "2024-12-31",
+   "horizon": "short",
+   "manifest_summary": {
+    "recipe": "shell-v1",
+    "intl_added": 15,
+    "academic_added": 47,
+    "reference": {
+     "status": "ok",
+     "articles": [
+      {
+       "title": "DeepSeek",
+       "milestones": [
+        {
+         "lang": "en",
+         "created": "2024-12-29",
+         "url": "https://en.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+         "lang": "de",
+         "created": "2024-12-28",
+         "url": "https://de.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+         "lang": "fr",
+         "created": "2024-12-28",
+         "url": "https://fr.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+         "lang": "it",
+         "created": "2025-01-28",
+         "url": "https://it.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+         "lang": "es",
+         "created": "2025-01-27",
+         "url": "https://es.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+         "lang": "ja",
+         "created": "2025-01-27",
+         "url": "https://ja.wikipedia.org/wiki/DeepSeek"
+        }
+       ],
+       "added": 0
+      },
+      {
+       "title": "DeepSeek (chatbot)",
+       "milestones": [
+        {
+         "lang": "en",
+         "created": "2025-02-05",
+         "url": "https://en.wikipedia.org/wiki/DeepSeek_%28chatbot%29"
+        }
+       ],
+       "added": 0
+      },
+      {
+       "title": "Mixture of experts",
+       "milestones": [
+        {
+         "lang": "en",
+         "created": "2019-08-26",
+         "url": "https://en.wikipedia.org/wiki/Mixture_of_experts"
+        }
+       ],
+       "added": 0
+      }
+     ]
+    },
+    "news_claims": 5
+   },
+   "claims": [
+    {
+     "anchor_date": "2024-12-31",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 694,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 264,
+       "judged": 10,
+       "expression": 0.0068,
+       "support": 0.068,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 161,
+       "judged": 10,
+       "expression": 0.3178,
+       "support": 8.081,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "DeepSeek\u2019s Janus Pro AI model beats rivals in image generation",
+         "date": "2025-01-28",
+         "source": "thehindu.com",
+         "url": "https://www.thehindu.com/sci-tech/technology/deepseeks-janus-pro-ai-model-beats-rivals-in-image-generation/article69149365.ece",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "DeepSeek's new open-source AI model surpassed Stability AI and Microsoft-backed OpenAI's models in benchmarks for image generation, the Chinese startup said in a technical report on Monday."
+        },
+        {
+         "title": "The Prompt: Is The DeepSeek Panic Overblown?",
+         "date": "2025-01-28",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/sites/rashishrivastava/2025/01/28/the-prompt-is-the-deepseek-panic-overblown/",
+         "relation": "states",
+         "confidence": 0.82,
+         "quote": "Eiso Kant, CTO and co-founder of Poolside AI, a unicorn that builds AI for software engineering, told Forbes that DeepSeek's strength is in its engineering ability to do more with less."
+        },
+        {
+         "title": "How China's new AI model DeepSeek is threatening U.S. dominance",
+         "date": "2025-01-24",
+         "source": "nbcnewyork.com",
+         "url": "https://www.nbcnewyork.com/news/business/money-report/how-chinas-new-ai-model-deepseek-is-threatening-u-s-dominance/6120598/",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "DeepSeek on Monday released R1, a reasoning model that also outperformed OpenAI's latest o1 in many of those third-party tests."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "nigeriasun.com",
+         "url": "https://www.nigeriasun.com/news/274996990/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "the models look fantastic but we don't think they are miracles"
+        },
+        {
+         "title": "There's A New AI in Town? What's Deepseek like?",
+         "date": "2025-01-30",
+         "source": "pulse.ng",
+         "url": "https://www.pulse.ng/articles/pulse-picks/deepseek-vs-chatgpt-2025013012112251849",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The new model shows that AI models could be run on less advanced and few Nvidia chips at around 1/30th of the cost and potentially perform to the same standard, if not better"
+        },
+        {
+         "title": "Some simple lessons from China's big AI breakthrough",
+         "date": "2025-01-30",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/some-simple-lessons-from-chinas-big",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "while the company does seem to have made some real innovations here"
+        },
+        {
+         "title": "DeepSeek Could Shatter Overvalued US Stocks as America's AI Spending Comes Under Scrutiny",
+         "date": "2025-01-28",
+         "source": "ibtimes.co.uk",
+         "url": "https://www.ibtimes.co.uk/deepseek-could-shatter-overvalued-us-stocks-americas-ai-spending-comes-under-scrutiny-1730566",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "When we first met him, he was this very nerdy guy with a terrible hairstyle talking about building a 10,000-chip cluster to train his own models. We didn't take him seriously"
+        },
+        {
+         "title": "\u2b50\ufe0f The year-end wake-up: The \u2018Chinese Sputnik\u2019 that demands our attention",
+         "date": "2024-12-31",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/the-year-end-wake-up-the-chinese",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Constraints breed ingenuity; ironically, export controls appear to have spurred Chinese AI teams to engineer leaner, more efficient solutions."
+        },
+        {
+         "title": "DeepSeek: AI meets jugaad as Alibaba's Qwen 2.5 pips DeepSeek in model battle - The Econom",
+         "date": "2025-01-30",
+         "source": "economictimes.indiatimes.com",
+         "url": "https://economictimes.indiatimes.com/tech/technology/ai-meets-jugaad-as-alibabas-qwen-2-5-pips-deepseek-in-model-battle/articleshow/117698471.cms",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "these models have been able to reduce computational costs by selectively activating only the required experts needed for the given task and achieve faster performance during inference"
+        },
+        {
+         "title": "China celebrates DeepSeek\u2019s breakout AI success as tech race heats up | CNN",
+         "date": "2025-01-28",
+         "source": "edition.cnn.com",
+         "url": "https://edition.cnn.com/2025/01/28/china/china-deepseek-ai-success-tech-intl-hnk/",
+         "relation": "entails",
+         "confidence": 0.62,
+         "quote": "The company, which has teams in Beijing and Hangzhou, has remained small, with just under 140 researchers and engineers, according to state media \u2013 a far cry from the large firms both in China and the US that have led the creation of AI models."
+        },
+        {
+         "title": "How DeepSeek is shaking up US tech heavyweights - Academia - The Jakarta Post",
+         "date": "2025-01-30",
+         "source": "thejakartapost.com",
+         "url": "https://www.thejakartapost.com/opinion/2025/01/31/how-deepseek-is-shaking-up-us-tech-heavyweights.html",
+         "relation": "entails",
+         "confidence": 0.65,
+         "quote": "DeepSeek also claims to have trained V3 using around 2,000 specialized computer chips, specifically H800 GPUs made by NVIDIA. This is again much fewer than other companies, which may have used up to 16,000 of the more powerful H100 chips."
+        },
+        {
+         "title": "DeepSeek Has Big Tech Sweating, But Investors Should Stay Cool",
+         "date": "2025-01-29",
+         "source": "investorplace.com",
+         "url": "https://investorplace.com/hypergrowthinvesting/2025/01/deepseek-has-big-tech-sweating-but-investors-should-stay-cool/",
+         "relation": "entails",
+         "confidence": 0.62,
+         "quote": "Based on our research, the startup\u2019s success came via innovative engineering born out of geopolitical necessity."
+        },
+        {
+         "title": "DeepSeek Just Fast-Tracked AI Job Disruption \u2013 Here\u2019s How Investors Can Prepare",
+         "date": "2025-01-29",
+         "source": "investorplace.com",
+         "url": "https://investorplace.com/smartmoney/2025/01/deepseek-ai-jobs-prepare/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "That means fewer connections for chips to calculate, and slashing the costs involved. This is what turned DeepSeek into an overnight success."
+        },
+        {
+         "title": "New Rival DeepSeek Could End OpenAI's AI Monopoly",
+         "date": "2025-01-27",
+         "source": "techweez.com",
+         "url": "https://techweez.com/2025/01/27/deepseek-ai-rival-to-openai/",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "What sets DeepSeek apart is its unorthodox approach to both talent and technology. Instead of hiring seasoned engineers, Liang recruited fresh PhD graduates from top Chinese universities like Peking and Tsinghua."
+        },
+        {
+         "title": "The Rise of DeepSeek: What the Headlines Miss",
+         "date": "2025-01-28",
+         "source": "rand.org",
+         "url": "https://www.rand.org/pubs/commentary/2025/01/the-rise-of-deepseek-what-the-headlines-miss.html",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "DeepSeek's achievements are genuine and significant. Claims dismissing their progress as mere propaganda miss the mark."
+        },
+        {
+         "title": "Microsoft CEO Satya Nadella touts DeepSeek's open-source AI as \"super impressive\": \"We sho",
+         "date": "2025-01-28",
+         "source": "windowscentral.com",
+         "url": "https://www.windowscentral.com/software-apps/microsoft-ceo-satya-nadella-touts-deepseeks-open-source-ai-as-super-impressive",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "it\u2019s super impressive in terms of both how they have really effectively done an open-source model that does this inference-time compute, and is super-compute efficient"
+        },
+        {
+         "title": "1 Super Semiconductor ETF to Buy in the Wake of the DeepSeek Sell-Off | The Motley Fool",
+         "date": "2025-01-30",
+         "source": "fool.com",
+         "url": "https://www.fool.com/investing/2025/01/30/1-semiconductor-etf-to-buy-wake-deepseek-sell-off/?source=iedfolrf0000001",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "its latest large language models (LLMs), which offer a significant leap in efficiency compared to those that currently lead the industry"
+        },
+        {
+         "title": "\"We regularly evaluate all competitive models\": DeepSeek AI reportedly outperforms Llama's",
+         "date": "2025-01-28",
+         "source": "windowscentral.com",
+         "url": "https://www.windowscentral.com/software-apps/deepseek-ai-reportedly-outperforms-llamas-next-version-throwing-meta-into-panic-mode",
+         "relation": "entails",
+         "confidence": 0.65,
+         "quote": "R1 surpasses proprietary AI models such as OpenAI's o1 reasoning model's capabilities across math, science, and coding at a fraction of the development cost."
+        },
+        {
+         "title": "What is DeepSeek, the Chinese AI company upending the stock market? - Georgia Asian Times",
+         "date": "2025-01-30",
+         "source": "gasiantimes.com",
+         "url": "https://gasiantimes.com/business/2025/01/30/what-is-deepseek-the-chinese-ai-company-upending-the-stock-market/",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "That paper was about another DeepSeek AI model called R1 that showed advanced \u201creasoning\u201d skills \u2014 such as the ability to rethink its approach to a math problem \u2014 and was significantly cheaper than a similar model sold by OpenAI called o1."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 273,
+       "judged": 10,
+       "expression": 0.12,
+       "support": 3.665,
+       "refute": 0.5,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The latest open artifacts (#7): Alpaca era of reasoning models, China's continued dominanc",
+         "date": "2025-02-19",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/artifacts-7",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "It's one of those months where it feels like a year passes in the open-source ecosystem. Things are the liveliest they've been in quite some time, obviously thanks to DeepSeek R1."
+        },
+        {
+         "title": "The Pulse #122: DeepSeek rocks the tech industry",
+         "date": "2025-01-30",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-122-deepseek-rocks-the",
+         "relation": "states",
+         "confidence": 0.65,
+         "quote": "The team behind DeepSeek found dozens of approaches to improve efficiency of their model \u2013 and published these optimizations in a paper titled DeepSeek-V3 Technical Report. Novel optimization methods include: Multi-Head Latent Attention (MLA.)"
+        },
+        {
+         "title": "DeepSeek's \"surprising\" AI claims show China \"starting to gain an edge\"",
+         "date": "2025-01-30",
+         "source": "newsweek.com",
+         "url": "https://www.newsweek.com/deepseeks-surprising-ai-claims-show-china-starting-gain-edge-2022606",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "DeepSeek-V3 is not a unique breakthrough or something that fundamentally changes the economics of LLM's; it's an expected point on an ongoing cost reduction curve."
+        },
+        {
+         "title": "I spent two days testing DeepSeek R1",
+         "date": "2025-01-30",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/i-spent-two-days-testing-deepseek",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "OpenAI charges API customers $60 to output a million o1 tokens, whereas DeepSeek charges $2.19 \u201427 times cheaper. \u2026 I consider R1 to be a very impressive model."
+        },
+        {
+         "title": "Deep Deepseek History and Impact on the Future of AI",
+         "date": "2025-01-31",
+         "source": "nextbigfuture.com",
+         "url": "https://www.nextbigfuture.com/2025/01/deep-deepseek-history-and-impact-on-the-future-of-ai.html",
+         "relation": "states",
+         "confidence": 0.55,
+         "quote": "Deepseek has more innovations to release and are a significant competitor especially with strong backing from the China government and China banks."
+        },
+        {
+         "title": "Nvidia Revenue Spikes as Agentic AI Aims to Transform Businesses | PYMNTS.com",
+         "date": "2025-02-27",
+         "source": "pymnts.com",
+         "url": "https://www.pymnts.com/earnings/2025/nvidia-ceo-q4-revenue-up-80-yoy-as-agentic-ai-aims-to-transform-businesses/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "DeepSeek's V3 model only cost $5.6 million to train using 2,000 slower H800 Nvidia chips. In contrast, OpenAI's GPT-4 cost $100 million to train on 25,000 H100 Nvidia GPUs."
+        },
+        {
+         "title": "Revolutionizing LLMs: How DeepSeek is Shaping the Future of AI Reasoning",
+         "date": "2025-01-30",
+         "source": "wccftech.com",
+         "url": "https://wccftech.com/revolutionizing-llms-how-deepseek-is-shaping-the-future-of-ai-reasoning/",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "Multitask Proficiency: Despite its smaller size, Janus Pro-7B demonstrates strong proficiency across diverse tasks, including reasoning, content generation, and specialized problem-solving."
+        },
+        {
+         "title": "After DeepSeek: For India, time for the AI leap",
+         "date": "2025-01-31",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/opinion/columns/after-deepseek-for-india-time-for-the-ai-leap-9808664/",
+         "relation": "states",
+         "confidence": 0.7,
+         "quote": "they cleverly combined several known AI engineering techniques, while making some unique contributions as well, to radically improve efficiencies and lower costs of AI-model training and inferencing"
+        },
+        {
+         "title": "Why India should cheer the rise of China's DeepSeek AI",
+         "date": "2025-01-30",
+         "source": "newindianexpress.com",
+         "url": "https://www.newindianexpress.com/web-only/2025/Jan/30/why-india-should-cheer-the-rise-of-chinas-deepseek-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "If a small Chinese company can build a world-class AI model in a relatively short time and at a fraction of the cost, there is no reason why India cannot do the same."
+        },
+        {
+         "title": "Algorithmic progress likely spurs more spending on compute, not less",
+         "date": "2025-02-14",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/algorithmic-progress-likely-spurs",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "forms of algorithmic progress that allow AI labs to improve frontier performance at the same time they can increase computational efficiency, which is largely true for DeepSeek's recent innovations"
+        },
+        {
+         "title": "France's Mistral hails DeepSeek's AI model - The Economic Times",
+         "date": "2025-01-31",
+         "source": "economictimes.indiatimes.com",
+         "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/frances-mistral-hails-deepseeks-ai-model/articleshow/117787935.cms",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "R1 is \"a great and complementary piece of open-source technology\""
+        },
+        {
+         "title": "The Real Threat of Chinese AI",
+         "date": "2025-02-28",
+         "source": "foreignaffairs.com",
+         "url": "https://www.foreignaffairs.com/china/real-threat-chinese-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Although DeepSeek's LLM performs remarkably well on many tasks, it has clearly been programmed to reflect Beijing's ideological goals and to suppress negative information about China."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 374,
+       "judged": 10,
+       "expression": 0.1545,
+       "support": 4.42,
+       "refute": 0.77,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "DeepSeek\u2019s latest R1 update attracts global media attention",
+         "date": "2025-05-30",
+         "source": "en.people.cn",
+         "url": "http://en.people.cn/n3/2025/0530/c90000-20321759.html",
+         "relation": "entails",
+         "confidence": 0.8,
+         "quote": "The LiveCodeBench leaderboard, a benchmark developed by researchers from UC Berkeley, MIT, and Cornell, ranked DeepSeek's updated R1 reasoning model just slightly behind OpenAI's o4 mini and o3 reasoning models on code generation, but ahead of xAI's Grok 3 mini and Alibaba's Qwen"
+        },
+        {
+         "title": "Meta's Llama 4 models debut with multimodal AI | VentureBeat",
+         "date": "2025-04-05",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/metas-answer-to-deepseek-is-here-llama-4-launches-with-long-context-scout-and-maverick-models-and-2t-parameter-behemoth-on-the-way/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "they seem designed to compete more directly with \"classical,\" non-reasoning LLMs and multimodal models such as OpenAI's GPT-4o and DeepSeek's V3 \u2014 with the exception of Llama 4 Behemoth, which does appear to threaten DeepSeek R1"
+        },
+        {
+         "title": "U.S. House Panel Says China's DeepSeek AI Is a 'Profound Threat' to National Security",
+         "date": "2025-04-16",
+         "source": "gizmodo.com",
+         "url": "https://gizmodo.com/u-s-house-panel-says-chinas-deepseek-ai-is-a-profound-threat-to-national-security-2000590343",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "A bipartisan House committee on Wednesday recommended placing restrictions on the export of AI models to China after concluding that DeepSeek trained its low-cost models using data from OpenAI's ChatGPT."
+        },
+        {
+         "title": "The AI Power Play: How ChatGPT, Gemini, Claude, and Others Are Shaping the Future of Artif",
+         "date": "2025-04-07",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2025/04/07/the-ai-power-play-how-chatgpt-gemini-claude-and-others-are-shaping-the-future-of-artificial-intelligence/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "companies such as OpenAI, Google, Anthropic, and emerging challengers like DeepSeek have pushed the boundaries of what large language models (LLMs) can do"
+        },
+        {
+         "title": "DeepSeek unveils new AI reasoning method amid anticipation for R2 model",
+         "date": "2025-04-05",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3305259/deepseek-unveils-new-ai-reasoning-method-anticipation-its-next-gen-model-rises",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "The resulting DeepSeek-GRM models outperformed existing methods, having \"achieved competitive performance\" with strong public reward models, the researchers wrote."
+        },
+        {
+         "title": "DeepSeek challenges OpenAI with efficient LLM | VentureBeat",
+         "date": "2025-04-26",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/deepseeks-success-shows-why-motivation-is-key-to-ai-innovation/",
+         "relation": "states",
+         "confidence": 0.7,
+         "quote": "Given the unavailability of the best high-end hardware, it seems that DeepSeek was motivated to innovate in the area of efficiency... DeepSeek has published their work, and people have verified that the results are reproducible at least on a much smaller scale."
+        },
+        {
+         "title": "DeepSeek offers new details on using 2,048 Nvidia chips to train its V3 model",
+         "date": "2025-05-16",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/big-tech/article/3310639/deepseek-paper-offers-new-details-how-it-used-2048-nvidia-chips-take-openai",
+         "relation": "entails",
+         "confidence": 0.75,
+         "quote": "The paper details technical optimisations that boost memory efficiency, streamline inter-chip communication, and enhance overall AI infrastructure performance \u2013 key advancements for reducing operational costs while scaling capabilities. These offer a \"practical blueprint for inno"
+        },
+        {
+         "title": "DeepSeek: Smarter Software Vs. More Compute",
+         "date": "2025-05-07",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/councils/forbestechcouncil/2025/05/07/deepseek-smarter-software-vs-more-compute/",
+         "relation": "states",
+         "confidence": 0.72,
+         "quote": "Instead of slapping on more compute and developing bigger models, the Chinese company focused on optimizing for a more efficient use of available resources. This included enhancing its model abilities through reinforcement learning, leveraging improved software architecture and o"
+        },
+        {
+         "title": "China\u2019s DeepSeek closes in on US rival OpenAI with upgraded model",
+         "date": "2025-05-30",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3312450/chinas-deepseek-closes-us-rival-openai-surpasses-alibaba-upgraded-model",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "The updated R1 model excelled among domestic AI models in a range of benchmark tests, including maths, coding and general logic, and matched up to global top models such as [OpenAI's] O3 and [Google's] Gemini2.5-Pro"
+        },
+        {
+         "title": "DeepSeek may have used Google's Gemini to train its latest model | TechCrunch",
+         "date": "2025-06-03",
+         "source": "techcrunch.com",
+         "url": "https://techcrunch.com/2025/06/03/deepseek-may-have-used-googles-gemini-to-train-its-latest-model/",
+         "relation": "contradicts",
+         "confidence": 0.42,
+         "quote": "OpenAI told the Financial Times it found evidence linking DeepSeek to the use of distillation, a technique to train AI models by extracting data from bigger, more capable ones."
+        },
+        {
+         "title": "DeepSeek Poses 'Profound' Security Threat, US House Panel Claims",
+         "date": "2025-04-17",
+         "source": "claimsjournal.com",
+         "url": "https://www.claimsjournal.com/news/national/2025/04/17/330114.htm",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "It sparked a selloff in tech stocks and upended the assumption that developing cutting-edge AI would require billions of dollars and enormous computing capacity."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 654,
+       "judged": 10,
+       "expression": 0.0717,
+       "support": 1.326,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The Epoch AI Brief - September 2025",
+         "date": "2025-10-01",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-epoch-ai-brief-september-2025",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "We also benchmarked DeepSeek-V3.1 on SWE-Bench verified. It achieved below SotA at 52 \u00b1 2.24%."
+        },
+        {
+         "title": "Our most popular Data Insights & Gradient Updates of 2025",
+         "date": "2025-12-23",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/our-most-popular-data-insights-and",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "This post covered three techniques introduced by the team behind the DeepSeek v3 paper that allowed them to release the best open-source pretrained model at the time, while using 10\u00d7 less compute than the next best open model Llama 3."
+        },
+        {
+         "title": "Ranking the Chinese Open Model Builders",
+         "date": "2025-08-17",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/chinas-top-19-open-model-labs",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "These companies have recently arrived at the frontier of performance and we will see if they have the capability to consistently release great models at a pace matching Qwen or DeepSeek."
+        },
+        {
+         "title": "The American DeepSeek Project",
+         "date": "2025-07-04",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/the-american-deepseek-project",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "the future will be in the balance of extremely powerful, closed American models counterbalancing a sea of strong, ubiquitous, open Chinese models"
+        },
+        {
+         "title": "Kimi K2 and when \"DeepSeek Moments\" become normal",
+         "date": "2025-07-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/kimi-k2-and-when-deepseek-moments",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "More organizations will join this list of OpenAI, Anthropic, Google, Meta, xAI, Qwen, DeepSeek, Moonshot AI, etc. Where there is a concentration of talent and sufficient compute, excellent models are very possible."
+        },
+        {
+         "title": "Latest open artifacts (#14): NVIDIA's rise, \"Swiss & UAE DeepSeek,\" and a resurgence of op",
+         "date": "2025-09-11",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/latest-open-artifacts-14-nvidias",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "The rest of the issue is packed with updates from Kimi, DeepSeek, ByteDance Seed, AI generated otters"
+        },
+        {
+         "title": "The problem with DeepSeek",
+         "date": "2025-12-05",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/the-problem-with-deepseek-v32-openai-preemption-anthropic",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "It's unlikely that v3.2 is actually dangerous \u2014 it likely isn't capable enough to be."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0034,
+     "surprisal": 0.6625,
+     "peak_after": 0.3178,
+     "adoption": 0.3144,
+     "vindication": 0.8646,
+     "predictive_value": 0.1942,
+     "best_anticipation": {
+      "title": "The Prompt: Is The DeepSeek Panic Overblown?",
+      "date": "2025-01-28",
+      "url": "https://www.forbes.com/sites/rashishrivastava/2025/01/28/the-prompt-is-the-deepseek-panic-overblown/",
+      "relation": "states",
+      "confidence": 0.82,
+      "quote": "Eiso Kant, CTO and co-founder of Poolside AI, a unicorn that builds AI for software engineering, told Forbes that DeepSeek's strength is in its engineering ability to do more with less."
+     },
+     "contradiction": {
+      "title": "DeepSeek's \"surprising\" AI claims show China \"starting to gain an edge\"",
+      "date": "2025-01-30",
+      "url": "https://www.newsweek.com/deepseeks-surprising-ai-claims-show-china-starting-gain-edge-2022606",
+      "relation": "contradicts",
+      "confidence": 0.5,
+      "quote": "DeepSeek-V3 is not a unique breakthrough or something that fundamentally changes the economics of LLM's; it's an expected point on an ongoing cost reduction curve."
+     },
+     "prior_strength": 0.3375,
+     "best_prior": {
+      "date": "2024-05-13",
+      "title": "Import AI 372: Gibberish jailbreak; DeepSeek's great new model; Google's soccer-playing ro",
+      "url": "https://importai.substack.com/p/import-ai-372-gibberish-jailbreak",
+      "source": "Jack Clark",
+      "relation": "partial",
+      "confidence": 0.75,
+      "quote": "DeepSeek has managed to hire some of those inscrutable wizards who can deeply understand CUDA"
+     },
+     "claim": {
+      "text": "DeepSeek has strong engineering talent and an unusual ability to execute and solve difficult optimization problems, and will continue producing strong models.",
+      "kind": "prediction",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "They cooked, big time, and will continue to cook"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-12-31",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 1096,
+       "judged": 10,
+       "expression": 0.0413,
+       "support": 0.413,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 376,
+       "judged": 10,
+       "expression": 0.0323,
+       "support": 0.323,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 200,
+       "judged": 10,
+       "expression": 0.108,
+       "support": 3.467,
+       "refute": 0.6,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "\"We regularly evaluate all competitive models\": DeepSeek AI reportedly outperforms Llama's",
+         "date": "2025-01-28",
+         "source": "windowscentral.com",
+         "url": "https://www.windowscentral.com/software-apps/deepseek-ai-reportedly-outperforms-llamas-next-version-throwing-meta-into-panic-mode",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "It surpasses advanced AI models like Meta\u2019s Llama 3.1, OpenAI\u2019s GPT-4o, and Anthropic\u2019s Claude Sonnet 3.5, all at a fraction of the cost."
+        },
+        {
+         "title": "DeepSeek's AI claims have shaken the world \u2014 but not everyone's convinced",
+         "date": "2025-01-30",
+         "source": "cnbc.com",
+         "url": "https://www.cnbc.com/2025/01/30/chinas-deepseek-has-some-big-ai-claims-not-all-experts-are-convinced-.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Both models are open-source, meaning their underlying code is free and publicly available for other developers to customize and redistribute."
+        },
+        {
+         "title": "Meet DeepSeek: the Chinese start-up that is changing how AI models are trained",
+         "date": "2025-01-01",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3293050/meet-deepseek-chinese-start-changing-how-ai-models-are-trained",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Hangzhou-based DeepSeek is 2025\u2019s \u2018biggest dark horse\u2019 in open-source large language models, Nvidia research scientist Jim Fan says"
+        },
+        {
+         "title": "Alibaba claims its new AI model surpasses DeepSeek",
+         "date": "2025-01-30",
+         "source": "americanbazaaronline.com",
+         "url": "https://americanbazaaronline.com/2025/01/30/alibaba-claims-its-new-ai-model-surpasses-deepseek458870/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "With its efficiency and cost-effectiveness, DeepSeek surpassed leading western models by far, reports said."
+        },
+        {
+         "title": "DeepSeek V3 and the actual cost of training frontier AI models",
+         "date": "2025-01-09",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/deepseek-v3-and-the-actual-cost-of",
+         "relation": "states",
+         "confidence": 0.87,
+         "quote": "most notable of which are the substantial improvements over Llama 405B instruct with way fewer active parameters than the previous best open weights model"
+        },
+        {
+         "title": "The State of Generative Models",
+         "date": "2025-01-04",
+         "source": "nrehiew.github.io",
+         "url": "https://nrehiew.github.io/blog/2024/",
+         "relation": "contradicts",
+         "confidence": 0.6,
+         "quote": "The current \u201cbest\u201d open-weights models are the Llama 3 series of models and Meta seems to have gone all-in to train the best possible vanilla Dense transformer."
+        },
+        {
+         "title": "Ai2's T\u00fclu 3 405B surpasses DeepSeek v3 | VentureBeat",
+         "date": "2025-01-30",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/ai2-releases-tulu-3-a-fully-open-source-model-that-bests-deepseek-v3-gpt-4o-with-novel-post-training-approach/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "it surpasses DeepSeek's v3 model across critical benchmarks"
+        },
+        {
+         "title": "DeepSeek Is Reshaping China\u2019s AI Landscape",
+         "date": "2025-01-29",
+         "source": "foreignpolicy.com",
+         "url": "https://foreignpolicy.com/2025/01/29/deepseek-china-ai-chatgpt-stocks/?tpcc=recirc_trending062921",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "The V3 model was already better than Meta's latest open-source model, Llama 3.3-70B in all metrics commonly used to evaluate a model's performance\u2014such as reasoning, coding, and quantitative reasoning\u2014and on par with Anthropic's Claude 3.5 Sonnet."
+        },
+        {
+         "title": "How DeepSeek is shaking up US tech heavyweights - Academia - The Jakarta Post",
+         "date": "2025-01-30",
+         "source": "thejakartapost.com",
+         "url": "https://www.thejakartapost.com/opinion/2025/01/31/how-deepseek-is-shaking-up-us-tech-heavyweights.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "In December, DeepSeek released its V3 model. This is a very powerful \"standard\" large language model that performs at a similar level to OpenAI's GPT-4o and Anthropic's Claude 3.5."
+        },
+        {
+         "title": "DeepSeek releases new models Janus-Pro and JanusFlow on Lunar New Year's Eve \u00b7 TechNode",
+         "date": "2025-01-29",
+         "source": "technode.com",
+         "url": "https://technode.com/2025/01/30/deepseek-releases-new-models-janus-pro-and-janusflow-on-lunar-new-years-eve/",
+         "relation": "states",
+         "confidence": 0.62,
+         "quote": "Following the China-based company's announcement that its DeepSeek-V3 model topped the scoreboard for open-source models"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 391,
+       "judged": 10,
+       "expression": 0.0396,
+       "support": 1.268,
+       "refute": 0.25,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "After DeepSeek: For India, time for the AI leap",
+         "date": "2025-01-31",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/opinion/columns/after-deepseek-for-india-time-for-the-ai-leap-9808664/",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "The AI models, which have been open-sourced, are supposed to have been built using just 2,000 Nvidia H800 GPUs, matching the performance of leading systems like OpenAI\u2019s ChatGPT 4.0"
+        },
+        {
+         "title": "France's Mistral hails DeepSeek's AI model - The Economic Times",
+         "date": "2025-01-31",
+         "source": "economictimes.indiatimes.com",
+         "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/frances-mistral-hails-deepseeks-ai-model/articleshow/117787935.cms",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The new model \"complements large open-source reasoning models like the recent releases of DeepSeek, and can serve as a strong base model for making reasoning capabilities emerge,\" Mistral said."
+        },
+        {
+         "title": "What Is DeepSeek? Everything to Know About the New Chinese AI Tool - CNET",
+         "date": "2025-01-31",
+         "source": "cnet.com",
+         "url": "https://www.cnet.com/tech/services-and-software/what-is-deepseek-everything-to-know-about-the-new-chinese-ai-tool/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "DeepSeek offers two LLMs: DeepSeek-V3 and DeepThink (R1). DeepSeek-V3 works like the standard ChatGPT model"
+        },
+        {
+         "title": "DeepSeek just insisted it's ChatGPT, and I think that's all the proof I need",
+         "date": "2025-01-30",
+         "source": "techradar.com",
+         "url": "https://www.techradar.com/computing/artificial-intelligence/deepseek-just-insisted-its-chatgpt-and-i-think-thats-all-the-proof-i-need",
+         "relation": "contradicts",
+         "confidence": 0.25,
+         "quote": "Everyone says it's the most powerful and cheaply trained AI ever (everyone except Alibaba), but I don't know if that's true."
+        },
+        {
+         "title": "Revolutionizing LLMs: How DeepSeek is Shaping the Future of AI Reasoning",
+         "date": "2025-01-30",
+         "source": "wccftech.com",
+         "url": "https://wccftech.com/revolutionizing-llms-how-deepseek-is-shaping-the-future-of-ai-reasoning/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The DeepSeek R1 reasoner model not only matches the performance of leading models like OpenAI's o1 but does so with remarkable cost efficiency"
+        },
+        {
+         "title": "Deep Deepseek History and Impact on the Future of AI",
+         "date": "2025-01-31",
+         "source": "nextbigfuture.com",
+         "url": "https://www.nextbigfuture.com/2025/01/deep-deepseek-history-and-impact-on-the-future-of-ai.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Deepseek V3 beats the performance of Open AI 4o."
+        },
+        {
+         "title": "What went into training DeepSeek-R1?",
+         "date": "2025-01-31",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/what-went-into-training-deepseek",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "DeepSeek R1\u2019s architecture is identical to DeepSeek v3, an earlier model that the company released in December 2024."
+        },
+        {
+         "title": "I spent two days testing DeepSeek R1",
+         "date": "2025-01-30",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/i-spent-two-days-testing-deepseek",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Overall, I found DeepSeek R1 to be on par with Google's latest thinking model, but not as good as o1-pro."
+        },
+        {
+         "title": "Gemma 3, OLMo 2 32B, and the growing potential of open-source AI",
+         "date": "2025-03-13",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/gemma-3-olmo-2-32b-and-the-growing",
+         "relation": "partially_anticipates",
+         "confidence": 0.34,
+         "quote": "Through 2024, and especially before DeepSeek, the impression was that scaling AI capabilities was just too expensive for the smaller players willing to do truly open-source development."
+        },
+        {
+         "title": "Five ways in which the last 3 months \u2014 and especially the DeepSeek era \u2014 have vindicated \u201c",
+         "date": "2025-02-09",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/five-ways-in-which-the-last-3-months",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Most recently, DeepSeek, which more or less matched OpenAI's o1, accelerated those price wars, and OpenAI was forced (already) to drop prices."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 497,
+       "judged": 10,
+       "expression": 0.0545,
+       "support": 1.19,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "DeepSeek\u2019s latest R1 update attracts global media attention",
+         "date": "2025-05-30",
+         "source": "en.people.cn",
+         "url": "http://en.people.cn/n3/2025/0530/c90000-20321759.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the latest model, DeepSeek-R1-0528, is still based on the DeepSeek V3 Base model released in December 2024, but it has undergone further training with increased computational resources"
+        },
+        {
+         "title": "Meta unveils 2 new multi-modal AI models: Llama 4 Scout and Maverick",
+         "date": "2025-04-06",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/technology/artificial-intelligence/meta-llama-4-scout-and-maverick-ai-models-9927829/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "It is also said to be smaller and more efficient than DeepSeek V3, which is another 17-billion-parameter model using 128 experts."
+        },
+        {
+         "title": "Llama 4 AI models are its \u2018most advanced\u2019 yet, says Meta",
+         "date": "2025-04-07",
+         "source": "siliconrepublic.com",
+         "url": "https://www.siliconrepublic.com/machines/llama-4-meta-ai-scout-maverick-behemoth-llm",
+         "relation": "anticipates_directionally",
+         "confidence": 0.4,
+         "quote": "The AI race, which was already fast gaining momentum, received yet another boost after the Chinese AI start-up DeepSeek\u2019s open-source V3 and R1 gained sudden popularity."
+        },
+        {
+         "title": "Import AI 417: Russian LLMs; Huawei's DGX rival; and 24 trillion tokens for training AIs",
+         "date": "2025-06-23",
+         "source": "Jack Clark",
+         "url": "https://importai.substack.com/p/import-ai-417-russian-llms-huaweis",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "how well it can support running DeepSeek-R1, the smash hit model from China's best model training startup"
+        },
+        {
+         "title": "DeepSeek offers new details on using 2,048 Nvidia chips to train its V3 model",
+         "date": "2025-05-16",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/big-tech/article/3310639/deepseek-paper-offers-new-details-how-it-used-2048-nvidia-chips-take-openai",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "attributes the start-up\u2019s breakthrough in training high-performance, cost-efficient AI systems to a hardware-software co-design approach"
+        },
+        {
+         "title": "China\u2019s DeepSeek closes in on US rival OpenAI with upgraded model",
+         "date": "2025-05-30",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3312450/chinas-deepseek-closes-us-rival-openai-surpasses-alibaba-upgraded-model",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Benchmark results cited by DeepSeek show that R1-0528\u2019s performance surpasses Alibaba\u2019s Qwen3 and matches models from OpenAI, Google"
+        },
+        {
+         "title": "DeepSeek unveils new AI reasoning method amid anticipation for R2 model",
+         "date": "2025-04-05",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3305259/deepseek-unveils-new-ai-reasoning-method-anticipation-its-next-gen-model-rises",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "speculation about the start-up\u2019s next move following the global attention garnered by the firm\u2019s V3 foundation model and R1 reasoning model"
+        },
+        {
+         "title": "OpenAI delays release of open source AI model, promises \u2018amazing\u2019 upgrade later this summe",
+         "date": "2025-06-12",
+         "source": "businesstoday.in",
+         "url": "https://www.businesstoday.in/technology/news/story/openai-delays-release-of-open-source-ai-model-promises-amazing-upgrade-later-this-summer-479978-2025-06-12",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "aims to outperform competitors such as DeepSeek\u2019s R1"
+        },
+        {
+         "title": "Alibaba\u2019s Qwen3 unseats DeepSeek\u2019s R1 as world\u2019s top-ranked open-source AI model",
+         "date": "2025-05-06",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/tech-trends/article/3309298/alibabas-qwen3-topples-deepseeks-r1-worlds-highest-ranked-open-source-ai-model",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Before the latest tests, DeepSeek\u2019s R1 had held the world\u2019s top open-source AI model spot on the LiveBench platform since its debut in January."
+        },
+        {
+         "title": "Qwen 3: The new open standard",
+         "date": "2025-04-28",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/qwen-3-the-new-open-standard",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Qwen3 is the best of both worlds for open models \u2014 peak performance and size scales \u2014 DeepSeek style or quality for the leading model"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 1025,
+       "judged": 10,
+       "expression": 0.0231,
+       "support": 0.871,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Interview: Ant Group's open model ambitions",
+         "date": "2025-11-12",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/inside-a-chinese-frontier-lab-inclusion",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "In 2025, the open model ecosystem has changed incredibly. It's more populated, far more dominated by Chinese companies, and growing. DeepSeek R1 shocked the world and now there are a handful of teams in China training exceptional models."
+        },
+        {
+         "title": "ChatGPT: Everything you need to know about the AI chatbot",
+         "date": "2025-12-22",
+         "source": "techcrunch.com",
+         "url": "https://techcrunch.com/2025/12/22/chatgpt-everything-to-know-about-the-ai-chatbot/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "OpenAI has battled the perception that it was ceding ground in the AI race to Chinese rivals like DeepSeek"
+        },
+        {
+         "title": "Ranking the Chinese Open Model Builders",
+         "date": "2025-08-17",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/chinas-top-19-open-model-labs",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "After the release of R1, they changed their strategy and released the weights of Minimax-Text-01, following up with reasoning models building upon it."
+        },
+        {
+         "title": "2025 Open Models Year in Review",
+         "date": "2025-12-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/2025-open-models-year-in-review",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "In 2024, the ecosystem was mostly relying on Llama 3 and looking ahead to the next generation of that model family, while Qwen2.5, QwQ and DeepSeek V2 / V2.5 / V3 were known to those deep into the ecosystem as capable but still niche picks. In 2025, DeepSeek and Qwen became house"
+        },
+        {
+         "title": "The American DeepSeek Project",
+         "date": "2025-07-04",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/the-american-deepseek-project",
+         "relation": "anticipates_directionally",
+         "confidence": 0.4,
+         "quote": "The goal for my next few years of work is what I'm calling The American DeepSeek Project \u2014 a fully open-source model at the scale and performance of current (publicly available) frontier models, within 2 years."
+        },
+        {
+         "title": "The problem with DeepSeek",
+         "date": "2025-12-05",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/the-problem-with-deepseek-v32-openai-preemption-anthropic",
+         "relation": "anticipates_directionally",
+         "confidence": 0.4,
+         "quote": "DeepSeek released a new model this week, v3.2, and it's genuinely impressive. According to the company, it competes with (though is slightly behind) the models from the top US developers, while having open weights."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0368,
+     "surprisal": 0.2115,
+     "peak_after": 0.108,
+     "adoption": 0.0713,
+     "vindication": 0.7777,
+     "predictive_value": 0.0134,
+     "best_anticipation": {
+      "title": "DeepSeek V3 and the actual cost of training frontier AI models",
+      "date": "2025-01-09",
+      "url": "https://www.interconnects.ai/p/deepseek-v3-and-the-actual-cost-of",
+      "relation": "states",
+      "confidence": 0.87,
+      "quote": "most notable of which are the substantial improvements over Llama 405B instruct with way fewer active parameters than the previous best open weights model"
+     },
+     "contradiction": {
+      "title": "The State of Generative Models",
+      "date": "2025-01-04",
+      "url": "https://nrehiew.github.io/blog/2024/",
+      "relation": "contradicts",
+      "confidence": 0.6,
+      "quote": "The current \u201cbest\u201d open-weights models are the Llama 3 series of models and Meta seems to have gone all-in to train the best possible vanilla Dense transformer."
+     },
+     "prior_strength": 0.7885,
+     "best_prior": {
+      "date": "2024-12-27",
+      "title": "Chinese AI firm releases DeepSeek V3, a new leader in open-source AI models",
+      "url": "https://www.thehindu.com/sci-tech/technology/chinese-ai-firm-releases-deepseek-v3-a-new-leader-in-open-source-ai-models/article69032888.ece",
+      "source": "thehindu.com",
+      "relation": "paraphrase",
+      "confidence": 0.83,
+      "quote": "Chinese AI firm releases DeepSeek V3, a new leader in open-source AI models"
+     },
+     "claim": {
+      "text": "DeepSeek v3 is the best open-weights language model available as of late December 2024.",
+      "kind": "thesis",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "clearly be the best open model"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-12-31",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 858,
+       "judged": 10,
+       "expression": 0.0355,
+       "support": 0.355,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 305,
+       "judged": 10,
+       "expression": 0.0779,
+       "support": 0.779,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 185,
+       "judged": 10,
+       "expression": 0.0405,
+       "support": 5.575,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Why everyone is freaking out about DeepSeek",
+         "date": "2025-01-28",
+         "source": "theverge.com",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/598846/deepseek-big-tech-ai-industry-nvidia-impac",
+         "relation": "partially_anticipates",
+         "confidence": 0.7,
+         "quote": "DeepSeek used \u201cmixture of experts,\u201d which only activates parts of the model for certain queries"
+        },
+        {
+         "title": "DeepSeek Has Big Tech Sweating, But Investors Should Stay Cool",
+         "date": "2025-01-29",
+         "source": "investorplace.com",
+         "url": "https://investorplace.com/hypergrowthinvesting/2025/01/deepseek-has-big-tech-sweating-but-investors-should-stay-cool/",
+         "relation": "partially_anticipates",
+         "confidence": 0.65,
+         "quote": "At the heart of DeepSeek\u2019s breakthrough is something called a Mixture-of-Experts (MoE) architecture... This drastic reduction in activated parameters is partially what has allowed the firm to create an AI as good as leading models for ~95% lower costs."
+        },
+        {
+         "title": "DeepSeek V3 and the actual cost of training frontier AI models",
+         "date": "2025-01-09",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/deepseek-v3-and-the-actual-cost-of",
+         "relation": "states",
+         "confidence": 0.96,
+         "quote": "It\u2019s their latest mixture of experts (MoE) model trained on 14.8T tokens with 671B total and 37B active parameters."
+        },
+        {
+         "title": "OpenAI finds DeepSeek used its data to train R1 reasoning model - SiliconANGLE",
+         "date": "2025-01-29",
+         "source": "siliconangle.com",
+         "url": "https://siliconangle.com/2025/01/29/openai-finds-deepseek-used-data-train-r1-reasoning-model/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "R1 is based on the industry-standard transformer LLM design and uses a processing approach called mixture of experts, or MoE. Standard LLMs activate all their parameters when they process a prompt. MoE models like R1 activate only a small fraction of its p"
+        },
+        {
+         "title": "DeepSeek Just Fast-Tracked AI Job Disruption \u2013 Here\u2019s How Investors Can Prepare",
+         "date": "2025-01-29",
+         "source": "investorplace.com",
+         "url": "https://investorplace.com/smartmoney/2025/01/deepseek-ai-jobs-prepare/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Instead of running every calculation at once, DeepSeek likely uses a Mixture of Experts (MoE) architecture \u2014a method that only activates the exact neurons needed for each task."
+        },
+        {
+         "title": "How DeepSeek is shaking up US tech heavyweights - Academia - The Jakarta Post",
+         "date": "2025-01-30",
+         "source": "thejakartapost.com",
+         "url": "https://www.thejakartapost.com/opinion/2025/01/31/how-deepseek-is-shaking-up-us-tech-heavyweights.html",
+         "relation": "states",
+         "confidence": 0.82,
+         "quote": "AI models have a lot of parameters that determine their responses to inputs (V3 has around 671 billion), but only a small fraction of these parameters is used for any given input."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "oklahomacitysun.com",
+         "url": "https://www.oklahomacitysun.com/news/274996990/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "The V3 model is a large language model that uses a Mixture-of-Experts (MOE) architecture... The V3 model has 671 billion parameters in total, with 37 billion active at any given time."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "nigeriasun.com",
+         "url": "https://www.nigeriasun.com/news/274996990/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "The V3 model has 671 billion parameters in total, with 37 billion active at any given time."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "aninews.in",
+         "url": "https://aninews.in/news/business/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report20250129100011/",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "The V3 model is a large language model that uses a Mixture-of-Experts (MOE) architecture... The V3 model has 671 billion parameters in total, with 37 billion active at any given time."
+        },
+        {
+         "title": "DeepSeek's AI model impacts Nvidia $200B | VentureBeat",
+         "date": "2025-01-30",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/dario-amodei-challenges-deepseeks-6-million-ai-narrative-what-anthropic-thinks-about-chinas-latest-ai-move/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "V3 represented genuine engineering innovations, particularly in managing the model's \" Key-Value cache \" and pushing the boundaries of the mixture of experts (MoE) method."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 319,
+       "judged": 10,
+       "expression": 0.072,
+       "support": 3.76,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Why India should cheer the rise of China's DeepSeek AI",
+         "date": "2025-01-30",
+         "source": "newindianexpress.com",
+         "url": "https://www.newindianexpress.com/web-only/2025/Jan/30/why-india-should-cheer-the-rise-of-chinas-deepseek-ai",
+         "relation": "states",
+         "confidence": 0.72,
+         "quote": "Despite a massive 671 billion parameters, DeepSeek-R1 activates only 37 bi"
+        },
+        {
+         "title": "What went into training DeepSeek-R1?",
+         "date": "2025-01-31",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/what-went-into-training-deepseek",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "Overall, the model is a very sparse mixture-of-experts, with 671 billion total parameters but only 37 billion active per token."
+        },
+        {
+         "title": "Revolutionizing LLMs: How DeepSeek is Shaping the Future of AI Reasoning",
+         "date": "2025-01-30",
+         "source": "wccftech.com",
+         "url": "https://wccftech.com/revolutionizing-llms-how-deepseek-is-shaping-the-future-of-ai-reasoning/",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "The model employs a Mixture-of-Experts (MoE) architecture (explained later), which activates 37 billion parameters out of 671 billion."
+        },
+        {
+         "title": "The Pulse #122: DeepSeek rocks the tech industry",
+         "date": "2025-01-30",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-122-deepseek-rocks-the",
+         "relation": "states",
+         "confidence": 0.96,
+         "quote": "The DeepSeek-V3 model uses 671B parameters, but only 37B are activated for each token: the most relevant parts of the model."
+        },
+        {
+         "title": "After DeepSeek: For India, time for the AI leap",
+         "date": "2025-01-31",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/opinion/columns/after-deepseek-for-india-time-for-the-ai-leap-9808664/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "It uses a \"mixture of experts\" technique to assign different parts of a training task to specialised units or \"experts\" within the model, ensuring that only the most relevant sections are used at any given time."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 443,
+       "judged": 10,
+       "expression": 0.0705,
+       "support": 1.431,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Mode",
+         "date": "2025-05-26",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2505.20225v1",
+         "relation": "partially_anticipates",
+         "confidence": 0.7,
+         "quote": "Recent large language models such as Gemini-1.5, DeepSeek-V3, and Llama-4 increasingly adopt Mixture-of-Experts (MoE) architectures, which offer strong efficiency-performance trade-offs by activating only a fraction of the model per token."
+        },
+        {
+         "title": "Why DeepSeek is cheap at scale but expensive to run locally",
+         "date": "2025-06-01",
+         "source": "seangoedecke.com",
+         "url": "https://www.seangoedecke.com/inference-batching-and-deepseek/",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "Some models (like DeepSeek\u2019s) that are mixture-of-experts with many layers thus require large batch sizes and high latency, otherwise throughput drops off a cliff."
+        },
+        {
+         "title": "DeepSeek offers new details on using 2,048 Nvidia chips to train its V3 model",
+         "date": "2025-05-16",
+         "source": "scmp.com",
+         "url": "https://www.scmp.com/tech/big-tech/article/3310639/deepseek-paper-offers-new-details-how-it-used-2048-nvidia-chips-take-openai",
+         "relation": "partially_anticipates",
+         "confidence": 0.7,
+         "quote": "DeepSeek also highlighted its use of a mixture-of-experts (MoE) model architecture, a machine-learning approach that divides an AI model into separate sub-networks, or experts, each focused on a subset of the input data while working collaboratively."
+        },
+        {
+         "title": "DeepSeek challenges OpenAI with efficient LLM | VentureBeat",
+         "date": "2025-04-26",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/deepseeks-success-shows-why-motivation-is-key-to-ai-innovation/",
+         "relation": "partially_anticipates",
+         "confidence": 0.65,
+         "quote": "DeepSeek applied MoE"
+        },
+        {
+         "title": "DeepSeek: Smarter Software Vs. More Compute",
+         "date": "2025-05-07",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/councils/forbestechcouncil/2025/05/07/deepseek-smarter-software-vs-more-compute/",
+         "relation": "partially_anticipates",
+         "confidence": 0.62,
+         "quote": "the Deepseek MoE framework comprises around 671 billion parameters; however, less than 0.5% of these parameters are used duri"
+        },
+        {
+         "title": "What is a Mixture of Experts model?",
+         "date": "2025-05-16",
+         "source": "techradar.com",
+         "url": "https://www.techradar.com/computing/artificial-intelligence/what-is-a-mixture-of-experts-model",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The concept has recently taken on a greater significance due to the launch of the Deepseek model, which deployed an innovative form of this technology to achieve impressive performance gains."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 824,
+       "judged": 10,
+       "expression": 0.095,
+       "support": 1.175,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Kimi K2 and when \"DeepSeek Moments\" become normal",
+         "date": "2025-07-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/kimi-k2-and-when-deepseek-moments",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "a sparse mixture of experts (MoE) model 2 with 1T total parameters (~1.5x DeepSeek V3/R1's 671B) and 32B active parameters (similar to DeepSeek V3/R1's 37B)"
+        },
+        {
+         "title": "How far can decentralized training over the internet scale?",
+         "date": "2025-12-29",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/how-far-can-decentralized-training",
+         "relation": "partially_anticipates",
+         "confidence": 0.75,
+         "quote": "DeepSeek v3 was trained on 14.8T tokens using a batch size of 63M, for a total of 14.8T / 63M \u2248 235k updates. At 32-bit precision, each update takes 2 x 671B parameters x 32 bits per parameter / 60 Mbps \u2248 8 days"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0567,
+     "surprisal": 0.03,
+     "peak_after": 0.095,
+     "adoption": 0.0383,
+     "vindication": 1.0,
+     "predictive_value": 0.0011,
+     "best_anticipation": {
+      "title": "DeepSeek V3 and the actual cost of training frontier AI models",
+      "date": "2025-01-09",
+      "url": "https://www.interconnects.ai/p/deepseek-v3-and-the-actual-cost-of",
+      "relation": "states",
+      "confidence": 0.96,
+      "quote": "It\u2019s their latest mixture of experts (MoE) model trained on 14.8T tokens with 671B total and 37B active parameters."
+     },
+     "contradiction": null,
+     "prior_strength": 0.97,
+     "best_prior": {
+      "date": "2024-12-27",
+      "title": "DeepSeek-V3 Technical Report",
+      "url": "http://arxiv.org/abs/2412.19437v2",
+      "source": "arXiv",
+      "relation": "identical",
+      "confidence": 0.97,
+      "quote": "We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token."
+     },
+     "claim": {
+      "text": "DeepSeek v3 uses a mixture-of-experts architecture with 671 billion total parameters and only 37 billion active parameters per token.",
+      "kind": "fact",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "37B active tokens, but 671B total parameters",
+       "highly aggressive mixture of experts"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-12-31",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 835,
+       "judged": 10,
+       "expression": 0.0834,
+       "support": 0.834,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 303,
+       "judged": 10,
+       "expression": 0.0215,
+       "support": 0.215,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 157,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 1.071,
+       "refute": 1.31,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Open Source and China Have Caught Up With OpenAI",
+         "date": "2025-01-22",
+         "source": "nextbigfuture.com",
+         "url": "https://www.nextbigfuture.com/2025/01/open-source-and-china-have-caught-up-with-openai.html",
+         "relation": "contradicts",
+         "confidence": 0.28,
+         "quote": "Trained for just $6M but rivaled ChatGPT-4o and Claude 3.5 Sonnet."
+        },
+        {
+         "title": "\"We regularly evaluate all competitive models\": DeepSeek AI reportedly outperforms Llama's",
+         "date": "2025-01-28",
+         "source": "windowscentral.com",
+         "url": "https://www.windowscentral.com/software-apps/deepseek-ai-reportedly-outperforms-llamas-next-version-throwing-meta-into-panic-mode",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "It surpasses advanced AI models like Meta's Llama 3.1, OpenAI's GPT-4o, and Anthropic's Claude Sonnet 3.5, all at a fraction of the cost."
+        },
+        {
+         "title": "DeepSeek Is Reshaping China\u2019s AI Landscape",
+         "date": "2025-01-29",
+         "source": "foreignpolicy.com",
+         "url": "https://foreignpolicy.com/2025/01/29/deepseek-china-ai-chatgpt-stocks/?tpcc=recirc_trending062921",
+         "relation": "contradicts",
+         "confidence": 0.33,
+         "quote": "better than Meta's latest open-source model, Llama 3.3-70B in all metrics commonly used to evaluate a model's performance\u2014such as reasoning, coding, and quantitative reasoning\u2014and on par with Anthropic's Claude 3.5 Sonnet"
+        },
+        {
+         "title": "The way we evaluate AI model safety might be about to break",
+         "date": "2025-01-22",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/the-way-we-evaluate-ai-model-safety",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "According to Lawrence Chan at AI evaluation non-profit METR, the labs implicitly rely on low benchmark scores to justify safety. After all, if an AI can't even score well on a biology quiz, how could it help create a bioweapon?"
+        },
+        {
+         "title": "Value Compass Benchmarks: A Platform for Fundamental and Validated Evaluation of LLMs Valu",
+         "date": "2025-01-13",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2501.07071v3",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "Existing static, open-source benchmarks are prone to data contamination and quickly become obsolete as LLMs evolve. Additionally, these discriminative evaluations uncover LLMs' knowledge about values, rather than valid assessments of LLMs' behavioral conformity to values."
+        },
+        {
+         "title": "Sam Altman thinks that AGI is basically a solved problem. I don\u2019t. Here\u2019s why.",
+         "date": "2025-01-06",
+         "source": "Gary Marcus",
+         "url": "https://garymarcus.substack.com/p/sam-altman-thinks-that-agi-is-basically",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Even on certain benchmarks, results may be fragile or difficult to replicate:\n\nIn o1's best performances cases, there may have been heavy data augmentation that is not possible in more open-ended domains. In domains where that's not possible, o1 may not even be that much better t"
+        },
+        {
+         "title": "Why reasoning models will generalize",
+         "date": "2025-01-28",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/why-reasoning-models-will-generalize",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "DeepSeek-R1, the new open-weight o1 replication has been showing up at the top of many random benchmarks as top overall, above Claude 3.5 Sonnet, Gemini, and GPT-4o"
+        },
+        {
+         "title": "Opinion: When AI passes this test, look out",
+         "date": "2025-01-24",
+         "source": "thestar.com.my",
+         "url": "https://www.thestar.com.my/tech/tech-news/2025/01/24/opinion-when-ai-passes-this-test-look-out",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "New models from companies like OpenAI, Google and Anthropic have been getting high scores on many doctorate-level challenges, limiting those tests' usefulness and leading to a chilling question: Are AI systems getting too smart for us to measure?"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 263,
+       "judged": 10,
+       "expression": 0.075,
+       "support": 1.385,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "California\u2019s surprisingly good AI policy report",
+         "date": "2025-03-21",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/california-ai-report",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "models outperform human experts on individual exam-style problems, but are much less useful in practice than those experts: agents are strong at things like knowledge or reasoning ability that traditional benchmarks tend to measure, but can\u2019t reliably perform diverse tasks of any"
+        },
+        {
+         "title": "The real reason AI benchmarks haven\u2019t reflected economic impacts",
+         "date": "2025-03-28",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-real-reason-ai-benchmarks-havent",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "what\u2019s challenging for humans may not correlate with what\u2019s challenging for AIs, further complicating the relationship between benchmark scores and real-world impacts"
+        },
+        {
+         "title": "Detecting Benchmark Contamination Through Watermarking",
+         "date": "2025-02-24",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2502.17259v2",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "successful contamination detection when models are contaminated enough to enhance performance, \\eg $p$-val $=10^{-3}$ for +5$\\%$ on ARC-Easy"
+        },
+        {
+         "title": "Overestimation in LLM Evaluation: A Controlled Large-Scale Study on Data Contamination's I",
+         "date": "2025-01-30",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2501.18771v1",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Data contamination -- the accidental consumption of evaluation examples within the pre-training data -- can undermine the validity of evaluation benchmarks... contamination with both source and target substantially inflates BLEU scores"
+        },
+        {
+         "title": "Is AI progress slowing down?",
+         "date": "2025-02-28",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/is-ai-progress-slowing-down",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "GPT-4.5 is most certainly not a state-of-the-art model. But it is a lot better than GPT-4: 4.5 gets 69% on GPQA Diamond... And, again, it slightly outperforms Claude 3.7 Sonnet without reasoning capabilities. According to OpenAI's Mark Chen, 4.5 \"does hit the benchmarks that we e"
+        },
+        {
+         "title": "We're Finding Out What Humans are Bad At",
+         "date": "2025-02-19",
+         "source": "Timothy B. Lee",
+         "url": "https://secondthoughts.ai/cp/157479406",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "I wish we had more information about how OpenAI's latest models have racked up such impressive scores on FrontierMath and Humanity's Last Exam."
+        },
+        {
+         "title": "The promise of reasoning models",
+         "date": "2025-02-28",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-promise-of-reasoning-models",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "AI systems would narrowly surpass the brightest humans on Earth in logical reasoning, structured argumentation, and computer programming\u2014while on the other hand, they would still struggle with seemingly much easier tasks like reliably operating enterprise computer software throug"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 398,
+       "judged": 10,
+       "expression": 0.08,
+       "support": 2.155,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Apple researchers show how popular AI models \u2018collapse\u2019 at complex problems",
+         "date": "2025-06-10",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/business/apple-researchers-ai-models-collapse-complex-problems-10058014/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Their findings showed that the AI industry may be grossly overstating these models\u2019 capabilities."
+        },
+        {
+         "title": "Beyond benchmark scores: Analyzing o3-mini\u2019s mathematical reasoning",
+         "date": "2025-06-08",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/beyond-benchmark-scores-analyzing",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "good at recognizing relevant material, but unable to extend or apply it in a novel way"
+        },
+        {
+         "title": "Meta Llama 4 Benchmarking Confusion: How Good Are the New AI Models? - CNET",
+         "date": "2025-04-09",
+         "source": "cnet.com",
+         "url": "https://www.cnet.com/tech/services-and-software/meta-dropped-llama-4-what-to-know-about-the-two-new-ai-models/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "it\u2019s possible that Meta submitted a better, more human-friendly model to try and juice its scores"
+        },
+        {
+         "title": "GPQA Diamond: what\u2019s left?",
+         "date": "2025-05-30",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/gpqa-diamond-whats-left",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "if we go for broke and apply that error rate to the entire set of 40, we get an overall invalid question rate of 15/198 = 8%"
+        },
+        {
+         "title": "Large Language Models Could Be Rote Learners",
+         "date": "2025-04-11",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2504.08300v5",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "When pre-exposed to the testing benchmark during training, less capable LLMs have been found to achieve inflated performance, thereby yielding erroneous results in LLM evaluation."
+        },
+        {
+         "title": "Establishing Trustworthy LLM Evaluation via Shortcut Neuron Analysis",
+         "date": "2025-06-04",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2506.04142v1",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "we discover that the overestimation of contaminated models is likely due to parameters acquiring shortcut solutions in training"
+        },
+        {
+         "title": "Crafting a good (reasoning) model",
+         "date": "2025-06-18",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/crafting-a-good-reasoning-model",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "And just kind of climbing these benchmark scores, is linked to this thing that I was saying with skills, is not the only way forward."
+        },
+        {
+         "title": "Toward Automated Robustness Evaluation of Mathematical Reasoning",
+         "date": "2025-06-05",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2506.05038v2",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "these models exhibit unexpected brittleness, often failing on simple variations of the same underlying task"
+        },
+        {
+         "title": "Apple AI research shows reasoning models collapse when problems are more complex",
+         "date": "2025-06-09",
+         "source": "thehindu.com",
+         "url": "https://www.thehindu.com/sci-tech/technology/apple-ai-research-shows-reasoning-models-collapse-when-problems-are-more-complex/article69674285.ece",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "although large reasoning models (LRMs) showed improved performance on benchmarks, they struggled with accuracy when the problems became more complex"
+        },
+        {
+         "title": "Expert pours cold water on Apple's downbeat AI outlook \u2014 says lack of high-powered hardwar",
+         "date": "2025-06-13",
+         "source": "tomshardware.com",
+         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/expert-pours-cold-water-on-apples-downbeat-ai-outlook-says-lack-of-high-powered-hardware-could-be-to-blame",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "models performed much better on well-known puzzles than on unfamiliar ones, indicating that their success likely stemmed from exposure during training rather than from adaptable or transferable problem-solving ability"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 808,
+       "judged": 10,
+       "expression": 0.0255,
+       "support": 2.56,
+       "refute": 0.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Thinking, Searching, and Acting",
+         "date": "2025-09-22",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/thinking-searching-and-acting",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "ounding evaluation scores were greeted with resounding criticism of \u201c they won\u2019t generalize,\u201d but that has turned out to be resoundingly false."
+        },
+        {
+         "title": "Claude Sonnet 4.5 knows when it\u2019s being tested",
+         "date": "2025-09-30",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/claude-sonnet-4-5-evaluation-situational-awareness",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "We cannot rule out that [Claude]\u2019s low deception rates in our evaluations are at least partially driven by its evaluation awareness"
+        },
+        {
+         "title": "Why AI writing is mid",
+         "date": "2025-11-16",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/why-ai-writing-is-mid",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "If we're making AIs that are soon to be superhuman at most knowledge work, that are trained primarily to predict text tokens, why is their ability to create high quality text tokens still so low?"
+        },
+        {
+         "title": "When high scores don\u2019t mean high intelligence: how to build better benchmarks",
+         "date": "2025-12-10",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/when-high-scores-dont-mean-high-intelligence",
+         "relation": "states",
+         "confidence": 0.68,
+         "quote": "We point to benchmarks as evidence of the capabilities of LLMs without spending much time considering how we are making those measurements... benchmark scores keep improving while real world applications are much less effective."
+        },
+        {
+         "title": "Why AI evals need to reflect the real world",
+         "date": "2025-09-10",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/why-ai-evals-need-to-reflect-real-world-benchmarking-rumman-chowdhury-mala-kumar",
+         "relation": "states",
+         "confidence": 0.68,
+         "quote": "Very often, AI systems and models that perform impressively against a benchmark and rank high on benchmark leaderboards then deliver inconsistently under real world constraints, revealing a clear gap between test success and operational reliability."
+        },
+        {
+         "title": "Why benchmarking is hard",
+         "date": "2025-12-23",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/why-benchmarking-is-hard",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "while we found differences between the average scores across settings (ranging from 74% to 80%), these differences were not statistically significant given the small size of GPQA-Diamond"
+        },
+        {
+         "title": "AI Benchmarks: How Companies Can Use Them to Assess Tech | PYMNTS.com",
+         "date": "2025-07-21",
+         "source": "pymnts.com",
+         "url": "https://www.pymnts.com/news/artificial-intelligence/2025/ai-benchmarks-how-companies-can-use-them-to-assess-tech/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "In model releases, many companies boast that they have beaten their competitors on selected benchmarks."
+        },
+        {
+         "title": "Benchmark Scores = General Capability + Claudiness",
+         "date": "2025-11-20",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/benchmark-scores-general-capability",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Anthropic has focused on making models that are state-of-the-art at agentic coding. Without additional focused investment, the models turn out not to be exceptional at advanced math."
+        },
+        {
+         "title": "AI models are getting really good at things you do at work",
+         "date": "2025-10-02",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/openai-gdpval-ai-jobs-work",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "by this time last year, models like Claude 3.5 Sonnet and GPT-4o were already close to acing several traditional benchmarks, including MMLU"
+        },
+        {
+         "title": "Giving your AI a Job Interview",
+         "date": "2025-11-12",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/giving-your-ai-a-job-interview",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "different models performed differently (ChatGPT was a better sales manager, Claude a better financial advisor)"
+        },
+        {
+         "title": "Two new benchmarks added to our suite",
+         "date": "2025-12-12",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/two-new-benchmarks-added-to-our-suite",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Qwen3-Max-Instruct's score may be due in part to data contamination. We consider this possible because Qwen3-Max-Instruct ranks much lower on AA-Omniscience, a closed benchmark broadly similar to SimpleQA Verified."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0524,
+     "surprisal": 0.7525,
+     "peak_after": 0.08,
+     "adoption": 0.0276,
+     "vindication": 0.6059,
+     "predictive_value": 0.0167,
+     "best_anticipation": {
+      "title": "When high scores don\u2019t mean high intelligence: how to build better benchmarks",
+      "date": "2025-12-10",
+      "url": "https://www.transformernews.ai/p/when-high-scores-dont-mean-high-intelligence",
+      "relation": "states",
+      "confidence": 0.68,
+      "quote": "We point to benchmarks as evidence of the capabilities of LLMs without spending much time considering how we are making those measurements... benchmark scores keep improving while real world applicati"
+     },
+     "contradiction": {
+      "title": "Thinking, Searching, and Acting",
+      "date": "2025-09-22",
+      "url": "https://www.interconnects.ai/p/thinking-searching-and-acting",
+      "relation": "contradicts",
+      "confidence": 0.45,
+      "quote": "ounding evaluation scores were greeted with resounding criticism of \u201c they won\u2019t generalize,\u201d but that has turned out to be resoundingly false."
+     },
+     "prior_strength": 0.2475,
+     "best_prior": {
+      "date": "2024-06-26",
+      "title": "PaCoST: Paired Confidence Significance Testing for Benchmark Contamination Detection in La",
+      "url": "http://arxiv.org/abs/2406.18326v2",
+      "source": "arXiv",
+      "relation": "partial",
+      "confidence": 0.55,
+      "quote": "This inclusion can lead to cheatingly high scores on model leaderboards, yet result in disappointing performance in real-world applications."
+     },
+     "claim": {
+      "text": "Benchmark scores serve as good negative selection but poor positive selection: weak benchmarks reliably indicate a weak model, while strong benchmarks do not establish that a model matches Claude Sonnet.",
+      "kind": "frame",
+      "salience": 0.75,
+      "explicit": true,
+      "fingerprints": [
+       "Benchmarks are good negative selection",
+       "not good positive selection"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2024-12-31",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 1001,
+       "judged": 10,
+       "expression": 0.003,
+       "support": 0.03,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 354,
+       "judged": 10,
+       "expression": 0.0112,
+       "support": 0.112,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 194,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.363,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "DeepSeek R1's recipe to replicate o1 and the future of reasoning LMs",
+         "date": "2025-01-21",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/deepseek-r1-recipe-for-o1",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "o1\u2019s pricing at $15 per million input tokens / $60 output looks out of place relative to R1\u2019s pricing at $0.55 per million input tokens / $2.19 output"
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "aninews.in",
+         "url": "https://aninews.in/news/business/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report20250129100011/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The V3 model, for instance, performs as well as or better than other large models on language, coding, and math benchmarks while using only a fraction of the computing resources."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "oklahomacitysun.com",
+         "url": "https://www.oklahomacitysun.com/news/274996990/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "The V3 model, for instance, performs as well as or better than other large models on language, coding, and math benchmarks while using only a fraction of the computing resources."
+        },
+        {
+         "title": "DeepSeek looks fantastic but not a miracle and not built in USD 5m, panic on it seems over",
+         "date": "2025-01-29",
+         "source": "nigeriasun.com",
+         "url": "https://www.nigeriasun.com/news/274996990/deepseek-looks-fantastic-but-not-a-miracle-and-not-built-in-usd-5m-panic-on-it-seems-overblown-bernstein-report",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "The V3 model, for instance, performs as well as or better than other large models on language, coding, and math benchmarks while using only a fraction of the computing resources."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 342,
+       "judged": 10,
+       "expression": 0.0231,
+       "support": 0.231,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "\ud83d\udd2e The Sunday edition #511: GPT-5 roadmap; AI politics; new GLP-1s; BYD vs Tesla, jobs for ",
+         "date": "2025-02-16",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-511",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "The catch is that you don't always need that level of heavyweight computation for every problem. This is where OpenAI's new focus comes in: figuring out how to let each model dynamically assign just the right amount of reasoning for a given task"
+        },
+        {
+         "title": "After DeepSeek: For India, time for the AI leap",
+         "date": "2025-01-31",
+         "source": "indianexpress.com",
+         "url": "https://indianexpress.com/article/opinion/columns/after-deepseek-for-india-time-for-the-ai-leap-9808664/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "These models achieve performance that matches existing models, like GPT-4, but at a fraction of the cost. The API access is roughly one-tenth to one-tw"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 485,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.27,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Claude-powered coding tools are poised to transform programming",
+         "date": "2025-05-29",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/claude-powered-coding-tools-are-poised",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The company\u2019s models have excelled at software engineering since last June\u2019s release of Claude 3.5 Sonnet."
+        },
+        {
+         "title": "Import AI 415: Situational awareness for AI systems; 8TB of open text; and China's heterog",
+         "date": "2025-06-09",
+         "source": "Jack Clark",
+         "url": "https://importai.substack.com/p/import-ai-415-situational-awareness",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "instead of refining a single candidate per step, we fan out such that each idea spawns multiple implementations, and the highest-performing kernels are used to seed the next round"
+        },
+        {
+         "title": "Mistral's new Devstral AI model was designed for coding | TechCrunch",
+         "date": "2025-05-21",
+         "source": "techcrunch.com",
+         "url": "https://techcrunch.com/2025/05/21/mistrals-new-devstral-model-was-designed-for-coding/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Devstral excels at using tools to explore codebases, editing multiple files and power[ing] software engineering agents \u2026 It is light enough to run on a single [Nvidia] RTX 4090 or a Mac with 32GB RAM, making it an ideal choice for local deployment and on-device use."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 975,
+       "judged": 10,
+       "expression": 0.0165,
+       "support": 0.165,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The Pulse #149: New trend: programming by kicking off parallel AI agents",
+         "date": "2025-10-09",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-149-new-trend-programming",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "New trend: programming by kicking off parallel AI agents. More devs are experimenting with kicking off coding agents in parallel"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0071,
+     "surprisal": 0.73,
+     "peak_after": 0.0231,
+     "adoption": 0.016,
+     "vindication": 1.0,
+     "predictive_value": 0.0117,
+     "best_anticipation": {
+      "title": "The Pulse #149: New trend: programming by kicking off parallel AI agents",
+      "date": "2025-10-09",
+      "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-149-new-trend-programming",
+      "relation": "partially_anticipates",
+      "confidence": 0.55,
+      "quote": "New trend: programming by kicking off parallel AI agents. More devs are experimenting with kicking off coding agents in parallel"
+     },
+     "contradiction": null,
+     "prior_strength": 0.27,
+     "best_prior": {
+      "date": "2024-12-20",
+      "title": "Building Effective AI Agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "source": "anthropic.com",
+      "relation": "partial",
+      "confidence": 0.6,
+      "quote": "Routing easy/common questions to smaller, cost-efficient models like Claude Haiku 4.5 and hard/unusual questions to more capable models like Claude Sonnet 4.5 to optimize for best performance."
+     },
+     "claim": {
+      "text": "An effective coding workflow is to split a codebase into blocks, dispatch every block in parallel to a cheap model such as DeepSeek v3 to determine whether it needs changing, then send only the flagged blocks to a stronger model such as Claude Sonnet for the actual edit.",
+      "kind": "synthesis",
+      "salience": 0.5,
+      "explicit": true,
+      "fingerprints": [
+       "The new coding paradigm is to split your entire codebase into chunks",
+       "send each chunk that returns \"yes\" to Sonnet"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

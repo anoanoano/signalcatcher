@@ -12,16 +12,30 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-DATA = json.loads(Path("data/units_report.json").read_text())
-_d2 = Path("data/units2_report.json")
-if _d2.exists():
-    DATA["units"] = DATA["units"] + json.loads(_d2.read_text())["units"]
-    DATA["run_id"] = DATA.get("run_id","") + " + units2"
+# Merge unit files, preferring rescored (surprisal-v2) versions; the v1
+# snapshot from git fills any unit the in-progress rescore has not reached, so
+# the report can ship while the rescore grinds through subscription windows.
+_units: dict = {}
+for f in ("data/units_report_v1.json", "data/units_report.json",
+          "data/units2_report.json", "data/unit7_report.json"):
+    _p = Path(f)
+    if _p.exists():
+        for u in json.loads(_p.read_text()).get("units", []):
+            prev = _units.get(u["key"])
+            is_v2 = any(c.get("prior_strength") is not None for c in u["claims"])
+            if prev is None or is_v2:
+                u["_surprisal_v2"] = is_v2
+                _units[u["key"]] = u
+ORDER = ["new-axis", "gpt5-expectations", "svb-run", "media-rarely-lies",
+         "techtimes-ai-2023", "lichtman-ignore", "deepseek-v3"]
+DATA = {"run_id": "merged", "units":
+        sorted(_units.values(), key=lambda u: ORDER.index(u["key"]) if u["key"] in ORDER else 99)}
 
-EXPERIMENT_TAG = {  # run-2 discriminant-validity experiment labels
+EXPERIMENT_TAG = {  # experiment labels
     "media-rarely-lies": "widely recognized as a great essay",
     "techtimes-ai-2023": "low-tier outlet, aggregated content",
     "lichtman-ignore": "under-the-radar writer",
+    "deepseek-v3": "shell protocol: intl press + arXiv + reference layer",
 }
 
 REL_LABEL = {
@@ -108,6 +122,22 @@ def trail(claim):
             + '</div>')
     return '<div class="trail">' + "".join(rows) + "</div>"
 
+def prior_line(c):
+    bp = c.get("best_prior")
+    if not bp:
+        if c.get("prior_strength") is not None:
+            return ('<p class="note"><strong>Closest prior statement:</strong> none found '
+                    'by the high-recall search &mdash; surprisal is undefeated.</p>')
+        return ""
+    src = esc(bp.get("source") or "")
+    return (f'<p class="note"><strong>Closest prior statement</strong> '
+            f'(defeats {100*c.get("prior_strength",0):.0f}% of novelty): '
+            f'{esc(bp["date"])} &middot; {src or esc(bp["title"][:40])} &middot; '
+            f'<span class="rel">{esc(bp["relation"])}</span>'
+            + (f' &mdash; &ldquo;{esc(bp["quote"][:180])}&rdquo;' if bp.get("quote") else "")
+            + '</p>')
+
+
 def claim_block(c, idx):
     cl = c["claim"]
     pv = c["predictive_value"]
@@ -131,6 +161,7 @@ def claim_block(c, idx):
 <div class="cbody">
   <p class="claim-full">{esc(cl["text"])}</p>
   {first}
+  {prior_line(c)}
   <div class="chart-wrap">{window_bars(c)}</div>
   <p class="note" style="margin-top:.2rem">Expression rate among the ~10 most-plausible documents per window
   (outlined&nbsp;= before first use; filled&nbsp;= after).</p>
@@ -237,7 +268,7 @@ def unit_card(u):
   <div class="unit-head">
     <p class="eyebrow">{esc(u["label"])}</p>
     <h3><a href="{esc(u["url"])}">{esc(u["title"])}</a></h3>
-    <p class="unit-meta">{esc(u["source"])} &middot; {esc(u["published"])} &middot; {horizon}</p>
+    <p class="unit-meta">{esc(u["source"])} &middot; {esc(u["published"])} &middot; {horizon}{"" if u.get("_surprisal_v2") else " &middot; surprisal v1 (rescore in progress)"}</p>
   </div>
   <div class="unit-stats">
     <div><div class="unum">{fmt(m("surprisal"))}</div><div class="ulbl">surprisal</div></div>
@@ -395,17 +426,25 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
   corpus: was it <strong>surprising</strong> when written, was it <strong>adopted</strong> by
   later discourse, and was it <strong>vindicated</strong> by the record? Expand any claim to
   see exactly where &mdash; and in whose words &mdash; it resurfaced.</p>
-  <div class="meta"><span>Aug 27, 2026</span><span>{n_claims} claims scored across 6 texts</span><span>corpus: 8,000+ dated documents, 2018&ndash;2026</span></div>
+  <div class="meta"><span>Aug 27, 2026</span><span>{n_claims} claims scored across 7 texts</span><span>corpus: 8,000+ dated documents, 2018&ndash;2026</span></div>
 </header>
 
 <section>
   <p class="eyebrow">01 &middot; How to read the three numbers</p>
   <h2>Surprisal &middot; Adoption &middot; Vindication</h2>
-  <div class="panel"><div class="formula"><b>surprisal</b>    1 &minus; how common the claim was BEFORE its author first stated it     (0&ndash;1, higher = more original)
+  <div class="panel"><div class="formula"><b>surprisal</b>    1 &minus; strength of the closest PRIOR statement found by a hard search   (higher = nobody had said it)
 <b>adoption</b>     how much more common it became after, at peak, minus baseline     (higher = discourse moved toward it)
 <b>vindication</b>  balance of later evidence: bore it out (+1) vs refuted it (&minus;1)
 
 <b>predictive value</b> = surprisal &times; adoption &times; (1 + vindication) / 2</div></div>
+  <p>Surprisal is an <em>existence</em> test, not a popularity test: a hard search
+  (query expansion, lexical, semantic and verbatim-phrase retrieval over everything in
+  the corpus dated before the claim&rsquo;s first use) looks for anyone who already said
+  it, and the single strongest prior statement &mdash; shown with each claim as a dated,
+  quoted receipt &mdash; defeats novelty in proportion to how fully it anticipates the
+  claim. An earlier version measured how <em>often</em> the claim appeared beforehand,
+  which compressed every claim into 0.85&ndash;1.0 because any specific proposition is
+  rare among documents on its own topic; that version is retired.</p>
   <p>The three components are reported separately for every claim because they answer
   different questions a reader might care about. A claim can be highly surprising and
   never adopted (ahead of its time, or just wrong-footed); common and adopted (riding a
@@ -422,7 +461,7 @@ footer{{margin-top:4rem;padding-top:1.1rem;border-top:1px solid var(--rule);
 
 <section>
   <p class="eyebrow">02 &middot; The Units</p>
-  <h2>Six texts, side by side</h2>
+  <h2>Seven texts, side by side</h2>
   <p>Two pilots. The first three texts stress different parts of the measure: a slow-burn
   geopolitical frame, concrete near-term predictions, a day-one event interpretation on
   month-scale windows. The second three are a <strong>reputation test</strong>: a widely

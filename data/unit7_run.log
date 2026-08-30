@@ -1,3 +1,42 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6744.13it/s]
 UNIT deepseek-v3: DeepSeek v3: The Six Million Dollar Model (2024-12-31)
+extracted 56 claims
+canvassed: ['prediction', 'thesis', 'fact', 'frame', 'synthesis']
+
+--- building evidence shell (shell-v1) ---
+    3 queries -> 133 candidate articles
+    fetched 100, collapsed 18 syndicated, added 82
+    3 queries -> 60 candidate articles
+    fetched 48, collapsed 4 syndicated, added 36
+    3 queries -> 141 candidate articles
+    fetched 111, collapsed 7 syndicated, added 53
+    3 queries -> 105 candidate articles
+    fetched 64, collapsed 9 syndicated, added 51
+    3 queries -> 88 candidate articles
+    fetched 64, collapsed 7 syndicated, added 20
+    intl panel: 20 listed, 15 added
+    academic: 47 abstracts added
+shell channels: {'news': 'ok', 'intl': 'ok', 'academic': 'ok', 'reference': 'ok', 'forum': 'ok'}
+
+[1/5] prediction: DeepSeek has strong engineering talent and an unusual ability to execu
+  S=0.6625 (prior_strength=0.3375) A=0.3144 V=0.8646 PV=0.1942 [378s]
+  closest prior: 2024-05-13 Jack Clark [partial] Import AI 372: Gibberish jailbreak; DeepSeek's gre
+
+[2/5] thesis: DeepSeek v3 is the best open-weights language model available as of la
+  S=0.2115 (prior_strength=0.7885) A=0.0713 V=0.7777 PV=0.0134 [743s]
+  closest prior: 2024-12-27 thehindu.com [paraphrase] Chinese AI firm releases DeepSeek V3, a new leader
+
+[3/5] fact: DeepSeek v3 uses a mixture-of-experts architecture with 671 billion to
+  S=0.03 (prior_strength=0.97) A=0.0383 V=1.0 PV=0.0011 [964s]
+  closest prior: 2024-12-27 arXiv [identical] DeepSeek-V3 Technical Report
+
+[4/5] frame: Benchmark scores serve as good negative selection but poor positive se
+  S=0.7525 (prior_strength=0.2475) A=0.0276 V=0.6059 PV=0.0167 [1339s]
+  closest prior: 2024-06-26 arXiv [partial] PaCoST: Paired Confidence Significance Testing for
+
+[5/5] synthesis: An effective coding workflow is to split a codebase into blocks, dispa
+  S=0.73 (prior_strength=0.27) A=0.016 V=1.0 PV=0.0117 [1577s]
+  closest prior: 2024-12-20 anthropic.com [partial] Building Effective AI Agents
+
+DONE in 26 min. {'calls': 72, 'cache_hits': 0, 'input_tokens': 144, 'output_tokens': 126901, 'est_cost_usd': 3.173}
