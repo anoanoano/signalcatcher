@@ -38,6 +38,7 @@ from datetime import datetime, timedelta
 import numpy as np
 
 from ..config import RELATION_WEIGHTS, Config
+from ..index.retrieve import expand_queries, retrieve
 from ..llm import LLM
 from ..models import Claim, Direction, Document
 from .adjudicate import adjudicate
@@ -97,6 +98,8 @@ class PredictiveResult:
     predictive_value: float | None
     best_anticipation: dict | None
     contradiction: dict | None
+    prior_strength: float = 0.0
+    best_prior: dict | None = None
 
     def to_dict(self) -> dict:
         return {
@@ -110,6 +113,8 @@ class PredictiveResult:
             "predictive_value": _r(self.predictive_value),
             "best_anticipation": self.best_anticipation,
             "contradiction": self.contradiction,
+            "prior_strength": _r(self.prior_strength),
+            "best_prior": self.best_prior,
         }
 
 
@@ -195,7 +200,40 @@ def score_predictive(
         say(f"    anchor moved back {fu.moved_days}d to {t1.date()} "
             f"({fu.n_prior_statements} earlier statements by the author)")
 
-    # ---- pre-t1: the baseline, judged with the prior-art adjudicator -------
+    # ---- surprisal: EXISTENCE of prior art, searched hard ------------------
+    # Novelty is defeated by the existence of a prior statement, not by its
+    # frequency. The first pilot measured surprisal as an expression *rate*,
+    # which is always near zero for any specific proposition (even a banal
+    # claim is a minority of what gets written about its own topic), so every
+    # claim scored 0.85-1.0 and the number did no work. Worse, the random
+    # sampling that makes adoption unbiased is exactly wrong here: 10 of 600
+    # topical docs almost surely misses the one that already said it -- the
+    # SVB collapse claim scored S=0.87 with verbatim March-10 statements
+    # sitting findable in the corpus. So surprisal now uses the high-recall
+    # retriever (expanded queries + lexical + dense + fingerprint) over ALL
+    # corpus before t1, and takes the single strongest prior:
+    #     surprisal = 1 - max(relation_weight x confidence)
+    queries = expand_queries(llm, claim, n=4)
+    pa = retrieve(store, claim, queries, before=t1, embedder=embedder,
+                  limit=12, per_query=12, exclude_source=src_id,
+                  exclude_docs=[doc.id])
+    prior_ev = adjudicate(llm, claim, t1, pa.candidates, Direction.PRIOR)
+    if persist and prior_ev and run_id:
+        store.add_evidence(prior_ev, run_id)
+    prior_scored = [(RELATION_WEIGHTS.get(e.relation.value, 0.0) * e.confidence, e)
+                    for e in prior_ev]
+    prior_strength, best_pe = max(prior_scored, key=lambda x: x[0], default=(0.0, None))
+    best_prior = None
+    if best_pe is not None and prior_strength > 0.1:
+        best_prior = {"date": best_pe.published_at.date().isoformat(),
+                      "title": best_pe.title[:90], "url": best_pe.url,
+                      "source": (lambda sr: sr.name if sr else "")(
+                          store.get_source(best_pe.source_id) if best_pe.source_id else None),
+                      "relation": best_pe.relation.value,
+                      "confidence": round(best_pe.confidence, 2),
+                      "quote": best_pe.quote[:240]}
+
+    # ---- pre-t1 rate baseline (adoption's reference point only) ------------
     pre: list[JudgedWindow] = []
     for a, b in pre_w:
         docs, _trail, n_top = _topical_candidates(
@@ -258,7 +296,7 @@ def score_predictive(
     post_ok = [w for w in post if w.reliable]
     baseline = (sum(w.expression * w.n_judged for w in pre_ok)
                 / sum(w.n_judged for w in pre_ok)) if pre_ok else None
-    surprisal = None if baseline is None else 1.0 - baseline
+    surprisal = max(0.0, 1.0 - prior_strength)
     peak_after = max((w.expression for w in post_ok), default=None) if post_ok else None
     adoption = None if (baseline is None or peak_after is None) else peak_after - baseline
 
@@ -268,7 +306,7 @@ def score_predictive(
                    if (support + refute) > 1e-9 else None)
 
     pv = None
-    if surprisal is not None and adoption is not None:
+    if adoption is not None:
         sign_factor = 1.0 if vindication is None else (1.0 + vindication) / 2.0
         pv = surprisal * max(0.0, adoption) * sign_factor
 
@@ -289,6 +327,7 @@ def score_predictive(
         baseline=baseline, surprisal=surprisal, peak_after=peak_after,
         adoption=adoption, vindication=vindication, predictive_value=pv,
         best_anticipation=_ex(strongest), contradiction=_ex(contra),
+        prior_strength=round(prior_strength, 4), best_prior=best_prior,
     )
     if persist and run_id:
         store.put_score(run_id, "claim", claim.id, "predictive_value", pv,
