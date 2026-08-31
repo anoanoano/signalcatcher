@@ -1,296 +1,222 @@
 # SignalCatcher
 
-A benchmark for what an information source actually contributed.
+A benchmark for what a piece of writing actually contributed to the discourse.
 
-For a given writer or publication, it extracts the substantive claims their work
-carries and scores each one twice:
-
-- **Originality** — was this claim already in the record when it was published?
-  Measured by searching everything in the corpus dated *strictly before* it.
-- **Influence** — did it travel afterwards, and did it travel *from here*?
-  Measured by searching forward in windows, and comparing uptake against what
-  the topic was doing anyway.
-
-The two are combined multiplicatively, not additively. An idea that was new but
-went nowhere, and an idea that spread but was already common, both fail to show
-that this source contributed something. Only the conjunction does.
-
-## The problem this design is mostly about
-
-The naive version of this benchmark does not work, in a way that is easy to miss
-because it still produces confident numbers.
-
-**Absence of prior art is an argument from silence.** Finding an earlier source
-proves a claim was not new. *Not* finding one proves only that you did not find
-one. A pipeline that scores "no prior art → 1.0" is reporting the size of its own
-corpus, and will rate obscure claims most highly.
-
-So originality is reported as an interval:
+For a given text — a blog post now, a publication's corpus at scale — it
+extracts the substantive claims the text carries and asks, for each claim,
+where it sits in time relative to everything else on its subject:
 
 ```
-hi = 1 - prior_strength     what the gathered evidence supports
-lo = hi × coverage          what survives if the unsearched space is as full
-                            of prior art as the searched space
+surprisal    1 − strength of the closest PRIOR statement found by a hard search
+             (higher = nobody had said it)
+adoption     rise in the claim's expression rate in its topical neighbourhood
+             after first use, at peak   (higher = discourse moved toward it)
+vindication  signed balance of later evidence: borne out (+1) vs refuted (−1)
+
+predictive value = surprisal × adoption × (1 + vindication) / 2
 ```
 
-`coverage` is driven mainly by whether the pre-window corpus contained
-*topically relevant* material at all. Searching a thousand on-topic documents
-and finding no statement of the claim is real evidence of novelty. Searching a
-corpus that had nothing on the subject is evidence of nothing, and the interval
-widens to say so. **A thin corpus cannot mint high scores.**
+Read it as: *you said something nobody was saying, the conversation came around
+to it, and the record proved you right.* A claim everyone was already making
+scores ~0 via surprisal. A claim nobody picked up scores 0 via adoption. A claim
+events refuted is crushed by the vindication term — and is labeled **wrong**,
+which the method deliberately keeps distinct from **ignored**.
 
-**The judge has already read the internet.** Ask a frontier model "was this
-original in 2019?" and it answers from hindsight — the score tracks fame, not
-priority. Three defences, in `score/adjudicate.py`:
+Two refusals define the design. It does **not** ask whether later writers *read*
+the text — causal influence is unknowable from text alone, and a writer who
+anticipated where discourse was going without causing it still saw it (the
+question is whether content *predicts* later content). And it does **not**
+reward being right about what everyone already expected: a correct prediction
+that was common knowledge scores zero, on purpose.
 
-1. The judge sees only dated excerpts and is instructed to reason from them alone.
-2. It must return a **verbatim quote** from the candidate supporting its verdict.
-   Unsupported matches are downgraded in code, not by request — so confident
-   hand-waving cannot score.
-3. The `no_retrieval` control re-runs every judgement with the evidence removed.
-   If the scores survive, the evidence was never doing the work.
+## The live report
 
-**Correlation is not transmission.** A columnist writing about a live story is
-always followed by more coverage of that story. Counting those follow-ons as
-influence scores the busiest desk highest. So uptake is measured against the
-topical background — documents on the same subject in the same window that do
-*not* assert the claim — and influence is the excess.
+The pilot results — seven texts, 35 claims, every number expandable to its
+dated, quoted receipts — render as a self-contained explorer:
 
-## Influence, in terms a newsroom already uses
+```bash
+python scripts/build_report.py out.html
+```
 
-| Dimension | What it is |
+## How a claim is scored
+
+1. **Canvass** (`score/canvass.py`) — extract the text's claims
+   (`extract/claims.py`), then select the 4–10 boldest with forced diversity
+   across kinds: facts, theses, frames, predictions, syntheses. Claims must be
+   *portable* — stated so they can be searched for in another writer's work
+   without the original's vocabulary.
+2. **Anchor at true first use** (`score/firstuse.py`) — writers repeat their
+   theses for years; the author's own back catalog is searched for the earliest
+   statement and every clock starts there. Measured: one claim's clock moved
+   back 761 days from the article it was extracted from.
+3. **Assemble the evidence shell** (`shell.py`) — see architecture below.
+4. **Surprisal** (`score/predictive.py`) — a high-recall search (query
+   expansion into other vocabularies + lexical + dense + verbatim-phrase
+   retrieval) over everything dated before first use; the single strongest
+   prior defeats novelty in proportion to how fully it anticipates the claim,
+   and is stored as a dated, quoted receipt. This is an **existence** test: an
+   earlier rate-based design compressed every claim into 0.85–1.0, because any
+   specific proposition is rare even among documents on its own topic.
+5. **Adoption** — in time windows after first use (months for event
+   interpretation, years for slow-burn theses), a *seeded random sample* of the
+   claim's topical neighbourhood is judged with a six-relation taxonomy:
+   `states (1.0) · entails (0.9) · anticipates_directionally (0.5) ·
+   partially_anticipates (0.3) · orthogonal (0) · contradicts (−1)`.
+   Random sampling keeps windows of very different sizes comparable;
+   top-similarity candidates are judged too but feed the evidence trail and
+   vindication, not the rate. `entails` is where **implicit** content earns
+   credit; `contradicts` is what gives the measure a sign.
+6. **Arithmetic** — no further model judgment.
+
+### Judging disciplines, enforced in code
+
+| discipline | prevents |
 |---|---|
-| **Lead time** | Days before the next *independent* source said the same thing — the scoop, in days |
-| **Pickup breadth** | How many independent outlets carried the claim, per window |
-| **Attribution rate** | How many of them said where it came from |
-| **Phrase spread** | Verbatim reuse of the source's own distinctive wording |
-| **Lift** | Pickup relative to the topical background rate |
+| **Quote or downgrade** — verdicts stronger than orthogonal must include a verbatim span, checked mechanically; unquotable verdicts are demoted | matching from training memory instead of the evidence shown |
+| **Hindsight flows one way** — the judge sees only dated excerpts and may not use what it remembers about outcomes | scoring fame instead of foresight |
+| **First-use anchoring** | crediting a restatement as an origination |
+| **Syndication collapse** (`ingest/dedup.py`, MinHash + LSH) before judging and at display | one wire story in twenty outlets counting as twenty adoptions (measured: 26–31% of fetched news) |
 
-Windows: 7 / 30 / 90 / 180 / 365 / 1095 days.
+## Evidence architecture: spine, shell, manifest
 
-Phrase spread is the strongest evidence available. Semantic similarity cannot
-distinguish influence from two writers independently noticing the same thing; a
-rare coinage reappearing verbatim in someone else's work is much harder to
-explain by coincidence. Fingerprints are validated as exact substrings of the
-source text before use — models paraphrase when asked to quote, and an invented
-phrase would either match nothing or match generic wording and manufacture
-influence.
+No corpus can host "the whole discourse," and none needs to — the right
+evidence base is **claim-shaped**. So:
 
-## The controls
+- **Spine** (persistent, small): a fixed panel of ~34 independent writers'
+  full archives, shared by every evaluation — what keeps texts comparable.
+- **Shell** (per text, ephemeral): evidence fetched by a fixed, versioned
+  recipe (`shell.py`, currently `shell-v1`) from fixed channels, dense exactly
+  where the text's claims live.
+- **Manifest** (`data/manifests/`): every query, hit count, and failure —
+  "searched and found nothing" and "could not search" are different facts.
 
-Scores ship with the controls that test them. Each is a prediction that must come
-true if the benchmark works.
+Channels, all free and keyless:
 
-| Control | Prediction |
-|---|---|
-| `date_shift` | Score claims as if published 4 years later. Prior-art strength must **rise**. |
-| `no_retrieval` | Re-judge with evidence withheld. Scores must move or flatten. |
-| `decoy_source` | A contemporaneous other writer must score lower on influence. |
-| `shuffled_claim` | Give claims the wrong publication dates. Influence must fall. |
-| `judge_agreement` | Re-judge at another effort setting. Verdicts must not swing wildly. |
+| channel | source | role |
+|---|---|---|
+| news | GDELT, keyword per claim, prior year included | pickup beyond the blogosphere; priors the trade press already broke |
+| international | fixed panel of leading dailies via GDELT `domainis:` (Le Monde, FAZ, Spiegel, Corriere, El País, El Observador, Asahi, SCMP…) | cross-border, cross-language diffusion |
+| academic | arXiv abstracts, date range inside the query | scholarly prior art — stops aggregators inheriting researchers' foresight |
+| reference | Wikipedia article-creation dates per language; Wayback first-capture fallback when Wikimedia 403s | a datable "reached common knowledge" milestone, per language |
+| forum | Hacker News (Algolia) | dated discovery and discussion |
 
-Two details matter more than they look:
+Storage: SQLite + FTS5 (external-content index; time-sliced search is the core
+primitive), local embeddings (bge-small — pinned weights beat a hosted endpoint
+that can be reweighted under you), every LLM judgement disk-cached. The corpus
+compresses to ~40% for cold storage; `snapshot`/`restore` archive it (Google
+Drive auto-detected). The HTTP cache is capped with oldest-first eviction.
 
-- `date_shift` compares `hi` (the evidence-only term), **not** the reported score.
-  Moving the date forward enlarges the prior window, which raises coverage, which
-  raises the blended score — so comparing scores lets a coverage gain cancel the
-  very prior-art effect the control exists to detect, and the control clears
-  itself. This was a real bug, caught by the control failing.
-- A control with no signal to test reports **n/a**, never PASS or FAIL. Comparing
-  0 against 0 is not evidence that the metric discriminates, and printing FAIL
-  for it would read as a verdict on the source rather than on the corpus.
+## Pilot results (Aug 2026)
 
-## Status
+| text | S̄ | Ā | V̄ | best PV |
+|---|---|---|---|---|
+| *Sizing up the New Axis* (Noah Smith) | 0.89 | 0.11 | +0.65 | **0.209** |
+| *DeepSeek v3* (Zvi Mowshowitz) | 0.48 | 0.09 | +0.85 | 0.194 |
+| *Ignore Allan Lichtman* (Good Reason — unknown writer) | 0.78 | 0.05 | +0.50 | 0.166 |
+| *SVB run, day one* (Noah Smith) | 0.63 | 0.21 | +0.86 | 0.112 |
+| *Expecting GPT-5* (Gary Marcus) | 0.80 | 0.09 | +0.46 | 0.089 |
+| *AI Predictions 2023* (Tech Times — content mill) | **0.39** | 0.04 | +0.93 | 0.046 |
+| *The Media Very Rarely Lies* (ACX — famous essay) | 0.80 | 0.04 | +0.58 | 0.029 |
 
-Working end to end. On a 1.4k-document, 5-year corpus:
+The metric does not follow reputation, for auditable reasons: the famous essay
+was argued *about* rather than adopted (dense engagement, near-zero adoption,
+one net-negative vindication); the content mill's aggregated claims lost their
+novelty once the arXiv channel put the actual academic priors in reach; the
+unknown writer's Lichtman debunking — bold, right before the falsifying
+election, vindicated — outscored both.
 
-```
-[PASS] date_shift       baseline=+1.000 observed=+0.797 delta=-0.203
-[PASS] no_retrieval     baseline=+0.425 observed=+0.444  -> passed via collapse to uniform
-[PASS] judge_agreement  mean abs. diff 0.106 (max 0.264)
-[n/a ] shuffled_claim   -> baseline influence ~0: nothing for the shuffle to destroy
-[n/a ] decoy_source     -> target influence ~0: no signal to compare
-```
+Separately, an ablation harness (`score/ablation.py`) measures a source's value
+to a model: closed-book vs decoy-context vs source-in-context, with a
+decoy-that-never-ran reported as unavailable rather than zero. Measured
+contrast: niche construction reporting +0.44 inference-time value with 33%
+already in the model's weights; ACX −0.05 with 100% — value captured at
+training time. The publisher-facing and lab-facing measurements share one
+claim layer.
 
-The two originality controls pass — the metric responds to dates, and to the
-presence of evidence rather than to the judge's memory. **The two influence
-controls are undecidable on this corpus**, and that is the honest current state:
-diffusion cannot be observed across eight sources. Corpus breadth is the binding
-constraint, not the scoring logic.
+## Validation
 
-## Usage
+Controls are predictions that must hold if the benchmark works
+(`validate/controls.py`): **date_shift** PASS (re-dated claims find their own
+era as prior art, 1.00→0.80); **no_retrieval** PASS (withhold evidence, scores
+collapse — the judge reads the corpus, not its memory); **judge_agreement**
+PASS (verdict shift 0.11 across reasoning settings); shuffled-dates and
+decoy-writer now decidable, next scheduled run.
+
+The strongest trust argument is that the harness has repeatedly falsified
+itself, with published numbers changing each time: surprisal compression
+(SVB collapse fact 0.87→0.14 once the search actually looked, receipt
+attached), aggregator credit (Tech Times thesis 0.96→0.15 once arXiv was in
+reach), dense-window selection bias (fixed by seeded random samples), a
+confounded control (date-shift compared a coverage-blended score that cancelled
+the effect it tested), vacuous controls reporting FAIL instead of
+not-decidable, and a serialization bug that shipped scores with empty evidence
+trails. Details in each commit message.
+
+## Running it
 
 ```bash
 uv venv && uv pip install -e .
+export ANTHROPIC_API_KEY=...        # or neither: see below
 
-signalcatcher corpus                          # what is in the pinned corpus
-signalcatcher ingest astralcodexten.com       # add a Substack
+# corpus management
+signalcatcher corpus                 # contents + disk breakdown
+signalcatcher ingest astralcodexten.com          # Substack archive
 signalcatcher ingest slatestarcodex.com --kind wordpress
-signalcatcher score "Scott Alexander" --docs 3
-signalcatcher validate "Scott Alexander" --decoy "Noah Smith" --json out.json
+signalcatcher snapshot my-corpus     # compress + archive (Drive auto-detected)
+signalcatcher restore my-corpus
+signalcatcher purge-cache
+
+# the predictive pipeline (current path) runs via scripts:
+python scripts/run_unit_deepseek.py  # template: one text under shell-v1
+python scripts/build_report.py out.html
 ```
 
-Corpus builds are restartable and idempotent: documents dedupe on URL and every
-HTTP response is cached to disk, so a re-run fills only what is missing.
+Judgements run on Claude (Opus). With no API credits, the pipeline falls back
+to headless `claude -p` billed against a Claude subscription
+(`LLM(backend="cli")`) — note a set `ANTHROPIC_API_KEY` silently takes
+precedence over the claude.ai login, so the CLI backend scrubs it from the
+subprocess environment. Long runs pace themselves against the subscription's
+usage windows.
 
-## Disk usage
-
-The corpus grows with every publication ingested, so nothing here is unbounded
-by default.
-
-| Item | What it is | Disposable? |
-|---|---|---|
-| `corpus.db` | The dataset: document text, FTS index, embeddings, judgements | **No** |
-| `cache/` | Raw HTTP responses, already parsed into the DB | Yes — capped at 512 MB, evicted oldest-first |
-
-The HTTP cache is pure speed. Every response in it has already been parsed into
-the corpus, so evicting an entry costs a re-fetch and never data. Left uncapped
-it reaches several gigabytes over a large build, which is not a trade anyone
-agreed to.
-
-```bash
-signalcatcher corpus                  # includes a disk breakdown
-signalcatcher purge-cache             # trim to the cap
-signalcatcher purge-cache --all       # empty it entirely
-```
-
-**Putting the corpus on another volume** — the repository then stays a few
-megabytes of code:
-
-```bash
-export SIGNALCATCHER_DATA=/Volumes/YourDrive/signalcatcher
-signalcatcher --data-dir /Volumes/YourDrive/signalcatcher corpus   # or per-command
-```
-
-Resolution order is `--data-dir` → `$SIGNALCATCHER_DATA` → `./data`.
-
-### How much corpus is actually needed
-
-Measured, not guessed. Coverage saturates logarithmically — the `target_pool`
-constant is 20,000 prior documents, and beyond it extra documents buy nothing:
-
-| prior-art pool | coverage | db size |
-|---|---|---|
-| 2,500 | 0.79 | 0.06 GB |
-| 6,599 | 0.89 | 0.16 GB |
-| 12,500 | 0.95 | 0.31 GB |
-| 20,000 | **1.00** | 0.49 GB |
-| 100,000 | 1.00 | 2.44 GB |
-
-Only about half a corpus precedes any given claim, so **~40,000 documents ≈ 1 GB
-reaches saturated coverage**. At ~24 KB/document, 1 GB is roughly 44,000 docs.
-
-The catch, and it is the whole catch: this assumes the corpus is *topically
-relevant*. The `topical` term dominates the coverage formula, and 40,000
-unrelated pages contribute nothing to it. A subsampling experiment
-(`scripts/scaling_experiment.py`) makes the point — cutting the corpus 16× barely
-moved best-match similarity (0.666 → 0.588) but collapsed coverage (0.89 → 0.39),
-because what thinned out was the *neighbourhood*, not the raw count.
-
-**So: build one focused ~1 GB corpus per investigation, not one giant one.**
-
-### Cold storage (`snapshot` / `restore`)
-
-A live corpus does not belong on a cloud drive. Google Drive for Desktop caches
-every file locally before syncing — measured: writing 200 MB to Drive consumed
-200 MB of local disk — so a database you are actively writing costs the same
-local space *plus* re-uploading a changing binary on every write.
-
-Archives are a different story. A corpus compresses to ~41% and, once
-snapshotted, never changes. So keep one corpus live and park the rest:
-
-```bash
-signalcatcher snapshot ai-commentary-2018-2026   # -> Google Drive, 194M -> 79M
-signalcatcher snapshots                          # list what is archived
-signalcatcher restore housing-2015-2025 --force  # page a different one in
-```
-
-Google Drive is auto-detected; `--to` / `--at` override it. Snapshots use
-`VACUUM INTO`, so they are consistent even while a build is running, and they
-preserve claims, judgements and the LLM cache — restoring gets you back the
-expensive work, not just the text.
-
-Note that `.venv` is a further ~870 MB, about 500 MB of which is PyTorch, pulled
-in by the local embedding model. Dropping `sentence-transformers` reclaims that
-but disables dense retrieval, which lowers coverage and therefore *widens* the
-originality intervals — the scores get more conservative, not wrong.
+`--data-dir` or `SIGNALCATCHER_DATA` points the corpus at another volume.
+The `score`/`validate` CLI subcommands run the earlier interval-based
+originality/influence scorers, kept for the controls harness; the
+surprisal/adoption/vindication path above supersedes them for evaluation.
 
 ## Layout
 
 ```
 signalcatcher/
-  models.py       claim / document / evidence schema
-  db.py           SQLite + FTS5 store; time-sliced search is the core primitive
-  config.py       pinned, hashable run configuration
-  llm.py          Claude wrapper: structured output, caching, grounded mode
-  ingest/         substack, wordpress, hn, gdelt, generic article extraction
-  index/          embeddings (local by default) + RRF fusion of three retrievers
-  extract/        claims.py — documents to portable, checkable propositions
-  score/          adjudicate, originality, influence, aggregate
-  validate/       controls.py — the five negative controls
-  pipeline.py     end to end: a source in, an audited scorecard out
-  report.py       renders a run with its receipts
+  models.py        claim / document / evidence schema
+  db.py            SQLite + FTS5; time-sliced search primitive
+  llm.py           Claude wrapper: structured output, caching, grounding,
+                   API or subscription-CLI backend
+  shell.py         per-text evidence recipe (shell-v1) + manifests
+  ingest/          substack, wordpress, hn, gdelt, arxiv, wikipedia,
+                   article extraction, syndication dedup
+  index/           local embeddings + RRF fusion of three retrievers
+  extract/         claims.py — texts to portable, checkable propositions
+  score/           canvass, firstuse, predictive (S/A/V), anticipate,
+                   adjudicate, ablation; legacy originality/influence
+  validate/        controls.py — the negative controls
+scripts/           corpus build, unit runners, rescores, report generator
+data/manifests/    per-unit shell manifests (what was searched, what failed)
 ```
 
-## Data sources
+## Honest limits
 
-Verified working: **Substack** (archive API + per-post bodies), **WordPress**
-REST (the pre-2021 blogosphere, which is the prior-art window for everything
-since), **Hacker News** via Algolia (dated discovery back to 2007, plus hard
-transmission evidence), **GDELT** (news pickup breadth, 2017+, keyless),
-**OpenAlex** (citation ground truth for calibration). Two ingestion traps worth
-knowing: Substack serves short archive pages at arbitrary offsets, so treating a
-short page as end-of-archive silently truncates a publication to its most recent
-weeks; and comment threads must be stripped, or a popular post is scored on its
-readers' words rather than the author's.
-
-## What is not built yet
-
-- **The AI-value link.** The claim layer is designed to support it — measuring
-  model performance with and without a source in the retrieval context — but the
-  ablation harness is not written.
-- **Durability.** Long-horizon vindication (was the claim corroborated,
-  contested, retracted?) has a place in the schema and no scorer.
-- **A gold set.** Known-original and known-derivative pieces, with datable first
-  use, to calibrate the metric against cases whose answers are already known.
-
-## Value to a model (`ablate`)
-
-Two questions, measured separately:
-
-- **Inference-time value** — does putting this source in the context window make
-  the model answer better than it otherwise would?
-- **Training-set value (proxy)** — does the model already know this unaided? For
-  a claim that *originated* with this source, a correct closed-book answer is
-  evidence the contribution is already priced into the weights.
-
-The measurement only means anything because of the third condition. Comparing
-"with the source" against "with nothing" mostly measures whether context helps,
-which it always does. So every question is also asked with a **decoy** context:
-the same amount of topically matched material from the same period, by other
-writers.
-
-```
-inference_value = score(with source) - max(score(closed book), score(decoy))
-```
-
-When the corpus has no contemporaneous material to build a decoy from, the decoy
-condition **did not run** and is reported as `n/a`, never as 0.0 — averaging an
-unavailable control in as zero silently inflates the source's apparent value.
-
-Measured on the current corpus:
-
-| Source | closed book | + decoy | + source | inference value | already in weights |
-|---|---|---|---|---|---|
-| Brian Potter (Construction Physics) | 0.542 | n/a | 0.983 | **+0.442** | 33% |
-| Scott Alexander (ACX) | 0.895 | 0.795 | 0.875 | **−0.050** | **100%** |
-
-The contrast is the point. The model already knows essentially all of ACX, so
-adding it to context buys nothing — its value was realised at training time.
-Niche construction reporting still carries substantial inference-time value.
-Those are different assets, and a benchmark that reported one number would hide
-the distinction that matters most to both a publisher and a data buyer.
-
-Caveat worth stating plainly: two ACX claims scored *negative* value, meaning the
-supplied excerpt made the answer worse than no context. That is an
-excerpt-selection failure, not a property of the source.
+- **Pilot scale**: 35 claims across 7 texts; per-text averages over ~5 claims
+  are indicative, not stable. The interesting comparisons are claim-level and
+  receipt-backed.
+- **Everything is corpus-relative**: a prior living in a paywalled archive, a
+  podcast, or an untapped language is invisible. The shell narrows this
+  per-claim; it cannot close it.
+- **The judge is a model**, constrained by grounding, quote-enforcement, and
+  measured agreement — individual verdicts can still err; every one is stored
+  with its supporting quote for audit.
+- **The recipe is part of the instrument**: a biased "where to look" biases
+  scores invisibly. Mitigations are a fixed versioned recipe, manifests, and
+  coverage discounts — not neutrality.
+- **Unbuilt**: podcast transcripts; a broader ring of small publications;
+  decade-scale durability; a gold set of claims with independently known
+  priority; the two pending controls at current scale.
