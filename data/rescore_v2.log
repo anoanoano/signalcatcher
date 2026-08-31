@@ -6,3 +6,22 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   new-axis prediction S=0.975 PV=0.0129 [1012s]
   new-axis frame      S=0.775 PV=0.2086 [20339s]
   gpt5-expectations prediction S=0.82 PV=0.0702 [37142s]
+  gpt5-expectations thesis     S=0.73 PV=0.0277 [47651s]
+  gpt5-expectations frame      S=0.73 PV=0.0894 [48112s]
+  gpt5-expectations fact       S=0.9625 PV=0.0 [48309s]
+  gpt5-expectations prediction S=0.7525 PV=0.043 [48607s]
+  svb-run prediction S=0.775 PV=0.1015 [48893s]
+  svb-run fact       S=0.145 PV=0.0885 [49186s]
+  svb-run thesis     S=0.7525 PV=0.1122 [49495s]
+  svb-run frame      S=0.7525 PV=0.0047 [49823s]
+  svb-run prediction S=0.73 PV=0.0839 [50141s]
+  media-rarely-lies thesis     S=0.775 PV=0.0286 [50634s]
+  media-rarely-lies fact       S=0.9575 PV=0.009 [50933s]
+  media-rarely-lies thesis     S=0.7525 PV=0.0268 [51288s]
+  media-rarely-lies thesis     S=0.7525 PV=0.0287 [51731s]
+  media-rarely-lies thesis     S=0.775 PV=0.0255 [52124s]
+Traceback (most recent call last):
+  File "/Users/matthewprewitt/signalcatcher/scripts/rescore_v2.py", line 27, in <module>
+    doc=[d for d in store.documents_for_source(src.id,limit=1500) if d.title.startswith(prefix)][0]
+                                               ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'

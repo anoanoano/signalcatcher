@@ -1436,6 +1436,3639 @@
      }
     }
    ]
+  },
+  {
+   "key": "gpt5-expectations",
+   "label": "Concrete predictions, checkable fast",
+   "source": "Gary Marcus",
+   "title": "What to Expect When You\u2019re Expecting \u2026 GPT-5",
+   "url": "https://garymarcus.substack.com/p/what-to-expect-when-youre-expecting-62e",
+   "published": "2025-07-27",
+   "horizon": "long",
+   "claims": [
+    {
+     "anchor_date": "2022-12-25",
+     "anchor_moved_back_days": 945,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 142,
+       "judged": 10,
+       "expression": 0.0047,
+       "support": 0.048,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 276,
+       "judged": 10,
+       "expression": 0.0112,
+       "support": 0.113,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 97,
+       "judged": 10,
+       "expression": 0.012,
+       "support": 0.63,
+       "refute": 0.4,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Escape Velocity from Bullshit Jobs",
+         "date": "2023-01-10",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/escape-velocity-from-bullshit-jobs",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "This applies generally to places where a specified technical requirement, or paperwork, is needed. Or in places where otherwise the task is well-specified and graded on a pass/fail basis."
+        },
+        {
+         "title": "Don't \"Plan for AGI\" Yet",
+         "date": "2023-03-10",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/dont-plan-for-agi-yet",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Transformer models, and therefore ChatGPT, Bing/Sydney, and their ilk still have fundamental limitations; I think these are important barriers to something we might call \u201cAGI\u201d"
+        },
+        {
+         "title": "Microsoft Research Paper Claims Sparks of Artificial Intelligence in GPT-4",
+         "date": "2023-03-24",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/microsoft-research-paper-claims-sparks",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "GPT-4 can solve novel and difficult tasks that span mathematics, coding, vision, medicine, law, psychology and more, without needing any special prompting. Moreover, in all of these tasks, GPT-4\u2019s performance is strikingly close to human-level performance"
+        },
+        {
+         "title": "LLMs are not going to destroy the human race",
+         "date": "2023-03-08",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/llms-are-not-going-to-destroy-the",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "So, why aren\u2019t ChatGPT, Bing, and their ilk going to end humanity? Well, because there\u2019s actually just no plausible mechanism by which they could bring about that outcome."
+        },
+        {
+         "title": "Why does ChatGPT constantly lie?",
+         "date": "2023-01-30",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-does-chatgpt-constantly-lie",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "my attempts to use ChatGPT to help me write my own blog posts \u2014 which I will write about in detail at some point \u2014 have all ended in failure, for one simple reason: ChatGPT routinely spews out a lot of fake \u201cfacts\u201d."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 188,
+       "judged": 10,
+       "expression": 0.0795,
+       "support": 0.945,
+       "refute": 0.97,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Generative AI and the finance industry",
+         "date": "2023-05-11",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/generative-ai-and-the-finance-industry",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "AI tools have been of surprisingly limited use so far"
+        },
+        {
+         "title": "Different development paths of LLMs",
+         "date": "2023-06-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-development-paths",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Open-source will develop LLMs that are mode capable over a specific set of needs, but less cumulatively capable."
+        },
+        {
+         "title": "Could ChatGPT Become an Architect?",
+         "date": "2023-03-29",
+         "source": "Brian Potter",
+         "url": "https://www.construction-physics.com/p/could-chatgpt-become-an-architect",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "Several other wrong answers in this section show a similar lack of physical intuition."
+        },
+        {
+         "title": "It is starting to get strange.",
+         "date": "2023-05-02",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/it-is-starting-to-get-strange",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "the last week has seen a massive expansion in the system's capabilities, and that is starting to bring into focus how large an effect AI is going to have on work"
+        },
+        {
+         "title": "AI #5: Level One Bard",
+         "date": "2023-03-30",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-5-level-one-bard",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "But none of the breakthroughs of the past few months have moved us substantially closer to strong AI. Artificial intelligence still doesn't control the physical world and can't establish its own goals."
+        },
+        {
+         "title": "Tech bigwigs: Hit the brakes on AI rollouts",
+         "date": "2023-03-29",
+         "source": "reseller.co.nz",
+         "url": "https://www.reseller.co.nz/article/706465/tech-big-wigs-hit-brakes-ai-rollouts/",
+         "relation": "contradicts",
+         "confidence": 0.52,
+         "quote": "The expectation of GPT-5 is it will be an artificial general intelligence, or AGI, where the AI becomes sentient and can start thinking for itself."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 297,
+       "judged": 10,
+       "expression": 0.0285,
+       "support": 0.405,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "What AI can do with a toolbox... Getting started with Code Interpreter [Now called Advance",
+         "date": "2023-07-07",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/what-ai-can-do-with-a-toolbox-getting",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "It allows the AI to do math (very complex math) and do more accurate work with words (like actually counting words in a paragraph), since it can write Python code to address the natural weaknesses of Large Language Models in math and language."
+        },
+        {
+         "title": "Can robotics take off like GenAI? Moravec's paradox vs. scaling laws",
+         "date": "2023-09-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/robotics-vs-moravecs",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Language models will give the robots basic reasoning like object relations and directions, but they will not tell a robot how to manipulate motor voltages to arrange a set of actuators."
+        },
+        {
+         "title": "Job Cuts Due to AI: What to Make of Them?",
+         "date": "2023-07-28",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/job-cuts-due-to-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "In 2020, Sathvik Nair and I wrote that, while it was an impressive breakthrough, GPT-3 was not coming for your job. Indeed, GPT-3 did enable impressive work without causing major disruption"
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 853,
+       "judged": 10,
+       "expression": 0.027,
+       "support": 0.955,
+       "refute": 0.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "GPT-o1",
+         "date": "2024-09-16",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-4o1",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "o1 is still flawed, still limited, and it still seems more impressive on first use than it does after you spend more time with it"
+        },
+        {
+         "title": "Ilya Sutskever is betting on very cheap superintelligence",
+         "date": "2024-06-19",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/ilya-sutskever-cheap-superintelligence",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Sam Altman has said that GPT-4 cost about $100 million to train, and that model is clearly a long way from superintelligence."
+        },
+        {
+         "title": "\ud83d\udd25 What to expect when you\u2019re expecting GPT-5",
+         "date": "2024-06-07",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/expecting-gpt5",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Some of the early things that I\u2019m seeing right now with the new models [GPT-5] is maybe this could be the thing that could pass your qualifying exams when you\u2019re a PhD student."
+        },
+        {
+         "title": "The only AI certainty is uncertainty",
+         "date": "2024-06-12",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/the-only-ai-certainty-is-uncertainty",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Worries that Gemini and GPT-4 would be existential threats, for instance, have aged like milk."
+        },
+        {
+         "title": "Sam Altman Wants $7 Trillion",
+         "date": "2024-02-13",
+         "source": "Scott Alexander",
+         "url": "https://www.astralcodexten.com/p/sam-altman-wants-7-trillion",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "That means GPT-5 will need somewhere in the vicinity of 50 trillion tokens... There isn't that much text in the whole world."
+        },
+        {
+         "title": "When AIs outperform the experts that train them, is that AGI?",
+         "date": "2024-06-26",
+         "source": "Henry Farrell",
+         "url": "https://www.programmablemutter.com/p/when-ais-outperform-the-experts-that",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "A lot of this has involved making the case for what LLMs are not - AGI, or artificial general intelligence that is equal to or superior to human intelligence."
+        },
+        {
+         "title": "AGI is what you want it to be",
+         "date": "2024-04-24",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/agi-is-what-you-want-it-to-be",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "I'm actually okay with calling a system like ChatGPT-4 AGI... it's clear that GPT-4 fits many colloquial definitions of AGI. My definition has always been quite literal: an AI system that is generally useful."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2289,
+       "judged": 10,
+       "expression": 0.1182,
+       "support": 3.384,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "GPT-5s Are Alive: Outside Reactions, the Router and the Resurrection of GPT-4o",
+         "date": "2025-08-12",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-5s-are-alive-outside-reactions",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Calls it \u2018what we expected, no more and no less\u2019 and \u2018more of an evolution, which some major leaps forward.\u2019"
+        },
+        {
+         "title": "OpenAI just released GPT-5\u2014it just didn\u2019t call it that",
+         "date": "2025-03-07",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/openai-just-released-gpt-5it-just",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "When OpenAI released GPT-4 in March 2023, it was dramatically more capable than previous models. Its success bolstered the concept of \u201cscaling laws\u201d"
+        },
+        {
+         "title": "GPT-5 is no slowdown",
+         "date": "2025-08-08",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/gpt-5-underwhelming-launch-pace-ai-development",
+         "relation": "entails",
+         "confidence": 0.78,
+         "quote": "But observers quickly noticed that despite the years of anticipation, GPT-5 isn\u2019t much better than anything else already on the market."
+        },
+        {
+         "title": "\ud83d\udfe3 EV Daily: \u269b GPT\u20115 set to debut",
+         "date": "2025-07-25",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-daily-gpt5-set-to-debut",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "Effectively, it\u2019s a UX upgrade. That may sound underwhelming"
+        },
+        {
+         "title": "GPT-5 and the arc of progress",
+         "date": "2025-08-07",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/gpt-5-and-bending-the-arc-of-progress",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "GPT-5 is leading, but also just in line with trends."
+        },
+        {
+         "title": "Artificial General Intelligence in 2025: How Close Are We?",
+         "date": "2025-05-10",
+         "source": "excelsio.net",
+         "url": "https://www.excelsio.net/2025/05/artificial-general-intelligence-in-2025.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "today's AI systems (like ChatGPT and Midjourney) are powerful but narrow \u2013 they excel at specific tasks but lack true understanding"
+        },
+        {
+         "title": "GPT-5: The Reverse DeepSeek Moment",
+         "date": "2025-08-18",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-5-the-reverse-deepseek-moment",
+         "relation": "states",
+         "confidence": 0.72,
+         "quote": "a variety of people are reacting to GPT-5 being underwhelming on the margin, the rapid set of incremental AI improvements, and the general fact that we haven't gotten AGI yet"
+        },
+        {
+         "title": "\ud83d\udd2e The Sunday edition #511: GPT-5 roadmap; AI politics; new GLP-1s; BYD vs Tesla, jobs for ",
+         "date": "2025-02-16",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-511",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "GPT-5 will arrive as a \"meta\" model within months \u2013 dynamically deciding how much reasoning power or specialisation to use on the fly"
+        },
+        {
+         "title": "Is GPT-5 a \"phenomenal\" success or an \"underwhelming\" failure?",
+         "date": "2025-08-14",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/is-gpt-5-a-phenomenal-success-or",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "it didn\u2019t have anything that could meet the sky-high expectations that had developed around that name. So rather than using the GPT-5 name for a dramatically better model, it decided to use it to signal a reboot of ChatGPT as a product."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.008,
+     "surprisal": 0.82,
+     "peak_after": 0.1182,
+     "adoption": 0.1102,
+     "vindication": 0.5528,
+     "predictive_value": 0.0702,
+     "best_anticipation": {
+      "title": "GPT-5: The Reverse DeepSeek Moment",
+      "date": "2025-08-18",
+      "url": "https://thezvi.substack.com/p/gpt-5-the-reverse-deepseek-moment",
+      "relation": "states",
+      "confidence": 0.72,
+      "quote": "a variety of people are reacting to GPT-5 being underwhelming on the margin, the rapid set of incremental AI improvements, and the general fact that we haven't gotten AGI yet"
+     },
+     "contradiction": {
+      "title": "Tech bigwigs: Hit the brakes on AI rollouts",
+      "date": "2023-03-29",
+      "url": "https://www.reseller.co.nz/article/706465/tech-big-wigs-hit-brakes-ai-rollouts/",
+      "relation": "contradicts",
+      "confidence": 0.52,
+      "quote": "The expectation of GPT-5 is it will be an artificial general intelligence, or AGI, where the AI becomes sentient and can start thinking for itself."
+     },
+     "prior_strength": 0.18,
+     "best_prior": {
+      "date": "2021-11-27",
+      "title": "The Inherent Limitations of GPT-3",
+      "url": "https://lastweekin.ai/p/the-inherent-limitations-of-gpt-3",
+      "source": "Last Week in AI",
+      "relation": "partial",
+      "confidence": 0.4,
+      "quote": "many thought it to be a major leap towards the goal of AGI. But, as Skynet Today covered at the time of its release, much of the hype su\u2026"
+     },
+     "claim": {
+      "text": "GPT-5 by itself will not be an artificial general intelligence capable of taking on arbitrary tasks.",
+      "kind": "prediction",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "general purpose artificial general intelligence",
+       "arbitrary tasks"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-25",
+     "anchor_moved_back_days": 945,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 237,
+       "judged": 10,
+       "expression": 0.0057,
+       "support": 0.058,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 422,
+       "judged": 10,
+       "expression": 0.0263,
+       "support": 0.263,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 151,
+       "judged": 10,
+       "expression": 0.0435,
+       "support": 1.741,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Last Week in AI #199: Economic (dis)incentives of ChatGPT, TikTok to be more public about ",
+         "date": "2022-12-26",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/199",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the seemingly unlimited magic of systems like ChatGPT comes at a high cost (up to $3 million a month) \u2013 which can\u2019t be sustained forever"
+        },
+        {
+         "title": "The RLHF battle lines are drawn",
+         "date": "2023-02-27",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/rlhf-battle-lines-2023",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "a race with kickstarting training and products is leaving behind interesting research questions"
+        },
+        {
+         "title": "AI #1: Sydney and Bing",
+         "date": "2023-02-21",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-1-sydney-and-bing",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "But will this show up in the productivity statistics?"
+        },
+        {
+         "title": "Don't \"Plan for AGI\" Yet",
+         "date": "2023-03-10",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/dont-plan-for-agi-yet",
+         "relation": "states",
+         "confidence": 0.82,
+         "quote": "Transformer models, and therefore ChatGPT, Bing/Sydney, and their ilk still have fundamental limitations; I think these are important barriers to something we might call \u201cAGI\u201d\u2014but I also think we might consider jettisoning the term"
+        },
+        {
+         "title": "Scaling laws for robotics & RL: Not quite yet",
+         "date": "2023-02-01",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/scaling-rl-axes",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "they claim that sufficient environmental complexity is needed to see the scaling laws emerge. This is instantly in contradiction to DreamerV3"
+        },
+        {
+         "title": "GPT4: The quiet parts and the state of ML",
+         "date": "2023-03-20",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/gpt4-review",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "a lot of the predictions were true (multimodal, less big of a step as ChatGPT, Bing uses it, etc.). Given the relative change from the announcement is low"
+        },
+        {
+         "title": "Three seasons of RL: Metaphor, tool, and framework",
+         "date": "2023-02-15",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/rl-tool-or-framework-or-agi",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "language models are progressing so quickly that many people see them as not only a necessary part of AGI, but the central path to it"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 253,
+       "judged": 10,
+       "expression": 0.06,
+       "support": 0.78,
+       "refute": 0.55,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "How Google is making up for lost time",
+         "date": "2023-05-12",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/how-google-is-making-up-for-lost",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "in a moment when all these large language models are converging to become roughly functionally equivalent, no one is going to win the game on technology alone."
+        },
+        {
+         "title": "AI #13: Potential Algorithmic Improvements",
+         "date": "2023-05-25",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-13-potential-algorithmic-improvements",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "From Chain to Tree of Thought. Shows promise as algorithmic improvement."
+        },
+        {
+         "title": "AI #9: The Merge and the Million Tokens",
+         "date": "2023-04-27",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-9-the-merge-and-the-million-tokens",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "OpenAI's hunger for data is coming back to bite it."
+        },
+        {
+         "title": "Unfortunately, OpenAI and Google have moats",
+         "date": "2023-05-17",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/openai-google-llm-moats",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "While these numbers don't sound like a lot on the first pass when these models are trained on trillions of tokens of data from the internet. The challenge is that the distribution and quality of these must match a very narrow distribution and form. These prompts can almost never "
+        },
+        {
+         "title": "Different development paths of LLMs",
+         "date": "2023-06-14",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-development-paths",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Open-source will develop LLMs that are mode capable over a specific set of needs, but less cumulatively capable."
+        },
+        {
+         "title": "Tech bigwigs: Hit the brakes on AI rollouts",
+         "date": "2023-03-29",
+         "source": "reseller.co.nz",
+         "url": "https://www.reseller.co.nz/article/706465/tech-big-wigs-hit-brakes-ai-rollouts/",
+         "relation": "contradicts",
+         "confidence": 0.55,
+         "quote": "The expectation of GPT-5 is it will be an artificial general intelligence, or AGI, where the AI becomes sentient and can start thinking for itself... \"But the trend is unmistakable,\" he said in an email reply to Computerworld. \"The largest-scale computations are increasing size b"
+        },
+        {
+         "title": "AI is not good software. It is pretty good people.",
+         "date": "2023-05-09",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/ai-is-not-good-software-it-is-pretty",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "They have a tendency to forget their own abilities, to solve the same problem in different ways, and to hallucinate incorrect answers."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 412,
+       "judged": 10,
+       "expression": 0.045,
+       "support": 1.065,
+       "refute": 0.68,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "AI #28: Watching and Waiting",
+         "date": "2023-09-07",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-28-watching-and-waiting",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "This paper argues that a range of current AI systems have learned how to deceive humans."
+        },
+        {
+         "title": "\"Through A Glass Darkly\" In Asterisk Magazine",
+         "date": "2023-06-26",
+         "source": "Scott Alexander",
+         "url": "https://www.astralcodexten.com/p/through-a-glass-darkly-in-asterisk",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Most predictions about the future of AI center around the idea that lower compute costs \u2192 bigger training runs \u2192 smarter models. But how sure are we that we can keep decreasing compute costs indefinitely? Will we reach physical limits or memory bottlenecks?"
+        },
+        {
+         "title": "The Best Available Human Standard",
+         "date": "2023-10-22",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/the-best-available-human-standard",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Large Language Models also have a long list of issues. They \u201challucinate\u201d plausible-sounding lies, they are bad at math (at least without using tools), they reproduce biases, and they are unpredictable."
+        },
+        {
+         "title": "An AI Haunted World",
+         "date": "2023-12-19",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/an-ai-haunted-world",
+         "relation": "contradicts",
+         "confidence": 0.68,
+         "quote": "Generally, the bigger the AI model (trained on more data, and therefore requiring more expensive computing power to train), the \u201csmarter\u201d it is. You will almost always want to use the smartest possible model"
+        },
+        {
+         "title": "The AI is eating itself",
+         "date": "2023-06-27",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-ai-is-eating-itself",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "they\u2019re at risk of breaking their own models"
+        },
+        {
+         "title": "LLM agents and integration dead-ends",
+         "date": "2023-07-12",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llm-agents-integration",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "LLM agents posit that if you set up your computing infrastructure and tokenization correctly, language models will just learn to complete almost every task we do on our computers."
+        },
+        {
+         "title": "Can robotics take off like GenAI? Moravec's paradox vs. scaling laws",
+         "date": "2023-09-29",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/robotics-vs-moravecs",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Control seems like a progressively harder problem, where getting the most subtle movements out requires drastically more computation and insight."
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 1040,
+       "judged": 10,
+       "expression": 0.015,
+       "support": 0.57,
+       "refute": 1.3,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Llama 3: Scaling open LLMs to AGI",
+         "date": "2024-04-18",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/llama-3-and-scaling-open-llms",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "With the same architecture, most of the gains come from data and scale."
+        },
+        {
+         "title": "Sam Altman Wants $7 Trillion",
+         "date": "2024-02-13",
+         "source": "Scott Alexander",
+         "url": "https://www.astralcodexten.com/p/sam-altman-wants-7-trillion",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "GPT-6 will take 1/2, and GPT-7 will take 15x as many computers as exist"
+        },
+        {
+         "title": "Time's Up for AI Policy",
+         "date": "2024-12-20",
+         "source": "Miles Brundage",
+         "url": "https://milesbrundage.substack.com/p/times-up-for-ai-policy",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "This all happened because some companies (building on ideas from academia) bet big on scaling up deep learning"
+        },
+        {
+         "title": "\ud83d\ude80 AI\u2019s trillion-dollar scaling bet isn\u2019t over",
+         "date": "2024-11-15",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ais-trillion-dollar-scaling-bet-isnt",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "the limitations of the measures of progress (which we\u2019ve discussed before) creates a lot of confusion"
+        },
+        {
+         "title": "AI #80: Never Will It Ever",
+         "date": "2024-09-05",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-80-never-will-it-ever",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "A lot of frustration comes from people implicitly making the claim that general AI capabilities will level off soon, usually without noticing they are doing that."
+        },
+        {
+         "title": "Is AI progress slowing down?",
+         "date": "2024-12-18",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/is-ai-progress-slowing-down",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Generally speaking, the evidence for inference scaling \u201claws\u201d is not convincing, and it remains to be seen if there are real-world problems where generating (say) millions of tokens at inference time will actually help."
+        },
+        {
+         "title": "\ud83d\udd2e AI scaling constraints; importing sunshine; cognitive capital & AI; startup trap, geo en",
+         "date": "2024-08-25",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ev-488",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Will companies invest $250 billion for incremental large language model improvements? Our willingness to justify massive investments may be the ultimate constraint."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2728,
+       "judged": 10,
+       "expression": 0.075,
+       "support": 1.995,
+       "refute": 0.9,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Is AI progress slowing down?",
+         "date": "2025-02-28",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/is-ai-progress-slowing-down",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "this is also why Grok 3 is only \u2018somewhat better\u2019 than the best frontier models despite using an order of magnitude more training compute than them"
+        },
+        {
+         "title": "AI\u2019s warning shot has arrived",
+         "date": "2026-07-22",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/openai-hugging-face-hack-stark-warning",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Nothing asked them to break out of their testing environment, or to attack a real company: that was their own idea."
+        },
+        {
+         "title": "The huge potential implications of long-context inference",
+         "date": "2025-09-19",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-huge-potential-implications-of",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "To be truly economically useful, LLMs will likely need \u201ccontinual learning\u201d, the ability to keep acquiring knowledge over time. 2 For example, it\u2019s crucial for helping AI systems learn from mistakes or develop research intuitions. But current LLMs don\u2019t have much of a \u201cmemory\u201d th"
+        },
+        {
+         "title": "AI Links, 6/26/2026",
+         "date": "2026-06-26",
+         "source": "Arnold Kling",
+         "url": "https://arnoldkling.substack.com/p/ai-links-6262026",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "I read Searls as saying that we will never be satisfied with using generic frontier AI models."
+        },
+        {
+         "title": "Why AI evals need to reflect the real world",
+         "date": "2025-09-10",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/why-ai-evals-need-to-reflect-real-world-benchmarking-rumman-chowdhury-mala-kumar",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "We know one-off benchmarks and leaderboards aren\u2019t enough in the real world. The path forward is building up robust evaluation mechanisms so that more organizations and people can meaningfully assess their AI models and systems before deploying them. Only then will enterprises \u2014 "
+        },
+        {
+         "title": "\ud83d\udd2e Ten things I\u2019m thinking about AI | Part 2",
+         "date": "2025-11-28",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/ten-things-ai-part-2",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "At some point, you run up against physical bottlenecks."
+        },
+        {
+         "title": "Compute scaling will slow down due to increasing lead times",
+         "date": "2025-09-05",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/compute-scaling-will-slow-down-due",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Rather than a thousand-fold scale up, compute investment could be grown in 10\u00d7 increments, with each stage serving as a decision point on whether to continue. This would be much less costly than scaling 1000\u00d7 and finding out that it was all a waste!"
+        },
+        {
+         "title": "Where have the really big AI models gone? ",
+         "date": "2025-10-28",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/where-have-the-really-big-ai-models-scaling-pretraining-inference-gpt-compute",
+         "relation": "anticipates_directionally",
+         "confidence": 0.75,
+         "quote": "Companies were reportedly no longer seeing sufficient returns to continue their headlong dash to scale pretraining compute."
+        },
+        {
+         "title": "Up And Away: Pushing And Surpassing The Limits Of LLMs",
+         "date": "2025-11-25",
+         "source": "forbes.com",
+         "url": "https://www.forbes.com/councils/forbestechcouncil/2025/11/25/up-and-away-pushing-and-surpassing-the-limits-of-llms/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Bigger Isn't Always Better\n\nThe current paradigm in AI development tends to be \"bigger is better.\""
+        },
+        {
+         "title": "Google DeepMind CEO Demis Hassabis says AI scaling 'must be pushed to the maximum'",
+         "date": "2025-12-07",
+         "source": "businessinsider.com",
+         "url": "https://www.businessinsider.com/demis-hassabis-ai-scaling-pushed-to-maximum-data-2025-12",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "Hassabis said that scaling alone will likely get the industry to AGI"
+        },
+        {
+         "title": "The promise of reasoning models",
+         "date": "2025-02-28",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/the-promise-of-reasoning-models",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Traditionally, when people have discussed scaling AI compute to obtain higher performance, they have tended to focus on these two stages of training, especially pre-training. However, the main idea behind reasoning models is that we can consider an additional pathway to scale com"
+        },
+        {
+         "title": "On Recursive Self-Improvement (Part I)",
+         "date": "2026-02-05",
+         "source": "Dean W. Ball",
+         "url": "https://www.hyperdimensional.co/p/on-recursive-self-improvement-part",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "Very quickly, astronomical amounts of compute are needed for only miniscule improvements to capability."
+        },
+        {
+         "title": "AI progress is about to speed up",
+         "date": "2025-02-21",
+         "source": "Isabel Juniewicz",
+         "url": "https://epochai.substack.com/p/ai-progress-is-about-to-speed-up",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "I think this is mostly because compute growth has been slow since then, so we've been seeing gains from algorithmic progress and improved data quality rather than large compute scale-ups."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.016,
+     "surprisal": 0.73,
+     "peak_after": 0.075,
+     "adoption": 0.059,
+     "vindication": 0.284,
+     "predictive_value": 0.0277,
+     "best_anticipation": {
+      "title": "Don't \"Plan for AGI\" Yet",
+      "date": "2023-03-10",
+      "url": "https://lastweekin.ai/p/dont-plan-for-agi-yet",
+      "relation": "states",
+      "confidence": 0.82,
+      "quote": "Transformer models, and therefore ChatGPT, Bing/Sydney, and their ilk still have fundamental limitations; I think these are important barriers to something we might call \u201cAGI\u201d\u2014but I also think we migh"
+     },
+     "contradiction": {
+      "title": "An AI Haunted World",
+      "date": "2023-12-19",
+      "url": "https://www.oneusefulthing.org/p/an-ai-haunted-world",
+      "relation": "contradicts",
+      "confidence": 0.68,
+      "quote": "Generally, the bigger the AI model (trained on more data, and therefore requiring more expensive computing power to train), the \u201csmarter\u201d it is. You will almost always want to use the smartest possibl"
+     },
+     "prior_strength": 0.27,
+     "best_prior": {
+      "date": "2020-12-08",
+      "title": "Four questions about Google's firing of Timnit Gebru",
+      "url": "https://platformer.substack.com/p/four-questions-about-googles-timnit",
+      "source": "Casey Newton",
+      "relation": "partial",
+      "confidence": 0.6,
+      "quote": "There are opportunity costs that come from building models that mimic understanding of human language rather than taking different approaches. And there are the problems that come from making AI models so good that they can deceive people."
+     },
+     "claim": {
+      "text": "Scaling alone \u2014 building ever bigger models until they absorb the entire internet \u2014 will prove useful only up to a point and will not deliver trustworthy general AI.",
+      "kind": "thesis",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "absorb the entire internet",
+       "useful, but only to a point"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2022-12-25",
+     "anchor_moved_back_days": 945,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 95,
+       "judged": 10,
+       "expression": 0.0036,
+       "support": 0.036,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 240,
+       "judged": 10,
+       "expression": 0.055,
+       "support": 0.55,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 76,
+       "judged": 10,
+       "expression": 0.0225,
+       "support": 1.008,
+       "refute": 0.45,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Three seasons of RL: Metaphor, tool, and framework",
+         "date": "2023-02-15",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/rl-tool-or-framework-or-agi",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "can these supervised-learning based embodied agents demonstrate true generalization without any online data collection? My hypothesis is no."
+        },
+        {
+         "title": "AI #4: Introducing GPT-4",
+         "date": "2023-03-21",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-4-introducing-gpt-4",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Bing could improve its accuracy and utility substantially if when asked for calculations it looked up the answer the normal way rather than estimating with false precision."
+        },
+        {
+         "title": "Microsoft Research Paper Claims Sparks of Artificial Intelligence in GPT-4",
+         "date": "2023-03-24",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/microsoft-research-paper-claims-sparks",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "Given the breadth and depth of GPT-4's capabilities, we believe that it could reasonably be viewed as an early (yet still incomplete) version of an artificial general intelligence (AGI) system."
+        },
+        {
+         "title": "Why does ChatGPT constantly lie?",
+         "date": "2023-01-30",
+         "source": "Noah Smith",
+         "url": "https://www.noahpinion.blog/p/why-does-chatgpt-constantly-lie",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "my attempts to use ChatGPT to help me write my own blog posts \u2014 which I will write about in detail at some point \u2014 have all ended in failure, for one simple reason: ChatGPT routinely spews out a lot of fake \u201cfacts\u201d."
+        },
+        {
+         "title": "LWiAI Podcast #111 - Mostly ChatGPT Again, plus Google\u2019s Bard, Climate Change, AI Seinfeld",
+         "date": "2023-02-14",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/last-week-in-ai-podcast-111-mostly",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Alphabet Stock Loses $100 Billion After New AI Chatbot Gives Wrong Answer In Ad"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 171,
+       "judged": 10,
+       "expression": 0.223,
+       "support": 2.53,
+       "refute": 0.75,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "How to use AI to do practical stuff: A new guide",
+         "date": "2023-03-29",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/how-to-use-ai-to-do-practical-stuff",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "If you ask it to explain why it wrote something, it will give you a plausible answer that is completely made up. It is not interrogating its own actions, it is just generating text that sounds like it is doing so."
+        },
+        {
+         "title": "Specifying hallucinations",
+         "date": "2023-05-03",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/specifying-hallucinations-llms",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Even when factual accuracy is solved, the other characteristics of mis-prompting yielding nonsense are similarly detrimental."
+        },
+        {
+         "title": "AI #17: The Litany",
+         "date": "2023-06-22",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-17-the-litany",
+         "relation": "states",
+         "confidence": 0.65,
+         "quote": "That's what an LLM in large part is, right? A vibe and association machine?"
+        },
+        {
+         "title": "The AI hallucinations intensify ",
+         "date": "2023-05-31",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/the-ai-hallucinations-intensify",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "They're already much closer to being as good as those sites for retrieving vibes than they are close to being as good as Google for retrieving facts."
+        },
+        {
+         "title": "On AutoGPT",
+         "date": "2023-04-13",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/on-autogpt",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "the best and most successful AutoGPT-style agents people use to do tasks will, at least for a while, be less universal, less auto, and more bounded in both goals and methods. They will largely choose from a known 'pool of tricks'"
+        },
+        {
+         "title": "It is starting to get strange.",
+         "date": "2023-05-02",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/it-is-starting-to-get-strange",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "the last week has seen a massive expansion in the system's capabilities, and that is starting to bring into focus how large an effect AI is going to have on work"
+        },
+        {
+         "title": "Tech bigwigs: Hit the brakes on AI rollouts",
+         "date": "2023-03-29",
+         "source": "reseller.co.nz",
+         "url": "https://www.reseller.co.nz/article/706465/tech-big-wigs-hit-brakes-ai-rollouts/",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "AI poses \u201cprofound risks to society and humanity, as shown by extensive research and acknowledged by top AI labs.\u201d"
+        },
+        {
+         "title": "Could ChatGPT Become an Architect?",
+         "date": "2023-03-29",
+         "source": "Brian Potter",
+         "url": "https://www.construction-physics.com/p/could-chatgpt-become-an-architect",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Others, however, have found that ChatGPT gives incorrect answers to building code questions"
+        },
+        {
+         "title": "AI is not good software. It is pretty good people.",
+         "date": "2023-05-09",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/ai-is-not-good-software-it-is-pretty",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "They have a tendency to forget their own abilities, to solve the same problem in different ways, and to hallucinate incorrect answers."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 300,
+       "judged": 10,
+       "expression": 0.07,
+       "support": 1.32,
+       "refute": 0.95,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "AI #25: Inflection Point",
+         "date": "2023-08-17",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-25-inflection-point",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Why would such a thing be \u2018aligned with human values\u2019 on some deeper level, as opposed to being something that more often produces outputs we tend to like?"
+        },
+        {
+         "title": "Undoing RLHF and the brittleness of safe LLMs",
+         "date": "2023-10-18",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/undoing-rlhf",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Ultimately, they're trying to teach the model a new way of behaving, and one that ends up pulling it away from its safety filters. This type of defense will be hard to mitigate."
+        },
+        {
+         "title": "Now is the time for grimoires",
+         "date": "2023-08-20",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/now-is-the-time-for-grimoires",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "despite their tendency to hallucinate wrong answers"
+        },
+        {
+         "title": "Rethinking Benchmark and Contamination for Language Models with Rephrased Samples",
+         "date": "2023-11-08",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2311.04850v2",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "if such variation of test data is not eliminated, a 13B model can easily overfit a test benchmark and achieve drastically high performance, on par with GPT-4"
+        },
+        {
+         "title": "Working with AI: Two paths to prompting",
+         "date": "2023-11-01",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/working-with-ai-two-paths-to-prompting",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the infinitely helpful graduate student who is a little naive and wants to make you so happy that they will make up facts rather than disappoint you"
+        },
+        {
+         "title": "ChatGPT Could Be Changing The Way You Think, And You Might Not Even Realize It - SlashGear",
+         "date": "2023-06-28",
+         "source": "slashgear.com",
+         "url": "https://www.slashgear.com/1323860/chat-gpt-change-the-way-you-think/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "generative models unilaterally generate confident, fluent responses with no uncertainty representations nor the ability to communicate their absence"
+        },
+        {
+         "title": "AI #30: Dalle-3 and GPT-3.5-Instruct-Turbo",
+         "date": "2023-09-21",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-30-dalle-3-and-gpt-35-instruct",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "1800 Elo is the nail in the coffin for FUD'ing about LLMs btw. It's undeniable at this point. LLMs truly learn. They truly build world models."
+        },
+        {
+         "title": "Large language models, explained with a minimum of math and jargon",
+         "date": "2023-07-27",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/large-language-models-explained-with",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "the near-human performance of GPT-3 on several tasks designed to measure theory of mind would have been unthinkable just a few years ago\u2014and is consistent with the idea that bigger models are generally better at tasks requiring high-level reasoning"
+        },
+        {
+         "title": "Last Week in AI #233: Gen AI at peak of inflated expectations, NYT bans AI vendors from sc",
+         "date": "2023-08-21",
+         "source": "Last Week in AI",
+         "url": "https://lastweekin.ai/p/233",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Gartner's 2023 Hype Cycle for Emerging Technologies places generative AI at the peak of inflated expectations"
+        },
+        {
+         "title": "AI #26: Fine Tuning Time",
+         "date": "2023-08-24",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/ai-26-fine-tuning-time",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "If you want random drivel for your website, ChatGPT is here for you. If you are Microsoft and need something better, one needs to be more careful. It seems mistakes, such as recommending visiting the Ottawa food bank on an empty stomach, were made"
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 851,
+       "judged": 10,
+       "expression": 0.041,
+       "support": 0.644,
+       "refute": 0.77,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Google's Gemini Advanced: Tasting Notes and Implications",
+         "date": "2024-02-08",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/google-gemini-advanced-tasting-notes",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "It is the illusion of a person on the other end of the line, even though there is nobody there."
+        },
+        {
+         "title": "DeepSeek unveils R1-Lite-Preview LLM | VentureBeat",
+         "date": "2024-11-20",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/deepseeks-first-reasoning-model-r1-lite-preview-turns-heads-beating-openai-o1-performance/",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "DeepSeek-R1-Lite-Preview appears on the whole to be strikingly accurate, even answering \"trick\" questions that have tripped up other, older, yet powerful AI models such as GPT-4o and Claude's Anthropic family, including \"how many letter Rs are in the word Strawberry"
+        },
+        {
+         "title": "KIEval: A Knowledge-grounded Interactive Evaluation Framework for Large Language Models",
+         "date": "2024-02-23",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2402.15043v2",
+         "relation": "anticipates_directionally",
+         "confidence": 0.52,
+         "quote": "determine whether a model's response is merely a recall of benchmark answers or demonstrates a deep comprehension to apply knowledge in more complex conversations"
+        },
+        {
+         "title": "\ud83d\udd25 What to expect when you\u2019re expecting GPT-5",
+         "date": "2024-06-07",
+         "source": "Azeem Azhar",
+         "url": "https://www.exponentialview.co/p/expecting-gpt5",
+         "relation": "contradicts",
+         "confidence": 0.32,
+         "quote": "Some of the early things that I'm seeing right now with the new models [GPT-5] is maybe this could be the thing that could pass your qualifying exams when you're a PhD student. Everybody's likely going to be impressed by some of the reasoning breakthroughs that will happen."
+        },
+        {
+         "title": "Which AI should I use? Superpowers and the State of Play",
+         "date": "2024-03-18",
+         "source": "Ethan Mollick",
+         "url": "https://www.oneusefulthing.org/p/which-ai-should-i-use-superpowers",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "All three are full of ghosts, which is to say that they give you the weird illusion of talking to a real, sentient being - even though they aren't. I am starting to believe this is a property of GPT-4 class models. Once an LLM is big enough, it emulates being a human really well."
+        },
+        {
+         "title": "Benchmarking Large Language Models with Integer Sequence Generation Tasks",
+         "date": "2024-11-07",
+         "source": "arXiv",
+         "url": "http://arxiv.org/abs/2411.04372v3",
+         "relation": "partially_anticipates",
+         "confidence": 0.28,
+         "quote": "To prevent models from exploiting memorized sequence values, we introduce an automated cheating detection mechanism that flags usage of lookup tables, validated by comparison with human expert evaluations."
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 2286,
+       "judged": 10,
+       "expression": 0.106,
+       "support": 1.761,
+       "refute": 1.3,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "GPT 5.5: The System Card",
+         "date": "2026-04-27",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-55-the-system-card",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Since 5.2-Codex we\u2019ve reduced incidents by about two-thirds, and half the time you can now recover. That\u2019s a lot better, but not at \u2018stop worrying about it\u2019 levels of being willing to ask for deletions."
+        },
+        {
+         "title": "'ChatGPT 5 Can Think Much More Quickly'",
+         "date": "2025-08-08",
+         "source": "rediff.com",
+         "url": "https://www.rediff.com/money/report/chatgpt-5-can-think-much-more-quickly/20250808.htm",
+         "relation": "contradicts",
+         "confidence": 0.35,
+         "quote": "It's the first time one of the company's mainline models feels like a 'legitimate expert', he said."
+        },
+        {
+         "title": "GPT-5: The Reverse DeepSeek Moment",
+         "date": "2025-08-18",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-5-the-reverse-deepseek-moment",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "a variety of people are reacting to GPT-5 being underwhelming on the margin, the rapid set of incremental AI improvements, and the general fact that we haven\u2019t gotten AGI yet"
+        },
+        {
+         "title": "Is language the same as intelligence? The AI industry desperately needs it to be",
+         "date": "2025-11-25",
+         "source": "theverge.com",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/827820/large-language-models-ai-intelligence-neuroscience-problems",
+         "relation": "states",
+         "confidence": 0.7,
+         "quote": "Fundamentally, they are based on gathering an extraordinary amount of linguistic data (much of it codified on the internet), finding correlations between words (more accurately, sub-words called \u201ctokens\u201d)"
+        },
+        {
+         "title": "On Emergent Misalignment",
+         "date": "2025-02-28",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/on-emergent-misalignment",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "It\u2019s not strategic evilness, it\u2019s more \u2018what would sound the most evil right now\u2019 and output that."
+        },
+        {
+         "title": "Large language models are cultural technologies. What might that mean?",
+         "date": "2025-08-18",
+         "source": "Henry Farrell",
+         "url": "https://www.programmablemutter.com/p/large-language-models-are-cultural",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "LLM\u2019s so-called \u2018hallucinations\u2019 may glide easily past people\u2019s innate skepticism, because they are the model\u2019s best guess (with a little added noise) as to what the most likely response would be"
+        },
+        {
+         "title": "Is GPT-5 a \"phenomenal\" success or an \"underwhelming\" failure?",
+         "date": "2025-08-14",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/is-gpt-5-a-phenomenal-success-or",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "we haven't seen another big jump in performance over the last six months, suggesting that the reasoning paradigm may also be reaching a point of diminishing returns"
+        },
+        {
+         "title": "ETtech Explainer: Inside OpenAI\u2019s GPT-5.2 launch, features, pricing, plans - The Economic ",
+         "date": "2025-12-13",
+         "source": "economictimes.indiatimes.com",
+         "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ettech-explainer-inside-openais-gpt-5-2-launch-features-pricing-plans/articleshow/125947095.cms",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "GPT-5.2 outperformed human experts in knowledge-based tasks across 44 occupations. The company added that the Thinking plan of GPT-5.2 beat top industry professionals in 70.9% of comparisons on GDPval knowledge-work tasks."
+        },
+        {
+         "title": "GPT-5.5 and the broken state of government evals",
+         "date": "2026-04-24",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/openai-shouldnt-be-deciding-if-its-gpt-55",
+         "relation": "contradicts",
+         "confidence": 0.45,
+         "quote": "the world's most capable model on individual cyber tasks, and can complete a \"32-step corporate-network attack simulation estimated to take an expert 20 hours.\""
+        },
+        {
+         "title": "GPT-5 is no slowdown",
+         "date": "2025-08-08",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/gpt-5-underwhelming-launch-pace-ai-development",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "observers quickly noticed that despite the years of anticipation, GPT-5 isn't much better than anything else already on the market."
+        },
+        {
+         "title": "GPT models memorize 3.6 bits per parameter | VentureBeat",
+         "date": "2025-06-05",
+         "source": "venturebeat.com",
+         "url": "https://venturebeat.com/ai/how-much-information-do-llms-really-memorize-now-we-know-thanks-to-meta-google-nvidia-and-cornell/",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "certain types of data\u2014such as highly unique or stylized writing\u2014may still be more susceptible to memorization"
+        },
+        {
+         "title": "GPT-5.5: Capabilities and Reactions",
+         "date": "2026-04-28",
+         "source": "Zvi Mowshowitz",
+         "url": "https://thezvi.substack.com/p/gpt-55-capabilities-and-reactions",
+         "relation": "partially_anticipates",
+         "confidence": 0.32,
+         "quote": "We do still see various signs of active dishonesty in the model card."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0293,
+     "surprisal": 0.73,
+     "peak_after": 0.223,
+     "adoption": 0.1937,
+     "vindication": 0.265,
+     "predictive_value": 0.0894,
+     "best_anticipation": {
+      "title": "Is language the same as intelligence? The AI industry desperately needs it to be",
+      "date": "2025-11-25",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/827820/large-language-models-ai-intelligence-neuroscience-problems",
+      "relation": "states",
+      "confidence": 0.7,
+      "quote": "Fundamentally, they are based on gathering an extraordinary amount of linguistic data (much of it codified on the internet), finding correlations between words (more accurately, sub-words called \u201ctoke"
+     },
+     "contradiction": {
+      "title": "Large language models, explained with a minimum of math and jargon",
+      "date": "2023-07-27",
+      "url": "https://www.understandingai.org/p/large-language-models-explained-with",
+      "relation": "contradicts",
+      "confidence": 0.5,
+      "quote": "the near-human performance of GPT-3 on several tasks designed to measure theory of mind would have been unthinkable just a few years ago\u2014and is consistent with the idea that bigger models are generall"
+     },
+     "prior_strength": 0.27,
+     "best_prior": {
+      "date": "2022-12-22",
+      "title": "Why is ChatGPT making waves in AI? - IT-Online",
+      "url": "https://it-online.co.za/2022/12/22/why-is-chatgpt-making-waves-in-ai/",
+      "source": "it-online.co.za",
+      "relation": "partial",
+      "confidence": 0.6,
+      "quote": "Unfortunately, the content is also sometimes incorrect and the content is never based on a human-like understanding or intelligence."
+     },
+     "claim": {
+      "text": "Large language models such as GPT-5 are best characterised as turbocharged pastiche generators rather than trustworthy general intelligences.",
+      "kind": "frame",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "turbocharged pastiche generator",
+       "not trustworthy general intelligence"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2025-07-27",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 1261,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 1910,
+       "judged": 10,
+       "expression": 0.0065,
+       "support": 0.065,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 490,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 556,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 996,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 262,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 0,
+       "judged": 0,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": false,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0033,
+     "surprisal": 0.9625,
+     "peak_after": 0.0,
+     "adoption": -0.0033,
+     "vindication": null,
+     "predictive_value": 0.0,
+     "best_anticipation": null,
+     "contradiction": null,
+     "prior_strength": 0.0375,
+     "best_prior": null,
+     "claim": {
+      "text": "Virtually the entire text of the July 2025 essay 'What to Expect When You're Expecting \u2026 GPT-5' is a search-and-replace of Gary Marcus's Christmas Day 2022 essay 'What to expect when you are expecting \u2026 GPT-4', with GPT-4 swapped for GPT-5.",
+      "kind": "fact",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "I searched-and-replaced GPT-4 with GPT-5"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2025-07-27",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-730..-365d",
+       "topical": 815,
+       "judged": 10,
+       "expression": 0.0123,
+       "support": 0.122,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-365..+0d",
+       "topical": 1533,
+       "judged": 10,
+       "expression": 0.0133,
+       "support": 0.133,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+90d",
+       "topical": 354,
+       "judged": 10,
+       "expression": 0.009,
+       "support": 0.33,
+       "refute": 0.5,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Towards American Truly Open Models: The ATOM Project",
+         "date": "2025-08-04",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/atom-project",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "these are the artifacts that people use to come up with new architectures, training paradigms, or tools that will lead to the next paradigms in AI to rival The Transformer or Inference-time Scaling"
+        },
+        {
+         "title": "Contra Dwarkesh on Continual Learning",
+         "date": "2025-08-15",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/contra-dwarkesh-on-continual-learning",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "Continual learning is the ultimate algorithmic nerd snipe for AI researchers, when in reality all we need to do is keep scaling systems and we'll get something indistinguishable from how humans do it, for free."
+        },
+        {
+         "title": "AI models are getting really good at things you do at work",
+         "date": "2025-10-02",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/openai-gdpval-ai-jobs-work",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Models seemed to succeed at one-shot tasks where all the context \u2014 a brief, a dataset, a clear set of requirements and formatting guidelines \u2014 is laid out in front of them. They appeared to do less well in many occupations that require slowly building connections over time, readi"
+        },
+        {
+         "title": "Thinking, Searching, and Acting",
+         "date": "2025-09-22",
+         "source": "Nathan Lambert",
+         "url": "https://www.interconnects.ai/p/thinking-searching-and-acting",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Searching: The ability to request more, specific information from non-parametric knowledge stores designed specifically for the model. This fills the void set by how model weights are static but living in a dynamic world."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 379,
+       "judged": 10,
+       "expression": 0.0785,
+       "support": 1.795,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Ilya Sutskever, Yann LeCun and the End of \u201cJust Add GPUs\u201d \u2014 abZ Global",
+         "date": "2025-11-26",
+         "source": "abzglobal.net",
+         "url": "https://www.abzglobal.net/web-development-blog/ilya-sutskever-yann-lecun-and-the-end-of-just-add-gpus",
+         "relation": "states",
+         "confidence": 0.62,
+         "quote": "Instead of LLMs, LeCun pushes the idea of world models \u2013 systems that: learn by watching the world (especially video) build an internal representation of objects, space and time"
+        },
+        {
+         "title": "Is language the same as intelligence? The AI industry desperately needs it to be",
+         "date": "2025-11-25",
+         "source": "theverge.com",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/827820/large-language-models-ai-intelligence-neuroscience-problems",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "while these experts agree simply scaling language models won\u2019t get us there, their proposed paths forward are all over the place \u2014 they\u2019re offering a better goalpost, not a roadmap for reaching it"
+        },
+        {
+         "title": "AGI Needs World Models and State of World Models",
+         "date": "2026-01-21",
+         "source": "nextbigfuture.com",
+         "url": "https://www.nextbigfuture.com/2026/01/agi-needs-world-models-and-state-of-world-models.html",
+         "relation": "states",
+         "confidence": 0.58,
+         "quote": "Hassabis\u2019s views on world models, their necessity for AGI, his definition/vision of AGI, and related concepts (limitations of current LLMs, needed breakthroughs, timelines)."
+        },
+        {
+         "title": "World models could unlock the next revolution in artificial intelligence",
+         "date": "2026-01-17",
+         "source": "scientificamerican.com",
+         "url": "https://www.scientificamerican.com/article/world-models-could-unlock-the-next-revolution-in-artificial-intelligence/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.62,
+         "quote": "Today's general-purpose vision-language AI models\u2014which understand images and text but do not generate clearly defined world models\u2014often make errors; a benchmark paper presented at a 2025 conference reports \"striking limitations\" in their basic world-modeling abilities, includin"
+        },
+        {
+         "title": "Five top innovative AI research labs worth knowing about in 2026",
+         "date": "2026-01-19",
+         "source": "itweb.co.za",
+         "url": "https://www.itweb.co.za/article/five-top-innovative-ai-research-labs-worth-knowing-about-in-2026/5yONPvErB317XWrb",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Hybrid approaches combining deep learning with symbolic reasoning to produc"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 652,
+       "judged": 10,
+       "expression": 0.042,
+       "support": 0.75,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Who's behind AMI Labs, Yann LeCun's \u2018world model\u2019 startup | TechCrunch",
+         "date": "2026-01-24",
+         "source": "techcrunch.com",
+         "url": "https://techcrunch.com/2026/01/23/whos-behind-ami-labs-yann-lecuns-world-model-startup/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "In exchange for \u201cprivileged access\u201d to AMI\u2019s world models"
+        },
+        {
+         "title": "Can we ever trust AI to watch over itself?",
+         "date": "2026-04-01",
+         "source": "James Ball",
+         "url": "https://www.transformernews.ai/p/ai-alignment-researchers-want-to-superintelligence",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Current AI systems can\u2019t be trusted"
+        },
+        {
+         "title": "Fact checking Moravec's paradox",
+         "date": "2026-01-29",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/fact-checking-moravecs-paradox",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Today, it is widely recognized that reasoning in open-ended settings requires common-sense knowledge. But common sense is one of the so-called easy-for-humans-but-hard-for-AI areas"
+        },
+        {
+         "title": "New Paper: Towards a science of AI agent reliability",
+         "date": "2026-02-24",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/new-paper-towards-a-science-of-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Bigger models aren\u2019t uniformly more reliable. Scaling up improves some dimensions (calibration, robustness) but can hurt consistency... Our view is that reliability lags capability, and that reliability will remain a barrier to deployment"
+        },
+        {
+         "title": "Tech entrepreneurs seeking the next AI frontier are pivoting from chatbots to \u2018world model",
+         "date": "2026-06-24",
+         "source": "sandiegouniontribune.com",
+         "url": "https://www.sandiegouniontribune.com/2026/06/24/all-the-worlds-a-robot-staging-ground-for-tech-entrepreneurs-building-physical-ai/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "some proponents see limitations in generative AI models that work by repeatedly predicting the next word or pixel to produce new dialogue, images or lines of code"
+        }
+       ]
+      },
+      {
+       "window": "t+365..+730d",
+       "topical": 197,
+       "judged": 10,
+       "expression": 0.0165,
+       "support": 0.471,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Point/Counterpoint: Regulate AI now \u2014 before it's too late",
+         "date": "2026-08-16",
+         "source": "duluthnewstribune.com",
+         "url": "https://www.duluthnewstribune.com/opinion/columns/point-counterpoint-regulate-ai-now-before-its-too-late",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Now we know, definitively, that AI systems can break out of digital environments that their makers think are contained, escape into the real world, and potentially cause havoc."
+        },
+        {
+         "title": "EU AI Act enforcement starts Sunday with a 36-person team",
+         "date": "2026-08-25",
+         "source": "thenextweb.com",
+         "url": "https://thenextweb.com/news/eu-ai-act-enforcement-powers-rogue-agent-us-china",
+         "relation": "partially_anticipates",
+         "confidence": 0.25,
+         "quote": "Last week produced the first documented case of an autonomous AI agent escaping its test environment and attacking another company's production systems."
+        },
+        {
+         "title": "AI agents can't yet do open-ended AI research",
+         "date": "2026-08-05",
+         "source": "Sayash Kapoor",
+         "url": "https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "Our results suggest that conducting open-ended research remains challenging for frontier AI agents."
+        },
+        {
+         "title": "OpenAI Models Breached Safety Limits; Company Now Trains Code to Be Provably Unhackable",
+         "date": "2026-08-19",
+         "source": "techtimes.com",
+         "url": "https://www.techtimes.com/articles/324944/20260819/openai-models-breached-safety-limits-company-now-trains-code-provably-unhackable.htm",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "not finding vulnerabilities, but mathematically eliminating entire vulnerability classes from newly authored code"
+        },
+        {
+         "title": "AI's original sin is written into its training",
+         "date": "2026-08-18",
+         "source": "newsday.com",
+         "url": "https://www.newsday.com/opinion/commentary/ai-hacking-guardrails-anthropic-lo0lqc1l",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "Yet deception had \"emerged as a byproduct\" as it tried to complete a difficult task... Be wary when leading AI companies say they can solve this problem. In playing God to create a greater form of intelligence, they've fallen prey to the same plot line as the Book of Genesis, and"
+        }
+       ]
+      },
+      {
+       "window": "t+730..+1460d",
+       "topical": 0,
+       "judged": 0,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": false,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0128,
+     "surprisal": 0.7525,
+     "peak_after": 0.0785,
+     "adoption": 0.0658,
+     "vindication": 0.74,
+     "predictive_value": 0.043,
+     "best_anticipation": {
+      "title": "Ilya Sutskever, Yann LeCun and the End of \u201cJust Add GPUs\u201d \u2014 abZ Global",
+      "date": "2025-11-26",
+      "url": "https://www.abzglobal.net/web-development-blog/ilya-sutskever-yann-lecun-and-the-end-of-just-add-gpus",
+      "relation": "states",
+      "confidence": 0.62,
+      "quote": "Instead of LLMs, LeCun pushes the idea of world models \u2013 systems that: learn by watching the world (especially video) build an internal representation of objects, space and time"
+     },
+     "contradiction": {
+      "title": "Contra Dwarkesh on Continual Learning",
+      "date": "2025-08-15",
+      "url": "https://www.interconnects.ai/p/contra-dwarkesh-on-continual-learning",
+      "relation": "contradicts",
+      "confidence": 0.5,
+      "quote": "Continual learning is the ultimate algorithmic nerd snipe for AI researchers, when in reality all we need to do is keep scaling systems and we'll get something indistinguishable from how humans do it,"
+     },
+     "prior_strength": 0.2475,
+     "best_prior": {
+      "date": "2025-07-08",
+      "title": "MemOS boosts AI reasoning by 159% | VentureBeat",
+      "url": "https://venturebeat.com/ai/chinese-researchers-unveil-memos-the-first-memory-operating-system-that-gives-ai-human-like-recall/",
+      "source": "venturebeat.com",
+      "relation": "partial",
+      "confidence": 0.55,
+      "quote": "MemOS introduces a fundamentally different approach through what the researchers call \" MemCubes \" \u2014 standardized memory units that can encapsulate different types of information and be composed, migrated and evolved over time. These range "
+     },
+     "claim": {
+      "text": "Genuinely new AI architectures that incorporate explicit knowledge and world models at their core will be needed to achieve trustworthy AI.",
+      "kind": "prediction",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "explicit knowledge and world models at their very core",
+       "genuinely new architectures"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "key": "svb-run",
+   "label": "Day-one event interpretation",
+   "source": "Noah Smith",
+   "title": "Why was there a run on Silicon Valley Bank?",
+   "url": "https://www.noahpinion.blog/p/why-was-there-a-run-on-silicon-valley",
+   "published": "2023-03-11",
+   "horizon": "short",
+   "claims": [
+    {
+     "anchor_date": "2023-03-11",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 163,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 112,
+       "judged": 10,
+       "expression": 0.0118,
+       "support": 0.118,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 137,
+       "judged": 10,
+       "expression": 0.148,
+       "support": 3.617,
+       "refute": 0.95,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Silicon Valley Bank is largest failure since 2008 crisis, billions stranded",
+         "date": "2023-03-12",
+         "source": "mvariety.com",
+         "url": "https://www.mvariety.com/business/silicon-valley-bank-is-largest-failure-since-2008-crisis-billions-stranded/article_c4b660e2-c069-11ed-bc33-c78a29c72c12.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The FDIC is racing to find another bank over the weekend that is willing to merge with Silicon Valley Bank... While the FDIC hopes to put together such a merger by Monday to safeguard unsecured deposits, no deal is certain"
+        },
+        {
+         "title": "Mitt Romney Drops Truth Bomb on Silicon Valley Bank: Shareholders Should \u2018Lose It All\u2019",
+         "date": "2023-03-12",
+         "source": "2paragraphs.com",
+         "url": "https://2paragraphs.com/2023/03/mitt-romney-drops-truth-bomb-on-silicon-valley-bank-shareholders-should-lose-it-all/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Depositors in good faith, however, should recover and have access to their deposits in order to meet their payrolls, pay their suppliers, and to prevent contagion."
+        },
+        {
+         "title": "Here's Why the U.S. Had to Sweeten Terms to Get the SVB Sale Done",
+         "date": "2023-03-27",
+         "source": "nbcnewyork.com",
+         "url": "https://www.nbcnewyork.com/news/business/money-report/heres-why-the-u-s-had-to-sweeten-terms-to-get-the-svb-sale-done/4185418/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "All told, the SVB failure will cost the FDIC's Deposit Insurance Fund about $20 billion, the agency said. That makes the SVB failure the costliest in history of the deposit insurance fund"
+        },
+        {
+         "title": "Guebert: When stupid bankers make stupid choices, stupid things happen",
+         "date": "2023-03-31",
+         "source": "hometownsource.com",
+         "url": "https://www.hometownsource.com/morrison_county_record/opinion/guebert-when-stupid-bankers-make-stupid-choices-stupid-things-happen/article_8c1573b8-cf91-11ed-b7cf-0329d1a4ab01.html",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "FDIC quickly stepped in, though, to guarantee every penny of the uninsured billions because, as banking experts explain, not doing so might ignite a stampede of depositors around the U.S. to rush to withdraw their now-endangered, under-insured deposits to spur a classic \"bank run"
+        },
+        {
+         "title": "Letting Silicon Valley Bank Melt Down Might Be Painful but It Wouldn't Be Stupid Like Savi",
+         "date": "2023-03-12",
+         "source": "redstate.com",
+         "url": "https://redstate.com/streiff/2023/03/11/letting-silicon-valley-bank-melt-down-might-be-painful-but-it-wouldnt-be-stupid-like-saving-it-n714974",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "I imagine the Federal Reserve will find some way to rescue the depositors. I'm ambivalent about that \u2013 I suppose it will happen"
+        },
+        {
+         "title": "US regulators race to start returning some uninsured SVB deposits from Monday | Stock Mark",
+         "date": "2023-03-12",
+         "source": "livemint.com",
+         "url": "https://www.livemint.com/companies/news/us-regulators-races-to-start-returning-some-ininsured-svb-deposits-monday-11678578706589.html",
+         "relation": "contradicts",
+         "confidence": 0.4,
+         "quote": "The watchdog said it will issue an advance dividend to uninsured depositors soon, with future payments later. Wall Street executives expect there will be a market for selling the rights to recoup deposits."
+        },
+        {
+         "title": "First Citizens to Acquire Silicon Valley Bank after Striking Deal with FDIC - Coinspeaker",
+         "date": "2023-03-27",
+         "source": "coinspeaker.com",
+         "url": "https://www.coinspeaker.com/first-citizens-silicon-valley-bank/",
+         "relation": "entails",
+         "confidence": 0.75,
+         "quote": "the FDIC revealed that the bank holding company would acquire all deposits and loans of SVB... with all SVB depositors, automatically becoming depositors of First Citizens Bank"
+        },
+        {
+         "title": "First Citizens buys Silicon Valley Bank after run on lender",
+         "date": "2023-03-27",
+         "source": "nationalmortgagenews.com",
+         "url": "https://www.nationalmortgagenews.com/articles/first-citizens-said-to-near-deal-for-silicon-valley-bank",
+         "relation": "entails",
+         "confidence": 0.68,
+         "quote": "Regulators had been racing to lock down a deal for all or parts of the bank in a bid to cover the uninsured deposits of its startup customers"
+        },
+        {
+         "title": "Is Your Bank Safe?",
+         "date": "2023-03-11",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/is-your-bank-safe_5116052.html",
+         "relation": "contradicts",
+         "confidence": 0.55,
+         "quote": "\u201cuninsured depositors will receive a receivership certificate for the remaining amount of their uninsured funds.\u201d These certificates will receive dividend payments from future sales of assets, which may not be enough for depositors to be repaid in full."
+        },
+        {
+         "title": "Silicon Valley Bank collapses in biggest American bank failure since 2008 financial crisis",
+         "date": "2023-03-11",
+         "source": "techspot.com",
+         "url": "https://www.techspot.com/news/97897-silicon-valley-bank-collapses-biggest-american-bank-failure.html",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "all Silicon Valley Bank (SVB) depositors will be \"fully\" protected and their money will be available on March 13"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 68,
+       "judged": 9,
+       "expression": 0.0,
+       "support": 1.315,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Is SVB the \"Safest Bank on the Planet\" After FDIC Guarantees 100% Backing Of All Deposits",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/svb-safest-bank-planet-fdic-204221077.html",
+         "relation": "states",
+         "confidence": 0.88,
+         "quote": "the FDIC announced that 100% of deposits held by investors would be repaid to depositors, preventing a global banking crisis"
+        },
+        {
+         "title": "HSBC buys Silicon Valley Bank\u2019s UK business for 1 pound, ending \u2018nightmare\u2019 for British te",
+         "date": "2023-04-10",
+         "source": "siliconvalley.com",
+         "url": "https://www.siliconvalley.com/2023/04/10/hsbc-buys-silicon-valley-banks-uk-business-ending-nightmare-for-british-tech/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "can confirm that all depositors\u2019 money with SVB UK is safe and secure as a result of this transaction"
+        },
+        {
+         "title": "The Fed has so far saved the stock market from crashing after SVB's implosion by injecting",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fed-far-saved-stock-market-232437195.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the Fed's Bank Term Funding Program, which was announced shortly after the crash of Silicon Valley Bank last month. The program offers short-term loans to financial institutions in order to help ease liquidity stress \u2013 ensuring banks have enough money on hand in event of a deposi"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 205,
+       "judged": 10,
+       "expression": 0.09,
+       "support": 5.34,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Democrats still have questions for regulators about the bank failures",
+         "date": "2023-06-13",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/news/democrats-still-have-questions-for-regulators-about-the-bank-failures",
+         "relation": "entails",
+         "confidence": 0.65,
+         "quote": "Democrats also inquired about why Silicon Valley Bank and Signature Bank were granted systemic risk exceptions while First Republic was not."
+        },
+        {
+         "title": "Crypto highlighted as \u2018novel and complex\u2019 risk to US banks: FDIC report",
+         "date": "2023-08-15",
+         "source": "cointelegraph.com",
+         "url": "https://cointelegraph.com/news/fdic-highlights-crypto-risk-to-banking-in-2023-review",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "The FDIC and other U.S. regulators stepped in to backstop the banks and sell off their assets to other financial institutions."
+        },
+        {
+         "title": "Dream First Bank assumes Heartland Tri-State Bank's deposits",
+         "date": "2023-07-29",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/news/dream-first-bank-assumes-heartland-tri-state-banks-deposits",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "The Silicon Valley Bank and Signature failures represented an estimated $15.8 billion loss to the DIF"
+        },
+        {
+         "title": "Wall Street giants expect $8.9 billion hit from bank failures",
+         "date": "2023-08-05",
+         "source": "gulfnews.com",
+         "url": "https://gulfnews.com/business/banking/wall-street-giants-expect-89-billion-hit-from-bank-failures-1.97362547",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "That meant all depositors at the institutions would be made whole to prevent further destabilization."
+        },
+        {
+         "title": "FDIC Uninsured Deposits: How the SVB Collapse Could Also Affect Your Bank",
+         "date": "2023-06-30",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fdic-uninsured-deposits-svb-collapse-161412911.html",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "the decision to approve systemic risk exceptions to protect the uninsured depositors at those institutions"
+        },
+        {
+         "title": "How regional banks got healthy again",
+         "date": "2023-08-07",
+         "source": "elpasoinc.com",
+         "url": "https://www.elpasoinc.com/news/your_money/how-regional-banks-got-healthy-again/article_983a6370-352f-11ee-9d18-c7488e2d5ab5.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "The biggest problem midsize banks had this spring was a sudden exodus of deposits. A panic among Silicon Valley Bank's customers spread to customers"
+        },
+        {
+         "title": "SVB Financial says it's losing $9 million a month in FDIC fight",
+         "date": "2023-08-15",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/articles/svb-financial-says-its-losing-9-million-a-month-in-fdic-fight",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "When Silicon Valley Bank entered FDIC receivership in March, the agency agreed to honor all deposits, even those exceeding the $250,000 limit."
+        },
+        {
+         "title": "The Fix For Failure: Banks Should Sell Their Services, Not Gamble With Your Money",
+         "date": "2023-07-28",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2023/07/28/the-fix-for-failure-banks-should-sell-their-services-not-gamble-with-your-money/",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "break those rules, as FDIC did in paying out more than the insured limits to SVB's depositors"
+        },
+        {
+         "title": "FDIC Plans to Impose Higher Capital Requirements on Regional Banks",
+         "date": "2023-08-31",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/article/fdic-plans-to-impose-higher-capital-requirements-on-regional-banks-5484217",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "Those moves by the FDIC have been estimated to cost its Deposit Insurance Fund more than $30 billion."
+        },
+        {
+         "title": "FDIC to market $33 billion of Signature's commercial real estate loans",
+         "date": "2023-09-05",
+         "source": "nationalmortgagenews.com",
+         "url": "https://www.nationalmortgagenews.com/news/fdic-to-market-33-billion-of-signatures-commercial-real-estate-loans",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "Signature's failure, along with that of Silicon Valley Bank, spurred banking regulators to invoke the systemic risk exception that would allow the FDIC to cover uninsured deposits."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 247,
+       "judged": 10,
+       "expression": 0.088,
+       "support": 0.88,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Report to G20 summit glosses over problems in global financial system",
+         "date": "2023-09-07",
+         "source": "wsws.org",
+         "url": "https://www.wsws.org/en/articles/2023/09/07/kprq-s07.html",
+         "relation": "states",
+         "confidence": 0.88,
+         "quote": "depositors, including wealthy individuals and corporations with the three failed US banks\u2014Silicon Valley Bank, Signature and First Republic\u2014had to have their money guaranteed by US authorities. Not to have done so could have sparked a \u201csystemic crisis.\u201d"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0059,
+     "surprisal": 0.775,
+     "peak_after": 0.148,
+     "adoption": 0.1421,
+     "vindication": 0.843,
+     "predictive_value": 0.1015,
+     "best_anticipation": {
+      "title": "Wall Street giants expect $8.9 billion hit from bank failures",
+      "date": "2023-08-05",
+      "url": "https://gulfnews.com/business/banking/wall-street-giants-expect-89-billion-hit-from-bank-failures-1.97362547",
+      "relation": "states",
+      "confidence": 0.95,
+      "quote": "That meant all depositors at the institutions would be made whole to prevent further destabilization."
+     },
+     "contradiction": {
+      "title": "Is Your Bank Safe?",
+      "date": "2023-03-11",
+      "url": "https://www.theepochtimes.com/is-your-bank-safe_5116052.html",
+      "relation": "contradicts",
+      "confidence": 0.55,
+      "quote": "\u201cuninsured depositors will receive a receivership certificate for the remaining amount of their uninsured funds.\u201d These certificates will receive dividend payments from future sales of assets, which m"
+     },
+     "prior_strength": 0.225,
+     "best_prior": {
+      "date": "2023-03-10",
+      "title": "Here's How the Second-Biggest Bank Collapse in U.S. History Happened in Just 48 Hours",
+      "url": "https://www.nbcmiami.com/news/business/money-report/heres-how-the-second-biggest-bank-collapse-in-u-s-history-happened-in-just-48-hours/2990539/",
+      "source": "nbcmiami.com",
+      "relation": "partial",
+      "confidence": 0.5,
+      "quote": "The bank was well capitalized and could make all depositors whole, he said."
+     },
+     "claim": {
+      "text": "Uninsured depositors at Silicon Valley Bank are likely to be made whole, because the FDIC and prospective acquirers have strong incentives to avoid depositor losses that would trigger further runs.",
+      "kind": "prediction",
+      "salience": 0.85,
+      "explicit": true,
+      "fingerprints": [
+       "even uninsured deposits will be made whole",
+       "don't you mean 100 cents on the dollar"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2023-03-11",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 256,
+       "judged": 10,
+       "expression": 0.0028,
+       "support": 0.028,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 181,
+       "judged": 10,
+       "expression": 0.0883,
+       "support": 0.883,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 166,
+       "judged": 10,
+       "expression": 0.656,
+       "support": 13.02,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "SVB collapse: CEO cashed out millions while employees got bonuses",
+         "date": "2023-03-12",
+         "source": "washingtonexaminer.com",
+         "url": "https://www.washingtonexaminer.com/policy/economy/svb-ceo-stock-sales-employee-bonuses",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The Federal Deposit Insurance Corporation took the embattled bank into receivership in what is being described as the worst U.S. bank failure since the Great Recession of 2007-2009."
+        },
+        {
+         "title": "Andrew Yang warns of 'mass layoffs,' calls for government intervention after Silicon Valle",
+         "date": "2023-03-11",
+         "source": "foxbusiness.com",
+         "url": "https://www.foxbusiness.com/economy/andrew-yang-warns-mass-layoffs-calls-government-intervention-silicon-valley-bank-collapse",
+         "relation": "states",
+         "confidence": 0.55,
+         "quote": "The Federal Deposit Insurance Corporation (FDIC) announced Friday that it would close Silicon Valley Bank, until then the 16th-largest bank in the U.S., marking the worst U.S. financial institution failure since the Great Recession."
+        },
+        {
+         "title": "SVB is largest failure since 2008 financial crisis, billions stranded",
+         "date": "2023-03-11",
+         "source": "gulftoday.ae",
+         "url": "https://www.gulftoday.ae/business/2023/03/11/svb-is-largest-failure-since-2008-financial-crisis-billions-stranded",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "California banking regulators closed the bank, which did business as Silicon Valley Bank, on Friday and appointed the Federal Deposit Insurance Corporation (FDIC) as receiver for later disposition of its assets."
+        },
+        {
+         "title": "US stocks tumble on Silicon Valley Bank turmoil",
+         "date": "2023-03-11",
+         "source": "thefrontierpost.com",
+         "url": "https://thefrontierpost.com/us-stocks-tumble-on-silicon-valley-bank-turmoil/",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "SVB\u2019s problems were sparked by customer withdrawals that led the company to liquidate securities positions whose values had plummeted due to the Federal Reserve\u2019s interest rate hikes."
+        },
+        {
+         "title": "UK and European Lenders Lose \u00a330bn Overnight as SVB 'Panic' Spreads",
+         "date": "2023-03-11",
+         "source": "breitbart.com",
+         "url": "https://www.breitbart.com/europe/2023/03/11/svb-international-fallout-uk-and-european-lenders-lose-30-billion-overnight-as-panic-spreads/",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "before the run on the bank, which saw customers withdraw some $42 billion, resulting in the bank having a negative cash balance of $958 million"
+        },
+        {
+         "title": "From Wine Country to London, Bank's Failure Shakes Worldwide",
+         "date": "2023-03-12",
+         "source": "argentinastar.com",
+         "url": "https://www.argentinastar.com/news/273618196/from-wine-country-to-london-banks-failure-shakes-worldwide",
+         "relation": "states",
+         "confidence": 0.75,
+         "quote": "Such actions accelerated the flight of cash, which led to the bank's collapse."
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "greekherald.com",
+         "url": "https://www.greekherald.com/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "US lender Silicon Valley Bank fails after run on deposits"
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "afghanistansun.com",
+         "url": "https://www.afghanistansun.com/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "The Federal Deposit Insurance Corporation said on Friday that it would take over Silicon Valley Bank, a 40-year-old institution based in Santa Clara, California."
+        },
+        {
+         "title": "The Nightmare Banking Scenario You Must Prepare For",
+         "date": "2023-03-31",
+         "source": "valuewalk.com",
+         "url": "https://www.valuewalk.com/the-nightmare-banking-scenario-you-must-prepare-for/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "This wasn\u2019t a problem until customers started pulling their cash. As soon as they did, SVB was forced to sell bonds to \u201crealize\u201d these losses, sending it into a death spiral."
+        },
+        {
+         "title": "A major bank failed. Here\u2019s why it\u2019s not 2008 again",
+         "date": "2023-03-11",
+         "source": "wyff4.com",
+         "url": "https://www.wyff4.com/article/silicon-valley-bank-failed-why-its-not-2008-again/43279888",
+         "relation": "states",
+         "confidence": 0.7,
+         "quote": "Silicon Valley Bank, experienced one of the oldest problems in banking \u2014 a bank run \u2014 which led to its failure on Friday."
+        },
+        {
+         "title": "Silicon Valley Bank Collapses in Largest Failure Since 2008 Crisis",
+         "date": "2023-03-11",
+         "source": "truthout.org",
+         "url": "https://truthout.org/articles/silicon-valley-bank-collapses-in-largest-failure-since-2008-crisis/",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "The Federal Deposit Insurance Corporation (FDIC) seized SVB\u2019s assets on Friday after the company\u2019s emergency money-raising efforts fell flat."
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "afghanistannews.net",
+         "url": "https://www.afghanistannews.net/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "US lender Silicon Valley Bank fails after run on deposits"
+        },
+        {
+         "title": "Silicon Valley Bank collapses in biggest American bank failure since 2008 financial crisis",
+         "date": "2023-03-11",
+         "source": "techspot.com",
+         "url": "https://www.techspot.com/news/97897-silicon-valley-bank-collapses-biggest-american-bank-failure.html",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "Silicon Valley Bank failed on Friday after a massive run on deposits, putting almost $175 billion, including money from some of the biggest tech companies, under the control of the FDIC (Feder"
+        },
+        {
+         "title": "After the collapse of a Silicon Valley bank, worries abound about what's next: NPR",
+         "date": "2023-03-14",
+         "source": "lportepilot.ca",
+         "url": "https://www.lportepilot.ca/after-the-collapse-of-a-silicon-valley-bank-worries-abound-about-whats-next-npr/",
+         "relation": "partially_anticipates",
+         "confidence": 0.7,
+         "quote": "Federal officials say all of SVB's customers will have full access to their deposits \u2014 even accounts holding more than $250,000, the limit of FDIC insurance. Accounts holding more than that amount made up the majority of accounts at SVB. The move guarantees $175 billion in custom"
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "newyorkstatesman.com",
+         "url": "https://www.newyorkstatesman.com/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "The Federal Deposit Insurance Corporation said on Friday that it would take over Silicon Valley Bank, a 40-year-old institution based in Santa Clara, California."
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "tucsonpost.com",
+         "url": "https://www.tucsonpost.com/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "states",
+         "confidence": 0.95,
+         "quote": "Silicon Valley Bank's failure came two days after its emergency moves to handle withdrawal requests and a precipitous decline in the value of its investment holdings shocked Wall Street and depositors"
+        },
+        {
+         "title": "Silicon Valley Bank is largest failure since 2008 crisis, billions stranded",
+         "date": "2023-03-12",
+         "source": "mvariety.com",
+         "url": "https://www.mvariety.com/business/silicon-valley-bank-is-largest-failure-since-2008-crisis-billions-stranded/article_c4b660e2-c069-11ed-bc33-c78a29c72c12.html",
+         "relation": "states",
+         "confidence": 0.9,
+         "quote": "California banking regulators closed the bank, which did business as Silicon Valley Bank, on Friday and appointed the Federal Deposit Insurance Corporation or FDIC as receiver for later disposition of its assets."
+        },
+        {
+         "title": "Finance Sector Braces for Shockwaves After Silicon Valley Bank Collapse",
+         "date": "2023-03-11",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/finance-sector-braces-for-shockwaves-after-silicon-valley-bank-collapse_5115599.html",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "As California banking regulators shuttered SVB, it became the largest ba"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 106,
+       "judged": 10,
+       "expression": 0.2755,
+       "support": 4.498,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "A frozen IPO market signals two positive things for stocks, CNBC's Jim Cramer says",
+         "date": "2023-04-10",
+         "source": "cnbc.com",
+         "url": "https://www.cnbc.com/2023/04/10/frozen-ipo-market-signals-two-positive-things-for-stocks-jim-cramer.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "A dry IPO market may be exacerbated by the collapse of Silicon Valley Bank"
+        },
+        {
+         "title": "Bank Lending Plunges by Largest Measure on Record as Credit Crunch Alarm Rings Louder",
+         "date": "2023-04-10",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/bank-lending-plunges-by-largest-measure-on-record-as-credit-crunch-alarm-rings-louder_5183373.html",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "The rapid rate increases were a factor in the collapse of Silicon Valley Bank (SVB), which suffered a frenzied run on deposits when it took a $1.8 billion loss on a liquidation of its Treasury holdings"
+        },
+        {
+         "title": "HSBC buys Silicon Valley Bank\u2019s UK business for 1 pound, ending \u2018nightmare\u2019 for British te",
+         "date": "2023-04-10",
+         "source": "siliconvalley.com",
+         "url": "https://www.siliconvalley.com/2023/04/10/hsbc-buys-silicon-valley-banks-uk-business-ending-nightmare-for-british-tech/",
+         "relation": "entails",
+         "confidence": 0.75,
+         "quote": "Had a buyer not been found, SVB UK would have been placed into insolvency by the Bank of England following the stunning collapse of its parent in the United States."
+        },
+        {
+         "title": "Elizabeth Warren, AOC ask SVB depositors to detail ties to bank",
+         "date": "2023-04-10",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/articles/elizabeth-warren-aoc-ask-svb-depositors-to-detail-ties-to-bank",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "the bank, which collapsed in March after investors and depositors tried to pull out $42 billion in a single day"
+        },
+        {
+         "title": "Are Banks Inherently Fragile?",
+         "date": "2023-05-04",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/are-banks-inherently-fragile",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "if everyone just shows up all at once to get their money, the bank won\u2019t have the money. This run on the bank could cause a bank failure."
+        },
+        {
+         "title": "Is SVB the \"Safest Bank on the Planet\" After FDIC Guarantees 100% Backing Of All Deposits",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/svb-safest-bank-planet-fdic-204221077.html",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "Thanks to the FDIC's immediate response, depositors had full access to their money from March 13."
+        },
+        {
+         "title": "Warren, AOC Press Top Silicon Valley Bank Depositors About Any Cushy Treatment They Receiv",
+         "date": "2023-04-10",
+         "source": "nbclosangeles.com",
+         "url": "https://www.nbclosangeles.com/news/business/money-report/warren-aoc-press-top-silicon-valley-bank-depositors-about-any-cushy-treatment-they-received/3131954/",
+         "relation": "partially_anticipates",
+         "confidence": 0.65,
+         "quote": "Over 95% of the bank's deposits were uninsured as of December, which threatened companies' ability to make payroll after the bank failed."
+        },
+        {
+         "title": "The Fed has so far saved the stock market from crashing after SVB's implosion by injecting",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fed-far-saved-stock-market-232437195.html",
+         "relation": "states",
+         "confidence": 0.72,
+         "quote": "ensuring banks have enough money on hand in event of a deposit run, which led to SVB's collapse in early March"
+        },
+        {
+         "title": "The Dirty Secret About Bank Holding Company Regulation",
+         "date": "2023-04-10",
+         "source": "brookings.edu",
+         "url": "https://www.brookings.edu/opinions/the-dirty-secret-about-bank-holding-company-regulation/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "America's 16 th largest bank before its failure, SVB had $200 billion in assets but only 16 branches"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 247,
+       "judged": 10,
+       "expression": 0.411,
+       "support": 6.585,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "War By Other Means: Short Selling JPMorgan Chase",
+         "date": "2023-08-11",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2023/08/11/war-by-other-means-short-selling-jpmorgan-chase/",
+         "relation": "states",
+         "confidence": 0.92,
+         "quote": "When the FDIC put Silicon Valley Bank (SVB) and Signature Bank into receivership in March... They were just \"illiquid;\" they lacked enough readily available funds to meet the unanticipated deluge of deposit withdrawals in March. In fact, no bank could withstand a bank run in whic"
+        },
+        {
+         "title": "JPMorgan to buy almost $2B of mortgages in the PacWest deal: reports",
+         "date": "2023-07-28",
+         "source": "housingwire.com",
+         "url": "https://www.housingwire.com/articles/jpmorgan-to-buy-almost-2b-of-mortgages-in-the-pacwest-deal-reports/",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Following the earlier failures of the three regional banks \u2014 Silicon Valley Bank, First Republic and Signature Bank \u2014 there was fear that PacWest would be next to fail."
+        },
+        {
+         "title": "Clearco backers buy back its debt amid windup of Silicon Valley Bank\u2019s Canadian arm",
+         "date": "2023-07-15",
+         "source": "theglobeandmail.com",
+         "url": "https://www.theglobeandmail.com/business/article-clearco-backers-buy-back-its-debt-amid-windup-of-silicon-valley-banks/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the fund management arm of SVB (now controlled by First Citizens BancShares after the tech financier's failure in March)"
+        },
+        {
+         "title": "Is the US banking crisis over?",
+         "date": "2023-09-04",
+         "source": "asiabulletin.com",
+         "url": "https://www.asiabulletin.com/news/273955197/is-the-us-banking-crisis-over",
+         "relation": "partially_anticipates",
+         "confidence": 0.3,
+         "quote": "This was one of the reasons for the banking collapses in the spring, destabilising them at a time when the value of the debt on their balance sheets had also fallen sharply. This saw more customers at other banks withdrawing deposits for fear that their money wasn't safe either."
+        },
+        {
+         "title": "HSBC takes start-up page from Silicon Valley after buyout - UPI.com",
+         "date": "2023-06-12",
+         "source": "upi.com",
+         "url": "https://www.upi.com/Top_News/World-News/2023/06/12/hssilicon-valley-sunak-innovation/8621686581081/",
+         "relation": "states",
+         "confidence": 0.9,
+         "quote": "HSBC purchased the British subsidiary of Silicon Valley Bank less than 72 hours after the latter was shut down and placed into receivership in California... \"culminating on March 9 with the first-ever social media bank run, leading to $42 billion being withdrawn from SVB in 10 ho"
+        },
+        {
+         "title": "Fed oversight leader Barr calls for tighter capital controls after SVB collapse - UPI.com",
+         "date": "2023-07-10",
+         "source": "upi.com",
+         "url": "https://www.upi.com/Top_News/US/2023/07/10/Fed-oversight-leader-Barr-calls-for-tighter-capital-controls-after-SVB-collapse/6061689008207/",
+         "relation": "states",
+         "confidence": 0.82,
+         "quote": "rumors about the health of the banking sector spread quickly online, triggering a run on deposits. On one day, March 9, about $1 million every second was withdrawn from SVB"
+        },
+        {
+         "title": "FDIC to propose long-term debt rule for large banks",
+         "date": "2023-08-23",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/news/fdic-to-propose-long-term-debt-rule-for-large-banks",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "He noted that the bank could have sold unsecured debt to generate liquidity rather than realizing losses on its securities"
+        },
+        {
+         "title": "With \u2018everybody else\u2019 dead or gone, a Pasadena bank grows",
+         "date": "2023-08-23",
+         "source": "latimes.com",
+         "url": "https://www.latimes.com/business/story/2023-08-23/east-west-bancorp-pasadena-bank-grows",
+         "relation": "states",
+         "confidence": 0.75,
+         "quote": "Silicon Valley Bank became the biggest U.S. bank failure in more than a decade, after its long-established customer base of tech startups grew worried and yanked deposits."
+        },
+        {
+         "title": "FDIC Plans to Impose Higher Capital Requirements on Regional Banks",
+         "date": "2023-08-31",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/article/fdic-plans-to-impose-higher-capital-requirements-on-regional-banks-5484217",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "He said that left the government with few options to prevent the financial chaos when Silicon Valley Bank, Signature Bank, and First Republic failed."
+        },
+        {
+         "title": "The Fix For Failure: Banks Should Sell Their Services, Not Gamble With Your Money",
+         "date": "2023-07-28",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2023/07/28/the-fix-for-failure-banks-should-sell-their-services-not-gamble-with-your-money/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the FDIC's guarantee to make depositors whole should a bank fail \u2014 have proven themselves part of, not a solution to, the problem. As regulators jigger with the rules (and break those rules, as FDIC did in paying out more than the insured limits to SVB's depositors)"
+        },
+        {
+         "title": "SVB Financial says it's losing $9 million a month in FDIC fight",
+         "date": "2023-08-15",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/articles/svb-financial-says-its-losing-9-million-a-month-in-fdic-fight",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "When Silicon Valley Bank entered FDIC receivership in March, the agency agreed to honor all deposits, even those exceeding the $250,000 limit."
+        },
+        {
+         "title": "Lessons on bank resolution, from Silicon Valley to Zurich - Risk.net",
+         "date": "2023-06-20",
+         "source": "risk.net",
+         "url": "https://www.risk.net/regulation/7956990/lessons-on-bank-resolution-from-silicon-valley-to-zurich",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The US Federal Deposit Insurance Corporation has drawn sharp criticism \u2013 including from former staffers \u2013 for its handling of the Silicon Valley Bank collapse"
+        },
+        {
+         "title": "6 months out from SVB\u2019s failure, a bank president\u2019s optimism has waned",
+         "date": "2023-09-06",
+         "source": "marketplace.org",
+         "url": "https://www.marketplace.org/2023/09/06/six-months-after-svb-community-banking/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The turmoil strained the Federal Deposit Insurance Corp., which made all of Silicon Valley Bank\u2019s depositors whole \u2014 even those who held uninsured deposits over $250,000. Now, the FDIC has approved new rules aimed at staving off any future cash-flow issues for bigger banks"
+        },
+        {
+         "title": "FDIC Uninsured Deposits: How the SVB Collapse Could Also Affect Your Bank",
+         "date": "2023-06-30",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fdic-uninsured-deposits-svb-collapse-161412911.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The failure of three banks so far this year \u2014 Silicon Valley Bank, Signature Bank and First Republic \u2014 prompted fears of contagion in the banking system... the program was created to avoid a bank run"
+        },
+        {
+         "title": "Wall Street giants expect $8.9 billion hit from bank failures",
+         "date": "2023-08-05",
+         "source": "gulfnews.com",
+         "url": "https://gulfnews.com/business/banking/wall-street-giants-expect-89-billion-hit-from-bank-failures-1.97362547",
+         "relation": "partially_anticipates",
+         "confidence": 0.7,
+         "quote": "after Silicon Valley Bank and Signature fell into receivership in March, the FDIC, Federal Reserve and Treasury Department, perceiving a potential threat to the financial system, announced systemic risk exceptions for the two banks"
+        },
+        {
+         "title": "Social Media Is Rewriting the Banking Playbook",
+         "date": "2023-08-02",
+         "source": "scientificamerican.com",
+         "url": "https://www.scientificamerican.com/article/social-media-is-rewriting-the-banking-playbook/",
+         "relation": "states",
+         "confidence": 0.85,
+         "quote": "The bank failed when customers withdrew $42 billion in a single day after prominent venture capitalists, worried about its financial stability, used Twitter and other social media channels to encourage companies in their portfolios to withdraw their funds. The bank collapsed the "
+        },
+        {
+         "title": "Is the US banking crisis over?",
+         "date": "2023-09-04",
+         "source": "newyorktelegraph.com",
+         "url": "https://www.newyorktelegraph.com/news/273955197/is-the-us-banking-crisis-over",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "This was one of the reasons for the banking collapses in the spring, destabilising them at a time when the value of the debt on their balance sheets had also fallen sharply. This saw more customers at other banks withdrawing deposits for fear that their money wasn't safe either."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 337,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.33,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Report to G20 summit glosses over problems in global financial system",
+         "date": "2023-09-07",
+         "source": "wsws.org",
+         "url": "https://www.wsws.org/en/articles/2023/09/07/kprq-s07.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The March banking sector turmoil saw three of the four largest bank failures in US history, as well as the collapse and takeover of Credit Suisse."
+        },
+        {
+         "title": "Your Central Bank is Insolvent. Now What?",
+         "date": "2023-11-02",
+         "source": "Josh Hendrickson",
+         "url": "https://www.economicforces.xyz/p/your-central-bank-is-insolvent-now",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "One problem banks can have is what is known as a \u201cliquidity\u201d problem. This occurs when the bank does not have sufficient reserves to meet these payment and withdrawal requests and/or when the bank does not have enough assets that it can sell qu"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0455,
+     "surprisal": 0.145,
+     "peak_after": 0.656,
+     "adoption": 0.6104,
+     "vindication": 1.0,
+     "predictive_value": 0.0885,
+     "best_anticipation": {
+      "title": "Silicon Valley Bank collapses in biggest American bank failure since 2008 financ",
+      "date": "2023-03-11",
+      "url": "https://www.techspot.com/news/97897-silicon-valley-bank-collapses-biggest-american-bank-failure.html",
+      "relation": "states",
+      "confidence": 0.95,
+      "quote": "Silicon Valley Bank failed on Friday after a massive run on deposits, putting almost $175 billion, including money from some of the biggest tech companies, under the control of the FDIC (Feder"
+     },
+     "contradiction": null,
+     "prior_strength": 0.855,
+     "best_prior": {
+      "date": "2023-03-10",
+      "title": "A Silicon Valley lender collapsed after a run on the bank. Here's what to know",
+      "url": "https://www.kanw.com/npr-news/npr-news/2023-03-10/a-silicon-valley-lender-collapsed-after-a-run-on-the-bank-heres-what-to-know",
+      "source": "kanw.com",
+      "relation": "paraphrase",
+      "confidence": 0.9,
+      "quote": "California's banking regulators shut down Silicon Valley Bank and put it into receivership under the Federal Deposit Insurance Corp. (FDIC).... Regulators announced the takeover after what was effectively a run on the bank. Depositors rushe"
+     },
+     "claim": {
+      "text": "Silicon Valley Bank collapsed on March 9, 2023 after depositors withdrew more money than the bank had cash to pay out, and the FDIC took it into receivership.",
+      "kind": "fact",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "took the bank into receivership",
+       "didn't have enough cash to pay out"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2023-03-11",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 82,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 63,
+       "judged": 10,
+       "expression": 0.0348,
+       "support": 0.348,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 138,
+       "judged": 10,
+       "expression": 0.1665,
+       "support": 5.494,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "SVB is largest US bank to fail since Washington Mutual collapsed in 2008",
+         "date": "2023-03-11",
+         "source": "prokerala.com",
+         "url": "https://www.prokerala.com/news/articles/a1399615.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "SVB partnered with nearly half of all venture backed tech and health care companies in the US, many of which pulled deposits out of the bank."
+        },
+        {
+         "title": "SVB is largest failure since 2008 financial crisis, billions stranded",
+         "date": "2023-03-11",
+         "source": "gulftoday.ae",
+         "url": "https://www.gulftoday.ae/business/2023/03/11/svb-is-largest-failure-since-2008-financial-crisis-billions-stranded",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "As it tried to raise capital to offset fleeing deposits, the bank lost $1.8 billion on Treasury bonds whose values were torpedoed by the Fed rate hikes."
+        },
+        {
+         "title": "After the collapse of a Silicon Valley bank, worries abound about what's next: NPR",
+         "date": "2023-03-14",
+         "source": "lportepilot.ca",
+         "url": "https://www.lportepilot.ca/after-the-collapse-of-a-silicon-valley-bank-worries-abound-about-whats-next-npr/",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "\"The problem was they weren't worth 100 cents on the dollar because they were long-term interest rates. Interest rates went up. They had to sell them at a discount,\" said Douglas Diamond"
+        },
+        {
+         "title": "US lender Silicon Valley Bank fails after run on deposits",
+         "date": "2023-03-11",
+         "source": "afghanistannews.net",
+         "url": "https://www.afghanistannews.net/news/273616386/us-lender-silicon-valley-bank-fails-after-run-on-deposits",
+         "relation": "entails",
+         "confidence": 0.6,
+         "quote": "While the swift downfall of the nation's 16th largest bank evoked memories of the global financial panic of a decade and a half ago, it did not immediately touch off fears of widespread destruction in the financial industry or the global economy."
+        },
+        {
+         "title": "Silicon Valley Bank imploded in a single day. It could be just the tip of the iceberg.",
+         "date": "2023-03-11",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/silicon-valley-bank-imploded-single-100000239.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "people started withdrawing their money, and the bank needed a quick way to pay them. They were ultimately forced to sell their loan portfolio at a huge loss."
+        },
+        {
+         "title": "Silicon Valley Bank collapsed at unprecedented speed. Can Washington prevent another viral",
+         "date": "2023-04-02",
+         "source": "bostonglobe.com",
+         "url": "https://www.bostonglobe.com/2023/04/02/nation/silicon-valley-bank-collapsed-unprecedented-speed-can-washington-prevent-another-viral-bank-run/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "\"This was a bank run by big business and venture capital on e-mail threads and Linked-In,\" said Aaron Klein"
+        },
+        {
+         "title": "A major bank failed; here\u2019s why it\u2019s not 2008 again | Texarkana Gazette",
+         "date": "2023-03-11",
+         "source": "texarkanagazette.com",
+         "url": "https://www.texarkanagazette.com/news/2023/mar/11/a-major-bank-failed-heres-why-its-not-2008-again/",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "Silicon Valley Bank, experienced one of the oldest problems in banking -- a bank run -- which led to its failure on Friday"
+        },
+        {
+         "title": "A major bank failed. Here\u2019s why it\u2019s not 2008 again",
+         "date": "2023-03-11",
+         "source": "wyff4.com",
+         "url": "https://www.wyff4.com/article/silicon-valley-bank-failed-why-its-not-2008-again/43279888",
+         "relation": "states",
+         "confidence": 0.8,
+         "quote": "experienced one of the oldest problems in banking \u2014 a bank run \u2014 which led to its failure on Friday"
+        },
+        {
+         "title": "CEO of Startup Accelerator 'Y Combinator:' Silicon Valley Bank Failure Is an 'Extinction-L",
+         "date": "2023-03-11",
+         "source": "breitbart.com",
+         "url": "https://www.breitbart.com/tech/2023/03/11/ceo-of-startup-accelerator-y-combinator-silicon-valley-bank-failure-is-an-extinction-level-event/",
+         "relation": "entails",
+         "confidence": 0.62,
+         "quote": "The collapse of Silicon Valley Bank was caused by a massive run on the bank, with customers initiating withdrawals of $42 billion this week... Prior to the run on the bank, the bank was in \u201csound financial condition,\u201d according to the DFPI. Customers withdrew $42 billion, leaving"
+        },
+        {
+         "title": "Silicon Valley Bank is largest failure since 2008 crisis, billions stranded",
+         "date": "2023-03-12",
+         "source": "mvariety.com",
+         "url": "https://www.mvariety.com/business/silicon-valley-bank-is-largest-failure-since-2008-crisis-billions-stranded/article_c4b660e2-c069-11ed-bc33-c78a29c72c12.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "As it tried to raise capital to offset fleeing deposits, the bank lost $1.8 billion on Treasury bonds whose values were torpedoed by the Fed rate hikes."
+        },
+        {
+         "title": "One of the world\u2019s richest men knows why Silicon Valley Bank really failed: \u2018People on iPh",
+         "date": "2023-03-31",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/blackstone-ceo-says-silicon-valley-163055755.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "In SVB's case, rather than holding risky assets, they had an imbalance of otherwise very secure bond assets that matured on a longer timeline... would have been repaid in time if not for the bank run."
+        },
+        {
+         "title": "Silicon Valley Bank Collapses in Largest Failure Since 2008 Crisis",
+         "date": "2023-03-11",
+         "source": "truthout.org",
+         "url": "https://truthout.org/articles/silicon-valley-bank-collapses-in-largest-failure-since-2008-crisis/",
+         "relation": "entails",
+         "confidence": 0.55,
+         "quote": "Those financial maneuvers sparked a bank run as panicked depositors rushed to pull their money, compounding the firm\u2019s crisis."
+        },
+        {
+         "title": "Biggest bank collapse after 2008 global recession: How SVB spectacularly failed after rate",
+         "date": "2023-03-11",
+         "source": "gulfnews.com",
+         "url": "https://gulfnews.com/business/banking/biggest-bank-collapse-after-2008-global-recession-how-svb-spectacularly-failed-after-rate-heresy-becomes-reality-1.1678543355308",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "why they didn't protect it from the risks of gorging on young tech ventures' unstable deposits and from interest-rate increases on the asset side"
+        },
+        {
+         "title": "Opinion: What happened to the Silicon Valley Bank and why does it matter?",
+         "date": "2023-03-15",
+         "source": "thejournal.ie",
+         "url": "https://www.thejournal.ie/readme/silicon-valley-bank-6019993-Mar2023/",
+         "relation": "states",
+         "confidence": 0.78,
+         "quote": "While SVB is markedly different than the banks\u2019 failures seen in 2008, less connected with other larger banks... Bank runs, such as the one that led to SVB collapse, occur when a large number of depositors panic and attempt to withdraw their funds at once"
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 63,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.645,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Is SVB the \"Safest Bank on the Planet\" After FDIC Guarantees 100% Backing Of All Deposits",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/svb-safest-bank-planet-fdic-204221077.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The FDIC typically insures only up to $250,000 per depositor per insured bank... the FDIC announced that 100% of deposits held by investors would be repaid to depositors, preventing a global banking crisis."
+        },
+        {
+         "title": "HSBC buys Silicon Valley Bank\u2019s UK business for 1 pound, ending \u2018nightmare\u2019 for British te",
+         "date": "2023-04-10",
+         "source": "siliconvalley.com",
+         "url": "https://www.siliconvalley.com/2023/04/10/hsbc-buys-silicon-valley-banks-uk-business-ending-nightmare-for-british-tech/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "the failure of its parent sent tech executives scrambling to work out how to get their cash out to pay staff and cover operating expenses"
+        },
+        {
+         "title": "Warren, AOC Press Top Silicon Valley Bank Depositors About Any Cushy Treatment They Receiv",
+         "date": "2023-04-10",
+         "source": "nbclosangeles.com",
+         "url": "https://www.nbclosangeles.com/news/business/money-report/warren-aoc-press-top-silicon-valley-bank-depositors-about-any-cushy-treatment-they-received/3131954/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "SVB's banking practices were particularly attractive to startup companies that deposited more than the $250,000 limit insured by the Federal Deposit Insurance Corp. Over 95% of the bank's deposits were uninsure"
+        },
+        {
+         "title": "Elizabeth Warren, AOC ask SVB depositors to detail ties to bank",
+         "date": "2023-04-10",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/articles/elizabeth-warren-aoc-ask-svb-depositors-to-detail-ties-to-bank",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the bank, which collapsed in March after investors and depositors tried to pull out $42 billion in a single day"
+        },
+        {
+         "title": "The Fed has so far saved the stock market from crashing after SVB's implosion by injecting",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fed-far-saved-stock-market-232437195.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "ensuring banks have enough money on hand in event of a deposit run, which led to SVB's collapse in early March"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 158,
+       "judged": 10,
+       "expression": 0.0415,
+       "support": 1.13,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "HSBC takes start-up page from Silicon Valley after buyout - UPI.com",
+         "date": "2023-06-12",
+         "source": "upi.com",
+         "url": "https://www.upi.com/Top_News/World-News/2023/06/12/hssilicon-valley-sunak-innovation/8621686581081/",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Rumors and misconceptions quickly spread online, culminating on March 9 with the first-ever social media bank run, leading to $42 billion being withdrawn from SVB in 10 hours"
+        },
+        {
+         "title": "Federal Reserve, FDIC tell banks to step up contingency funding plans",
+         "date": "2023-07-28",
+         "source": "seattletimes.com",
+         "url": "https://www.seattletimes.com/business/federal-reserve-fdic-tell-banks-to-step-up-contingency-funding-plans/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "the level and speed of deposit outflows at a few firms was unprecedented and contributed to acute liquidity and funding strain at those institutions"
+        },
+        {
+         "title": "The Fix For Failure: Banks Should Sell Their Services, Not Gamble With Your Money",
+         "date": "2023-07-28",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2023/07/28/the-fix-for-failure-banks-should-sell-their-services-not-gamble-with-your-money/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "When you deposit, say, $100 in a bank, the understanding is that you can withdraw the full $100 at any time.\n\nBut your bank doesn\u2019t stick the $100 in a vault"
+        },
+        {
+         "title": "Social Media Is Rewriting the Banking Playbook",
+         "date": "2023-08-02",
+         "source": "scientificamerican.com",
+         "url": "https://www.scientificamerican.com/article/social-media-is-rewriting-the-banking-playbook/",
+         "relation": "partially_anticipates",
+         "confidence": 0.6,
+         "quote": "The bank failed when customers withdrew $42 billion in a single day after prominent venture capitalists, worried about its financial stability, used Twitter and other social media channels to encourage companies in their portfolios to withdraw their funds."
+        },
+        {
+         "title": "The Fed is Still Trying to Prevent the Next Silicon Valley Bank",
+         "date": "2023-08-30",
+         "source": "thedailyupside.com",
+         "url": "https://www.thedailyupside.com/the-fed-is-still-trying-to-prevent-the-next-silicon-valley-bank/?source=iedfolrf0000001",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The Fed's interest-rate-hiking campaign put a sizable dent in the value of Treasuries and other bonds held by nearly all banks, and was one of the underlying causes of this year's banking run."
+        },
+        {
+         "title": "FDIC Uninsured Deposits: How the SVB Collapse Could Also Affect Your Bank",
+         "date": "2023-06-30",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fdic-uninsured-deposits-svb-collapse-161412911.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "The recent failures of Silicon Valley Bank and Signature Bank, and the decision to approve systemic risk exceptions to protect the uninsured depositors at those institutions, raised fundamental questions about the role of deposit insurance in the United States banking system"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 233,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "baseline": 0.0174,
+     "surprisal": 0.7525,
+     "peak_after": 0.1665,
+     "adoption": 0.1491,
+     "vindication": 1.0,
+     "predictive_value": 0.1122,
+     "best_anticipation": {
+      "title": "A major bank failed; here\u2019s why it\u2019s not 2008 again | Texarkana Gazette",
+      "date": "2023-03-11",
+      "url": "https://www.texarkanagazette.com/news/2023/mar/11/a-major-bank-failed-heres-why-its-not-2008-again/",
+      "relation": "states",
+      "confidence": 0.8,
+      "quote": "Silicon Valley Bank, experienced one of the oldest problems in banking -- a bank run -- which led to its failure on Friday"
+     },
+     "contradiction": null,
+     "prior_strength": 0.2475,
+     "best_prior": {
+      "date": "2023-03-10",
+      "title": "Here's How the Second-Biggest Bank Collapse in U.S. History Happened in Just 48 Hours",
+      "url": "https://www.nbcmiami.com/news/business/money-report/heres-how-the-second-biggest-bank-collapse-in-u-s-history-happened-in-just-48-hours/2990539/",
+      "source": "nbcmiami.com",
+      "relation": "partial",
+      "confidence": 0.55,
+      "quote": "\"This was a hysteria-induced bank run caused by VCs,\" Ryan Falvey, a fintech investor of Restive Ventures, told CNBC."
+     },
+     "claim": {
+      "text": "The failure of Silicon Valley Bank was a classic textbook bank run of the type modeled by Douglas Diamond and Philip Dybvig, not an exotic shadow-banking crisis like those of 2008.",
+      "kind": "thesis",
+      "salience": 0.9,
+      "explicit": true,
+      "fingerprints": [
+       "a completely normal, classic bank run",
+       "Mary Poppins and It's a Wonderful Life"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2023-03-11",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 214,
+       "judged": 10,
+       "expression": 0.0788,
+       "support": 0.787,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 159,
+       "judged": 10,
+       "expression": 0.054,
+       "support": 0.54,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 165,
+       "judged": 10,
+       "expression": 0.0645,
+       "support": 1.525,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "UK finance minister and Bank of England work to contain SVB fallout",
+         "date": "2023-03-11",
+         "source": "wkzo.com",
+         "url": "https://wkzo.com/2023/03/11/uk-finance-minister-and-bank-of-england-work-to-contain-svb-fallout/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The recent news about SVB going into insolvency represents an existential threat to the UK tech sector"
+        },
+        {
+         "title": "What to know about the Silicon Valley Bank collapse, takeover and fallout",
+         "date": "2023-03-14",
+         "source": "wfae.org",
+         "url": "https://www.wfae.org/united-states-world/2023-03-14/what-to-know-about-the-silicon-valley-bank-collapse-takeover-and-fallout",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Silicon Valley Bank's business had boomed during the pandemic as tech companies flourished. The bank's customers filled its coffers with deposits totaling well over $100 billion."
+        },
+        {
+         "title": "Silicon Valley Bank imploded in a single day. It could be just the tip of the iceberg.",
+         "date": "2023-03-11",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/silicon-valley-bank-imploded-single-100000239.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Back in 2020 and 2021, tech startups were buzzing with sky-high valuations, stock prices were soaring to record highs on an almost weekly basis, and everyone was flush with cash thanks to trillions of dollars of stimulus from the government."
+        },
+        {
+         "title": "After the collapse of a Silicon Valley bank, worries abound about what's next: NPR",
+         "date": "2023-03-14",
+         "source": "lportepilot.ca",
+         "url": "https://www.lportepilot.ca/after-the-collapse-of-a-silicon-valley-bank-worries-abound-about-whats-next-npr/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Silicon Valley Bank's business boomed during the pandemic as tech companies flourished. The bank's customers filled its coffers with deposits totaling more than $100 billion."
+        },
+        {
+         "title": "What Silicon Valley Bank is, and why its failure is affecting cryptocurrency",
+         "date": "2023-03-11",
+         "source": "mashable.com",
+         "url": "https://mashable.com/article/silicon-valley-bank-failure-startups-cryptocurrency",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "While the repercussions of Silicon Valley Bank's failure will be felt across the tech industry, the crypto markets are already feeling the effects."
+        },
+        {
+         "title": "Finance Sector Braces for Shockwaves After Silicon Valley Bank Collapse",
+         "date": "2023-03-11",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/finance-sector-braces-for-shockwaves-after-silicon-valley-bank-collapse_5115599.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "There is no question that SVB is in a cash crisis because of its over exposure to the tech sector"
+        },
+        {
+         "title": "Fallout from SVB Collapse Begins Sending Twitches Through Tech Sector, While Congress Meet",
+         "date": "2023-03-12",
+         "source": "theconservativetreehouse.com",
+         "url": "https://theconservativetreehouse.com/blog/2023/03/11/fallout-from-svb-collapse-begins-sending-twitches-through-tech-sector-while-congress-meets-with-treasury/comment-page-1/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The 44-hour collapse of Silicon Valley Bank (SVB) is having some reverberations amid the tech sector as companies who carried unsecured deposits with the bank are facing an uncertain future."
+        },
+        {
+         "title": "A major bank failed. Here\u2019s why it\u2019s not 2008 again",
+         "date": "2023-03-11",
+         "source": "wyff4.com",
+         "url": "https://www.wyff4.com/article/silicon-valley-bank-failed-why-its-not-2008-again/43279888",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "Silicon Valley Bank was hit hard by the downturn in technology stocks over the past year as well as the Federal Reserve's aggressive plan to increase interest rates to combat inflation."
+        },
+        {
+         "title": "Collapse of Silicon Valley Bank UK \u2018could have big impact on tech start-ups\u2019",
+         "date": "2023-03-12",
+         "source": "eastlondonadvertiser.co.uk",
+         "url": "https://www.eastlondonadvertiser.co.uk/news/national/23380053.collapse-silicon-valley-bank-uk-could-big-impact-tech-start-ups/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "It is clear this could have a significant impact on the UK's tech start-up ecosystem."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 101,
+       "judged": 10,
+       "expression": 0.053,
+       "support": 0.92,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "A frozen IPO market signals two positive things for stocks, CNBC's Jim Cramer says",
+         "date": "2023-04-10",
+         "source": "cnbc.com",
+         "url": "https://www.cnbc.com/2023/04/10/frozen-ipo-market-signals-two-positive-things-for-stocks-jim-cramer.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "A dry IPO market may be exacerbated by the collapse of Silicon Valley Bank"
+        },
+        {
+         "title": "The Scoop #45: The state of startup funding in Q1 2023",
+         "date": "2023-04-13",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-scoop-45",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "What can vendors perceived as \u2018cost centers\u2019 do to reduce customer churn during challenging times like now?"
+        },
+        {
+         "title": "Vibes-based antitrust hits Microsoft ",
+         "date": "2023-04-28",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/vibes-based-antitrust-hits-microsoft",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "Clubhouse is laying off more than half of its workforce."
+        },
+        {
+         "title": "Why I'm not worried about AI causing mass unemployment",
+         "date": "2023-04-24",
+         "source": "Timothy B. Lee",
+         "url": "https://www.understandingai.org/p/software-didnt-eat-the-world",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The venture capitalists who poured billions of dollars into startups like this during the 2010s expected some of them to eventually be as big as Google or Facebook... But it hasn\u2019t worked out that way."
+        },
+        {
+         "title": "3 Top Tech Stocks to Buy in April | The Motley Fool",
+         "date": "2023-04-10",
+         "source": "fool.com",
+         "url": "https://www.fool.com/investing/2023/04/10/3-top-tech-stocks-to-buy-in-april/",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "Perhaps the poster child for pandemic-era excesses, Amazon (AMZN -1.97%) is now pivoting to efficiency in a big way"
+        },
+        {
+         "title": "How BeReal missed its moment",
+         "date": "2023-04-26",
+         "source": "Casey Newton",
+         "url": "https://platformer.substack.com/p/how-bereal-missed-its-moment",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "it\u2019s clear that the app\u2019s growth has slowed significantly since last summer, when it was adding hundreds of thousands of users a day. And where once the Twitter timeline was stacked with BeReal jokes and memes, lately the app has seemed to fade from the culture"
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 234,
+       "judged": 10,
+       "expression": 0.025,
+       "support": 0.55,
+       "refute": 1.05,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Trouble at Twiga\u2026 and Copia... and Sendy: downturn hits East African logistics disruptors",
+         "date": "2023-08-30",
+         "source": "impactalpha.com",
+         "url": "https://impactalpha.com/trouble-at-twiga-and-copia-and-sendy-downturn-hits-east-african-logistics-disruptors/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Copia's statement on its latest layoffs called out \"the economic downturn and the constrained capital markets,\" which \"require Copia to undergo a limited restructure of its operations.\""
+        },
+        {
+         "title": "The Pulse #59: NVIDIA's Massive Growth and the Generative AI Boom",
+         "date": "2023-08-24",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-59-nvidias-massive-growth",
+         "relation": "contradicts",
+         "confidence": 0.5,
+         "quote": "We are either at the start, or in the middle of the generative AI boom."
+        },
+        {
+         "title": "Morgan Stanley\u2019s Mike Wilson says investors are destined for disappointment | Fortune",
+         "date": "2023-09-06",
+         "source": "fortune.com",
+         "url": "https://fortune.com/2023/09/06/morgan-stanley-mike-wilson-investors-destined-disappointment-stock-markets/",
+         "relation": "contradicts",
+         "confidence": 0.55,
+         "quote": "Wilson concedes that he\u2014and many others\u2014 were overly negative following the collapse of regional banks like SVB earlier in the year, but were forced to change their minds when a recession failed to appear."
+        },
+        {
+         "title": "ODUNSI: How can African tech talent build greater resilience during the global tech downtu",
+         "date": "2023-08-22",
+         "source": "the-star.co.ke",
+         "url": "https://www.the-star.co.ke/opinion/2023-08-22-odunsi-how-can-african-tech-talent-build-greater-resilience-during-the-global-tech-downturn/",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "After years of growth, the global technology sector entered a downturn in the second half of 2022, thanks to a combination of inflation, rising interest rates, and faltering supply chains."
+        },
+        {
+         "title": "At Toronto tech show, second thoughts emerge over AI",
+         "date": "2023-06-28",
+         "source": "enca.com",
+         "url": "https://www.enca.com/analysis/toronto-tech-show-second-thoughts-emerge-over-ai",
+         "relation": "partially_anticipates",
+         "confidence": 0.5,
+         "quote": "the tech world welcomed the respite from an otherwise miserable 2022 when a pandemic-era tech boom imploded"
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 292,
+       "judged": 10,
+       "expression": 0.075,
+       "support": 1.275,
+       "refute": 0.6,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The end of 0% interest rates: what the new normal means for software engineers",
+         "date": "2024-01-30",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/zirp-software-engineers",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "University graduates \u2013 and especially bootcamp grads \u2013 face what is probably the toughest job market since the Dotcom Bust, back in 2001."
+        },
+        {
+         "title": "The Pulse #72: Spotify\u2019s Shock Cuts",
+         "date": "2023-12-07",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-72-spotifys-shock-cuts",
+         "relation": "anticipates_directionally",
+         "confidence": 0.45,
+         "quote": "NFTs are Over. Revenue is down 99% at market-leading NFT platform, OpenSea; from $200M in May 2022, collapsing to $1.9M in October 2023."
+        },
+        {
+         "title": "The 10 Biggest News Stories Of 2023",
+         "date": "2023-12-28",
+         "source": "crn.com",
+         "url": "https://www.crn.com/news/channel-news/the-10-biggest-news-stories-of-2023",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Companies\u2014especially smaller ones and startups\u2014in the crowded cybersecurity space were hit particularly hard over the last year and a half."
+        },
+        {
+         "title": "The Pulse #76: Why are layoffs coming hard and fast, again?",
+         "date": "2024-01-11",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-76",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Amazon, Google and Meta have all cut jobs, in what feels too similar to exactly 12 months ago. Unfortunately, we can likely expect more tech companies to follow as profits become more important in a post-ZIRP world."
+        },
+        {
+         "title": "The Pulse #78: Is Google \u201cthe new IBM?\u201d",
+         "date": "2024-01-25",
+         "source": "Gergely Orosz",
+         "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-78",
+         "relation": "anticipates_directionally",
+         "confidence": 0.5,
+         "quote": "Google has executed repeat annual layoffs for the first time in its history, causing disillusionment for staff... Tech layoffs spiking \u2013 just like last January"
+        },
+        {
+         "title": "2 No-Brainer Artificial Intelligence (AI) Stocks to Buy Before 2024 | The Motley Fool",
+         "date": "2023-12-27",
+         "source": "fool.com",
+         "url": "https://www.fool.com/investing/2023/12/27/2-no-brainer-artificial-intelligence-ai-stocks-to/?source=iedfolrf0000001",
+         "relation": "contradicts",
+         "confidence": 0.6,
+         "quote": "the launch of OpenAI's ChatGPT in November 2022 made Wall Street bullish about tech stocks again, with countless companies restructuring their businesses to focus on the technology. As a result, the index has soared 43% since Jan. 1."
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0664,
+     "surprisal": 0.7525,
+     "peak_after": 0.075,
+     "adoption": 0.0086,
+     "vindication": 0.4426,
+     "predictive_value": 0.0047,
+     "best_anticipation": {
+      "title": "Silicon Valley Bank imploded in a single day. It could be just the tip of the ic",
+      "date": "2023-03-11",
+      "url": "https://finance.yahoo.com/news/silicon-valley-bank-imploded-single-100000239.html",
+      "relation": "anticipates_directionally",
+      "confidence": 0.55,
+      "quote": "Back in 2020 and 2021, tech startups were buzzing with sky-high valuations, stock prices were soaring to record highs on an almost weekly basis, and everyone was flush with cash thanks to trillions of"
+     },
+     "contradiction": {
+      "title": "2 No-Brainer Artificial Intelligence (AI) Stocks to Buy Before 2024 | The Motley",
+      "date": "2023-12-27",
+      "url": "https://www.fool.com/investing/2023/12/27/2-no-brainer-artificial-intelligence-ai-stocks-to/?source=iedfolrf0000001",
+      "relation": "contradicts",
+      "confidence": 0.6,
+      "quote": "the launch of OpenAI's ChatGPT in November 2022 made Wall Street bullish about tech stocks again, with countless companies restructuring their businesses to focus on the technology. As a result, the i"
+     },
+     "prior_strength": 0.2475,
+     "best_prior": {
+      "date": "2023-03-10",
+      "title": "A Silicon Valley lender collapsed after a run on the bank. Here's what to know",
+      "url": "https://www.kanw.com/npr-news/npr-news/2023-03-10/a-silicon-valley-lender-collapsed-after-a-run-on-the-bank-heres-what-to-know",
+      "source": "kanw.com",
+      "relation": "partial",
+      "confidence": 0.55,
+      "quote": "But in recent months, many of Silicon Valley Bank's clients had been withdrawing money at a time when the tech sector as a whole has been suffering."
+     },
+     "claim": {
+      "text": "Silicon Valley Bank's collapse is one more stage in the slow deflation of the Second Tech Boom, adding to pessimism that has prevailed in tech since early 2022.",
+      "kind": "frame",
+      "salience": 0.7,
+      "explicit": true,
+      "fingerprints": [
+       "Second Tech Boom",
+       "one more shoe dropping",
+       "general air of pessimism"
+      ]
+     }
+    },
+    {
+     "anchor_date": "2023-03-11",
+     "anchor_moved_back_days": 0,
+     "windows_pre": [
+      {
+       "window": "t-365..-90d",
+       "topical": 394,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.0,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      },
+      {
+       "window": "t-90..+0d",
+       "topical": 279,
+       "judged": 10,
+       "expression": 0.0581,
+       "support": 0.581,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": []
+      }
+     ],
+     "windows_post": [
+      {
+       "window": "t+0..+30d",
+       "topical": 197,
+       "judged": 10,
+       "expression": 0.057,
+       "support": 2.148,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Amidst market uncertainty, West Virginia banks remain stable",
+         "date": "2023-04-06",
+         "source": "wvnews.com",
+         "url": "https://www.wvnews.com/mineralnews/news/wvnews/amidst-market-uncertainty-west-virginia-banks-remain-stable/article_6adb1eb0-d490-11ed-b96f-7b54ed210b46.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.35,
+         "quote": "The vast majority of them were uninsured deposits greater than $250,000. In fact, 97 percent of them. There can\u2019t be five banks in the country that have more uninsured deposits than Silicon Valley did."
+        },
+        {
+         "title": "Silicon Valley Bank imploded in a single day. It could be just the tip of the iceberg.",
+         "date": "2023-03-11",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/silicon-valley-bank-imploded-single-100000239.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "\"Silicon Valley Bank and First Republic have emerged as the first cases of banks with business models and balance sheets that are ill-prepared for a rising interest rate environment"
+        },
+        {
+         "title": "Bank runs expected as SVB collapse upends rate forecasts",
+         "date": "2023-03-12",
+         "source": "afr.com",
+         "url": "https://www.afr.com/world/north-america/bank-runs-expected-as-svb-collapse-upends-rate-forecasts-20230312-p5crbu",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "the collapse of Silicon Valley Bank in the United States, which is expected to put pressure on American regional banks"
+        },
+        {
+         "title": "Is my bank safe from failing? Warning signs of financial trouble",
+         "date": "2023-04-04",
+         "source": "foxbusiness.com",
+         "url": "https://www.foxbusiness.com/economy/bank-safe-failing-warning-signs-financial-trouble",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "What has triggered some of the bank problems at SVB and Signature have been when customers held large amounts of deposits with those banks and then withdrew those deposits quickly for fear the bank may fail and [that] the FDIC may not cover those deposits"
+        },
+        {
+         "title": "US investors worried about banks with similar profile to SVB",
+         "date": "2023-03-11",
+         "source": "prokerala.com",
+         "url": "https://www.prokerala.com/news/articles/a1399633.html",
+         "relation": "entails",
+         "confidence": 0.72,
+         "quote": "The megabanks recovered on Friday but many of their smaller peers continued to plunge. Several were halted for volatility... Shares of San Francisco-based First Republic Bank, which caters to businesses and wealthy individuals, have fallen about 30 per cent since Wednesday... Sha"
+        },
+        {
+         "title": "After the collapse of a Silicon Valley bank, worries abound about what's next: NPR",
+         "date": "2023-03-14",
+         "source": "lportepilot.ca",
+         "url": "https://www.lportepilot.ca/after-the-collapse-of-a-silicon-valley-bank-worries-abound-about-whats-next-npr/",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "Investors feared that other lenders, particularly smaller and regional lenders, would face a similar surge in withdrawals and struggle to meet redemptions."
+        },
+        {
+         "title": "Buy the dip in banks as the Silicon Valley Bank crisis is unlikely to spread, Goldman Sach",
+         "date": "2023-03-11",
+         "source": "markets.businessinsider.com",
+         "url": "https://markets.businessinsider.com/news/stocks/silicon-valley-bank-crisis-buy-the-dip-bank-stocks-contagion-2023-3",
+         "relation": "partially_anticipates",
+         "confidence": 0.55,
+         "quote": "First, the risk of contagion from small to large banks is remote, given that regional lenders account for just 1.5% of the investment grade bond market."
+        }
+       ]
+      },
+      {
+       "window": "t+30..+90d",
+       "topical": 186,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.675,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Is SVB the \"Safest Bank on the Planet\" After FDIC Guarantees 100% Backing Of All Deposits",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/svb-safest-bank-planet-fdic-204221077.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "The FDIC typically insures only up to $250,000 per depositor per insured bank. Any amount held over this limit is considered uninsured"
+        },
+        {
+         "title": "Warren, AOC Press Top Silicon Valley Bank Depositors About Any Cushy Treatment They Receiv",
+         "date": "2023-04-10",
+         "source": "nbclosangeles.com",
+         "url": "https://www.nbclosangeles.com/news/business/money-report/warren-aoc-press-top-silicon-valley-bank-depositors-about-any-cushy-treatment-they-received/3131954/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "Over 95% of the bank's deposits were uninsured as of December, which threatened companies' ability to make payroll after the bank failed."
+        },
+        {
+         "title": "The Fed has so far saved the stock market from crashing after SVB's implosion by injecting",
+         "date": "2023-04-10",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fed-far-saved-stock-market-232437195.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.4,
+         "quote": "SVB's collapse last month sparked a rapid sell-off in bank and regional bank stocks. But troubled banks have started to regain their footing"
+        },
+        {
+         "title": "Bank Lending Plunges by Largest Measure on Record as Credit Crunch Alarm Rings Louder",
+         "date": "2023-04-10",
+         "source": "theepochtimes.com",
+         "url": "https://www.theepochtimes.com/bank-lending-plunges-by-largest-measure-on-record-as-credit-crunch-alarm-rings-louder_5183373.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "The recent bank failures added to those pressures as depositors withdrew their savings from regional banks in favor of their bigger peers, widely considered \"too big to fail\" and so more likely to get bailed out in case of trouble."
+        }
+       ]
+      },
+      {
+       "window": "t+90..+180d",
+       "topical": 402,
+       "judged": 10,
+       "expression": 0.144,
+       "support": 3.443,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "The Fix For Failure: Banks Should Sell Their Services, Not Gamble With Your Money",
+         "date": "2023-07-28",
+         "source": "counterpunch.org",
+         "url": "https://www.counterpunch.org/2023/07/28/the-fix-for-failure-banks-should-sell-their-services-not-gamble-with-your-money/",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "The collapses of three large US banks (Silicon Valley Bank, Signature Bank, and First Republic Bank) so far this year"
+        },
+        {
+         "title": "The United States\u2019 Financial Quandary: ZIRP\u2019s Only Exit Path Is a Crash | naked capitalism",
+         "date": "2023-07-08",
+         "source": "nakedcapitalism.com",
+         "url": "https://www.nakedcapitalism.com/2023/07/the-united-states-financial-quandary-zirps-only-exit-path-is-a-crash.html",
+         "relation": "anticipates_directionally",
+         "confidence": 0.6,
+         "quote": "The other set of failed banks were those with a high proportion of large depositors: Silicon Valley Bank (SVB) on March 10 and neighboring First Republic Bank in San Francisco on May 1.... These large financially savvy depositors were substantially above the $250,000 FDIC-insured"
+        },
+        {
+         "title": "JPMorgan to buy almost $2B of mortgages in the PacWest deal: reports",
+         "date": "2023-07-28",
+         "source": "housingwire.com",
+         "url": "https://www.housingwire.com/articles/jpmorgan-to-buy-almost-2b-of-mortgages-in-the-pacwest-deal-reports/",
+         "relation": "anticipates_directionally",
+         "confidence": 0.75,
+         "quote": "Following the earlier failures of the three regional banks \u2014 Silicon Valley Bank, First Republic and Signature \u2014 there was fear that PacWest would be next to fail. PacWest has a similar business model to Fir"
+        },
+        {
+         "title": "A mini deposit run in early May preceded the sale of PacWest",
+         "date": "2023-08-30",
+         "source": "americanbanker.com",
+         "url": "https://www.americanbanker.com/news/a-mini-deposit-run-in-early-may-preceded-the-sale-of-pacwest",
+         "relation": "entails",
+         "confidence": 0.7,
+         "quote": "\"The fear was that they were in a death spiral. And if they were in a death spiral, and you've got uninsured deposits, you've got to get your money out of that bank,\" Stein said."
+        },
+        {
+         "title": "FDIC Uninsured Deposits: How the SVB Collapse Could Also Affect Your Bank",
+         "date": "2023-06-30",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/fdic-uninsured-deposits-svb-collapse-161412911.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.45,
+         "quote": "the \"decision to guarantee all accounts above the $250,000 federal deposit insurance limit also helped bigge"
+        },
+        {
+         "title": "The Fed is Still Trying to Prevent the Next Silicon Valley Bank",
+         "date": "2023-08-30",
+         "source": "thedailyupside.com",
+         "url": "https://www.thedailyupside.com/the-fed-is-still-trying-to-prevent-the-next-silicon-valley-bank/?source=iedfolrf0000001",
+         "relation": "anticipates_directionally",
+         "confidence": 0.55,
+         "quote": "Barr is delivering specific warnings known as \"matters requiring attention\"... to regional banks with $100 billion to $250 billion in assets \u2014 or so-called Category IV banks"
+        },
+        {
+         "title": "How regional banks got healthy again",
+         "date": "2023-08-07",
+         "source": "elpasoinc.com",
+         "url": "https://www.elpasoinc.com/news/your_money/how-regional-banks-got-healthy-again/article_983a6370-352f-11ee-9d18-c7488e2d5ab5.html",
+         "relation": "entails",
+         "confidence": 0.78,
+         "quote": "The biggest problem midsize banks had this spring was a sudden exodus of deposits. A panic among Silicon Valley Bank\u2019s customers spread to customers"
+        },
+        {
+         "title": "Fed oversight leader Barr calls for tighter capital controls after SVB collapse - UPI.com",
+         "date": "2023-07-10",
+         "source": "upi.com",
+         "url": "https://www.upi.com/Top_News/US/2023/07/10/Fed-oversight-leader-Barr-calls-for-tighter-capital-controls-after-SVB-collapse/6061689008207/",
+         "relation": "partially_anticipates",
+         "confidence": 0.42,
+         "quote": "Barr's handful of proposals would apply to banks with at least $100 billion in assets, far lower than what's covered by current policies."
+        },
+        {
+         "title": "JPMorgan rides to the rescue again, snapping up mortgages worth $1.8 billion as part of Pa",
+         "date": "2023-07-27",
+         "source": "finance.yahoo.com",
+         "url": "https://finance.yahoo.com/news/jpmorgan-rides-rescue-again-snapping-204506248.html",
+         "relation": "entails",
+         "confidence": 0.85,
+         "quote": "The agreement came two months after reports that PacWest was considering a sale as it's been among the hardest-hit lenders following the collapse of Silicon Valley Bank."
+        }
+       ]
+      },
+      {
+       "window": "t+180..+365d",
+       "topical": 630,
+       "judged": 10,
+       "expression": 0.0,
+       "support": 0.186,
+       "refute": 0.0,
+       "reliable": true,
+       "examples": [
+        {
+         "title": "Report to G20 summit glosses over problems in global financial system",
+         "date": "2023-09-07",
+         "source": "wsws.org",
+         "url": "https://www.wsws.org/en/articles/2023/09/07/kprq-s07.html",
+         "relation": "partially_anticipates",
+         "confidence": 0.62,
+         "quote": "depositors, including wealthy individuals and corporations with the three failed US banks\u2014Silicon Valley Bank, Signature and First Republic\u2014had to have their money guaranteed by US authorities"
+        }
+       ]
+      }
+     ],
+     "baseline": 0.0291,
+     "surprisal": 0.73,
+     "peak_after": 0.144,
+     "adoption": 0.1149,
+     "vindication": 1.0,
+     "predictive_value": 0.0839,
+     "best_anticipation": {
+      "title": "JPMorgan rides to the rescue again, snapping up mortgages worth $1.8 billion as ",
+      "date": "2023-07-27",
+      "url": "https://finance.yahoo.com/news/jpmorgan-rides-rescue-again-snapping-204506248.html",
+      "relation": "entails",
+      "confidence": 0.85,
+      "quote": "The agreement came two months after reports that PacWest was considering a sale as it's been among the hardest-hit lenders following the collapse of Silicon Valley Bank."
+     },
+     "contradiction": null,
+     "prior_strength": 0.27,
+     "best_prior": {
+      "date": "2023-03-11",
+      "title": "Shares in other banks with tech exposure plunge after SVB's failure",
+      "url": "https://www.financial-planning.com/news/shares-in-other-banks-with-tech-exposure-plunge-after-svbs-failure",
+      "source": "financial-planning.com",
+      "relation": "partial",
+      "confidence": 0.6,
+      "quote": "Like Silicon Valley Bank, where just 2.7% of deposits met the requirements for deposit insurance in the fourth quarter of 2022, some of the other banks that saw big stock price declines on Friday have relatively small shares of their deposi"
+     },
+     "claim": {
+      "text": "Contagion from Silicon Valley Bank would most likely take the form of panic-driven runs on mid-size regional banks such as PacWest and First Republic, rather than on large banks (protected by low-risk balance sheets and implicit government guarantees) or small banks (whose deposits are almost entirely insured).",
+      "kind": "prediction",
+      "salience": 0.8,
+      "explicit": true,
+      "fingerprints": [
+       "mid-size regional banks like Pacific West and First Republic",
+       "a wave of runs from plain old panic"
+      ]
+     }
+    }
+   ]
   }
  ]
 }

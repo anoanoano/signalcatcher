@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6700.76it/s]
+  techtimes-ai-2023 prediction S=0.7525 PV=0.0463 [357s]
+  techtimes-ai-2023 thesis     S=0.145 PV=0.0103 [8210s]
+  techtimes-ai-2023 fact       S=0.03 PV=0.0009 [8721s]
+  techtimes-ai-2023 prediction S=0.964 PV=0.0185 [8948s]
+  techtimes-ai-2023 prediction S=0.06 PV=0.0011 [9182s]
+  lichtman-ignore thesis     S=0.775 PV=0.0 [9426s]
+  lichtman-ignore fact       S=0.259 PV=0.0131 [9584s]
+  lichtman-ignore frame      S=0.954 PV=0.0097 [9791s]
+  lichtman-ignore thesis     S=0.9565 PV=0.1657 [9860s]
+  lichtman-ignore thesis     S=0.955 PV=0.001 [10038s]
+done 10038s hits=20/128
