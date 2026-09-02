@@ -63,6 +63,72 @@ REL_LABEL = {
 
 def esc(s): return H.escape(str(s or ""))
 
+def _doc_text(url):
+    """Source text for a quoted document, cached; None when unavailable."""
+    if url in _DOCTEXT:
+        return _DOCTEXT[url]
+    t = None
+    try:
+        from signalcatcher.models import Document as _D
+        d = _s.get_document(_D.make_id(url))
+        t = d.text if d else None
+    except Exception:
+        t = None
+    _DOCTEXT[url] = t
+    return t
+_DOCTEXT: dict = {}
+
+
+def clean_quote(q, limit=200, url=None):
+    """Tidy a stored verbatim span for display.
+
+    Judges copy spans character-for-character, so a stored quote can begin or
+    end mid-word ("nsensus toward..."), and storage clips long ones. Heuristics
+    cannot tell a fragment ("nsensus") from a legitimate lowercase start
+    ("our alliance..."), so the repair is done against the source document:
+    find the span in the stored text and extend both ends to word boundaries.
+    When the document is unavailable the span is shown as stored, with
+    ellipses marking any visible clipping.
+    """
+    q = (q or "").strip()
+    if not q:
+        return ""
+    text = _doc_text(url) if url else None
+    if text:
+        probe = q[:80]
+        i = text.lower().find(probe.lower())
+        if i != -1:
+            j = i + len(q)
+            while i > 0 and (text[i-1].isalnum() or text[i-1] in "'\u2019-"):
+                i -= 1
+            j = min(j, len(text))
+            while j < len(text) and (text[j-1].isalnum()) and (text[j].isalnum() or text[j] in "'\u2019-"):
+                j += 1
+            q = " ".join(text[i:j].split())
+    clipped_tail = False
+    if len(q) > limit:
+        cut = q[:limit]
+        q = cut[: cut.rfind(" ")] if " " in cut else cut
+        clipped_tail = True
+    head = "&hellip;" if q[:1].islower() else ""
+    tail = "&hellip;" if (clipped_tail or q[-1:] not in '.!?\u201d"') else ""
+    return head + esc(q) + tail
+
+
+REL_GLOSS = {
+    "identical": "asserts the same proposition",
+    "paraphrase": "same proposition, different words",
+    "subsumes": "an earlier, more general principle that entails the claim",
+    "partial": "contained a component of the claim, not the whole",
+    "topical": "same subject; does not assert the claim",
+    "states": "asserts the same proposition",
+    "entails": "what it reports is what you'd expect if the claim is right",
+    "anticipates_directionally": "events developed the way the claim's framework points",
+    "partially_anticipates": "bears out a component, not the substance",
+    "orthogonal": "same subject; neither confirms nor conflicts",
+    "contradicts": "the record ran the other way",
+}
+
 def fmt(x, pct=False):
     if x is None: return "&mdash;"
     return f"{100*x:.0f}%" if pct else f"{x:.2f}"
@@ -112,15 +178,16 @@ def trail(claim):
     rows = []
     for e in items:
         lab, cls = REL_LABEL.get(e["relation"], (e["relation"], "mut"))
+        gl = REL_GLOSS.get(e["relation"], "")
         copies = (f'<span class="trail-src">+{e["_copies"]} syndicated '
                   f'{"copy" if e["_copies"]==1 else "copies"}</span>' if e.get("_copies") else "")
         rows.append(
             f'<div class="trail-item"><div class="trail-head">'
             f'<span class="trail-date">{esc(e["date"])}</span>'
             f'<span class="trail-src">{esc(e.get("source") or "")}</span>'
-            f'<span class="chip {cls}">{esc(lab)} &middot; {e.get("confidence","")}</span>{copies}</div>'
+            f'<span class="chip {cls}" title="{esc(gl)}">{esc(lab)} &middot; {e.get("confidence","")}</span>{copies}</div>'
             f'<div class="trail-title">{esc(e["title"])}</div>'
-            + (f'<div class="trail-quote">&ldquo;{esc(e["quote"])}&rdquo;</div>' if e.get("quote") else "")
+            + (f'<div class="trail-quote">&ldquo;{clean_quote(e["quote"], 280, e.get("url"))}&rdquo;</div>' if e.get("quote") else "")
             + '</div>')
     return '<div class="trail">' + "".join(rows) + "</div>"
 
@@ -131,11 +198,13 @@ def prior_line(c):
             return ('<p class="note"><strong>Closest prior statement:</strong> none found '
                     'by the high-recall search &mdash; novelty undefeated.</p>')
         return ""
+    gloss = REL_GLOSS.get(bp["relation"], "")
     return (f'<p class="note"><strong>Closest prior statement</strong> '
             f'(defeats {100*c.get("prior_strength",0):.0f}% of novelty): '
             f'{esc(bp["date"])} &middot; {esc(bp.get("source") or bp["title"][:40])} &middot; '
-            f'<span class="rel">{esc(bp["relation"])}</span>'
-            + (f' &mdash; &ldquo;{esc(bp["quote"][:180])}&rdquo;' if bp.get("quote") else "")
+            f'<span class="rel" title="{esc(gloss)}">{esc(bp["relation"])}</span>'
+            + (f' <span class="gloss">({esc(gloss)})</span>' if gloss else "")
+            + (f' &mdash; &ldquo;{clean_quote(bp["quote"], 180, bp.get("url"))}&rdquo;' if bp.get("quote") else "")
             + '</p>')
 
 def claim_block(c, idx):
@@ -218,7 +287,7 @@ def unit_timeline(u):
             stroke='var(--chart)' if fill=="none" else "var(--panel)"
             attrs=(f'data-d="{esc(e["date"])}" data-s="{esc(e.get("source") or "")}" '
                    f'data-r="{esc(e["relation"])}" data-t="{esc(e["title"][:110])}" '
-                   f'data-q="{esc(e.get("quote","")[:260])}" data-u="{esc(e.get("url",""))}" '
+                   f'data-q="{clean_quote(e.get("quote",""), 240, e.get("url"))}" data-u="{esc(e.get("url",""))}" '
                    f'data-unit="{uid}"')
             if shape=="diamond":
                 o.append(f'<path class="dot" d="M{x:.0f},{y-6} L{x+6:.0f},{y} L{x:.0f},{y+6} L{x-6:.0f},{y} Z" fill="{fill}" stroke="var(--panel)" stroke-width="1.5" {attrs}/>')
@@ -299,7 +368,11 @@ def worked_example():
     <li><strong>The text.</strong> {esc(u["source"])} publishes
       <em>{esc(u["title"])}</em> on {esc(u["published"])}. Canvassing extracts its
       boldest claims; this one is a <em>{esc(cl["kind"])}</em>:
-      <div class="quote">{esc(cl["text"][:220])}</div></li>
+      <div class="quote">{esc(cl["text"])}</div>
+      <p class="note">Claims are the benchmark&rsquo;s <em>restatements</em>, not
+      quotations &mdash; each is rewritten to stand alone, which is why it names its
+      author in the third person. Everything downstream searches for this proposition
+      in other people&rsquo;s words.</p></li>
     <li><strong>Find its true first use.</strong> A search of the author&rsquo;s own
       back catalog finds the claim was first stated
       <strong>{c["anchor_moved_back_days"]} days earlier</strong>, on
@@ -310,8 +383,13 @@ def worked_example():
       retrieval) surfaces the strongest prior statement:
       <div class="quote">{esc(bp.get("date",""))} &middot; {esc(bp.get("source") or "")} &middot;
       <span class="rel">{esc(bp.get("relation",""))}</span>
-      {("&mdash; &ldquo;"+esc(bp.get("quote","")[:150])+"&rdquo;") if bp.get("quote") else ""}</div>
-      That prior defeats {100*c.get("prior_strength",0):.0f}% of the claim&rsquo;s novelty:
+      <span class="gloss">({esc(REL_GLOSS.get(bp.get("relation",""),""))})</span>
+      {("&mdash; &ldquo;"+clean_quote(bp.get("quote",""),160,bp.get("url"))+"&rdquo;") if bp.get("quote") else ""}</div>
+      A <em>partial</em> prior is deliberately weak evidence against novelty: one
+      component of the claim existed &mdash; here, supply-chain rebuilding as
+      industrial policy &mdash; while the claim&rsquo;s substance (reorganizing the
+      economy to <em>prepare for great-power conflict</em>) did not. It therefore
+      defeats only {100*c.get("prior_strength",0):.0f}% of the claim&rsquo;s novelty:
       <strong>surprisal = {fmt(s_)}</strong>.</li>
     <li><strong>Did the discourse move toward it?</strong> In time windows after first use,
       a random sample of the claim&rsquo;s topical neighbourhood is judged: does each document
@@ -319,7 +397,7 @@ def worked_example():
       Expression rises from a {fmt(c.get("baseline"),pct=True) if c.get("baseline") is not None else "near-zero"}
       baseline to a peak of {fmt(c.get("peak_after"),pct=True)}:
       <strong>adoption = {fmt(a_)}</strong>.
-      {("<div class='quote'>"+esc(ex["date"])+" &middot; "+esc(ex.get("source") or "")+" &mdash; &ldquo;"+esc(ex.get("quote","")[:160])+"&rdquo;</div>") if ex else ""}</li>
+      {("<div class='quote'>"+esc(ex["date"])+" &middot; "+esc(ex.get("source") or "")+" &middot; <span class='rel'>"+esc(ex.get("relation",""))+"</span> <span class='gloss'>("+esc(REL_GLOSS.get(ex.get("relation",""),""))+")</span> &mdash; &ldquo;"+clean_quote(ex.get("quote",""),200,ex.get("url"))+"&rdquo;</div>") if ex else ""}</li>
     <li><strong>Did the record bear it out?</strong> Weighing every supporting judgement
       against every contradicting one: <strong>vindication = {fmt(v_)}</strong>
       (+1 fully borne out, &minus;1 refuted).</li>
@@ -451,6 +529,7 @@ td.num,th.num{{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:
 .chip.neg{{color:var(--neg);background:var(--neg-bg)}}
 .chip.mut{{color:var(--mut);background:var(--mut-bg)}}
 .rel{{font-family:"IBM Plex Mono",monospace;font-size:.82rem;font-weight:600}}
+.gloss{{font-size:.82rem;color:var(--ink-3);font-style:italic}}
 .quote{{background:var(--quote-bg);border-left:3px solid var(--accent);
   padding:.7rem 1rem;margin:.6rem 0;font-size:.92rem}}
 ol.steps{{padding-left:1.3rem}} ol.steps>li{{margin-bottom:1.1rem}}
